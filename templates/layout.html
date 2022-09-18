@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>NLNOG Looking Glass</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/bootstrap-responsive.min.css') }}">
+  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/DT_bootstrap.css') }}">
+  <style>
+	.btn-danger {
+    	background-color: #f4511e;
+    }
+	h1 {
+		font-weight: bolder;
+	}
+	h5.prefix {
+		padding: 3px;
+	}
+	.routingentry {
+		background-color: white;
+		padding: 5px;
+		margin: 20px;
+	}
+	.valid {
+   	 	color: #00bb00;
+	}
+	.not-found {
+		color: #000000;
+	}
+	.invalid {
+		color: #bb0000;
+	}
+	.modal .modal-body p {
+		font-family:'Lucida Sans', 'Courier New', Courier, monospace !important;
+	}
+	.community {
+		color: #338;
+		text-decoration: underline #0033cc dotted 2px;
+		cursor: help;
+	}
+	td.data {
+		font-family: monospace;
+	}
+	table {
+		background-color: white;
+	}
+	a {
+		text-decoration: none;
+	}
+	a.whois {
+		text-decoration: none;
+	}
+	.peername {
+		background-color: #ddd;
+		color: black;
+		font-weight: bold;
+	}
+	.form-select {
+		background: #fff;
+	}
+	.accordion-button {
+		font-size: 15pt;
+		font-weight: bold;
+	}
+ </style>
+ <script type="text/javascript" src="{{url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+ <script type="text/javascript" src="{{url_for('static', filename='js/jquery.min.js') }}"></script>
+ <script type="text/javascript" src="{{url_for('static', filename='js/jquery.dataTables.js') }}"></script>
+ <script type="text/javascript" src="{{url_for('static', filename='js/DT_bootstrap.js') }}"></script>
+  <script type="text/javascript">
+	$(document).ready(function(){
+	  $('[data-toggle="tooltip"]').tooltip();
+	});
+	$(function(){
+		$(".modal .modal-footer .btn").click(function(){
+			$(".modal").modal('hide');
+		});
+		$("a.whois").click(function (event){
+			event.preventDefault();
+			link = $(this).attr('href');
+			$.getJSON(link, function(data) {
+				$(".modal h3").html("whois information for " + data.title);
+				$(".modal .modal-body > p").css("white-space", "pre-line").text(data.output);
+				$(".modal").modal('show');
+			});
+		});
+	});
+</script>
+</head>
+<body>
+	<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-primary">
+		<div class="container-fluid">
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+			  <span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+			  <ul class="navbar-nav">
+				<li class="nav-item dropdown">
+				  <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+					NLNOG Looking Glass
+				  </a>
+				  <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+					<li><a class="dropdown-item" href="/">Home</a></li>
+					<li><a class="dropdown-item" href="/summary">BGP peer summary</a></li>
+					<li><a class="dropdown-item" href="/about">About this Looking Glass</a></li>
+					<li><a class="dropdown-item" href="https://nlnog.net">About NLNOG</a></li>
+				  </ul>
+				</li>
+			  </ul>
+			</div>
+		</div>
+		<div class="container-fluid">
+			<form action="/prefix" method="get">
+				<div class="input-group input-group-sm">
+					<span class="input-group-text" id="inputGroup-sm">IP or prefix</span>
+					<input type="text" required="true" class="form-control" value="{{prefix}}" aria-describedby="inputGroup-sizing-sm" name="q">
+					<div class="input-group-btn input-group-sm">
+						<select class="form-select" name="match">
+							<option value="exact" selected>Exact match</option>
+							<option value="orlonger">Or longer</option>
+						</select>
+					</div>
+					&nbsp; <span class="input-group-text">on</span>
+					<div class="input-group-btn input-group-sm">
+						<select class="form-select" name="peer">
+							<option value="all">all peers</option>
+							{% for peername in peers %}<option {% if peername == peer %}selected{% endif %}>{{ peername }}</option>{% endfor %}
+						</select>
+					</div>&nbsp;
+					<button type="submit" class="btn btn-danger" type="submit">Show routes</button>
+				</div>
+			</form>
+		</div>
+	  </nav>
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+	<div class="modal-dialog modal-xl">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h3 class="modal-title" id="staticBackdropLabel">Modal title</h3>
+		  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+		</div>
+		<div class="modal-body" style="height: 300px; overflow: auto;">
+			<p>...</p>
+		</div>
+		<div class="modal-footer">
+			<a href="#" class="btn btn-primary">Close</a>
+		</div>
+	  </div>
+	</div>
+  </div>
+	<div class="container-fluid">
+		<div class="row-fluid">
+			<div class="span8">
+				{% if warnings %}
+				<div class="alert alert-warning">
+					{% for warning in warnings %}{{warning}}<br />{% endfor %}
+				</div>
+				{% endif %}
+				{% if errors %}
+				<div class="alert alert-error">
+					{% for error in errors %}{{error}}<br />{% endfor %}
+				</div>
+				{% endif %}
+
+				{% block body %}{% endblock %}
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+	t = $('.table-summary')
+    if (t) t.dataTable( {
+        "bPaginate": false,
+        } );
+</script>
+</body>
+</html>

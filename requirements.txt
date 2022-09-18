@@ -1,0 +1,4 @@
+dnspython
+flask
+netaddr
+requests

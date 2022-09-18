@@ -1,0 +1,12 @@
+# https://www.rfc-editor.org/rfc/rfc8326.html
+65535:0,Graceful shutdown
+
+# https://www.iana.org/go/rfc7999
+65535:666,Blackhole
+
+# https://www.iana.org/go/rfc1997
+65535:65281,No export
+65535:65282,No advertise
+
+# https://www.rfc-editor.org/rfc/rfc3765.html
+65535:65283,Don't advertise to peers

@@ -1,0 +1,16 @@
+# taken from AS12859 object in RIPE / provided by noc@bit.nl
+12859:1000,learned from AMS-IX peer
+12859:1001,learned from AMS-IX route servers
+12859:1005,learned from NL-ix peer
+12859:1006,learned from NL-ix route servers
+12859:1010,learned from DE-CIX peer
+12859:1011,learned from DE-CIX route servers
+12859:1020,learned from FRYS-IX peer
+12859:1021,learned from FRYS-IX route servers
+12859:1030,learned from LINX peer
+12859:1035,learned from LINX route servers
+12859:1100,learned from a public peer
+12859:1200,learned from a transit provider
+12859:1400,learned from a private peer
+12859:3xxx,routes originated by BIT
+12859:4xxx,customer routes

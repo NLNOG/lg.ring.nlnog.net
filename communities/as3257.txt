@@ -1,0 +1,107 @@
+# AS327 communities taken from https://onestep.net/communities/as3257/
+3257:4000,GTT customer route
+3257:5000,GTT originated route
+3257:4400-4499,EU exchange points
+3257:4500-4599,US exchange points
+3257:50001,route originated in Europe
+3257:50002,route originated in the US and Canada
+3257:50003,route originated in Asia
+3257:50110,route originated in central Europe
+3257:50111,route originated in outer Europe
+3257:50120,route originated in US east coast
+3257:50121,route originated in US west coast
+3257:50122,route originated in US Canada outer regions
+3257:50130,route originated in Asia
+3257:51100,route originated in the US east coast
+3257:51101,route originated in NYC
+3257:51102,route originated in WAS
+3257:51103,route originated in MIA
+3257:51104,route originated in ATL
+3257:51105,route originated in BOS
+3257:51106,route originated in PHI
+3257:51107,route originated in CHA
+3257:51108,route originated in ORL
+3257:51200,route originated in the US west coast
+3257:51201,route originated in SJC
+3257:51202,route originated in LAX
+3257:51203,route originated in PAO
+3257:51204,route originated in SEA
+3257:51205,route originated in PHX
+3257:51206,route originated in LAS
+3257:51207,route originated in SLC
+3257:51300,route originated in the US central
+3257:51301,route originated in CHI
+3257:51302,route originated in DAL
+3257:51303,route originated in DEN
+3257:51304,route originated in STL
+3257:51305,route originated in MIN
+3257:51306,route originated in IAH
+3257:51400,route originated in Canada
+3257:51401,route originated in TOR
+3257:51402,route originated in MTL
+3257:51403,route originated in VAN
+3257:53000,route originated in GR
+3257:53001,route originated in ATH
+3257:53100,route originated in NL
+3257:53101,route originated in AMS
+3257:53200,route originated in BE
+3257:53201,route originated in BRU
+3257:53202,route originated in ANR
+3257:53300,route originated in FR
+3257:53301,route originated in PAR
+3257:53302,route originated in MRS
+3257:53400,route originated in ES
+3257:53401,route originated in MAD
+3257:53402,route originated in BCN
+3257:53520,route originated in LU
+3257:53530,route originated in IE
+3257:53531,route originated in DUB
+3257:53590,route originated in BG
+3257:53591,route originated in SOF
+3257:53700,route originated in LT
+3257:53701,route originated in VIL
+3257:53900,route originated in IT
+3257:53901,route originated in TRN
+3257:53902,route originated in MIL
+3257:53903,route originated in BLQ
+3257:53904,route originated in ROM
+3257:53905,route originated in CAG
+3257:53906,route originated in PSR
+3257:53907,route originated in FLR
+3257:53908,route originated in GOA
+3257:53909,route originated in NAP
+3257:53910,route originated in PMO
+3257:53911,route originated in QPA
+3257:54000,route originated in RO
+3257:54001,route originated in BUC
+3257:54100,route originated in CH
+3257:54101,route originated in ZUR
+3257:54102,route originated in BSL
+3257:54200,route originated in CZ
+3257:54201,route originated in PRG
+3257:54210,route originated in SK
+3257:54211,route originated in BTS
+3257:54300,route originated in AT
+3257:54301,route originated in VIE
+3257:54400,route originated in UK
+3257:54401,route originated in LON
+3257:54402,route originated in MAN
+3257:54500,route originated in DK
+3257:54501,route originated in CPH
+3257:54600,route originated in SE
+3257:54601,route originated in STK
+3257:54700,route originated in NO
+3257:54701,route originated in OSL
+3257:54800,route originated in PL
+3257:54801,route originated in WAW
+3257:54900,route originated in DE
+3257:54901,route originated in FRA
+3257:54902,route originated in DUS
+3257:54903,route originated in HAM
+3257:54904,route originated in MUC
+3257:54905,route originated in BER
+3257:56500,route originated in SG
+3257:56501,route originated in SIN
+3257:56600,route originated in JP
+3257:56601,route originated in TYO
+3257:58520,route originated in HK (Hong Kong)

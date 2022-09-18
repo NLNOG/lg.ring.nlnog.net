@@ -1,0 +1,5 @@
+# AS174 communities taken from https://onestep.net/communities/as174/
+174:21000,Route is learned from NA (North America) non-customer.
+174:21001,Route is NA internal or customer route.
+174:21100,Route is learned from EU (Europe) non-customer.
+174:21101,Route is a EU internal or customer route.

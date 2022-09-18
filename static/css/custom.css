@@ -1,0 +1,18 @@
+.valid {
+    color: #00bb00;
+}
+.not-found {
+    color: #000000;
+}
+.invalid {
+    color: #bb0000;
+}
+.modal .modal-body p {
+    font-family:'Lucida Sans', 'Courier New', Courier, monospace !important;
+}
+.underline {
+    text-decoration: underline #00bbbb dotted 2px;
+}
+td.right {
+    text-align:right;
+}

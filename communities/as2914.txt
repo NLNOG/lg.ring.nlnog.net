@@ -1,0 +1,96 @@
+# AS2914 communities taken from https://www.gin.ntt.net/support-center/policies-procedures/routing/
+2914:410,NTT and customer routes
+2914:420,Peer routes
+2914:10xx,North America MSA origins
+2914:1001,Ashburn, VA
+2914:1002,Atlanta, GA
+2914:1003,Chicago, IL
+2914:1004,Dallas / Houston, TX
+2914:1005,Los Angeles, CA
+2914:1006,Miami, FL
+2914:1007,Seattle, WA
+2914:1008,Milpitas / Mountain View / Palo Alto / San Jose / Santa Clara / San Francisco, CA
+2914:1009,New York, NY / Newark, NJ
+2914:1010,Sacramento, CA
+2914:1011,Boston, MA
+2914:1012,Toronto, Canada
+2914:12xx,EU MSA origins
+2914:1201,Dusseldorf / Frankfurt, Germany
+2914:1202,Geneva, Switzerland
+2914:1203,London, England
+2914:1204,Madrid, Spain
+2914:1205,Paris, France
+2914:1206,Amsterdam, Netherlands
+2914:1207,Warsaw, Poland
+2914:1208,Sofia, Bulgaria
+2914:1209,Budapest, Hungary
+2914:1210,Bucharest, Romania
+2914:1211,Brussels, Belgium
+2914:1212,Milan, Italy
+2914:1213,Munich, Germany
+2914:1214,Stockholm, Sweden
+2914:1215,Vienna, Austria
+2914:1216,Barcelona, Spain
+2914:1217,Valencia, Spain
+2914:1218,Luxembourg City, Luxembourg
+2914:1219,Marseilles, France
+2914:1220,Berlin, Germany
+2914:1221,Manchester, England
+2914:1222,Dublin, Ireland
+2914:14xx,ASIA MSA origins
+2914:1401,Kuala Lumpur, Malaysia
+2914:1402,New Territories, Hong Kong
+2914:1403,Osaka, Japan
+2914:1404,Seoul, South Korea
+2914:1405,Singapore
+2914:1406,Sydney, Australia
+2914:1407,Taipei, Taiwan
+2914:1408,Tokyo, Japan
+2914:1409,Tseung Kwan O, Hong Kong
+2914:1410,Jakarta, Indonesia
+2914:1411,Bandar Seri Begawan, Brunei
+2914:1412,Bangkok, Thailand
+2914:16xx,South American MSA origins
+2914:1601,Sao Paulo, Brazil
+2914:20xx,North American country origins
+2914:2000,us (United States)
+2914:2001,ca (Canada)
+2914:22xx,European country origins
+2914:2201,uk (United Kingdom)
+2914:2202,de (Germany)
+2914:2203,nl (Netherlands)
+2914:2204,fr (France)
+2914:2205,es (Spain)
+2914:2206,ch (Switzerland)
+2914:2207,pl (Poland)
+2914:2208,bg (Bulgaria)
+2914:2209,hu (Hungary)
+2914:2210,ro (Romania)
+2914:2211,be (Belgium)
+2914:2212,it (Italy)
+2914:2213,se (Sweden)
+2914:2214,at (Austria)
+2914:2215,lx (Luxembourg)
+2914:2216,ie (Ireland)
+2914:24xx,Asian country origins
+2914:2401,jp (Japan)
+2914:2402,au (Australia)
+2914:2403,hk (Hong Kong)
+2914:2404,tw (Taiwan)
+2914:2405,kr (Korea)
+2914:2406,sg (Singapore)
+2914:2407,my (Malaysia)
+2914:2408,id (Indonesia)
+2914:2409,bn (Brunei)
+2914:2410,th (Thailand)
+2914:26xx,South America country origins
+2914:2601,br (Brazil)
+2914:3xxx,world regional origins
+2914:3000,North America
+2914:3075,North America regional customer
+2914:3200,Europe
+2914:3275,Europe regional customer
+2914:3400,Asia
+2914:3475,Asia regional customer
+2914:3600,South America
+2914:3675,South America regional customer

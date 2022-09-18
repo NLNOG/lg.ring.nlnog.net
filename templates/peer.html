@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+{% block body %}
+<br/>
+<h2>
+    Peer details for '{{ peer }}'
+</h2>
+<br/>
+<table class="table">
+    <tr>
+        <td>Remote ASN</td>
+        <td><a href="/whois?q={{ data.remote_as }}" class="whois">{{ data.remote_as }}</a></td>
+    </tr>
+    <tr>
+        <td>Remote IP</td>
+        <td><a href="/whois?q={{ data.remote_addr }}" class="whois">{{ data.remote_addr }}</a></td>
+    </tr>
+    <tr>
+        <td>BGP State</td>
+        <td><button type="button" class="btn btn-sm btn-outline-{% if data.state == "up" or data.state == "Established" %}success{% else %}danger{% endif %}">{{data.state}}</button>
+        </td>
+    </tr>
+    <tr>
+        <td>Last up/down</td>
+        <td>{{ data.last_updown }}</td>
+    </tr>
+    {%- if data.state == "Established" %}
+    <tr>
+        <td>Prefixes received</td>
+        <td>{{ '{:,}'.format(data.stats.prefixes.received) }}</td>
+    </tr>
+    <tr>
+        <td>Capabilities</td>
+        <td><button type="button" class="btn btn-sm btn-outline-{% if data.session.capabilities.as4byte %}success{% else %}danger{% endif %}">4-byte ASN</button> <button type="button" class="btn btn-sm btn-outline-{% if data.session.capabilities.refresh %}success{% else %}danger{% endif %}">refresh</button> <button type="button" class="btn btn-sm btn-outline-{% if data.session.capabilities.enhanced_refresh %}success{% else %}danger{% endif %}">enhanced refresh</button></td>
+    </tr>
+    <tr>
+        <td>Protocols</td>
+        <td> {% for proto in data.session.capabilities.multiprotocol %}<button type="button" class="btn btn-sm btn-outline-secondary">{{ proto }}</button> {% endfor %}</td>
+    </tr>
+    <tr>
+        <td>Add-path</td>
+        <td>{% if data.session.capabilities["add-path"] %}{% for ap in data.session.capabilities["add-path"] %}<span class="label">{{ ap.mode }} {{ ap.family }}</span> {% endfor %}{% else %}<span class="label label-important">not supported</span>{% endif %}</td>
+    </tr>         
+    {% endif %}
+</table>
+</pre>
+<br />
+
+{% endblock %}

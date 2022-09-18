@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+{% block body %}
+<br/>
+<h2>
+    Routes found{% if peer != 'all' %} on {{ peer }}{% endif %} for '{{ prefix }}'
+</h2>
+<br/>
+
+<div class="accordion accordion-flush" id="prefix{{prefix}}">
+{% for prefix in routes %}
+<div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-heading{{loop.index}}">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse{{loop.index}}" aria-expanded="true" aria-controls="panelsStayOpen-collapse{{loop.idex}}">
+            Prefix: {{ prefix }}&nbsp;<span class="small"><span class="badge bg-primary">{{ routes[prefix] | length }}</span></span>
+        </button>
+    </h2>
+    <div id="panelsStayOpen-collapse{{loop.index}}" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-heading{{loop.index}}"> 
+        <div class="accordion-body">
+{%- for route in routes[prefix] %}
+{% if peer != route.peer %}
+<span class="d-block p-2 peername"><span class="badge bg-secondary">{{loop.index}}</span> {{ route.peer }}</span>
+{% endif %}
+<table class="table">
+    <tr>
+        <td width="15%">AS-Path</td>
+        <td class="data">{% for as in route.aspath %}<span data-toggle="tooltip" data-placement="top" title="{{ as[1] }}"><a href="/whois?q={{ as[0] }}" class="whois">{{ as[0] }}</a></span> {% endfor %}via next-hop <a href="/whois?q={{ route.exit_nexthop }}" class="whois">{{ route.exit_nexthop }}</a> (validation state: <span class="{{ route.ovs }}">{{ route.ovs }}</span>)</td>
+    </tr>
+    <tr>
+        <td>Communities</td>
+        <td class="data">{% for community in route.communities %}{% if community[1]  %}<button type="button" class="btn btn-sm btn-outline-primary" data-toggle="tooltip" data-placement="bottom" animation="true" title="{{ community[1] }}">{{ community[0] }}</button>{% else %}<button type="button" class="btn btn-sm btn-outline-secondary">{{ community[0] }}</button></button>{% endif %} {% endfor %}</td>
+    </tr>
+    <tr>
+        <td>Extended communities</td>
+        <td class="data"d>{{ route.extended_communities|join(" ")}}</td>
+    </tr>
+    <tr>
+        <td>Large communities</td>
+        <td>{{ route.large_communities|join(" ")}}</td>
+    </tr>
+</table>
+
+{% endfor %}
+</div>
+
+</div>
+
+</div>
+{% endfor %}
+</div>
+{% endblock %}

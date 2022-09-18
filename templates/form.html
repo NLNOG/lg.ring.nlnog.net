@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>NLNOG Looking Glass</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+  <style>
+
+  .btn-danger {
+    background-color: #f4511e;
+  }
+  input {
+    font-family: monospace;
+  }
+  .stats {
+    color: #888;
+    font-size: smaller;
+    font-family: monospace;
+  }
+  .footer {
+    background-color: #eee;
+    border-top: dotted 1px #999;
+    color: #888;
+    font-size: smaller;
+    padding: 5px;
+  }
+  .footer a {
+    text-decoration: none;
+  }
+ </style>
+</head>
+<body>
+    <main class="flex-shrink-0">
+    <div class="d-flex align-items-center justify-content-center vh-100">
+
+        <form action="/prefix" method="get">
+            <div class="input-group justify-content-center">
+                <img src="{{ url_for('static', filename='img/nlnog.png') }}">
+            </div>
+            <div class="input-group justify-content-center">
+                <h1 class="display-2">NLNOG Looking Glass</h1>
+            </div>
+            <div class="input-group justify-content-center">
+                <p>
+                Please enter an IP address or prefix to look up in our routing tables.
+                </p>
+            </div>
+            <div class="input-group input-group">
+                <span class="input-group-text" id="inputGroup-lg">IP or prefix</span>
+                <input type="text" required="true" autofocus="autofocus" class="form-control" placeholder="192.0.2.0/24" aria-describedby="inputGroup-sizing-lg" name="q">
+                <div class="input-group-btn input-group-lg">
+                    <select class="form-select" name="match">
+                        <option value="exact" selected>Exact match</option>
+                        <option value="orlonger">Or longer</option>
+                    </select>
+                </div>
+                &nbsp; <span class="input-group-text">on</span>
+                <div class="input-group-btn input-group-lg">
+                    <select class="form-select" name="peer">
+                        <option selected value="all">all peers</option>
+                        {% for peer in peers %}
+                        <option>{{ peer }}</option>
+                        {% endfor %}
+                    </select>
+                </div>&nbsp;
+                <button type="submit" class="btn btn-danger" type="submit">Show routes</button>
+            </div>
+            <div class="input-group justify-content-center stats">
+                <p>
+                    <br/>
+                    IPv4: {{ '{:,}'.format(totals["v4_up"]) }} peers up, {{ '{:,}'.format(totals["v4_down"]) }} down, {{ '{:,}'.format(totals["v4_pfx"]) }} prefixes received<br/>
+                    IPv6: {{ '{:,}'.format(totals["v6_up"]) }} peers up, {{ '{:,}'.format(totals["v6_down"]) }} down, {{ '{:,}'.format(totals["v6_pfx"]) }} prefixes received
+                    
+                </p>
+            </div>
+        </form>
+    </div>
+    </main>
+    <div class="footer position-absolute bottom-0 start-0 w-100">
+        The NLNOG Looking Glass is provided by <a href="https://nlnog.net">NLNOG</a>. Hosting is sponsored by <a href="https://bit.nl">BIT</a>. 
+        Questions? Please contact us at <a href="mailto:ring-admins@nlnog.net">ring-admins@nlnog.net</a>.
+    </div>
+{{totals}}
+<script type="text/javascript" src="{{url_for('static', filename='js/jquery.js') }}"></script>
+<script type="text/javascript" src="{{url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+</body>
+</html>
