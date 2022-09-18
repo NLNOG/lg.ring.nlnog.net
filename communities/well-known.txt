@@ -5,8 +5,9 @@
 65535:666,Blackhole
 
 # https://www.iana.org/go/rfc1997
-65535:65281,No export
-65535:65282,No advertise
+65535:65281,NO_EXPORT: do not export
+65535:65282,NO_ADVERTISE: do not advertise
+65535:65283,NO_EXPORT_SUBCONFED: do not advertise to peers or confederations
 
 # https://www.rfc-editor.org/rfc/rfc3765.html
-65535:65283,Don't advertise to peers
+65535:65284,NOPEER: Don't advertise to peers
