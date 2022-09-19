@@ -4,4 +4,4 @@ import os
 sitepath = os.path.realpath(os.path.dirname(__file__))
 sys.path.insert(0, sitepath)
 
-from lg import app as application
+from nlnog_lg import app as application
