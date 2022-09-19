@@ -14,7 +14,7 @@
             Prefix: {{ prefix }}&nbsp;<span class="small"><span class="badge bg-primary">{{ routes[prefix] | length }}</span></span>
         </button>
     </h2>
-    <div id="panelsStayOpen-collapse{{loop.index}}" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-heading{{loop.index}}"> 
+    <div id="panelsStayOpen-collapse{{loop.index}}" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-heading{{loop.index}}">
         <div class="accordion-body">
 {%- for route in routes[prefix] %}
 {% if peer != route.peer %}
@@ -23,7 +23,11 @@
 <table class="table">
     <tr>
         <td width="15%">AS-Path</td>
-        <td class="data">{% for as in route.aspath %}<span data-toggle="tooltip" data-placement="top" title="{{ as[1] }}"><a href="/whois?q={{ as[0] }}" class="whois">{{ as[0] }}</a></span> {% endfor %}via next-hop <a href="/whois?q={{ route.exit_nexthop }}" class="whois">{{ route.exit_nexthop }}</a> (validation state: <span class="{{ route.ovs }}">{{ route.ovs }}</span>)</td>
+	<td class="data">{% for as in route.aspath %}<span data-toggle="tooltip" data-placement="top" title="{{ as[1] }}"><a href="/whois?q={{ as[0] }}" class="whois">{{ as[0] }}</a></span> {% endfor %}via next-hop <a href="/whois?q={{ route.exit_nexthop }}" class="whois">{{ route.exit_nexthop }}</a></td>
+    </tr>
+    <tr>
+	 <td>Validation state</td>
+	<td class="data"><span class="{{ route.ovs }}">{{ route.ovs }}</span></td>
     </tr>
     <tr>
         <td>Communities</td>
@@ -31,11 +35,11 @@
     </tr>
     <tr>
         <td>Extended communities</td>
-        <td class="data"d>{{ route.extended_communities|join(" ")}}</td>
+	<td class="data"d>{% for community in route.extended_communities %}<button type="button" class="btn btn-sm btn-outline-secondary">{{ community }}</button>&nbsp;{% endfor %}</td>
     </tr>
     <tr>
         <td>Large communities</td>
-        <td>{{ route.large_communities|join(" ")}}</td>
+	<td class="data"d>{% for community in route.large_communities %}<button type="button" class="btn btn-sm btn-outline-secondary">{{ community }}</button>&nbsp;{% endfor %}</td>
     </tr>
 </table>
 
