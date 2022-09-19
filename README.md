@@ -1,5 +1,5 @@
 # nlnog-lg
-This is the NLNOG Looking Glass for OpenBPGD, written by Teun Vink <nlnog@teun.tv>. This code is used as a front end to the <a href="https://openbgpd.org">OpenBGPD</a> route collector operated by NLNOG. The looking glass is hosted at https://lg.ring.nlnog.net.
+This is the NLNOG Looking Glass for OpenBPGD, written by Teun Vink <nlnog@teun.tv>. This code is used as a front end to the <a href="https://openbgpd.org">OpenBGPD</a> route collector operated by NLNOG. The looking glass is hosted at https://lg.ring.nlnog.net. The code was inspired on [bird-lg](https://github.com/sileht/bird-lg/) by Mehdi Abaakouk.
 
 **Please note**: this code is not intended as general purpose looking glass code. It is custom made for this specific use case. 
 
