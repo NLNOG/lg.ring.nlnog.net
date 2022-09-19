@@ -6,6 +6,9 @@
 </h2>
 <br/>
 
+{% if routes | length == 0 %}
+    <div class="alert alert-danger" role="alert">No matching routes found.
+{% endif %}
 <div class="accordion accordion-flush" id="prefix{{prefix}}">
 {% for prefix in routes %}
 <div class="accordion-item">
@@ -31,7 +34,7 @@
     </tr>
     <tr>
         <td>Communities</td>
-        <td class="data">{% for community in route.communities %}{% if community[1]  %}<button type="button" class="btn btn-sm btn-outline-primary" data-toggle="tooltip" data-placement="bottom" animation="true" title="{{ community[1] }}">{{ community[0] }}</button>{% else %}<button type="button" class="btn btn-sm btn-outline-secondary">{{ community[0] }}</button></button>{% endif %} {% endfor %}</td>
+        <td class="data">{% for community in route.communities %}{% if community[1]  %}<button type="button" class="btn btn-sm btn-outline-primary" data-toggle="tooltip" data-placement="bottom" animation="true" title="{{ community[1] }}">{{ community[0] }}</button>{% else %}<button type="button" class="btn btn-sm btn-outline-secondary">{{ community[0] }}</button>{% endif %} {% endfor %}</td>
     </tr>
     <tr>
         <td>Extended communities</td>
