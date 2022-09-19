@@ -27,7 +27,7 @@
     </tr>
     <tr>
 	 <td>Validation state</td>
-	<td class="data"><span class="{{ route.ovs }}">{{ route.ovs }}</span></td>
+	<td class="data"><button type="button" class="btn btn-sm btn-{% if route.ovs == "valid" %}success{% elif route.ovs == "invalid" %}danger{% else %}secondary{% endif %}">{{ route.ovs }}</button></td>
     </tr>
     <tr>
         <td>Communities</td>
