@@ -31,6 +31,7 @@ import argparse
 import requests
 import subprocess
 from urllib.parse import unquote
+from datetime import datetime, timezone, timedelta
 from flask import Flask, abort, jsonify, render_template, request
 from dns.resolver import Resolver, NXDOMAIN, Timeout, NoAnswer, NoNameservers
 
@@ -43,7 +44,7 @@ app = Flask(__name__)
 app.config.from_pyfile(args.config_file)
 app.secret_key = app.config["SESSION_KEY"]
 app.debug = args.debug
-app.version = "0.2"
+app.version = "0.2.1"
 asnlist = {}
 
 
@@ -308,7 +309,10 @@ def show_route_for_prefix():
     if "rib" not in result:
         errors.append("No routes found.")
     else:
+        now = datetime.now(timezone.utc)
         for route in result.get("rib", []):
+            delta = timedelta(seconds=int(route.get("last_update_sec", 0)))
+            timestamp = now - delta
             if route["prefix"] not in routes:
                 routes[route["prefix"]] = []
             routes[route["prefix"]].append({
@@ -324,6 +328,8 @@ def show_route_for_prefix():
                 "valid": route["valid"],
                 "ovs": route["ovs"],
                 "exit_nexthop": route["exit_nexthop"],
+                "last_update": route["last_update"],
+                "last_update_at": timestamp.strftime("%Y-%m-%d %H:%M:%S UTC"),
             })
 
     return render_template("route.html", peer=peer, peers=peers, routes=routes, prefix=prefix, errors=errors)

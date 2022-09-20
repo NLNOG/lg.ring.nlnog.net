@@ -33,6 +33,10 @@
 	<td class="data"><button type="button" class="btn btn-sm btn-{% if route.ovs == "valid" %}success{% elif route.ovs == "invalid" %}danger{% else %}secondary{% endif %}">{{ route.ovs }}</button></td>
     </tr>
     <tr>
+        <td>Last update</td>
+        <td class=""data">{{route.last_update_at}} ({{route.last_update}} ago)</td>
+    </tr>
+    <tr>
         <td>Communities</td>
         <td class="data">{% for community in route.communities %}{% if community[1]  %}<button type="button" class="btn btn-sm btn-outline-primary" data-toggle="tooltip" data-placement="bottom" animation="true" title="{{ community[1] }}">{{ community[0] }}</button>{% else %}<button type="button" class="btn btn-sm btn-outline-secondary">{{ community[0] }}</button>{% endif %} {% endfor %}</td>
     </tr>
