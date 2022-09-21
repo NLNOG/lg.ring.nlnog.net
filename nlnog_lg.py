@@ -159,7 +159,7 @@ def get_asn_name(asn: str):
     resolver = Resolver()
     resolver.search = ""
     try:
-        query = resolver.resolve(f"AS{asn}.asn.cymru.com", "TXT")
+        query = resolver.query(f"AS{asn}.asn.cymru.com", "TXT")
         asname = query.rrset[0].to_text().split("|")[-1][:-1].strip()
         asnlist[asn] = asname
         return asname
