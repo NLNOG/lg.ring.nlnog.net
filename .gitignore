@@ -1,0 +1,5 @@
+https://datatracker.ietf.org/doc/html/draft-omar-si-00
+*.swp
+*.pyc
+venv/
+.vscode/
