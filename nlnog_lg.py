@@ -247,13 +247,13 @@ def resolve(domain):
 
     # Try resolving IPv6 first
     try:
-        return str(resv.resolve(domain, 'AAAA')[0])
+        return str(resv.query(domain, 'AAAA')[0])
     except (NXDOMAIN, NoAnswer, NoNameservers, Timeout):
         pass
 
     # Try resolving IPv4
     try:
-        return str(resv.resolve(domain, 'A')[0])
+        return str(resv.query(domain, 'A')[0])
     except (NXDOMAIN, NoAnswer, NoNameservers, Timeout):
         pass
 
