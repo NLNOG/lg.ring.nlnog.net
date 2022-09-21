@@ -1,11 +1,11 @@
-# nlnog-lg
-This is the NLNOG Looking Glass for OpenBPGD, written by Teun Vink <nlnog@teun.tv>. This code is used as a front end to the <a href="https://openbgpd.org">OpenBGPD</a> route collector operated by NLNOG. The looking glass is hosted at https://lg.ring.nlnog.net. The code was inspired on [bird-lg](https://github.com/sileht/bird-lg/) by Mehdi Abaakouk.
+# NLNOG Looking Glass
+This is the NLNOG Looking Glass for OpenBPGD, written by Teun Vink. This code is used as a front end to the <a href="https://openbgpd.org">OpenBGPD</a> route collector operated by NLNOG. The looking glass is hosted at https://lg.ring.nlnog.net. The code was inspired on [bird-lg](https://github.com/sileht/bird-lg/) by Mehdi Abaakouk.
 
 **Please note**: this code is not intended as general purpose looking glass code. It is custom made for this specific use case. 
 
 Questions about the status of the Looking Glass or its peers should be directed at ring-admins@nlnog.net.
 
-## known communities
+## Known communities
 Where possible the Looking Glass tries to provide information on communities used on routes. This is done using information stored in the [`communities`](communities) folder. This folder contains a file per ASN for known communities. Each line should contain a community entry followed by a comma, followed by the description of the community. Any line not matching this format is ignored.
 
 The following types of entries are accepted for communities:
@@ -16,7 +16,7 @@ The following types of entries are accepted for communities:
 
 Additions and updates to the list of communities are welcome, if possible please provide a source for the data as a comment on the first line of the file, and name the file `asNNN.txt`, where `NNN` is the ASN.
 
-## license
+## License
 ```
  Copyright (c) 2022 Stichting NLNOG <stichting@nlnog.net>
 

@@ -5,6 +5,9 @@
  Looking Glass code for the NLNOG Looking Glass.
  Written by Teun Vink <nlnog@teun.tv>
 
+ Code contributions:
+  * Filip Hruška
+
  Source code: https://github/com/NLNOG/nlnog-lg
 
 
