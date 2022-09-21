@@ -26,13 +26,15 @@
 
 import re
 import glob
+import pydot
 import netaddr
+import textwrap
 import argparse
 import requests
 import subprocess
 from urllib.parse import unquote
 from datetime import datetime, timezone, timedelta
-from flask import Flask, abort, jsonify, render_template, request
+from flask import Flask, abort, jsonify, render_template, request, escape, Response
 from dns.resolver import Resolver, NXDOMAIN, Timeout, NoAnswer, NoNameservers
 
 parser = argparse.ArgumentParser()
@@ -154,7 +156,7 @@ def get_asn_name(asn: str):
     resolver = Resolver()
     resolver.search = ""
     try:
-        query = resolver.query(f"AS{asn}.asn.cymru.com", "TXT")
+        query = resolver.resolve(f"AS{asn}.asn.cymru.com", "TXT")
         asname = query.rrset[0].to_text().split("|")[-1][:-1].strip()
         asnlist[asn] = asname
         return asname
@@ -233,6 +235,81 @@ def get_peer_info(names_only: bool = False, established_only: bool = False):
 
     return (data, totals)
 
+def resolve(domain):
+    resv = Resolver()
+    resv.timeout = 1
+
+    # Try resolving IPv6 first
+    try:
+        return str(resv.resolve(domain, 'AAAA')[0])
+    except (NXDOMAIN, NoAnswer, NoNameservers, Timeout):
+        pass
+
+    # Try resolving IPv4
+    try:
+        return str(resv.resolve(domain, 'A')[0])
+    except (NXDOMAIN, NoAnswer, NoNameservers, Timeout):
+        pass
+
+    # No answer
+    return None
+
+def generate_map(routes, prefix):
+    graph = pydot.Dot('map', graph_type='digraph')
+
+    asns = {}
+    links = []
+
+    def add_asn(peer):
+        if peer[0] not in asns:
+            label = '\n'.join(textwrap.wrap(f"AS{peer[0]} | {escape(peer[1])}", width=28))
+            asns[peer[0]] = pydot.Node(peer[0], label=label, fontsize="10")
+
+            graph.add_node(asns[peer[0]])
+
+    def add_link(src, dest, label='', fontsize=10, fillcolor="black"):
+        if f'{src}_{dest}' not in links or label != '':
+            links.append(f'{src}_{dest}')
+
+            edge = pydot.Edge(src, dest, label=label, fontsize=fontsize)
+            edge.set_color(fillcolor)
+            graph.add_edge(edge)
+
+    def visualize_route(route):
+        # Generate a consistent color hash
+        color = 0xffffff
+        for _ in route['aspath']:
+            color *= int(_[0])
+        color &= 0xffffff
+
+        for idx, ashop in enumerate(route['aspath']):
+            add_asn(ashop)
+
+            # Add a link from the looking glass node node
+            if idx == 0:
+                add_link("lgnode", route['aspath'][0][0], label=route['peer'].upper(), fontsize=9, fillcolor="#%x" % color)
+
+            # Add a link towards the prefix
+            if idx+1 == len(route['aspath']):
+                add_link(ashop[0], prefix, fillcolor="#%x" % color)
+                continue
+
+            # Add links in between
+            add_link(ashop[0], route['aspath'][idx+1][0], fillcolor="#%x" % color)
+
+    # Add the prefix node
+    pfxnode = pydot.Node(prefix, label=prefix, shape="box", fillcolor="#F5A9A9", style="filled", fontsize="10")
+    graph.add_node(pfxnode)
+
+    # Add the looking glass node
+    lgnode = pydot.Node("lgnode", label=f"{app.config['LOOKING_GLASS_NAME'].upper()}", shape="box", fillcolor="#F5A9A9", style="filled", fontsize="10")
+    graph.add_node(lgnode)
+
+    # Visualize every path
+    for route in routes:
+        visualize_route(route)
+
+    return graph.create_svg().decode()
 
 @app.route("/")
 def mainpage():
@@ -265,6 +342,8 @@ def show_peer_details(peer: str):
 
 
 @app.route("/prefix")
+@app.route("/prefix/map")
+@app.route("/prefix/map/fullscreen")
 def show_route_for_prefix():
     """ Handle the prefix details page.
     """
@@ -288,11 +367,18 @@ def show_route_for_prefix():
             if (netaddr.valid_ipv4(net) and net.prefixlen <= 16) or \
                (netaddr.valid_ipv6(net) and net.prefixlen <= 48):
                 errors.append("Not showing more specific routes, too many results.")
-            elif request.args.get("match") == "orlonger":
+            elif request.args.get("match") == "orlonger" and request.path != '/prefix/map':
                 args["all"] = 1
     except netaddr.core.AddrFormatError:
         if not netaddr.valid_ipv4(prefix) and not netaddr.valid_ipv6(prefix):
-            return render_template('error.html', warnings=[f"{prefix} is not a valid IPv4 or IPv6 address."]), 400
+            # Test domain resolution
+            resolved = resolve(prefix)
+
+            # Make sure the received answer is either valid IPv4 or IPv6
+            if resolved and (netaddr.valid_ipv4(resolved) or netaddr.valid_ipv6(resolved)):
+                prefix = resolved
+            else:
+                return render_template('error.html', warnings=[f"{prefix} is not a valid IPv4 or IPv6 address."]), 400
     args["prefix"] = prefix
 
     routes = {}
@@ -332,7 +418,22 @@ def show_route_for_prefix():
                 "last_update_at": timestamp.strftime("%Y-%m-%d %H:%M:%S UTC"),
             })
 
-    return render_template("route.html", peer=peer, peers=peers, routes=routes, prefix=prefix, errors=errors)
+    # Return a fullscreen map svg
+    if request.path == '/prefix/map/fullscreen':
+        svgmap = generate_map(routes[route["prefix"]], route["prefix"])
+
+        response = Response(svgmap, mimetype='image/svg+xml')
+        response.headers['Cache-Control'] = 'no-cache, no-store, max-age=0'
+
+        return response
+
+    # Return a map page
+    elif request.path == '/prefix/map':
+        return render_template("map.html", peer=peer, peers=peers, routes=routes, prefix=route["prefix"], errors=errors)
+
+    # Return a route view
+    else:
+        return render_template("route.html", peer=peer, peers=peers, routes=routes, prefix=prefix, errors=errors)
 
 
 @app.route("/about")
