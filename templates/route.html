@@ -33,6 +33,14 @@
 	<td class="data"><button type="button" class="btn btn-sm btn-{% if route.ovs == "valid" %}success{% elif route.ovs == "invalid" %}danger{% else %}secondary{% endif %}">{{ route.ovs }}</button></td>
     </tr>
     <tr>
+        <td>Origin</td>
+        <td class="data">{{ route.origin }}</td>
+    </tr>
+    <tr>
+        <td>MED</td>
+        <td class="data">{{ route.metric }}</td>
+    </tr>
+    <tr>
         <td>Last update</td>
         <td class=""data">{{route.last_update_at}} ({{route.last_update}} ago)</td>
     </tr>

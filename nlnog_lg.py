@@ -352,8 +352,8 @@ def show_peer_details(peer: str):
 @app.route("/prefix/map/fullscreen")
 def show_route_for_prefix():
     """ Handle the prefix details page.
-    """
-    """ Look up BGP routes.
+
+        Look up BGP routes.
     """
     errors = []
     prefix = unquote(request.args.get('q', '').strip())
@@ -422,6 +422,7 @@ def show_route_for_prefix():
                 "exit_nexthop": route["exit_nexthop"],
                 "last_update": route["last_update"],
                 "last_update_at": timestamp.strftime("%Y-%m-%d %H:%M:%S UTC"),
+                "metric": route["metric"],
             })
 
     # Return a fullscreen map svg
