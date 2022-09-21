@@ -287,7 +287,7 @@ def show_route_for_prefix():
         if "/" in prefix:
             if (netaddr.valid_ipv4(net) and net.prefixlen <= 16) or \
                (netaddr.valid_ipv6(net) and net.prefixlen <= 48):
-                errors.append("BLUP MET PREFIX")
+                errors.append("Not showing more specific routes, too many results.")
             elif request.args.get("match") == "orlonger":
                 args["all"] = 1
     except netaddr.core.AddrFormatError:
