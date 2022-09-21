@@ -2,7 +2,7 @@
 {% block body %}
 <br/>
 <h2>
-    Routes found{% if peer != 'all' %} on {{ peer }}{% endif %} for '{{ prefix }}'
+    Routes found{% if peer != 'all' %} on {{ peer }}{% endif %} for '{{ prefix }}' <a href="/prefix/map?{{ request.query_string.decode() }}" class="btn btn-secondary btn-sm" style="margin-bottom: 0.25rem; line-height: 1.2;">map</a>
 </h2>
 <br/>
 

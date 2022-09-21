@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block body %}
+<br/>
+<h2>
+    Routing map{% if peer != 'all' %} on {{ peer }}{% endif %} for '{{ prefix }}'
+    <a href="/prefix?{{ request.query_string.decode() }}" class="btn btn-secondary btn-sm" style="margin-bottom: 0.25rem; line-height: 1.2;">route view</a>
+    <a href="/prefix/map/fullscreen?{{ request.query_string.decode() }}" class="btn btn-secondary btn-sm" style="margin-bottom: 0.25rem; line-height: 1.2;">fullscreen map</a>
+</h2>
+<br/>
+
+{% if routes | length == 0 %}
+    <div class="alert alert-danger" role="alert">No matching routes found.
+{% endif %}
+
+<div class="svgmap">
+    <img src="/prefix/map/fullscreen?{{ request.query_string.decode() }}" style="max-width: 100%">
+</div>
+
+{% endblock %}
