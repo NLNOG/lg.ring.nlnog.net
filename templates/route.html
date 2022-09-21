@@ -8,7 +8,7 @@
 
 {% if routes | length == 0 %}
     <div class="alert alert-danger" role="alert">No matching routes found.
-{% endif %}
+{% else %}
 <div class="accordion accordion-flush" id="prefix{{prefix}}">
 {% for prefix in routes %}
 <div class="accordion-item">
@@ -58,4 +58,5 @@
 </div>
 {% endfor %}
 </div>
+{% endif %}
 {% endblock %}
