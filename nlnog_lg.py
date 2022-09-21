@@ -21,7 +21,7 @@
  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
- 
+
 """
 
 import re
@@ -171,7 +171,7 @@ def whois_command(query: str):
     return subprocess.Popen(['whois'] + server + [query], stdout=subprocess.PIPE).communicate()[0].decode('utf-8', 'ignore')
 
 
-def openbgpd_command(router: str, command: str, args: dict = {}):
+def openbgpd_command(router: str, command: str, args: dict = None):
     """ Run a query on an OpenBGPD endpoint.
     """
     command_map = {
@@ -179,6 +179,9 @@ def openbgpd_command(router: str, command: str, args: dict = {}):
         "route": "rib",
         "peer": "neighbors",
     }
+
+    if args is None:
+        args = {}
 
     url = f"{router}/bgplgd/{command_map[command]}"
     data = requests.get(url, verify=False, params=args)
