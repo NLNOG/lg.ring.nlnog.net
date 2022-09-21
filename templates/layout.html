@@ -54,6 +54,12 @@
 		font-size: 15pt;
 		font-weight: bold;
 	}
+	.valid {
+		color: #009900;
+	}
+	.invalid {
+		color: #990000;
+	}
  </style>
  <script type="text/javascript" src="{{url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
  <script type="text/javascript" src="{{url_for('static', filename='js/jquery.min.js') }}"></script>
@@ -81,7 +87,7 @@
 </head>
 <body>
 	<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-primary">
-		<div class="container-fluid">
+		<div class="container">
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
 			  <span class="navbar-toggler-icon"></span>
 			</button>
@@ -101,7 +107,7 @@
 			  </ul>
 			</div>
 		</div>
-		<div class="container-fluid">
+		<div class="container">
 			<form action="/prefix" method="get">
 				<div class="input-group input-group-sm">
 					<span class="input-group-text" id="inputGroup-sm">IP or prefix</span>

@@ -350,6 +350,7 @@ def show_peer_details(peer: str):
 @app.route("/prefix")
 @app.route("/prefix/map")
 @app.route("/prefix/map/fullscreen")
+@app.route("/prefix/text")
 def show_route_for_prefix():
     """ Handle the prefix details page.
 
@@ -425,21 +426,21 @@ def show_route_for_prefix():
                 "metric": route["metric"],
             })
 
-    # Return a fullscreen map svg
     if request.path == '/prefix/map/fullscreen':
+        # Return a fullscreen map svg
         svgmap = generate_map(routes[route["prefix"]], route["prefix"])
-
         response = Response(svgmap, mimetype='image/svg+xml')
         response.headers['Cache-Control'] = 'no-cache, no-store, max-age=0'
 
         return response
-
-    # Return a map page
     elif request.path == '/prefix/map':
+        # Return a map page
         return render_template("map.html", peer=peer, peers=peers, routes=routes, prefix=route["prefix"], errors=errors)
-
-    # Return a route view
+    elif request.path == "/prefix/text":
+        # return a route view in plain text style
+        return render_template("route-text.html", peer=peer, peers=peers, routes=routes, prefix=prefix, errors=errors)
     else:
+        # Return a route view in HTML table style
         return render_template("route.html", peer=peer, peers=peers, routes=routes, prefix=prefix, errors=errors)
 
 
