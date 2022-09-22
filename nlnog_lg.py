@@ -403,8 +403,6 @@ def show_route_for_prefix():
     communitylist = read_communities()
 
     if "rib" not in result:
-        errors.append("No routes found.")
-    else:
         now = datetime.now(timezone.utc)
         for route in result.get("rib", []):
             delta = timedelta(seconds=int(route.get("last_update_sec", 0)))
