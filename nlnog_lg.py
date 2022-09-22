@@ -388,7 +388,7 @@ def show_route_for_prefix():
             if resolved and (netaddr.valid_ipv4(resolved) or netaddr.valid_ipv6(resolved)):
                 prefix = resolved
             else:
-                return render_template('error.html', warnings=[f"{prefix} is not a valid IPv4 or IPv6 address."]), 400
+                return render_template('error.html', errors=[f"{prefix} is not a valid IPv4 or IPv6 address."]), 400
     args["prefix"] = prefix
 
     routes = {}
@@ -396,13 +396,13 @@ def show_route_for_prefix():
     # query the OpenBGPD API endpoint
     status, result = openbgpd_command(app.config["ROUTER"], "route", args=args)
     if not status:
-        errors.append(result)
+        return render_template('error.html', errors=[f"Failed to query the NLNOG Looking Glass backend."]), 400
 
     # get a list of peers for the dropdown list in the menu
     peers = get_peer_info(names_only=True, established_only=True)
     communitylist = read_communities()
 
-    if "rib" not in result:
+    if "rib" in result:
         now = datetime.now(timezone.utc)
         for route in result.get("rib", []):
             delta = timedelta(seconds=int(route.get("last_update_sec", 0)))

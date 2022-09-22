@@ -64,6 +64,9 @@
 		margin-top: 0.15rem;
 		margin-bottom: 0.15rem;
 	}
+	.navbar {
+		margin-bottom: 10px;
+	}
  </style>
  <script type="text/javascript" src="{{url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
  <script type="text/javascript" src="{{url_for('static', filename='js/jquery.min.js') }}"></script>
@@ -160,7 +163,7 @@
 				</div>
 				{% endif %}
 				{% if errors %}
-				<div class="alert alert-error">
+				<div class="alert alert-danger">
 					{% for error in errors %}{{error}}<br />{% endfor %}
 				</div>
 				{% endif %}
