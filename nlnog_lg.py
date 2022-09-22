@@ -27,6 +27,7 @@
 
 """
 
+import os
 import re
 import glob
 import pydot
@@ -60,7 +61,8 @@ def read_communities():
     communitylist = {}
     re_range = re.compile(r"^(\d+)\-(\d+)$")
 
-    files = glob.glob("communities/*.txt")
+    currentdir = os.path.dirname(os.path.realpath(__file__))
+    files = glob.glob(f"{currentdir}/communities/*.txt")
     for filename in files:
         with open(filename, "r") as fh:
             for entry in [line.strip() for line in fh.readlines()]:
@@ -221,7 +223,8 @@ def get_peer_info(names_only: bool = False, established_only: bool = False):
     data = []
 
     if names_only:
-        return sorted([neighbor.get("description", "no name") for neighbor in result.get("neighbors", [])])
+        return sorted([neighbor.get("description", "no name") for neighbor in \
+            result.get("neighbors", []) if neighbor["state"].lower() in ["up", "established"]])
 
     for neighbor in result.get("neighbors", []):
         props = dict()
