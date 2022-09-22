@@ -30,26 +30,26 @@
 import os
 import re
 import glob
-import pydot
-import netaddr
 import textwrap
 import argparse
-import requests
 import subprocess
 from urllib.parse import unquote
 from datetime import datetime, timezone, timedelta
+import pydot
+import netaddr
+import requests
 from flask import Flask, abort, jsonify, render_template, request, escape, Response
 from dns.resolver import Resolver, NXDOMAIN, Timeout, NoAnswer, NoNameservers
 
 parser = argparse.ArgumentParser()
 parser.add_argument("-c", "--config", dest="config_file", help="path to config file", default="nlnog-lg.conf")
 parser.add_argument("-d", "--debug", dest="debug", action="store_const", const=True, default=False)
-args = parser.parse_args()
+arguments = parser.parse_args()
 
 app = Flask(__name__)
-app.config.from_pyfile(args.config_file)
+app.config.from_pyfile(arguments.config_file)
 app.secret_key = app.config["SESSION_KEY"]
-app.debug = args.debug
+app.debug = arguments.debug
 app.version = "0.2.1"
 asnlist = {}
 
@@ -64,8 +64,8 @@ def read_communities():
     currentdir = os.path.dirname(os.path.realpath(__file__))
     files = glob.glob(f"{currentdir}/communities/*.txt")
     for filename in files:
-        with open(filename, "r") as fh:
-            for entry in [line.strip() for line in fh.readlines()]:
+        with open(filename, "r", encoding="utf8") as filehandle:
+            for entry in [line.strip() for line in filehandle.readlines()]:
                 if entry.startswith("#") or "," not in entry:
                     continue
                 (comm, desc) = entry.split(",", 1)
@@ -90,8 +90,8 @@ def read_communities():
                     elif "x" in value:
                         regex = re.compile(value.replace("x", r"\d"))
                     elif re_range.match(value):
-                        m = re_range.match(value)
-                        first, last = int(m.group(1)), int(m.group(2))
+                        match = re_range.match(value)
+                        first, last = int(match.group(1)), int(match.group(2))
                         if first > last:
                             print(f"Bad range for as {asn}, {first} should be less than {last}")
                             continue
@@ -191,12 +191,12 @@ def openbgpd_command(router: str, command: str, args: dict = None):
         args = {}
 
     url = f"{router}/bgplgd/{command_map[command]}"
-    data = requests.get(url, verify=False, params=args)
+    data = requests.get(url, verify=False, params=args, timeout=60)
     if data.status_code == 200:
         try:
             return True, data.json()
-        except Exception as e:
-            print(f"Error retrieving data from {url}: {e}")
+        except Exception as err:  # pylint: disable=broad-except
+            print(f"Error retrieving data from {url}: {err}")
             return False, "No valid JSON returned by the LG endpoint."
     else:
         print(f"Error: {data.status_code}: {data.text}")
@@ -227,7 +227,7 @@ def get_peer_info(names_only: bool = False, established_only: bool = False):
                        result.get("neighbors", []) if neighbor["state"].lower() in ["up", "established"]])
 
     for neighbor in result.get("neighbors", []):
-        props = dict()
+        props = {}
         props["name"] = neighbor.get("description", "no name")
         props["state"] = neighbor["state"]
         props["since"] = neighbor["last_updown"]
@@ -245,7 +245,9 @@ def get_peer_info(names_only: bool = False, established_only: bool = False):
     return (data, totals)
 
 
-def resolve(domain):
+def resolve(domain: str) -> str:
+    """ Try to resolve a domain.
+    """
     resv = Resolver()
     resv.timeout = 1
 
@@ -265,7 +267,9 @@ def resolve(domain):
     return None
 
 
-def generate_map(routes, prefix):
+def generate_map(routes: dict, prefix: str):
+    """ Generate a SVG map for routes for a prefix.
+    """
     graph = pydot.Dot('map', graph_type='digraph')
 
     asns = {}
@@ -283,8 +287,8 @@ def generate_map(routes, prefix):
             links.append(f'{src}_{dest}')
 
             edge = pydot.Edge(src, dest, label=label, fontsize=fontsize)
-            edge.set_color(fillcolor)
-            graph.add_edge(edge)
+            edge.set_color(fillcolor)  # pylint: disable=no-member
+            graph.add_edge(edge)  # pylint: disable=no-member
 
     def visualize_route(route):
         # Generate a consistent color hash
@@ -321,7 +325,7 @@ def generate_map(routes, prefix):
     for route in routes:
         visualize_route(route)
 
-    return graph.create_svg().decode()
+    return graph.create_svg().decode()  # pylint: disable=no-member
 
 
 @app.route("/")
@@ -439,15 +443,17 @@ def show_route_for_prefix():
         response.headers['Cache-Control'] = 'no-cache, no-store, max-age=0'
 
         return response
-    elif request.path == '/prefix/map':
+
+    if request.path == '/prefix/map':
         # Return a map page
         return render_template("map.html", peer=peer, peers=peers, routes=routes, prefix=route["prefix"], warnings=warnings, errors=errors)
-    elif request.path == "/prefix/text":
+
+    if request.path == "/prefix/text":
         # return a route view in plain text style
         return render_template("route-text.html", peer=peer, peers=peers, routes=routes, prefix=prefix, warnings=warnings, errors=errors)
-    else:
-        # Return a route view in HTML table style
-        return render_template("route.html", peer=peer, peers=peers, routes=routes, prefix=prefix, warnings=warnings, errors=errors)
+
+    # Return a route view in HTML table style
+    return render_template("route.html", peer=peer, peers=peers, routes=routes, prefix=prefix, warnings=warnings, errors=errors)
 
 
 @app.route("/about")
@@ -458,14 +464,14 @@ def about():
 
 
 @app.errorhandler(400)
-def incorrect_request(e: str):
+def incorrect_request(_: str):
     """ A generic error handler for 400 errors.
     """
     return render_template('error.html', warnings=["The server could not understand the request"]), 400
 
 
 @app.errorhandler(404)
-def page_not_found(e: str):
+def page_not_found(_: str):
     """ A generic error handler for 404 errors.
     """
     return render_template('error.html', warnings=["The requested URL was not found on the server."]), 404
@@ -482,9 +488,9 @@ def whois():
     try:
         asnum = int(query)
         query = "as%d" % asnum
-    except Exception:
-        m = re.match(r"[\w\d-]*\.(?P<domain>[\d\w-]+\.[\d\w-]+)$", query)
-        if m:
+    except ValueError:
+        match = re.match(r"[\w\d-]*\.(?P<domain>[\d\w-]+\.[\d\w-]+)$", query)
+        if match:
             query = query.groupdict()["domain"]
 
     output = whois_command(query)
