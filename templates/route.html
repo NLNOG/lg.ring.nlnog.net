@@ -19,6 +19,8 @@
     </h2>
     <div id="panelsStayOpen-collapse{{loop.index}}" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-heading{{loop.index}}">
         <div class="accordion-body">
+    <a href="https://irrexplorer.nlnog.net/prefix/{{prefix}}" class="btn btn-community btn-primary"><i class="bi bi-patch-check"></i> IRR Explorer</a>
+    <a href="/whois?q={{prefix}}" class="btn btn-community btn-primary btn-sms whois"><i class="bi bi-search"></i> WHOIS</a>
 {%- for route in routes[prefix] %}
 {% if peer != route.peer %}
 <span class="d-block p-2 peername"><span class="badge bg-secondary">{{loop.index}}</span> {{ route.peer }}</span>
