@@ -447,16 +447,19 @@ def show_route_for_prefix():
 
     if request.path == '/prefix/map':
         # Return a map page
-        return render_template("map.html", peer=peer, peers=peers, routes=routes, prefix=route["prefix"], warnings=warnings, errors=errors)
+        return render_template("map.html", peer=peer, peers=peers, routes=routes, prefix=route["prefix"], 
+                               warnings=warnings, errors=errors, match=request.args.get("match"))
 
     if request.path == "/prefix/text":
         # return a route view in plain text style
-        return render_template("route-text.html", peer=peer, peers=peers, routes=routes, prefix=prefix, warnings=warnings, errors=errors)
+        return render_template("route-text.html", peer=peer, peers=peers, routes=routes, prefix=prefix,
+                               warnings=warnings, errors=errors, match=request.args.get("match"))
 
     # pylint: enable=undefined-loop-variable
 
     # Return a route view in HTML table style
-    return render_template("route.html", peer=peer, peers=peers, routes=routes, prefix=prefix, warnings=warnings, errors=errors)
+    return render_template("route.html", peer=peer, peers=peers, routes=routes, prefix=prefix, 
+                           warnings=warnings, errors=errors, match=request.args.get("match"))
 
 
 @app.route("/about")
