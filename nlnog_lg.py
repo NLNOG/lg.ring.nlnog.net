@@ -436,6 +436,7 @@ def show_route_for_prefix():
                 "metric": route["metric"],
             })
 
+    # pylint: disable=undefined-loop-variable
     if request.path == '/prefix/map/fullscreen':
         # Return a fullscreen map svg
         svgmap = generate_map(routes[route["prefix"]], route["prefix"])
@@ -451,6 +452,8 @@ def show_route_for_prefix():
     if request.path == "/prefix/text":
         # return a route view in plain text style
         return render_template("route-text.html", peer=peer, peers=peers, routes=routes, prefix=prefix, warnings=warnings, errors=errors)
+
+    # pylint: enable=undefined-loop-variable
 
     # Return a route view in HTML table style
     return render_template("route.html", peer=peer, peers=peers, routes=routes, prefix=prefix, warnings=warnings, errors=errors)
