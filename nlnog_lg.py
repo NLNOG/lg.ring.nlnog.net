@@ -223,8 +223,8 @@ def get_peer_info(names_only: bool = False, established_only: bool = False):
     data = []
 
     if names_only:
-        return sorted([neighbor.get("description", "no name") for neighbor in \
-            result.get("neighbors", []) if neighbor["state"].lower() in ["up", "established"]])
+        return sorted([neighbor.get("description", "no name") for neighbor in
+                       result.get("neighbors", []) if neighbor["state"].lower() in ["up", "established"]])
 
     for neighbor in result.get("neighbors", []):
         props = dict()
@@ -244,6 +244,7 @@ def get_peer_info(names_only: bool = False, established_only: bool = False):
 
     return (data, totals)
 
+
 def resolve(domain):
     resv = Resolver()
     resv.timeout = 1
@@ -262,6 +263,7 @@ def resolve(domain):
 
     # No answer
     return None
+
 
 def generate_map(routes, prefix):
     graph = pydot.Dot('map', graph_type='digraph')
@@ -311,7 +313,8 @@ def generate_map(routes, prefix):
     graph.add_node(pfxnode)
 
     # Add the looking glass node
-    lgnode = pydot.Node("lgnode", label=f"{app.config['LOOKING_GLASS_NAME'].upper()}", shape="box", fillcolor="#F5A9A9", style="filled", fontsize="10")
+    lgnode = pydot.Node("lgnode", label=f"{app.config['LOOKING_GLASS_NAME'].upper()}",
+                        shape="box", fillcolor="#F5A9A9", style="filled", fontsize="10")
     graph.add_node(lgnode)
 
     # Visualize every path
@@ -319,6 +322,7 @@ def generate_map(routes, prefix):
         visualize_route(route)
 
     return graph.create_svg().decode()
+
 
 @app.route("/")
 def mainpage():
@@ -359,6 +363,7 @@ def show_route_for_prefix():
 
         Look up BGP routes.
     """
+    warnings = []
     errors = []
     prefix = unquote(request.args.get('q', '').strip())
     peer = unquote(request.args.get('peer', 'all').strip())
@@ -374,9 +379,9 @@ def show_route_for_prefix():
         net = netaddr.IPNetwork(prefix)
         # single addresses without a netmask would be a valid IPNetwork too, ignore them
         if "/" in prefix:
-            if (netaddr.valid_ipv4(net) and net.prefixlen <= 16) or \
-               (netaddr.valid_ipv6(net) and net.prefixlen <= 48):
-                errors.append("Not showing more specific routes, too many results.")
+            if (netaddr.valid_ipv4(str(net.ip)) and net.prefixlen <= 16) or \
+               (netaddr.valid_ipv6(str(net.ip)) and net.prefixlen <= 48):
+                warnings.append("Not showing more specific routes, too many results, showing exact matches only.")
             elif request.args.get("match") == "orlonger" and request.path != '/prefix/map':
                 args["all"] = 1
     except netaddr.core.AddrFormatError:
@@ -396,7 +401,7 @@ def show_route_for_prefix():
     # query the OpenBGPD API endpoint
     status, result = openbgpd_command(app.config["ROUTER"], "route", args=args)
     if not status:
-        return render_template('error.html', errors=[f"Failed to query the NLNOG Looking Glass backend."]), 400
+        return render_template('error.html', errors=["Failed to query the NLNOG Looking Glass backend."]), 400
 
     # get a list of peers for the dropdown list in the menu
     peers = get_peer_info(names_only=True, established_only=True)
@@ -436,13 +441,13 @@ def show_route_for_prefix():
         return response
     elif request.path == '/prefix/map':
         # Return a map page
-        return render_template("map.html", peer=peer, peers=peers, routes=routes, prefix=route["prefix"], errors=errors)
+        return render_template("map.html", peer=peer, peers=peers, routes=routes, prefix=route["prefix"], warnings=warnings, errors=errors)
     elif request.path == "/prefix/text":
         # return a route view in plain text style
-        return render_template("route-text.html", peer=peer, peers=peers, routes=routes, prefix=prefix, errors=errors)
+        return render_template("route-text.html", peer=peer, peers=peers, routes=routes, prefix=prefix, warnings=warnings, errors=errors)
     else:
         # Return a route view in HTML table style
-        return render_template("route.html", peer=peer, peers=peers, routes=routes, prefix=prefix, errors=errors)
+        return render_template("route.html", peer=peer, peers=peers, routes=routes, prefix=prefix, warnings=warnings, errors=errors)
 
 
 @app.route("/about")
