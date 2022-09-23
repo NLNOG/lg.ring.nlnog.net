@@ -48,7 +48,7 @@
     </tr>
     <tr>
         <td>Communities</td>
-        <td class="data">{% for community in route.communities %}{% if community[1]  %}<button type="button" class="btn btn-community btn-sm btn-outline-primary" data-toggle="tooltip" data-placement="bottom" animation="true" title="{{ community[1] }}">{{ community[0] }}</button>{% else %}<button type="button" class="btn btn-sm btn-outline-secondary">{{ community[0] }}</button>{% endif %} {% endfor %}</td>
+        <td class="data">{% for community in route.communities %}{% if community[1]  %}<button type="button" class="btn btn-community btn-sm btn-outline-primary" data-toggle="tooltip" data-placement="bottom" animation="true" title="{{ community[1] }}">{{ community[0] }} <span class="comm2text">({{ community[1][:25] }}{% if community[1] | length >25 %}...{% endif %})</span></button>{% else %}<button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="tooltip" data-placement="bottom" animation="true" title="no communtiy details available">{{ community[0] }}</button>{% endif %} {% endfor %}</td>
     </tr>
     <tr>
         <td>Extended communities</td>
