@@ -4,13 +4,13 @@
 3491:4xx,PCCWG Asian Customers
 3491:5xx,PCCWG African Customers
 3491:6xx,PCCWG Latin American Customers
-3491:7xx,PCCWG Austrlian Customers
+3491:7xx,PCCWG Australian Customers
 3491:1xxx,PCCWG US Eeast coast Peers
 3491:2xxx,PCCWG US West coast Peers
 3491:3xxx,PCCWG European Peers
 3491:4xxx,PCCWG Asian Peers
 3491:5xxx,PCCWG African Peers
 3491:6xxx,PCCWG Latin American Peers
-3491:7xxx,PCCWG Austrlian Peers
+3491:7xxx,PCCWG Australian Peers
 3491:999,PCCWG Blackhole
 3491:53900,PCCWG do not export to other regions
