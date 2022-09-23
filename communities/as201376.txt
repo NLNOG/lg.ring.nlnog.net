@@ -1,4 +1,4 @@
-# Extended communities used at AuvernIX, provided by contact@auvernix.org
+# Large communities used at AuvernIX, provided by contact@auvernix.org
 201376:0:0,prevent announcement to peers
 201376:0:x,prevent announcement to peer
 201376:1:x,force announcement to peer
