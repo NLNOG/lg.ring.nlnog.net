@@ -1,815 +1,815 @@
 # AS641 communities taken from https://onestep.net/communities/as6461/
-6461:5994,Prefixes learned via a peering session in APAC
-6461:5995,Prefixes learned across a public peering exchange
-6461:5996,Prefixes learned via a peering session in the EU
-6461:5997,Prefixes learned from a peer
-6461:5998,Prefixes learned from a customer
-6461:5999,Prefixes learned from an internal resource
+6461:5994,Peering session in APAC
+6461:5995,Public peering exchange
+6461:5996,Peering in the EU
+6461:5997,Peer
+6461:5998,Customer
+6461:5999,Internal resource
 
-6461:2000,Customer route learned in Asia
-6461:2001,Customer route learned in Western US
-6461:2002,Customer route learned in Central US
-6461:2003,Customer route learned in Eastern US
-6461:2004,Customer route learned in Western EU
-6461:2005,Customer route learned in Eastern EU
-6461:2006,Customer route learned in Western Canada
-6461:2007,Customer route learned in Eastern Canada
-6461:2008,Customer route learned in Australia
-6461:2009,Customer route learned in Africa
-6461:2010,Customer route learned in Central Canada
-6461:2100,Customer route learned in Japan
-6461:2101,Customer route learned in the United States
-6461:2102,Customer route learned in the Netherlands
-6461:2103,Customer route learned in France
-6461:2104,Customer route learned in Denark
-6461:2105,Customer route learned in Ireland
-6461:2106,Customer route learned in Germany
-6461:2107,Customer route learned in the United Kingdom
-6461:2108,Customer route learned in Austria
-6461:2109,Customer route learned in Canada
-6461:2110,Customer route learned in Singapore
-6461:2111,Customer route learned in Hong Kong
-6461:2112,Customer route learned in Australia
-6461:2113,Customer route learned in Spain
-6461:2114,Customer route learned in Belgium
-6461:2115,Customer route learned in Swiss
-6461:2116,Customer route learned in Luxembourg
+6461:2000,Customer in Asia
+6461:2001,Customer in Western US
+6461:2002,Customer in Central US
+6461:2003,Customer in Eastern US
+6461:2004,Customer in Western EU
+6461:2005,Customer in Eastern EU
+6461:2006,Customer in Western Canada
+6461:2007,Customer in Eastern Canada
+6461:2008,Customer in Australia
+6461:2009,Customer in Africa
+6461:2010,Customer in Central Canada
+6461:2100,Customer in Japan
+6461:2101,Customer in the United States
+6461:2102,Customer in the Netherlands
+6461:2103,Customer in France
+6461:2104,Customer in Denark
+6461:2105,Customer in Ireland
+6461:2106,Customer in Germany
+6461:2107,Customer in the United Kingdom
+6461:2108,Customer in Austria
+6461:2109,Customer in Canada
+6461:2110,Customer in Singapore
+6461:2111,Customer in Hong Kong
+6461:2112,Customer in Australia
+6461:2113,Customer in Spain
+6461:2114,Customer in Belgium
+6461:2115,Customer in Swiss
+6461:2116,Customer in Luxembourg
 
-6461:2400,Customer routes learned in AMS1
-6461:2401,Customer routes learned in AMS2
-6461:2402,Customer routes learned in AMS3
-6461:2403,Customer routes learned in APC1
-6461:2404,Customer routes learned in ATL1
-6461:2405,Customer routes learned in ATL2
-6461:2406,Customer routes learned in ATL4
-6461:2407,Customer routes learned in BOS2
-6461:2408,Customer routes learned in CDG1
-6461:2409,Customer routes learned in CDG2
-6461:2410,Customer routes learned in CDG4
-6461:2411,Customer routes learned in CPH1
-6461:2412,Customer routes learned in DCA2
-6461:2413,Customer routes learned in DFW1
-6461:2414,Customer routes learned in DFW2
-6461:2415,Customer routes learned in DFW3
-6461:2416,Customer routes learned in DUB1
-6461:2417,Customer routes learned in EWR1
-6461:2418,Customer routes learned in FRA1
-6461:2419,Customer routes learned in FRA2
-6461:2420,Customer routes learned in IAD1
-6461:2421,Customer routes learned in IAD2
-6461:2422,Customer routes learned in IAD4
-6461:2423,Customer routes learned in IAD5
-6461:2424,Customer routes learned in IAD7
-6461:2425,Customer routes learned in IAH1
-6461:2426,Customer routes learned in LAX1
-6461:2427,Customer routes learned in LAX2
-6461:2428,Customer routes learned in LAX3
-6461:2429,Customer routes learned in LGA5
-6461:2430,Customer routes learned in LGA2
-6461:2431,Customer routes learned in LGA3
-6461:2432,Customer routes learned in LGA4
-6461:2433,Customer routes learned in LHR1
-6461:2434,Customer routes learned in LHR2 & LHR3
-6461:2435,Customer routes learned in LHR4
-6461:2436,Customer routes learned in HND1
-6461:2437,Customer routes learned in NRT3
-6461:2438,Customer routes learned in NUQ1
-6461:2439,Customer routes learned in ORD1
-6461:2440,Customer routes learned in ORD2
-6461:2441,Customer routes learned in PAO1
-6461:2442,Customer routes learned in SEA1
-6461:2443,Customer routes learned in SEA2
-6461:2444,Customer routes learned in SEA3
-6461:2445,Customer routes learned in SEA4
-6461:2446,Customer routes learned in SFO1
-6461:2447,Customer routes learned in SJC1
-6461:2448,Customer routes learned in SJC2
-6461:2449,Customer routes learned in SJC3
-6461:2450,Customer routes learned in SJC6
-6461:2451,Customer routes learned in SQL1
-6461:2452,Customer routes learned in VIE2
-6461:2453,Customer routes learned in VIE3
-6461:2454,Customer routes learned in CDG3
-6461:2455,Customer routes learned in VIE4
-6461:2456,Customer routes learned in AMS5
-6461:2457,Customer routes learned in ATL6
-6461:2458,Customer routes learned in IAD10
-6461:2459,Customer routes learned in LAX9
-6461:2460,Customer routes learned in ORD7
-6461:2461,Customer routes learned in PHX2
-6461:2462,Customer routes learned in SFO3
-6461:2463,Customer routes learned in SJC7
-6461:2464,Customer routes learned in PHL2
-6461:2465,Customer routes learned in CDG9
-6461:2466,Customer routes learned in CDG10
-6461:2467,Customer routes learned in SFO7
-6461:2468,Customer routes learned in EWR2
-6461:2469,Customer routes learned in LAX12
-6461:2470,Customer routes learned in ORD6
-6461:2471,Customer routes learned in FRA3
-6461:2472,Customer routes learned in FRA4
-6461:2473,Customer routes learned in CDG11
-6461:2474,Customer routes learned in CDG12
-6461:2475,Customer routes learned in EWR4
-6461:2476,Customer routes learned in EWR6
-6461:2477,Customer routes learned in EWR191
-6461:2478,Customer routes learned in LGA7
-6461:2479,Customer routes learned in AUS1
-6461:2480,Customer routes learned in DFW5
-6461:2482,Customer routes learned in DFW7
-6461:2481,Customer routes learned in DFW78
-6461:2483,Customer routes learned in ORD4
-6461:2484,Customer routes learned in ORD5
-6461:2485,Customer routes learned in IAD8
-6461:2486,Customer routes learned in BWI9
-6461:2487,Customer routes learned in LAX7
-6461:2488,Customer routes learned in SJC37
-6461:2489,Customer routes learned in SFO2
-6461:2490,Customer routes learned in IAH4
-6461:2491,Customer routes learned in IAH63
-6461:2492,Customer routes learned in IAD6
-6461:2493,Customer routes learned in LAX103
-6461:2494,Customer routes learned in LHR8
-6461:2495,Customer routes learned in LGA6
-6461:2496,Customer routes learned in LGA243
-6461:2497,Customer routes learned in PDX1
-6461:2498,Customer routes learned in MIA1
-6461:2499,Customer routes learned in LAX112
-6461:2300,Customer routes learned in FRA6
-6461:2301,Customer routes learned in FRA5
-6461:2302,Customer routes learned in FRA8
-6461:2303,Customer routes learned in FRA7
-6461:2304,Customer routes learned in AMS15
-6461:2305,Customer routes learned in AMS14
-6461:2306,Customer routes learned in AMS12
-6461:2307,Customer routes learned in AMS13
-6461:2308,Customer routes learned in AMS10
-6461:2309,Customer routes learned in CDG13
-6461:2310,Customer routes learned in CDG14
-6461:2311,Customer routes learned in CDG15
-6461:2312,Customer routes learned in LHR25
-6461:2313,Customer routes learned in LHR6
-6461:2315,Customer routes learned in LHR23
-6461:2316,Customer routes learned in LHR18
-6461:2317,Customer routes learned in IAD93
-6461:2318,Customer routes learned in LAS1
-6461:2319,Customer routes learned in EWR3
-6461:2320,Customer routes learned in EWR8
-6461:2321,Customer routes learned in EWR12
-6461:2322,Customer routes learned in EWR14
-6461:2323,Customer routes learned in BDL4
-6461:2324,Customer routes learned in AUS3
-6461:2325,Customer routes learned in DEN1
-6461:2326,Customer routes learned in DEN2
-6461:2327,Customer routes learned in ORD11
-6461:2328,Customer routes learned in IAH81
-6461:2329,Customer routes learned in SJC5
-6461:2330,Customer routes learned in SJC6
-6461:2331,Customer routes learned in SJC8
-6461:2332,Customer routes learned in PHX3
-6461:2333,Customer routes learned in PHX7
-6461:2334,Customer routes learned in ORD3
-6461:2335,Customer routes learned in DFW14
-6461:2336,Customer routes learned in DFW15
-6461:2337,Customer routes learned in TOR1
-6461:2338,Customer routes learned in TOR2
-6461:2339,Customer routes learned in TOR4
-6461:2340,Customer routes learned in SEA6
-6461:2341,Customer routes learned in ATL3
-6461:2342,Customer routes learned in SLC1
-6461:2343,Customer routes learned in MSP1
-6461:2344,Customer routes learned in MSP2
-6461:2345,Customer routes learned in LHR9
-6461:2346,Customer routes learned in BNA1
-6461:2347,Customer routes learned in MEM1
-6461:2348,Customer routes learned in KCY1
-6461:2349,Customer routes learned in PIT1
-6461:2350,Customer routes learned in AMS16
-6461:2434,Customer routes learned in LHR15
-6461:2351,Customer routes learned in AMS4
-6461:2352,Customer routes learned in LAX5
-6461:2353,Customer routes learned in LHR26
-6461:2354,Customer routes learned in ORD47
-6461:2355,Customer routes learned in SEA25
-6461:2356,Customer routes learned in PHX8
-6461:2357,Customer routes learned in CLE1
-6461:2358,Customer routes learned in BWI18
-6461:2359,Customer routes learned in LHR11
-6461:2360,Customer routes learned in SJC15
-6461:2361,Customer routes learned in ORD48
-6461:2362,Customer routes learned in AMS17
-6461:2363,Customer routes learned in LHR27
-6461:2364,Customer routes learned in MIA2
-6461:2365,Customer routes learned in CLT1
-6461:2366,Customer routes learned in FRA9
-6461:2367,Customer routes learned in CHO1
-6461:2368,Customer routes learned in DTW1
-6461:2369,Customer routes learned in DTW2
-6461:2370,Customer routes learned in IAD47
-6461:2371,Customer routes learned in SEA26
-6461:2372,Customer routes learned in GEG4
-6461:2373,Customer routes learned in SHD1
-6461:2374,Customer routes learned in PHX9
-6461:2375,Customer routes learned in MDW1
-6461:2376,Customer routes learned in CYS2
-6461:2377,Customer routes learned in SAN2
-6461:2378,Customer routes learned in IAD48
-6461:2379,Customer routes learned in IAH19
-6461:2380,Customer routes learned in LHR28
-6461:2381,Customer routes learned in DEN4
-6461:2382,Customer routes learned in BOI2
-6461:2383,Customer routes learned in PHX10
-6461:2384,Customer routes learned in MAN1
-6461:2385,Customer routes learned in CYS1
-6461:2386,Customer routes learned in DFW79
-6461:2387,Customer routes learned in IAD94
-6461:2388,Customer routes learned in CHD1
-6461:2389,Customer routes learned in AUS4
-6461:2390,Customer routes learned in CVG3
-6461:2391,Customer routes learned in TUS1
-6461:2392,Customer routes learned in AMS18
-6461:2393,Customer routes learned in SIN1
-6461:2394,Customer routes learned in IND1
-6461:2395,Customer routes learned in HKG1
-6461:2396,Customer routes learned in ORD49
-6461:2397,Customer routes learned in SYD1
-6461:2398,Customer routes learned in AMA1
-6461:2399,Customer routes learned in AMS19
-6461:8000,Customer routes learned in YUL1
-6461:8001,Customer routes learned in YUL2
-6461:8002,Customer routes learned in DEN5
-6461:8003,Customer routes learned in TOR3
-6461:8004,Customer routes learned in SPK1
-6461:8005,Customer routes learned in SLC2
-6461:8006,Customer routes learned in ORD50
-6461:8007,Customer routes learned in BWI19
-6461:8008,Customer routes learned in SEA28
-6461:8009,Customer routes learned in CLT4
-6461:8010,Customer routes learned in YVR2
-6461:8011,Customer routes learned in YVR3
-6461:8012,Customer routes learned in LAS2
-6461:8013,Customer routes learned in CLT2
-6461:8014,Customer routes learned in EWR69
-6461:8015,Customer routes learned in IAD9
-6461:8016,Customer routes learned in YWG1
-6461:8017,Customer routes learned in YWG2
-6461:8018,Customer routes learned in KCY4
-6461:8019,Customer routes learned in ORD53
-6461:8020,Customer routes learned in DFW83
-6461:8021,Customer routes learned in LAS4
-6461:8022,Customer routes learned in PDX2
-6461:8023,Customer routes learned in MCO1
-6461:8024,Customer routes learned in COS19
-6461:8025,Customer routes learned in DEN67
-6461:8026,Customer routes learned in DUB3
-6461:8027,Customer routes learned in FAB1
-6461:8028,Customer routes learned in MRS1
-6461:8029,Customer routes learned in YYC1
-6461:8030,Customer routes learned in YYC2
-6461:8031,Customer routes learned in LTN1
-6461:8032,Customer routes learned in ATL10
-6461:8033,Customer routes learned in LAX10
-6461:8034,Customer routes learned in DUB2
-6461:8035,Customer routes learned in SGU1
-6461:8036,Customer routes learned in DEN66
-6461:8037,Customer routes learned in BOD1
-6461:8038,Customer routes learned in CDG16
-6461:8039,Customer routes learned in CDG17
-6461:8040,Customer routes learned in CDG18
-6461:8041,Customer routes learned in CDG19
-6461:8042,Customer routes learned in CDG20
-6461:8043,Customer routes learned in TLS1
-6461:8044,Customer routes learned in MAD1
-6461:8045,Customer routes learned in BRU1
-6461:8046,Customer routes learned in LYN1
-6461:8047,Customer routes learned in ZRH1
-6461:8048,Customer routes learned in LYN2
-6461:8049,Customer routes learned in SXB1
-6461:8050,Customer routes learned in NTE1
-6461:8051,Customer routes learned in CDG21
-6461:8052,Customer routes learned in CDG22
-6461:8053,Customer routes learned in CDG23
-6461:8054,Customer routes learned in CDG24
-6461:8055,Customer routes learned in LUX1
-6461:8056,Customer routes learned in MPL1
-6461:8057,Customer routes learned in LIL1
-6461:8058,Customer routes learned in MSP20
-6461:8059,Customer routes learned in KCY2
-6461:8060,Customer routes learned in OMA1
-6461:8061,Customer routes learned in SAT1
-6461:8062,Customer routes learned in PHX15
-6461:8063,Customer routes learned in DTW3
+6461:2400,Customer in AMS1
+6461:2401,Customer in AMS2
+6461:2402,Customer in AMS3
+6461:2403,Customer in APC1
+6461:2404,Customer in ATL1
+6461:2405,Customer in ATL2
+6461:2406,Customer in ATL4
+6461:2407,Customer in BOS2
+6461:2408,Customer in CDG1
+6461:2409,Customer in CDG2
+6461:2410,Customer in CDG4
+6461:2411,Customer in CPH1
+6461:2412,Customer in DCA2
+6461:2413,Customer in DFW1
+6461:2414,Customer in DFW2
+6461:2415,Customer in DFW3
+6461:2416,Customer in DUB1
+6461:2417,Customer in EWR1
+6461:2418,Customer in FRA1
+6461:2419,Customer in FRA2
+6461:2420,Customer in IAD1
+6461:2421,Customer in IAD2
+6461:2422,Customer in IAD4
+6461:2423,Customer in IAD5
+6461:2424,Customer in IAD7
+6461:2425,Customer in IAH1
+6461:2426,Customer in LAX1
+6461:2427,Customer in LAX2
+6461:2428,Customer in LAX3
+6461:2429,Customer in LGA5
+6461:2430,Customer in LGA2
+6461:2431,Customer in LGA3
+6461:2432,Customer in LGA4
+6461:2433,Customer in LHR1
+6461:2434,Customer in LHR2 & LHR3
+6461:2435,Customer in LHR4
+6461:2436,Customer in HND1
+6461:2437,Customer in NRT3
+6461:2438,Customer in NUQ1
+6461:2439,Customer in ORD1
+6461:2440,Customer in ORD2
+6461:2441,Customer in PAO1
+6461:2442,Customer in SEA1
+6461:2443,Customer in SEA2
+6461:2444,Customer in SEA3
+6461:2445,Customer in SEA4
+6461:2446,Customer in SFO1
+6461:2447,Customer in SJC1
+6461:2448,Customer in SJC2
+6461:2449,Customer in SJC3
+6461:2450,Customer in SJC6
+6461:2451,Customer in SQL1
+6461:2452,Customer in VIE2
+6461:2453,Customer in VIE3
+6461:2454,Customer in CDG3
+6461:2455,Customer in VIE4
+6461:2456,Customer in AMS5
+6461:2457,Customer in ATL6
+6461:2458,Customer in IAD10
+6461:2459,Customer in LAX9
+6461:2460,Customer in ORD7
+6461:2461,Customer in PHX2
+6461:2462,Customer in SFO3
+6461:2463,Customer in SJC7
+6461:2464,Customer in PHL2
+6461:2465,Customer in CDG9
+6461:2466,Customer in CDG10
+6461:2467,Customer in SFO7
+6461:2468,Customer in EWR2
+6461:2469,Customer in LAX12
+6461:2470,Customer in ORD6
+6461:2471,Customer in FRA3
+6461:2472,Customer in FRA4
+6461:2473,Customer in CDG11
+6461:2474,Customer in CDG12
+6461:2475,Customer in EWR4
+6461:2476,Customer in EWR6
+6461:2477,Customer in EWR191
+6461:2478,Customer in LGA7
+6461:2479,Customer in AUS1
+6461:2480,Customer in DFW5
+6461:2482,Customer in DFW7
+6461:2481,Customer in DFW78
+6461:2483,Customer in ORD4
+6461:2484,Customer in ORD5
+6461:2485,Customer in IAD8
+6461:2486,Customer in BWI9
+6461:2487,Customer in LAX7
+6461:2488,Customer in SJC37
+6461:2489,Customer in SFO2
+6461:2490,Customer in IAH4
+6461:2491,Customer in IAH63
+6461:2492,Customer in IAD6
+6461:2493,Customer in LAX103
+6461:2494,Customer in LHR8
+6461:2495,Customer in LGA6
+6461:2496,Customer in LGA243
+6461:2497,Customer in PDX1
+6461:2498,Customer in MIA1
+6461:2499,Customer in LAX112
+6461:2300,Customer in FRA6
+6461:2301,Customer in FRA5
+6461:2302,Customer in FRA8
+6461:2303,Customer in FRA7
+6461:2304,Customer in AMS15
+6461:2305,Customer in AMS14
+6461:2306,Customer in AMS12
+6461:2307,Customer in AMS13
+6461:2308,Customer in AMS10
+6461:2309,Customer in CDG13
+6461:2310,Customer in CDG14
+6461:2311,Customer in CDG15
+6461:2312,Customer in LHR25
+6461:2313,Customer in LHR6
+6461:2315,Customer in LHR23
+6461:2316,Customer in LHR18
+6461:2317,Customer in IAD93
+6461:2318,Customer in LAS1
+6461:2319,Customer in EWR3
+6461:2320,Customer in EWR8
+6461:2321,Customer in EWR12
+6461:2322,Customer in EWR14
+6461:2323,Customer in BDL4
+6461:2324,Customer in AUS3
+6461:2325,Customer in DEN1
+6461:2326,Customer in DEN2
+6461:2327,Customer in ORD11
+6461:2328,Customer in IAH81
+6461:2329,Customer in SJC5
+6461:2330,Customer in SJC6
+6461:2331,Customer in SJC8
+6461:2332,Customer in PHX3
+6461:2333,Customer in PHX7
+6461:2334,Customer in ORD3
+6461:2335,Customer in DFW14
+6461:2336,Customer in DFW15
+6461:2337,Customer in TOR1
+6461:2338,Customer in TOR2
+6461:2339,Customer in TOR4
+6461:2340,Customer in SEA6
+6461:2341,Customer in ATL3
+6461:2342,Customer in SLC1
+6461:2343,Customer in MSP1
+6461:2344,Customer in MSP2
+6461:2345,Customer in LHR9
+6461:2346,Customer in BNA1
+6461:2347,Customer in MEM1
+6461:2348,Customer in KCY1
+6461:2349,Customer in PIT1
+6461:2350,Customer in AMS16
+6461:2434,Customer in LHR15
+6461:2351,Customer in AMS4
+6461:2352,Customer in LAX5
+6461:2353,Customer in LHR26
+6461:2354,Customer in ORD47
+6461:2355,Customer in SEA25
+6461:2356,Customer in PHX8
+6461:2357,Customer in CLE1
+6461:2358,Customer in BWI18
+6461:2359,Customer in LHR11
+6461:2360,Customer in SJC15
+6461:2361,Customer in ORD48
+6461:2362,Customer in AMS17
+6461:2363,Customer in LHR27
+6461:2364,Customer in MIA2
+6461:2365,Customer in CLT1
+6461:2366,Customer in FRA9
+6461:2367,Customer in CHO1
+6461:2368,Customer in DTW1
+6461:2369,Customer in DTW2
+6461:2370,Customer in IAD47
+6461:2371,Customer in SEA26
+6461:2372,Customer in GEG4
+6461:2373,Customer in SHD1
+6461:2374,Customer in PHX9
+6461:2375,Customer in MDW1
+6461:2376,Customer in CYS2
+6461:2377,Customer in SAN2
+6461:2378,Customer in IAD48
+6461:2379,Customer in IAH19
+6461:2380,Customer in LHR28
+6461:2381,Customer in DEN4
+6461:2382,Customer in BOI2
+6461:2383,Customer in PHX10
+6461:2384,Customer in MAN1
+6461:2385,Customer in CYS1
+6461:2386,Customer in DFW79
+6461:2387,Customer in IAD94
+6461:2388,Customer in CHD1
+6461:2389,Customer in AUS4
+6461:2390,Customer in CVG3
+6461:2391,Customer in TUS1
+6461:2392,Customer in AMS18
+6461:2393,Customer in SIN1
+6461:2394,Customer in IND1
+6461:2395,Customer in HKG1
+6461:2396,Customer in ORD49
+6461:2397,Customer in SYD1
+6461:2398,Customer in AMA1
+6461:2399,Customer in AMS19
+6461:8000,Customer in YUL1
+6461:8001,Customer in YUL2
+6461:8002,Customer in DEN5
+6461:8003,Customer in TOR3
+6461:8004,Customer in SPK1
+6461:8005,Customer in SLC2
+6461:8006,Customer in ORD50
+6461:8007,Customer in BWI19
+6461:8008,Customer in SEA28
+6461:8009,Customer in CLT4
+6461:8010,Customer in YVR2
+6461:8011,Customer in YVR3
+6461:8012,Customer in LAS2
+6461:8013,Customer in CLT2
+6461:8014,Customer in EWR69
+6461:8015,Customer in IAD9
+6461:8016,Customer in YWG1
+6461:8017,Customer in YWG2
+6461:8018,Customer in KCY4
+6461:8019,Customer in ORD53
+6461:8020,Customer in DFW83
+6461:8021,Customer in LAS4
+6461:8022,Customer in PDX2
+6461:8023,Customer in MCO1
+6461:8024,Customer in COS19
+6461:8025,Customer in DEN67
+6461:8026,Customer in DUB3
+6461:8027,Customer in FAB1
+6461:8028,Customer in MRS1
+6461:8029,Customer in YYC1
+6461:8030,Customer in YYC2
+6461:8031,Customer in LTN1
+6461:8032,Customer in ATL10
+6461:8033,Customer in LAX10
+6461:8034,Customer in DUB2
+6461:8035,Customer in SGU1
+6461:8036,Customer in DEN66
+6461:8037,Customer in BOD1
+6461:8038,Customer in CDG16
+6461:8039,Customer in CDG17
+6461:8040,Customer in CDG18
+6461:8041,Customer in CDG19
+6461:8042,Customer in CDG20
+6461:8043,Customer in TLS1
+6461:8044,Customer in MAD1
+6461:8045,Customer in BRU1
+6461:8046,Customer in LYN1
+6461:8047,Customer in ZRH1
+6461:8048,Customer in LYN2
+6461:8049,Customer in SXB1
+6461:8050,Customer in NTE1
+6461:8051,Customer in CDG21
+6461:8052,Customer in CDG22
+6461:8053,Customer in CDG23
+6461:8054,Customer in CDG24
+6461:8055,Customer in LUX1
+6461:8056,Customer in MPL1
+6461:8057,Customer in LIL1
+6461:8058,Customer in MSP20
+6461:8059,Customer in KCY2
+6461:8060,Customer in OMA1
+6461:8061,Customer in SAT1
+6461:8062,Customer in PHX15
+6461:8063,Customer in DTW3
 
-6461:2200,Peer routes learned in AMS (Amsterdam, NL)
-6461:2201,Peer routes learned in APC (Napa, CA)
-6461:2202,Peer routes learned in ATL (Atlanta, GA)
-6461:2203,Peer routes learned in BOS (Boston, MA)
-6461:2204,Peer routes learned in CDG (Paris, FR)
-6461:2205,Peer routes learned in CPH (Copenhagen, DK)
-6461:2206,Peer routes learned in DCA (Washington, DC)
-6461:2207,Peer routes learned in DFW (Dallas, TX)
-6461:2208,Peer routes learned in DUB (Dublin, IE)
-6461:2209,Peer routes learned in EWR (Pennsauken, NJ)
-6461:2210,Peer routes learned in FRA (Frankfurt, DE)
-6461:2211,Peer routes learned in IAD (Vienna, VA)
-6461:2212,Peer routes learned in IAH (Houston, TX)
-6461:2213,Peer routes learned in LAX (Los Angeles, CA)
-6461:2214,Peer routes learned in LGA (New York, NY)
-6461:2215,Peer routes learned in LHR (London, UK)
-6461:2216,Peer routes learned in HND (Tokyo, JP)
-6461:2217,Peer routes learned in NUQ (Moffett Field, CA)
-6461:2218,Peer routes learned in ORD (Chicago, IL)
-6461:2219,Peer routes learned in PAO (Palo Alto, CA)
-6461:2220,Peer routes learned in SEA (Seattle, WA)
-6461:2221,Peer routes learned in SFO (San Francisco, CA)
-6461:2222,Peer routes learned in SJC (San Jose, CA)
-6461:2223,Peer routes learned in SQL (Redwood City, CA)
-6461:2224,Peer routes learned in VIE (Vienna, AT)
-6461:2225,Peer routes learned in PHL (Philadelphia, PA)
-6461:2226,Peer routes learned in PHX (Phoenix, AZ)
-6461:2227,Peer routes learned in AUS (Austin, TX)
-6461:2228,Peer routes learned in BWI (Baltimore, MD)
-6461:2229,Peer routes learned in PDX (Portland, OR)
-6461:2230,Peer routes learned in MIA (Miami, FL)
-6461:2231,Peer routes learned in LAS (Las Vegas, NV)
-6461:2232,Peer routes learned in BDL (Hartford, CT)
-6461:2233,Peer routes learned in DEN (Denver, CO)
-6461:2234,Peer routes learned in TOR (Toronto, Can)
-6461:2235,Peer routes learned in SLC (Salt Lake City, UT)
-6461:2236,Peer routes learned in MSP (Minneapolis, MN)
-6461:2237,Peer routes learned in BNA (Nashville, TN)
-6461:2238,Peer routes learned in MEM (Memphis, TN)
-6461:2239,Peer routes learned in JZR (Laurel, MT)
-6461:2240,Peer routes learned in KCY (Kansas City, MO)
-6461:2241,Peer routes learned in PIT (Pittsburgh, PA)
-6461:2242,Peer routes learned in ABI (Abilene, TX)
-6461:2243,Peer routes learned in ABQ (Albuquerque, NM)
-6461:2244,Peer routes learned in AMA (Amarillo, TX)
-6461:2245,Peer routes learned in ALT (Allentown, PA)
-6461:2246,Peer routes learned in BIL (Billings, MT)
-6461:2247,Peer routes learned in BIS (Bismark, ND)
-6461:2248,Peer routes learned in BOI (Boise, ID)
-6461:2249,Peer routes learned in BRE (Brewster, WA)
-6461:2250,Peer routes learned in BSN (Basin, WY)
-6461:2251,Peer routes learned in BTH (Bethlehem, PA)
-6461:2252,Peer routes learned in BZN (Bozeman, MT)
-6461:2253,Peer routes learned in COS (Colorado Springs, CO)
-6461:2254,Peer routes learned in CPR (Casper, WY)
-6461:2255,Peer routes learned in CYS (Cheyenne, WY)
-6461:2256,Peer routes learned in EAT (East Wenatchee, WA)
-6461:2257,Peer routes learned in ELP (El Paso, TX)
-6461:2258,Peer routes learned in FAR (Fargo, ND)
-6461:2259,Peer routes learned in GNG (Gooding, ID)
-6461:2260,Peer routes learned in HLN (Helena, MT)
-6461:2261,Peer routes learned in IND (Indianapolis, IN)
-6461:2262,Peer routes learned in JZN (Quincy, WA)
-6461:2263,Peer routes learned in LAN (Lansing, MI)
-6461:2264,Peer routes learned in LAU (Laurel, MT)
-6461:2265,Peer routes learned in LBB (Lubbock, TX)
-6461:2266,Peer routes learned in LGN (La Grande, OR)
-6461:2267,Peer routes learned in MOD (Modesto, CA)
-6461:2268,Peer routes learned in MSO (Missoula, MT)
-6461:2269,Peer routes learned in OMA (Omaha, NE)
-6461:2270,Peer routes learned in ORO (Oroville, WA)
-6461:2271,Peer routes learned in SAN (San Diego,CA)
-6461:2272,Peer routes learned in SMF (Sacremento,CA)
-6461:2273,Peer routes learned in SPK (Spokane, WA)
-6461:2274,Peer routes learned in WNG (Walsenburg, CO)
-6461:2275,Peer routes learned in YVR (Vancouver, BC)
-6461:2276,Peer routes learned in BUT (Butte, MT)
-6461:2277,Peer routes learned in CLE (Cleveland, OH)
-6461:2278,Peer routes learned in CLT (Charlotte, NC)
-6461:2279,Peer routes learned in CHO (Charlottesville, VA)
-6461:2280,Peer routes learned in SDH (Quicksburg, VA)
-6461:2281,Peer routes learned in MDW (Monee, IL)
-6461:2282,Peer routes learned in MAN (Manchester, UK)
-6461:2283,Peer routes learned in CVG (Cincinnati, OH)
-6461:2284,Peer routes learned in TUS (Tucson, AZ)
-6461:2285,Peer routes learned in SIN (Singapore)
-6461:2286,Peer routes learned in HKG (Hong Kong)
-6461:2287,Peer routes learned in SYD (Sydney)
-6461:2288,Peer routes learned in YUL (Montreal)
-6461:2289,Peer routes learned in YWG (Winnipeg)
-6461:2290,Peer routes learned in MCO (Orlando)
-6461:2291,Peer routes learned in FAB (Farnborough)
-6461:2292,Peer routes learned in MRS (Marseille)
-6461:2293,Peer routes learned in YYC (Calgary)
-6461:2294,Peer routes learned in LTN (Luton)
-6461:2295,Peer routes learned in SGU (St George, UT)
-6461:2296,Peer routes learned in BOD (Bordeaux)
-6461:2297,Peer routes learned in TLS (Toulouse)
-6461:2298,Peer routes learned in BRU (Bruxelles)
-6461:2299,Peer routes learned in MAD (Madrid)
-6461:6000,Peer routes learned in LYN (Lyon)
-6461:6001,Peer routes learned in ZRH (Zurich)
-6461:6002,Peer routes learned in NTE (Nantes)
-6461:6003,Peer routes learned in SXB (Strasbourg)
-6461:6004,Peer routes learned in LUX (Luxembourg)
-6461:6005,Peer routes learned in MPL (Montpellier)
-6461:6006,Peer routes learned in LIL (Lille)
-6461:6007,Peer routes learned in SAT (San Antonio)
-6461:6008,Peer routes learned in DTW (Detroit)
+6461:2200,Peer in AMS (Amsterdam, NL)
+6461:2201,Peer in APC (Napa, CA)
+6461:2202,Peer in ATL (Atlanta, GA)
+6461:2203,Peer in BOS (Boston, MA)
+6461:2204,Peer in CDG (Paris, FR)
+6461:2205,Peer in CPH (Copenhagen, DK)
+6461:2206,Peer in DCA (Washington, DC)
+6461:2207,Peer in DFW (Dallas, TX)
+6461:2208,Peer in DUB (Dublin, IE)
+6461:2209,Peer in EWR (Pennsauken, NJ)
+6461:2210,Peer in FRA (Frankfurt, DE)
+6461:2211,Peer in IAD (Vienna, VA)
+6461:2212,Peer in IAH (Houston, TX)
+6461:2213,Peer in LAX (Los Angeles, CA)
+6461:2214,Peer in LGA (New York, NY)
+6461:2215,Peer in LHR (London, UK)
+6461:2216,Peer in HND (Tokyo, JP)
+6461:2217,Peer in NUQ (Moffett Field, CA)
+6461:2218,Peer in ORD (Chicago, IL)
+6461:2219,Peer in PAO (Palo Alto, CA)
+6461:2220,Peer in SEA (Seattle, WA)
+6461:2221,Peer in SFO (San Francisco, CA)
+6461:2222,Peer in SJC (San Jose, CA)
+6461:2223,Peer in SQL (Redwood City, CA)
+6461:2224,Peer in VIE (Vienna, AT)
+6461:2225,Peer in PHL (Philadelphia, PA)
+6461:2226,Peer in PHX (Phoenix, AZ)
+6461:2227,Peer in AUS (Austin, TX)
+6461:2228,Peer in BWI (Baltimore, MD)
+6461:2229,Peer in PDX (Portland, OR)
+6461:2230,Peer in MIA (Miami, FL)
+6461:2231,Peer in LAS (Las Vegas, NV)
+6461:2232,Peer in BDL (Hartford, CT)
+6461:2233,Peer in DEN (Denver, CO)
+6461:2234,Peer in TOR (Toronto, Can)
+6461:2235,Peer in SLC (Salt Lake City, UT)
+6461:2236,Peer in MSP (Minneapolis, MN)
+6461:2237,Peer in BNA (Nashville, TN)
+6461:2238,Peer in MEM (Memphis, TN)
+6461:2239,Peer in JZR (Laurel, MT)
+6461:2240,Peer in KCY (Kansas City, MO)
+6461:2241,Peer in PIT (Pittsburgh, PA)
+6461:2242,Peer in ABI (Abilene, TX)
+6461:2243,Peer in ABQ (Albuquerque, NM)
+6461:2244,Peer in AMA (Amarillo, TX)
+6461:2245,Peer in ALT (Allentown, PA)
+6461:2246,Peer in BIL (Billings, MT)
+6461:2247,Peer in BIS (Bismark, ND)
+6461:2248,Peer in BOI (Boise, ID)
+6461:2249,Peer in BRE (Brewster, WA)
+6461:2250,Peer in BSN (Basin, WY)
+6461:2251,Peer in BTH (Bethlehem, PA)
+6461:2252,Peer in BZN (Bozeman, MT)
+6461:2253,Peer in COS (Colorado Springs, CO)
+6461:2254,Peer in CPR (Casper, WY)
+6461:2255,Peer in CYS (Cheyenne, WY)
+6461:2256,Peer in EAT (East Wenatchee, WA)
+6461:2257,Peer in ELP (El Paso, TX)
+6461:2258,Peer in FAR (Fargo, ND)
+6461:2259,Peer in GNG (Gooding, ID)
+6461:2260,Peer in HLN (Helena, MT)
+6461:2261,Peer in IND (Indianapolis, IN)
+6461:2262,Peer in JZN (Quincy, WA)
+6461:2263,Peer in LAN (Lansing, MI)
+6461:2264,Peer in LAU (Laurel, MT)
+6461:2265,Peer in LBB (Lubbock, TX)
+6461:2266,Peer in LGN (La Grande, OR)
+6461:2267,Peer in MOD (Modesto, CA)
+6461:2268,Peer in MSO (Missoula, MT)
+6461:2269,Peer in OMA (Omaha, NE)
+6461:2270,Peer in ORO (Oroville, WA)
+6461:2271,Peer in SAN (San Diego,CA)
+6461:2272,Peer in SMF (Sacremento,CA)
+6461:2273,Peer in SPK (Spokane, WA)
+6461:2274,Peer in WNG (Walsenburg, CO)
+6461:2275,Peer in YVR (Vancouver, BC)
+6461:2276,Peer in BUT (Butte, MT)
+6461:2277,Peer in CLE (Cleveland, OH)
+6461:2278,Peer in CLT (Charlotte, NC)
+6461:2279,Peer in CHO (Charlottesville, VA)
+6461:2280,Peer in SDH (Quicksburg, VA)
+6461:2281,Peer in MDW (Monee, IL)
+6461:2282,Peer in MAN (Manchester, UK)
+6461:2283,Peer in CVG (Cincinnati, OH)
+6461:2284,Peer in TUS (Tucson, AZ)
+6461:2285,Peer in SIN (Singapore)
+6461:2286,Peer in HKG (Hong Kong)
+6461:2287,Peer in SYD (Sydney)
+6461:2288,Peer in YUL (Montreal)
+6461:2289,Peer in YWG (Winnipeg)
+6461:2290,Peer in MCO (Orlando)
+6461:2291,Peer in FAB (Farnborough)
+6461:2292,Peer in MRS (Marseille)
+6461:2293,Peer in YYC (Calgary)
+6461:2294,Peer in LTN (Luton)
+6461:2295,Peer in SGU (St George, UT)
+6461:2296,Peer in BOD (Bordeaux)
+6461:2297,Peer in TLS (Toulouse)
+6461:2298,Peer in BRU (Bruxelles)
+6461:2299,Peer in MAD (Madrid)
+6461:6000,Peer in LYN (Lyon)
+6461:6001,Peer in ZRH (Zurich)
+6461:6002,Peer in NTE (Nantes)
+6461:6003,Peer in SXB (Strasbourg)
+6461:6004,Peer in LUX (Luxembourg)
+6461:6005,Peer in MPL (Montpellier)
+6461:6006,Peer in LIL (Lille)
+6461:6007,Peer in SAT (San Antonio)
+6461:6008,Peer in DTW (Detroit)
 
-6461:2500,Peer route learned in Asia
-6461:2501,Peer route learned in Western US
-6461:2502,Peer route learned in Central US
-6461:2503,Peer route learned in Eastern US
-6461:2504,Peer route learned in Western EU
-6461:2505,Peer route learned in Eastern EU
-6461:2506,Peer route learned in Western Canada
-6461:2507,Peer route learned in Eastern Canada
-6461:2508,Peer route learned in Australia
-6461:2509,Peer route learned in Africa
-6461:2510,Peer route learned in Central Canada
-6461:2600,Peer route learned in Japan
-6461:2601,Peer route learned in the United States
-6461:2602,Peer route learned in the Netherlands
-6461:2603,Peer route learned in France
-6461:2604,Peer route learned in Denark
-6461:2605,Peer route learned in Ireland
-6461:2606,Peer route learned in Germany
-6461:2607,Peer route learned in the United Kingdom
-6461:2608,Peer route learned in Austria
-6461:2609,Peer route learned in Canada
-6461:2610,Peer route learned in Singapore
-6461:2611,Peer route learned in Hong Kong
-6461:2612,Peer route learned in Australia
-6461:2613,Peer route learned in Spain
-6461:2614,Peer route learned in Belgium
-6461:2615,Peer route learned in Swiss
-6461:2616,Peer route learned in Luxembourg
+6461:2500,Peer in Asia
+6461:2501,Peer in Western US
+6461:2502,Peer in Central US
+6461:2503,Peer in Eastern US
+6461:2504,Peer in Western EU
+6461:2505,Peer in Eastern EU
+6461:2506,Peer in Western Canada
+6461:2507,Peer in Eastern Canada
+6461:2508,Peer in Australia
+6461:2509,Peer in Africa
+6461:2510,Peer in Central Canada
+6461:2600,Peer in Japan
+6461:2601,Peer in the United States
+6461:2602,Peer in the Netherlands
+6461:2603,Peer in France
+6461:2604,Peer in Denark
+6461:2605,Peer in Ireland
+6461:2606,Peer in Germany
+6461:2607,Peer in the United Kingdom
+6461:2608,Peer in Austria
+6461:2609,Peer in Canada
+6461:2610,Peer in Singapore
+6461:2611,Peer in Hong Kong
+6461:2612,Peer in Australia
+6461:2613,Peer in Spain
+6461:2614,Peer in Belgium
+6461:2615,Peer in Swiss
+6461:2616,Peer in Luxembourg
 
-6461:2700,Peer routes learned in AMS (Amsterdam, NL)
-6461:2701,Peer routes learned in APC (Napa, CA)
-6461:2702,Peer routes learned in ATL (Atlanta, GA)
-6461:2703,Peer routes learned in BOS (Boston, MA)
-6461:2704,Peer routes learned in CDG (Paris, FR)
-6461:2705,Peer routes learned in CPH (Copenhagen, DK)
-6461:2706,Peer routes learned in DCA (Washington, DC)
-6461:2707,Peer routes learned in DFW (Dallas, TX)
-6461:2708,Peer routes learned in DUB (Dublin, IE)
-6461:2709,Peer routes learned in EWR (Pennsauken, NJ)
-6461:2710,Peer routes learned in FRA (Frankfurt, DE)
-6461:2711,Peer routes learned in IAD (Vienna, VA)
-6461:2712,Peer routes learned in IAH (Houston, TX)
-6461:2713,Peer routes learned in LAX (Los Angeles, CA)
-6461:2714,Peer routes learned in LGA (New York, NY)
-6461:2715,Peer routes learned in LHR (London, UK)
-6461:2716,Peer routes learned in HND (Tokyo, JP)
-6461:2717,Peer routes learned in NUQ (Moffett Field, CA)
-6461:2718,Peer routes learned in ORD (Chicago, IL)
-6461:2719,Peer routes learned in PAO (Palo Alto, CA)
-6461:2720,Peer routes learned in SEA (Seattle, WA)
-6461:2721,Peer routes learned in SFO (San Francisco, CA)
-6461:2722,Peer routes learned in SJC (San Jose, CA)
-6461:2723,Peer routes learned in SQL (Redwood City, CA)
-6461:2724,Peer routes learned in VIE (Vienna, AT)
-6461:2725,Peer routes learned in PHL (Philadelphia, PA)
-6461:2726,Peer routes learned in PHX (Phoenix, AZ)
-6461:2727,Peer routes learned in AUS (Austin, TX)
-6461:2728,Peer routes learned in BWI (Baltimore, MD)
-6461:2729,Peer routes learned in PDX (Portland, OR)
-6461:2730,Peer routes learned in MIA (Miami, FL)
-6461:2731,Peer routes learned in LAS (Las Vegas, NV)
-6461:2732,Peer routes learned in BDL (Hartford, CT)
-6461:2733,Peer routes learned in DEN (Denver, CO)
-6461:2734,Peer routes learned in TOR (Toronto, Can)
-6461:2735,Peer routes learned in SLC (Salt Lake City, UT)
-6461:2736,Peer routes learned in MSP (Minneapolis, MN)
-6461:2737,Peer routes learned in BNA (Nashville, TN)
-6461:2738,Peer routes learned in MEM (Memphis, TN)
-6461:2739,Peer routes learned in JZR (Laurel, MT)
-6461:2740,Peer routes learned in KCY (Kansas City, MO)
-6461:2741,Peer routes learned in PIT (Pittsburgh, PA)
-6461:2742,Peer routes learned in ABI (Abilene, TX)
-6461:2743,Peer routes learned in ABQ (Albuquerque, NM)
-6461:2744,Peer routes learned in AMA (Amarillo, TX)
-6461:2745,Peer routes learned in ALT (Allentown, PA)
-6461:2746,Peer routes learned in BIL (Billings, MT)
-6461:2747,Peer routes learned in BIS (Bismark, ND)
-6461:2748,Peer routes learned in BOI (Boise, ID)
-6461:2749,Peer routes learned in BRE (Brewster, WA)
-6461:2750,Peer routes learned in BSN (Basin, WY)
-6461:2751,Peer routes learned in BTH (Bethlehem, PA)
-6461:2752,Peer routes learned in BZN (Bozeman, MT)
-6461:2753,Peer routes learned in COS (Colorado Springs, CO)
-6461:2754,Peer routes learned in CPR (Casper, WY)
-6461:2755,Peer routes learned in CYS (Cheyenne, WY)
-6461:2756,Peer routes learned in EAT (East Wenatchee, WA)
-6461:2757,Peer routes learned in ELP (El Paso, TX)
-6461:2758,Peer routes learned in FAR (Fargo, ND)
-6461:2759,Peer routes learned in GNG (Gooding, ID)
-6461:2760,Peer routes learned in HLN (Helena, MT)
-6461:2761,Peer routes learned in IND (Indianapolis, IN)
-6461:2762,Peer routes learned in JZN (Quincy, WA)
-6461:2763,Peer routes learned in LAN (Lansing, MI)
-6461:2764,Peer routes learned in LAU (Laurel, MT)
-6461:2765,Peer routes learned in LBB (Lubbock, TX)
-6461:2766,Peer routes learned in LGN (La Grande, OR)
-6461:2767,Peer routes learned in MOD (Modesto, CA)
-6461:2768,Peer routes learned in MSO (Missoula, MT)
-6461:2769,Peer routes learned in OMA (Omaha, NE)
-6461:2770,Peer routes learned in ORO (Oroville, WA)
-6461:2771,Peer routes learned in SAN (San Diego,CA)
-6461:2772,Peer routes learned in SMF (Sacremento,CA)
-6461:2773,Peer routes learned in SPK (Spokane, WA)
-6461:2774,Peer routes learned in WNG (Walsenburg, CO)
-6461:2775,Peer routes learned in YVR (Vancouver, BC)
-6461:2776,Peer routes learned in BUT (Butte, MT)
-6461:2777,Peer routes learned in CLE (Cleveland, OH)
-6461:2778,Peer routes learned in CLT (Charlotte, NC)
-6461:2779,Peer routes learned in CHO (Charlottesville, VA)
-6461:2780,Peer routes learned in SDH (Quicksburg, VA)
-6461:2781,Peer routes learned in MDW (Monee, IL)
-6461:2782,Peer routes learned in MAN (Manchester, UK)
-6461:2783,Peer routes learned in CVG (Cincinnati, OH)
-6461:2784,Peer routes learned in TUS (Tucson, AZ)
-6461:2785,Peer routes learned in SIN (Singapore)
-6461:2786,Peer routes learned in HKG (Hong Kong)
-6461:2787,Peer routes learned in SYD (Sydney)
-6461:2788,Peer routes learned in YUL (Montreal)
-6461:2789,Peer routes learned in YWG (Winnipeg)
-6461:2790,Peer routes learned in MCO (Orlando)
-6461:2791,Peer routes learned in FAB (Farnborough)
-6461:2792,Peer routes learned in MRS (Marseille)
-6461:2793,Peer routes learned in YYC (Calgary)
-6461:2794,Peer routes learned in LTN (Luton)
-6461:2795,Peer routes learned in SGU (St George, UT)
-6461:2796,Peer routes learned in BOD (Bordeaux)
-6461:2797,Peer routes learned in TLS (Toulouse)
-6461:2798,Peer routes learned in BRU (Bruxelles)
-6461:2799,Peer routes learned in MAD (Madrid)
-6461:7000,Peer routes learned in LYN (Lyon)
-6461:7001,Peer routes learned in ZRH (Zurich)
-6461:7002,Peer routes learned in NTE (Nantes)
-6461:7003,Peer routes learned in SXB (Strasbourg)
-6461:7004,Peer routes learned in LUX (Luxembourg)
-6461:7005,Peer routes learned in MPL (Montpellier)
-6461:7006,Peer routes learned in LIL (Lille)
-6461:7007,Peer routes learned in SAT (San Antonio)
-6461:7008,Peer routes learned in DTW (Detroit)
+6461:2700,Peer in AMS (Amsterdam, NL)
+6461:2701,Peer in APC (Napa, CA)
+6461:2702,Peer in ATL (Atlanta, GA)
+6461:2703,Peer in BOS (Boston, MA)
+6461:2704,Peer in CDG (Paris, FR)
+6461:2705,Peer in CPH (Copenhagen, DK)
+6461:2706,Peer in DCA (Washington, DC)
+6461:2707,Peer in DFW (Dallas, TX)
+6461:2708,Peer in DUB (Dublin, IE)
+6461:2709,Peer in EWR (Pennsauken, NJ)
+6461:2710,Peer in FRA (Frankfurt, DE)
+6461:2711,Peer in IAD (Vienna, VA)
+6461:2712,Peer in IAH (Houston, TX)
+6461:2713,Peer in LAX (Los Angeles, CA)
+6461:2714,Peer in LGA (New York, NY)
+6461:2715,Peer in LHR (London, UK)
+6461:2716,Peer in HND (Tokyo, JP)
+6461:2717,Peer in NUQ (Moffett Field, CA)
+6461:2718,Peer in ORD (Chicago, IL)
+6461:2719,Peer in PAO (Palo Alto, CA)
+6461:2720,Peer in SEA (Seattle, WA)
+6461:2721,Peer in SFO (San Francisco, CA)
+6461:2722,Peer in SJC (San Jose, CA)
+6461:2723,Peer in SQL (Redwood City, CA)
+6461:2724,Peer in VIE (Vienna, AT)
+6461:2725,Peer in PHL (Philadelphia, PA)
+6461:2726,Peer in PHX (Phoenix, AZ)
+6461:2727,Peer in AUS (Austin, TX)
+6461:2728,Peer in BWI (Baltimore, MD)
+6461:2729,Peer in PDX (Portland, OR)
+6461:2730,Peer in MIA (Miami, FL)
+6461:2731,Peer in LAS (Las Vegas, NV)
+6461:2732,Peer in BDL (Hartford, CT)
+6461:2733,Peer in DEN (Denver, CO)
+6461:2734,Peer in TOR (Toronto, Can)
+6461:2735,Peer in SLC (Salt Lake City, UT)
+6461:2736,Peer in MSP (Minneapolis, MN)
+6461:2737,Peer in BNA (Nashville, TN)
+6461:2738,Peer in MEM (Memphis, TN)
+6461:2739,Peer in JZR (Laurel, MT)
+6461:2740,Peer in KCY (Kansas City, MO)
+6461:2741,Peer in PIT (Pittsburgh, PA)
+6461:2742,Peer in ABI (Abilene, TX)
+6461:2743,Peer in ABQ (Albuquerque, NM)
+6461:2744,Peer in AMA (Amarillo, TX)
+6461:2745,Peer in ALT (Allentown, PA)
+6461:2746,Peer in BIL (Billings, MT)
+6461:2747,Peer in BIS (Bismark, ND)
+6461:2748,Peer in BOI (Boise, ID)
+6461:2749,Peer in BRE (Brewster, WA)
+6461:2750,Peer in BSN (Basin, WY)
+6461:2751,Peer in BTH (Bethlehem, PA)
+6461:2752,Peer in BZN (Bozeman, MT)
+6461:2753,Peer in COS (Colorado Springs, CO)
+6461:2754,Peer in CPR (Casper, WY)
+6461:2755,Peer in CYS (Cheyenne, WY)
+6461:2756,Peer in EAT (East Wenatchee, WA)
+6461:2757,Peer in ELP (El Paso, TX)
+6461:2758,Peer in FAR (Fargo, ND)
+6461:2759,Peer in GNG (Gooding, ID)
+6461:2760,Peer in HLN (Helena, MT)
+6461:2761,Peer in IND (Indianapolis, IN)
+6461:2762,Peer in JZN (Quincy, WA)
+6461:2763,Peer in LAN (Lansing, MI)
+6461:2764,Peer in LAU (Laurel, MT)
+6461:2765,Peer in LBB (Lubbock, TX)
+6461:2766,Peer in LGN (La Grande, OR)
+6461:2767,Peer in MOD (Modesto, CA)
+6461:2768,Peer in MSO (Missoula, MT)
+6461:2769,Peer in OMA (Omaha, NE)
+6461:2770,Peer in ORO (Oroville, WA)
+6461:2771,Peer in SAN (San Diego,CA)
+6461:2772,Peer in SMF (Sacremento,CA)
+6461:2773,Peer in SPK (Spokane, WA)
+6461:2774,Peer in WNG (Walsenburg, CO)
+6461:2775,Peer in YVR (Vancouver, BC)
+6461:2776,Peer in BUT (Butte, MT)
+6461:2777,Peer in CLE (Cleveland, OH)
+6461:2778,Peer in CLT (Charlotte, NC)
+6461:2779,Peer in CHO (Charlottesville, VA)
+6461:2780,Peer in SDH (Quicksburg, VA)
+6461:2781,Peer in MDW (Monee, IL)
+6461:2782,Peer in MAN (Manchester, UK)
+6461:2783,Peer in CVG (Cincinnati, OH)
+6461:2784,Peer in TUS (Tucson, AZ)
+6461:2785,Peer in SIN (Singapore)
+6461:2786,Peer in HKG (Hong Kong)
+6461:2787,Peer in SYD (Sydney)
+6461:2788,Peer in YUL (Montreal)
+6461:2789,Peer in YWG (Winnipeg)
+6461:2790,Peer in MCO (Orlando)
+6461:2791,Peer in FAB (Farnborough)
+6461:2792,Peer in MRS (Marseille)
+6461:2793,Peer in YYC (Calgary)
+6461:2794,Peer in LTN (Luton)
+6461:2795,Peer in SGU (St George, UT)
+6461:2796,Peer in BOD (Bordeaux)
+6461:2797,Peer in TLS (Toulouse)
+6461:2798,Peer in BRU (Bruxelles)
+6461:2799,Peer in MAD (Madrid)
+6461:7000,Peer in LYN (Lyon)
+6461:7001,Peer in ZRH (Zurich)
+6461:7002,Peer in NTE (Nantes)
+6461:7003,Peer in SXB (Strasbourg)
+6461:7004,Peer in LUX (Luxembourg)
+6461:7005,Peer in MPL (Montpellier)
+6461:7006,Peer in LIL (Lille)
+6461:7007,Peer in SAT (San Antonio)
+6461:7008,Peer in DTW (Detroit)
 
-6461:2800,Peer routes learned in AMS1
-6461:2801,Peer routes learned in AMS2
-6461:2802,Peer routes learned in AMS3
-6461:2803,Peer routes learned in APC1
-6461:2804,Peer routes learned in ATL1
-6461:2805,Peer routes learned in ATL2
-6461:2806,Peer routes learned in ATL4
-6461:2807,Peer routes learned in BOS2
-6461:2808,Peer routes learned in CDG1
-6461:2809,Peer routes learned in CDG2
-6461:2810,Peer routes learned in CDG4
-6461:2811,Peer routes learned in CPH1
-6461:2812,Peer routes learned in DCA2
-6461:2813,Peer routes learned in DFW1
-6461:2814,Peer routes learned in DFW2
-6461:2815,Peer routes learned in DFW3
-6461:2816,Peer routes learned in DUB1
-6461:2817,Peer routes learned in EWR1
-6461:2818,Peer routes learned in FRA1
-6461:2819,Peer routes learned in FRA2
-6461:2820,Peer routes learned in IAD1
-6461:2821,Peer routes learned in IAD2
-6461:2822,Peer routes learned in IAD4
-6461:2823,Peer routes learned in IAD5
-6461:2824,Peer routes learned in IAD7
-6461:2825,Peer routes learned in IAH1
-6461:2826,Peer routes learned in LAX1
-6461:2827,Peer routes learned in LAX2
-6461:2828,Peer routes learned in LAX3
-6461:2829,Peer routes learned in LGA5
-6461:2830,Peer routes learned in LGA2
-6461:2831,Peer routes learned in LGA3
-6461:2832,Peer routes learned in LGA4
-6461:2833,Peer routes learned in LHR1
-6461:2834,Peer routes learned in LHR2 & LHR3
-6461:2835,Peer routes learned in LHR4
-6461:2836,Peer routes learned in HND1
-6461:2837,Peer routes learned in NRT3
-6461:2838,Peer routes learned in NUQ1
-6461:2839,Peer routes learned in ORD1
-6461:2840,Peer routes learned in ORD2
-6461:2841,Peer routes learned in PAO1
-6461:2842,Peer routes learned in SEA1
-6461:2843,Peer routes learned in SEA2
-6461:2844,Peer routes learned in SEA3
-6461:2845,Peer routes learned in SEA4
-6461:2846,Peer routes learned in SFO1
-6461:2847,Peer routes learned in SJC1
-6461:2848,Peer routes learned in SJC2
-6461:2849,Peer routes learned in SJC3
-6461:2850,Peer routes learned in SJC6
-6461:2851,Peer routes learned in SQL1
-6461:2852,Peer routes learned in VIE2
-6461:2853,Peer routes learned in VIE3
-6461:2854,Peer routes learned in CDG3
-6461:2855,Peer routes learned in VIE4
-6461:2856,Peer routes learned in AMS5
-6461:2857,Peer routes learned in ATL6
-6461:2858,Peer routes learned in IAD10
-6461:2859,Peer routes learned in LAX9
-6461:2860,Peer routes learned in ORD7
-6461:2861,Peer routes learned in PHX2
-6461:2862,Peer routes learned in SFO3
-6461:2863,Peer routes learned in SJC7
-6461:2864,Peer routes learned in PHL2
-6461:2865,Peer routes learned in CDG9
-6461:2866,Peer routes learned in CDG10
-6461:2867,Peer routes learned in SFO7
-6461:2868,Peer routes learned in EWR2
-6461:2869,Peer routes learned in LAX12
-6461:2870,Peer routes learned in ORD6
-6461:2871,Peer routes learned in FRA3
-6461:2872,Peer routes learned in FRA4
-6461:2873,Peer routes learned in CDG11
-6461:2874,Peer routes learned in CDG12
-6461:2875,Peer routes learned in EWR4
-6461:2876,Peer routes learned in EWR6
-6461:2877,Peer routes learned in EWR191
-6461:2878,Peer routes learned in LGA7
-6461:2879,Peer routes learned in AUS1
-6461:2880,Peer routes learned in DFW5
-6461:2882,Peer routes learned in DFW7
-6461:2881,Peer routes learned in DFW78
-6461:2883,Peer routes learned in ORD4
-6461:2884,Peer routes learned in ORD5
-6461:2885,Peer routes learned in IAD8
-6461:2886,Peer routes learned in BWI9
-6461:2887,Peer routes learned in LAX7
-6461:2888,Peer routes learned in SJC37
-6461:2889,Peer routes learned in SFO2
-6461:2890,Peer routes learned in IAH4
-6461:2891,Peer routes learned in IAH63
-6461:2892,Peer routes learned in IAD6
-6461:2893,Peer routes learned in LAX103
-6461:2894,Peer routes learned in LHR8
-6461:2895,Peer routes learned in LGA6
-6461:2896,Peer routes learned in LGA243
-6461:2897,Peer routes learned in PDX1
-6461:2898,Peer routes learned in MIA1
-6461:2899,Peer routes learned in LAX112
-6461:2900,Peer routes learned in FRA6
-6461:2901,Peer routes learned in FRA5
-6461:2902,Peer routes learned in FRA8
-6461:2903,Peer routes learned in FRA7
-6461:2904,Peer routes learned in AMS15
-6461:2905,Peer routes learned in AMS14
-6461:2906,Peer routes learned in AMS12
-6461:2907,Peer routes learned in AMS13
-6461:2908,Peer routes learned in AMS10
-6461:2909,Peer routes learned in CDG13
-6461:2910,Peer routes learned in CDG14
-6461:2911,Peer routes learned in CDG15
-6461:2912,Peer routes learned in LHR25
-6461:2913,Peer routes learned in LHR6
-6461:2915,Peer routes learned in LHR23
-6461:2916,Peer routes learned in LHR18
-6461:2917,Peer routes learned in IAD93
-6461:2918,Peer routes learned in LAS1
-6461:2919,Peer routes learned in EWR3
-6461:2920,Peer routes learned in EWR8
-6461:2921,Peer routes learned in EWR12
-6461:2922,Peer routes learned in EWR14
-6461:2923,Peer routes learned in BDL4
-6461:2924,Peer routes learned in AUS3
-6461:2925,Peer routes learned in DEN1
-6461:2926,Peer routes learned in DEN2
-6461:2927,Peer routes learned in ORD11
-6461:2928,Peer routes learned in IAH81
-6461:2929,Peer routes learned in SJC5
-6461:2930,Peer routes learned in SJC6
-6461:2931,Peer routes learned in SJC8
-6461:2932,Peer routes learned in PHX3
-6461:2933,Peer routes learned in PHX7
-6461:2934,Peer routes learned in ORD3
-6461:2935,Peer routes learned in DFW14
-6461:2936,Peer routes learned in DFW15
-6461:2937,Peer routes learned in TOR1
-6461:2938,Peer routes learned in TOR2
-6461:2939,Peer routes learned in TOR4
-6461:2940,Peer routes learned in SEA6
-6461:2941,Peer routes learned in ATL3
-6461:2942,Peer routes learned in SLC1
-6461:2943,Peer routes learned in MSP1
-6461:2944,Peer routes learned in MSP2
-6461:2945,Peer routes learned in LHR9
-6461:2946,Peer routes learned in BNA1
-6461:2947,Peer routes learned in MEM1
-6461:2948,Peer routes learned in KCY1
-6461:2949,Peer routes learned in PIT1
-6461:2950,Peer routes learned in AMS16
-6461:2834,Peer routes learned in LHR15
-6461:2951,Peer routes learned in AMS4
-6461:2952,Peer routes learned in LAX5
-6461:2953,Peer routes learned in LHR26
-6461:2954,Peer routes learned in ORD47
-6461:2955,Peer routes learned in SEA25
-6461:2956,Peer routes learned in PHX8
-6461:2957,Peer routes learned in CLE1
-6461:2958,Peer routes learned in BWI18
-6461:2959,Peer routes learned in LHR11
-6461:2960,Peer routes learned in SJC15
-6461:2961,Peer routes learned in ORD48
-6461:2962,Peer routes learned in AMS17
-6461:2963,Peer routes learned in LHR27
-6461:2964,Peer routes learned in MIA2
-6461:2965,Peer routes learned in CLT1
-6461:2966,Peer routes learned in FRA9
-6461:2967,Peer routes learned in CHO1
-6461:2968,Peer routes learned in DTW1
-6461:2969,Peer routes learned in DTW2
-6461:2970,Peer routes learned in IAD47
-6461:2971,Peer routes learned in SEA26
-6461:2972,Peer routes learned in GEG4
-6461:2973,Peer routes learned in SHD1
-6461:2974,Peer routes learned in PHX9
-6461:2975,Peer routes learned in MDW1
-6461:2976,Peer routes learned in CYS2
-6461:2977,Peer routes learned in SAN2
-6461:2978,Peer routes learned in IAD48
-6461:2979,Peer routes learned in IAH19
-6461:2980,Peer routes learned in LHR28
-6461:2981,Peer routes learned in DEN4
-6461:2982,Peer routes learned in BOI2
-6461:2983,Peer routes learned in PHX10
-6461:2984,Peer routes learned in MAN1
-6461:2985,Peer routes learned in CYS1
-6461:2986,Peer routes learned in DFW79
-6461:2987,Peer routes learned in IAD94
-6461:2988,Peer routes learned in CHD1
-6461:2989,Peer routes learned in AUS4
-6461:2990,Peer routes learned in CVG3
-6461:2991,Peer routes learned in TUS1
-6461:2992,Peer routes learned in AMS18
-6461:2993,Peer routes learned in SIN1
-6461:2994,Peer routes learned in IND1
-6461:2995,Peer routes learned in HKG1
-6461:2996,Peer routes learned in ORD49
-6461:2997,Peer routes learned in SYD1
-6461:2998,Peer routes learned in AMA1
-6461:2999,Peer routes learned in AMS19
-6461:9000,Peer routes learned in YUL1
-6461:9001,Peer routes learned in YUL2
-6461:9002,Peer routes learned in DEN5
-6461:9003,Peer routes learned in TOR3
-6461:9004,Peer routes learned in SPK1
-6461:9005,Peer routes learned in SLC2
-6461:9006,Peer routes learned in ORD50
-6461:9007,Peer routes learned in BWI19
-6461:9008,Peer routes learned in SEA28
-6461:9009,Peer routes learned in CLT4
-6461:9010,Peer routes learned in YVR2
-6461:9011,Peer routes learned in YVR3
-6461:9012,Peer routes learned in LAS2
-6461:9013,Peer routes learned in CLT2
-6461:9014,Peer routes learned in EWR69
-6461:9015,Peer routes learned in IAD9
-6461:9016,Peer routes learned in YWG1
-6461:9017,Peer routes learned in YWG2
-6461:9018,Peer routes learned in KCY4
-6461:9019,Peer routes learned in ORD53
-6461:9020,Peer routes learned in DFW83
-6461:9021,Peer routes learned in LAS4
-6461:9022,Peer routes learned in PDX2
-6461:9023,Peer routes learned in MCO1
-6461:9024,Peer routes learned in COS19
-6461:9025,Peer routes learned in DEN67
-6461:9026,Peer routes learned in DUB3
-6461:9027,Peer routes learned in FAB1
-6461:9028,Peer routes learned in MRS1
-6461:9029,Peer routes learned in YYC1
-6461:9030,Peer routes learned in YYC2
-6461:9031,Peer routes learned in LTN1
-6461:9032,Peer routes learned in ATL10
-6461:9033,Peer routes learned in LAX10
-6461:9034,Peer routes learned in DUB2
-6461:9035,Peer routes learned in SGU1
-6461:9036,Peer routes learned in DEN66
-6461:9037,Peer routes learned in BOD1
-6461:9038,Peer routes learned in CDG16
-6461:9039,Peer routes learned in CDG17
-6461:9040,Peer routes learned in CDG18
-6461:9041,Peer routes learned in CDG19
-6461:9042,Peer routes learned in CDG20
-6461:9043,Peer routes learned in TLS1
-6461:9044,Peer routes learned in MAD1
-6461:9045,Peer routes learned in BRU1
-6461:9046,Peer routes learned in LYN1
-6461:9047,Peer routes learned in ZRH1
-6461:9048,Peer routes learned in LYN2
-6461:9049,Peer routes learned in SXB1
-6461:9050,Peer routes learned in NTE1
-6461:9051,Peer routes learned in CDG21
-6461:9052,Peer routes learned in CDG22
-6461:9053,Peer routes learned in CDG23
-6461:9054,Peer routes learned in CDG24
-6461:9055,Peer routes learned in LUX1
-6461:9056,Peer routes learned in MPL1
-6461:9057,Peer routes learned in LIL1
-6461:9058,Peer routes learned in MSP20
-6461:9059,Peer routes learned in KCY2
-6461:9060,Peer routes learned in OMA1
-6461:9061,Peer routes learned in SAT1
-6461:9062,Peer routes learned in PHX15
-6461:9063,Peer routes learned in DTW3
+6461:2800,Peer in AMS1
+6461:2801,Peer in AMS2
+6461:2802,Peer in AMS3
+6461:2803,Peer in APC1
+6461:2804,Peer in ATL1
+6461:2805,Peer in ATL2
+6461:2806,Peer in ATL4
+6461:2807,Peer in BOS2
+6461:2808,Peer in CDG1
+6461:2809,Peer in CDG2
+6461:2810,Peer in CDG4
+6461:2811,Peer in CPH1
+6461:2812,Peer in DCA2
+6461:2813,Peer in DFW1
+6461:2814,Peer in DFW2
+6461:2815,Peer in DFW3
+6461:2816,Peer in DUB1
+6461:2817,Peer in EWR1
+6461:2818,Peer in FRA1
+6461:2819,Peer in FRA2
+6461:2820,Peer in IAD1
+6461:2821,Peer in IAD2
+6461:2822,Peer in IAD4
+6461:2823,Peer in IAD5
+6461:2824,Peer in IAD7
+6461:2825,Peer in IAH1
+6461:2826,Peer in LAX1
+6461:2827,Peer in LAX2
+6461:2828,Peer in LAX3
+6461:2829,Peer in LGA5
+6461:2830,Peer in LGA2
+6461:2831,Peer in LGA3
+6461:2832,Peer in LGA4
+6461:2833,Peer in LHR1
+6461:2834,Peer in LHR2 & LHR3
+6461:2835,Peer in LHR4
+6461:2836,Peer in HND1
+6461:2837,Peer in NRT3
+6461:2838,Peer in NUQ1
+6461:2839,Peer in ORD1
+6461:2840,Peer in ORD2
+6461:2841,Peer in PAO1
+6461:2842,Peer in SEA1
+6461:2843,Peer in SEA2
+6461:2844,Peer in SEA3
+6461:2845,Peer in SEA4
+6461:2846,Peer in SFO1
+6461:2847,Peer in SJC1
+6461:2848,Peer in SJC2
+6461:2849,Peer in SJC3
+6461:2850,Peer in SJC6
+6461:2851,Peer in SQL1
+6461:2852,Peer in VIE2
+6461:2853,Peer in VIE3
+6461:2854,Peer in CDG3
+6461:2855,Peer in VIE4
+6461:2856,Peer in AMS5
+6461:2857,Peer in ATL6
+6461:2858,Peer in IAD10
+6461:2859,Peer in LAX9
+6461:2860,Peer in ORD7
+6461:2861,Peer in PHX2
+6461:2862,Peer in SFO3
+6461:2863,Peer in SJC7
+6461:2864,Peer in PHL2
+6461:2865,Peer in CDG9
+6461:2866,Peer in CDG10
+6461:2867,Peer in SFO7
+6461:2868,Peer in EWR2
+6461:2869,Peer in LAX12
+6461:2870,Peer in ORD6
+6461:2871,Peer in FRA3
+6461:2872,Peer in FRA4
+6461:2873,Peer in CDG11
+6461:2874,Peer in CDG12
+6461:2875,Peer in EWR4
+6461:2876,Peer in EWR6
+6461:2877,Peer in EWR191
+6461:2878,Peer in LGA7
+6461:2879,Peer in AUS1
+6461:2880,Peer in DFW5
+6461:2882,Peer in DFW7
+6461:2881,Peer in DFW78
+6461:2883,Peer in ORD4
+6461:2884,Peer in ORD5
+6461:2885,Peer in IAD8
+6461:2886,Peer in BWI9
+6461:2887,Peer in LAX7
+6461:2888,Peer in SJC37
+6461:2889,Peer in SFO2
+6461:2890,Peer in IAH4
+6461:2891,Peer in IAH63
+6461:2892,Peer in IAD6
+6461:2893,Peer in LAX103
+6461:2894,Peer in LHR8
+6461:2895,Peer in LGA6
+6461:2896,Peer in LGA243
+6461:2897,Peer in PDX1
+6461:2898,Peer in MIA1
+6461:2899,Peer in LAX112
+6461:2900,Peer in FRA6
+6461:2901,Peer in FRA5
+6461:2902,Peer in FRA8
+6461:2903,Peer in FRA7
+6461:2904,Peer in AMS15
+6461:2905,Peer in AMS14
+6461:2906,Peer in AMS12
+6461:2907,Peer in AMS13
+6461:2908,Peer in AMS10
+6461:2909,Peer in CDG13
+6461:2910,Peer in CDG14
+6461:2911,Peer in CDG15
+6461:2912,Peer in LHR25
+6461:2913,Peer in LHR6
+6461:2915,Peer in LHR23
+6461:2916,Peer in LHR18
+6461:2917,Peer in IAD93
+6461:2918,Peer in LAS1
+6461:2919,Peer in EWR3
+6461:2920,Peer in EWR8
+6461:2921,Peer in EWR12
+6461:2922,Peer in EWR14
+6461:2923,Peer in BDL4
+6461:2924,Peer in AUS3
+6461:2925,Peer in DEN1
+6461:2926,Peer in DEN2
+6461:2927,Peer in ORD11
+6461:2928,Peer in IAH81
+6461:2929,Peer in SJC5
+6461:2930,Peer in SJC6
+6461:2931,Peer in SJC8
+6461:2932,Peer in PHX3
+6461:2933,Peer in PHX7
+6461:2934,Peer in ORD3
+6461:2935,Peer in DFW14
+6461:2936,Peer in DFW15
+6461:2937,Peer in TOR1
+6461:2938,Peer in TOR2
+6461:2939,Peer in TOR4
+6461:2940,Peer in SEA6
+6461:2941,Peer in ATL3
+6461:2942,Peer in SLC1
+6461:2943,Peer in MSP1
+6461:2944,Peer in MSP2
+6461:2945,Peer in LHR9
+6461:2946,Peer in BNA1
+6461:2947,Peer in MEM1
+6461:2948,Peer in KCY1
+6461:2949,Peer in PIT1
+6461:2950,Peer in AMS16
+6461:2834,Peer in LHR15
+6461:2951,Peer in AMS4
+6461:2952,Peer in LAX5
+6461:2953,Peer in LHR26
+6461:2954,Peer in ORD47
+6461:2955,Peer in SEA25
+6461:2956,Peer in PHX8
+6461:2957,Peer in CLE1
+6461:2958,Peer in BWI18
+6461:2959,Peer in LHR11
+6461:2960,Peer in SJC15
+6461:2961,Peer in ORD48
+6461:2962,Peer in AMS17
+6461:2963,Peer in LHR27
+6461:2964,Peer in MIA2
+6461:2965,Peer in CLT1
+6461:2966,Peer in FRA9
+6461:2967,Peer in CHO1
+6461:2968,Peer in DTW1
+6461:2969,Peer in DTW2
+6461:2970,Peer in IAD47
+6461:2971,Peer in SEA26
+6461:2972,Peer in GEG4
+6461:2973,Peer in SHD1
+6461:2974,Peer in PHX9
+6461:2975,Peer in MDW1
+6461:2976,Peer in CYS2
+6461:2977,Peer in SAN2
+6461:2978,Peer in IAD48
+6461:2979,Peer in IAH19
+6461:2980,Peer in LHR28
+6461:2981,Peer in DEN4
+6461:2982,Peer in BOI2
+6461:2983,Peer in PHX10
+6461:2984,Peer in MAN1
+6461:2985,Peer in CYS1
+6461:2986,Peer in DFW79
+6461:2987,Peer in IAD94
+6461:2988,Peer in CHD1
+6461:2989,Peer in AUS4
+6461:2990,Peer in CVG3
+6461:2991,Peer in TUS1
+6461:2992,Peer in AMS18
+6461:2993,Peer in SIN1
+6461:2994,Peer in IND1
+6461:2995,Peer in HKG1
+6461:2996,Peer in ORD49
+6461:2997,Peer in SYD1
+6461:2998,Peer in AMA1
+6461:2999,Peer in AMS19
+6461:9000,Peer in YUL1
+6461:9001,Peer in YUL2
+6461:9002,Peer in DEN5
+6461:9003,Peer in TOR3
+6461:9004,Peer in SPK1
+6461:9005,Peer in SLC2
+6461:9006,Peer in ORD50
+6461:9007,Peer in BWI19
+6461:9008,Peer in SEA28
+6461:9009,Peer in CLT4
+6461:9010,Peer in YVR2
+6461:9011,Peer in YVR3
+6461:9012,Peer in LAS2
+6461:9013,Peer in CLT2
+6461:9014,Peer in EWR69
+6461:9015,Peer in IAD9
+6461:9016,Peer in YWG1
+6461:9017,Peer in YWG2
+6461:9018,Peer in KCY4
+6461:9019,Peer in ORD53
+6461:9020,Peer in DFW83
+6461:9021,Peer in LAS4
+6461:9022,Peer in PDX2
+6461:9023,Peer in MCO1
+6461:9024,Peer in COS19
+6461:9025,Peer in DEN67
+6461:9026,Peer in DUB3
+6461:9027,Peer in FAB1
+6461:9028,Peer in MRS1
+6461:9029,Peer in YYC1
+6461:9030,Peer in YYC2
+6461:9031,Peer in LTN1
+6461:9032,Peer in ATL10
+6461:9033,Peer in LAX10
+6461:9034,Peer in DUB2
+6461:9035,Peer in SGU1
+6461:9036,Peer in DEN66
+6461:9037,Peer in BOD1
+6461:9038,Peer in CDG16
+6461:9039,Peer in CDG17
+6461:9040,Peer in CDG18
+6461:9041,Peer in CDG19
+6461:9042,Peer in CDG20
+6461:9043,Peer in TLS1
+6461:9044,Peer in MAD1
+6461:9045,Peer in BRU1
+6461:9046,Peer in LYN1
+6461:9047,Peer in ZRH1
+6461:9048,Peer in LYN2
+6461:9049,Peer in SXB1
+6461:9050,Peer in NTE1
+6461:9051,Peer in CDG21
+6461:9052,Peer in CDG22
+6461:9053,Peer in CDG23
+6461:9054,Peer in CDG24
+6461:9055,Peer in LUX1
+6461:9056,Peer in MPL1
+6461:9057,Peer in LIL1
+6461:9058,Peer in MSP20
+6461:9059,Peer in KCY2
+6461:9060,Peer in OMA1
+6461:9061,Peer in SAT1
+6461:9062,Peer in PHX15
+6461:9063,Peer in DTW3
