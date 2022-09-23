@@ -1,0 +1,6 @@
+# provided by beheer@freedomnet.nl (incomplete as of 23-09-2022)
+206238:500:0,learned from any peer
+206238:501:0,learned from AMS-IX peer
+206238:502:0,learned from FRYSIX peer
+206238:801:x,learned from access network peer
+206238:503:x,learned from private peer
