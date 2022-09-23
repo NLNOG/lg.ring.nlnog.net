@@ -1,0 +1,54 @@
+# AS35280 (F5 Inc.) communities, taken from whois as35280
+35280:10,RPKI Valid
+35280:20,RPKI Unknown
+35280:30,RPKI Invalid
+35280:1010,Europe
+35280:1020,North America
+35280:1030,South America
+35280:1040,Asia
+35280:1050,Oceania
+35280:1060,Africa
+35280:2010,France
+35280:2020,Luxembourg
+35280:2030,Netherlands
+35280:2040,United State of America
+35280:2050,United Kingdom
+35280:2060,Germany
+35280:2070,Japan
+35280:2080,Singapore
+35280:2090,Brazil
+35280:2100,Portugal
+35280:2110,Spain
+35280:2120,Australia
+35280:2130,China
+35280:2140,Canada
+35280:2150,Sweden
+35280:2160,India
+35280:3010,Paris
+35280:3020,Toulouse
+35280:3030,Luxembourg
+35280:3040,New York
+35280:3050,Amsterdam
+35280:3060,London
+35280:3070,Frankfort
+35280:3080,Ashburn
+35280:3090,Seattle
+35280:3100,San Jose
+35280:3110,Tokyo
+35280:3120,Singapore
+35280:3130,Sao Paulo
+35280:3140,Lisbon
+35280:3150,Madrid
+35280:3160,Osaka
+35280:3170,Melbourne
+35280:3180,Sydney
+35280:3190,Hong Kong
+35280:3200,Toronto
+35280:3210,Dallas
+35280:3220,Atlanta
+35280:3230,Stockholm
+35280:3240,Mumbai
+35280:3250,Chennai
+35280:30000,Customers
+35280:35280,F5 prefixes
+35280:64999:nnn,Prefixes originally received from ASN
