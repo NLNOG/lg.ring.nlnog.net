@@ -1,0 +1,255 @@
+# PCCW taken from whois -h whois.ripe.net AS3491
+3491:100,North America (East Coast) customer
+3491:1000,North America (East Coast) peer
+3491:200,North America (West Coast) customer
+3491:2000,North America (West Coast) peer
+3491:300,Europe customer
+3491:3000,Europe peer
+3491:400,Asia customer
+3491:4000,Asia peer
+3491:500,Africa customer
+3491:5000,Africa peer
+3491:700,Australia customer
+3491:7000,Australia peer
+3491:101,ASH01 Ashburn customer
+3491:1001,ASH01 Ashburn peer
+3491:112,ASH02 Ashburn customer
+3491:1012,ASH02 Ashburn peer
+3491:108,ATL01 Atlanta customer
+3491:1008,ATL01 Atlanta peer
+3491:115,ATL02 Atlanta customer
+3491:1015,ATL02 Atlanta peer
+3491:104,BLT01 Baltimore customer
+3491:1004,BLT01 Baltimore peer
+3491:202,CHC01 Chicago customer
+3491:2002,CHC01 Chicago peer
+3491:201,DAL01 Dallas customer
+3491:2001,DAL01 Dallas peer
+3491:117,JAX01 Jacksonville customer
+3491:1017,JAX01 Jacksonville peer
+3491:117,JAX01 Jacksonville customer
+3491:1017,JAX01 Jacksonville peer
+3491:212,LAR01 Laredo customer
+3491:2012,LAR01 Laredo peer
+3491:208,LAR02 Laredo customer
+3491:2008,LAR02 Laredo peer
+3491:205,LAX01 Los Angeles customer
+3491:2005,LAX01 Los Angeles peer
+3491:207,LAX04 Los Angeles customer
+3491:2007,LAX04 Los Angeles peer
+3491:209,LAX05 Los Angeles customer
+3491:2009,LAX05 Los Angeles peer
+3491:211,MCA01 McAllen customer
+3491:2011,MCA01 McAllen peer
+3491:206,MCA02 McAllen customer
+3491:2006,MCA02 McAllen peer
+3491:107,MIA02 Miami customer
+3491:1007,MIA02 Miami peer
+3491:106,NYC01 New York customer
+3491:1006,NYC01 New York peer
+3491:110,NYC02 New York customer
+3491:1010,NYC02 New York peer
+3491:113,NYC06 New York customer
+3491:1013,NYC06 New York peer
+3491:114,NYC07 New York customer
+3491:1014,NYC07 New York peer
+3491:105,PHL02 Philadelphia customer
+3491:1005,PHL02 Philadelphia peer
+3491:116,RST01 Reston customer
+3491:1016,RST01 Reston peer
+3491:203,SEA01 Seattle customer
+3491:2003,SEA01 Seattle peer
+3491:204,SJO01 San Jose customer
+3491:2004,SJO01 San Jose peer
+3491:213,TOR01 Toronto customer
+3491:2013,TOR01 Toronto peer
+3491:111,WDC02 Washington DC customer
+3491:1011,WDC02 Washington DC peer
+
+3491:304,AMS01 Amsterdam customer
+3491:3004,AMS01 Amsterdam peer
+3491:322,AMS02 Amsterdam customer
+3491:3022,AMS02 Amsterdam peer
+3491:306,ATH01 Athens customer
+3491:3006,ATH01 Athens peer
+3491:314,BRU01 Brussels customer
+3491:3014,BRU01 Brussels peer
+3491:302,FRF02 Frankfurt customer
+3491:3002,FRF02 Frankfurt peer
+3491:310,FRF05 Frankfurt customer
+3491:3010,FRF05 Frankfurt peer
+3491:311,FRF06 Frankfurt customer
+3491:3011,FRF06 Frankfurt peer
+3491:316,FRF08 Frankfurt customer
+3491:3016,FRF08 Frankfurt peer
+3491:315,GOS01 Gosselies customer
+3491:3015,GOS01 Gosselies peer
+3491:301,LDN01 London customer
+3491:3001,LDN01 London peer
+3491:319,LDN03 London customer
+3491:3019,LDN03 London peer
+3491:312,LDN04 London customer
+3491:3012,LDN04 London peer
+3491:313,LDN05 London customer
+3491:3013,LDN05 London peer
+3491:317,LDN12 London customer
+3491:3017,LDN12 London peer
+3491:307,MAR01 Marseille customer
+3491:3007,MAR01 Marseille peer
+3491:320,MCH01 Munich customer
+3491:3020,MCH01 Munich peer
+3491:303,MIL01 Milan customer
+3491:3003,MIL01 Milan peer
+3491:318,MIL02 Milan customer
+3491:3018,MIL02 Milan peer
+3491:308,PAR03 Paris customer
+3491:3008,PAR03 Paris peer
+3491:309,PAR04 Paris customer
+3491:3009,PAR04 Paris peer
+3491:305,STK01 Stockholm customer
+3491:3005,STK01 Stockholm peer
+3491:321,ZRH01 Zurich customer
+3491:3021,ZRH01 Zurich peer
+3491:414,BKK01 Bangkok customer
+3491:4014,BKK01 Bangkok peer
+3491:422,BKK02 Bangkok customer
+3491:4022,BKK02 Bangkok peer
+3491:428,CAI01 Cairo customer
+3491:4028,CAI01 Cairo peer
+3491:434,DOH01 Doha customer
+3491:4034,DOH01 Doha peer
+3491:427,DUB02 Dubai customer
+3491:4027,DUB02 Dubai peer
+3491:426,DUB03 Dubai customer
+3491:4026,DUB03 Dubai peer
+3491:431,DUB04 Dubai customer
+3491:4031,DUB04 Dubai peer
+3491:435,FJR01 Fujairah customer
+3491:4035,FJR01 Fujairah peer
+3491:424,HAN02 Hanoi customer
+3491:4024,HAN02 Hanoi peer
+3491:425,HCM02 Ho Chi Min Cit customery
+3491:4025,HCM02 Ho Chi Min City peer
+3491:441,HKG02 Hong Kong customer
+3491:4041,HKG02 Hong Kong peer
+3491:401,HKG04 Hong Kong customer
+3491:4001,HKG04 Hong Kong peer
+3491:407,HKG05 Hong Kong customer
+3491:4007,HKG05 Hong Kong peer
+3491:404,HKG08 Hong Kong customer
+3491:4004,HKG08 Hong Kong peer
+3491:415,HKG12 Hong Kong customer
+3491:4015,HKG12 Hong Kong peer
+3491:440,HKG14 Hong Kong customer
+3491:4040,HKG14 Hong Kong peer
+3491:406,HKG15 Hong Kong customer
+3491:4006,HKG15 Hong Kong peer
+3491:420,HKG31 Hong Kong customer
+3491:4020,HKG31 Hong Kong peer
+3491:436,HKG33 Hong Kong customer
+3491:4036,HKG33 Hong Kong peer
+3491:429,HKG39 Hong Kong customer
+3491:4029,HKG39 Hong Kong peer
+3491:416,JKT01 Jakarta customer
+3491:4016,JKT01 Jakarta peer
+3491:437,JKT02 Jakarta customer
+3491:4037,JKT02 Jakarta peer
+3491:438,JKT03 Jakarta customer
+3491:4038,JKT03 Jakarta peer
+3491:413,KLP01 Kuala Lumpur customer
+3491:4013,KLP01 Kuala Lumpur peer
+3491:418,MNL01 Manila customer
+3491:4018,MNL01 Manila peer
+3491:423,MNL02 Manila customer
+3491:4023,MNL02 Manila peer
+3491:444,MNL03 Manila customer
+3491:4044,MNL03 Manila peer
+3491:417,OSA01 Osaka customer
+3491:4017,OSA01 Osaka peer
+3491:443,OSA02 Osaka customer
+3491:4043,OSA02 Osaka peer
+3491:409,SEO01 Seoul customer
+3491:4009,SEO01 Seoul peer
+3491:439,SEO03 Seoul customer
+3491:4039,SEO03 Seoul peer
+3491:411,SIN01 Singapore customer
+3491:4011,SIN01 Singapore peer
+3491:412,SIN02 Singapore customer
+3491:4012,SIN02 Singapore peer
+3491:403,SIN03 Singapore customer
+3491:4003,SIN03 Singapore peer
+3491:405,TAP01 Taipei customer
+3491:4005,TAP01 Taipei peer
+3491:402,TAP04 Taipei customer
+3491:4002,TAP04 Taipei peer
+3491:421,TAP06 Taipei customer
+3491:4021,TAP06 Taipei peer
+3491:408,TOK01 Tokyo customer
+3491:4008,TOK01 Tokyo peer
+3491:419,TOK02 Tokyo customer
+3491:4019,TOK02 Tokyo peer
+3491:432,TOK13 Tokyo customer
+3491:4032,TOK13 Tokyo peer
+3491:521,ACC01 Accra customer
+3491:5021,ACC01 Accra peer
+3491:442,AQJ01 Aqaba customer
+3491:4042,AQJ01 Aqaba peer
+3491:502,BLZ01 Blantyre customer
+3491:5002,BLZ01 Blantyre peer
+3491:503,BLZ02 Blantyre customer
+3491:5003,BLZ02 Blantyre peer
+3491:516,CPT01 Capetown customer
+3491:5016,CPT01 Capetown peer
+3491:528,DKR01 Dakar customer
+3491:5028,DKR01 Dakar peer
+3491:504,DAR01 Dar es Salaam customer
+3491:5004,DAR01 Dar es Salaam peer
+3491:505,DAR02 Dar es Salaam customer
+3491:5005,DAR02 Dar es Salaam peer
+3491:506,GAB01 Gaborone customer
+3491:5006,GAB01 Gaborone peer
+3491:507,GAB02 Gaborone customer
+3491:5007,GAB02 Gaborone peer
+3491:508,GOM01 Goma customer
+3491:5008,GOM01 Goma peer
+3491:509,GYI01 Gisenyi customer
+3491:5009,GYI01 Gisenyi peer
+3491:527,JIB01 Djibouti customer
+3491:5027,JIB01 Djibouti peer
+3491:517,JNB01 Johannesburg customer
+3491:5017,JNB01 Johannesburg peer
+3491:510,JNB02 Johannesburg customer
+3491:5010,JNB02 Johannesburg peer
+3491:523,KLA01 Kampala customer
+3491:5023,KLA01 Kampala peer
+3491:501,LOS01 Lagos customer
+3491:5001,LOS01 Lagos peer
+3491:518,LUN01 Lusaka customer
+3491:5018,LUN01 Lusaka peer
+3491:511,MAU01 Mauritius customer
+3491:5011,MAU01 Mauritius peer
+3491:512,MBA01 Mombasa customer
+3491:5012,MBA01 Mombasa peer
+3491:524,MBA02 Mombasa customer
+3491:5024,MBA02 Mombasa peer
+3491:513,MPM01 Maputo customer
+3491:5013,MPM01 Maputo peer
+3491:514,MPM02 Maputo customer
+3491:5014,MPM02 Maputo peer
+3491:515,MPM03 Maputo customer
+3491:5015,MPM03 Maputo peer
+3491:519,NBO01 Nairobi customer
+3491:5019,NBO01 Nairobi peer
+3491:522,NBO02 Nairobi customer
+3491:5022,NBO02 Nairobi peer
+3491:520,VCC01 Limbe customer
+3491:5020,VCC01 Limbe peer
+3491:701,PER01 Perth customer
+3491:7001,PER01 Perth peer
+3491:702,SYD02 Sydney customer
+3491:7002,SYD02 Sydney peer
+3491:703,SYD04 Sydney customer
+3491:7003,SYD04 Sydney peer
+3491:9001,Customer
+3491:9002,Peer
+3491:9003,Self Originated
