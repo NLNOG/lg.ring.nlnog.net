@@ -1,0 +1,27 @@
+# AS57866 communities taken from https://www.fusix.nl/network/
+65100:nnn,Transit/Private peer route learned from AS XXXXX
+57866:57866,Route originated by Fusix
+57866:500,Customer route
+57866:300,Private peer route
+57866:200,Public peer route
+57866:100,Transit provider route
+65102:24115,Route learned from Equinix IX peer
+65102:41441,Route learned from Speed-IX peer
+65102:56393,Route learned from Frys-IX peer
+65103:1,Route learned in Nikhef
+65103:2,Route learned in Equinix AM6
+65103:3,Route learned in Digital Realty AMS17
+65104:31,Route learned in The Netherlands
+57866:100:nnn,Transit/Private peer route learned from AS XXXXX
+57866:101:57866,Route originated by Fusix
+57866:101:500,Customer route
+57866:101:300,Private peer route
+57866:101:200,Public peer route
+57866:101:100,Transit provider route
+57866:102:24115,Route learned from Equinix IX peer
+57866:102:41441,Route learned from Speed-IX peer
+57866:102:56393,Route learned from Frys-IX peer
+57866:103:1,Route learned in Nikhef
+57866:103:2,Route learned in Equinix AM6
+57866:103:3,Route learned in Digital Realty AMS17
+57866:104:31,Route learned in The Netherlands
