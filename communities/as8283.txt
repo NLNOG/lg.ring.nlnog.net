@@ -1,44 +1,44 @@
 # obtained from 'whois -h whois.ripe.net as8283'
-8283:1,peering routes
 8283:0:1,peering routes
-8283:2,downstream routes
 8283:0:2,downstream routes
-8283:101,Accepted from peer because of valid IRR entry
-8283:5:1,Accepted from peer because of valid IRR entry
-8283:102,Accepted from peer because of valid ROA
-8283:5:2,Accepted from peer because of valid ROA
-8283:104,Accepted while RPKI invalid because it is added to our whitelist
-8283:5:4,Accepted while RPKI invalid because it is added to our whitelist
+8283:1,peering routes
 8283:10,received from TRUE
-8283:6:10,received from TRUE
-8283:11,received from Atom86
+8283:101,Accepted from peer because of valid IRR entry
+8283:102,Accepted from peer because of valid ROA
+8283:104,Accepted while RPKI invalid because it is added to our whitelist
 8283:11,8283:6:11,received from Atom86
+8283:11,received from Atom86
 8283:14,received from FiberRing
-8283:6:14,received from FiberRing
 8283:15,received from Fusix
-8283:6:15,received from Fusix
-8283:50,Set LOCAL_PREF to 50 (default is 100)
-8283:50,8283:1:50,Set LOCAL_PREF to 50 (default is 100)
 8283:150,Set LOCAL_PREF to 150 (default is 100)
 8283:1:150,Set LOCAL_PREF to 150 (default is 100)
+8283:1:450,Set LOCAL_PREF to 450 (default is 500)
+8283:1:50,Set LOCAL_PREF to 50 (default is 100)
+8283:1:50,Set LOCAL_PREF to 50 (default is 500)
+8283:1:550,Set LOCAL_PREF to 550 (default is 500)
+8283:2,downstream routes
 8283:202,Prepend 8283 once to all eBGP peers
+8283:203,Prepend 8283 twice to all eBGP peers
+8283:204,Do not export to eBGP peers
 8283:2:0,Prepend 8283 once to all eBGP peers
 8283:2:nnn,Prepend 8283 once to peer AS nnn
-8283:203,Prepend 8283 twice to all eBGP peers
-8283:3:0,Prepend 8283 twice to all eBGP peers
-8283:3:nnn,Prepend 8283 twice to peer AS nnn
-8283:204,Do not export to eBGP peers
-8283:4:0,Do not export to eBGP peers
-8283:4:nnn,Do not export to peer AS nnn
-8283:50,Set LOCAL_PREF to 50 (default is 500)
-8283:1:50,Set LOCAL_PREF to 50 (default is 500)
-8283:450,Set LOCAL_PREF to 450 (default is 500)
-8283:1:450,Set LOCAL_PREF to 450 (default is 500)
-8283:550,Set LOCAL_PREF to 550 (default is 500)
-8283:1:550,Set LOCAL_PREF to 550 (default is 500)
 8283:301,Do not export to other Coloclue members
 8283:301:0,Do not export to other Coloclue members
 8283:302,Do not export to transit providers
 8283:302:0,Do not export to transit providers
 8283:303,Do not export to direct peers
 8283:303:0,Do not export to direct peers
+8283:3:0,Prepend 8283 twice to all eBGP peers
+8283:3:nnn,Prepend 8283 twice to peer AS nnn
+8283:450,Set LOCAL_PREF to 450 (default is 500)
+8283:4:0,Do not export to eBGP peers
+8283:4:nnn,Do not export to peer AS nnn
+8283:50,Set LOCAL_PREF to 50 (default is 100)
+8283:50,Set LOCAL_PREF to 50 (default is 500)
+8283:550,Set LOCAL_PREF to 550 (default is 500)
+8283:5:1,Accepted from peer because of valid IRR entry
+8283:5:2,Accepted from peer because of valid ROA
+8283:5:4,Accepted while RPKI invalid because it is added to our whitelist
+8283:6:10,received from TRUE
+8283:6:14,received from FiberRing
+8283:6:15,received from Fusix
