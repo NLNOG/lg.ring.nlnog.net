@@ -1,0 +1,146 @@
+6453:86,Peer route
+6453:50,Customer route
+
+6453:1000,North America
+6453:1100,North America - East Coast
+6453:1102,Newark - 165 Halsey
+6453:1103,Ashburn - Equinix
+6453:1106,Montreal
+6453:1107,Laurentides
+6453:1110,Miami - NAP of Americas
+6453:1111,New York - Switch and Data
+6453:1112,New York - 32 AOA
+6453:1113,New York - 60 Hudson
+6453:1114,New York - 111 8th Avenue
+6453:1115,Manassas - EvoSwitch
+6453:1116,New Jersey - Wall
+6453:1117,New Jersey - Secaucus
+6453:1200,North America - Central North
+6453:1202,Chicago - Equinix
+6453:1203,Toronto
+6453:1204,Toronto - Equinix tnk
+6453:1205,Toronto - ORANO
+6453:1206,Toronto - Neutral Data
+6453:1207,Toronto - Cologix
+6453:1300,North America - West Coast
+6453:1301,Palo Alto - Equinix
+6453:1302,Los Angeles - Equinix
+6453:1303,Los Angeles - 1 Wilshire
+6453:1304,Hillsboro - Telx
+6453:1305,San Jose - Equinix
+6453:1306,Seattle
+6453:1307,Vancouver - West Hastings
+6453:1308,Lake Cowichan
+6453:1309,Santa Clara
+6453:1310,Phoenix
+6453:1311,Las Vegas
+6453:1312,San Francisco
+6453:1400,North America - Central South
+6453:1402,Atlanta - Telx
+6453:1403,Dallas - Equinix
+6453:1404,Denver - Confluent
+6453:1405,Mcallen
+6453:1406,Laredo
+6453:1407,Dallas - Bryan St
+6453:2000,Europe
+6453:2100,United Kingdom
+6453:2101,London - Telehouse North
+6453:2102,London - Harbour Exchange
+6453:2103,London - Redbus Interhouse
+6453:2104,London - Stratford
+6453:2105,London - Telecity Redbus
+6453:2106,London - Telehouse East
+6453:2107,London -  High Wycombe
+6453:2108,Somerset - Highbridge Cable Station
+6453:2109,London - Slough Equinix
+6453:2200,France
+6453:2201,Courbevoie - LDCom
+6453:2202,Paris - Telehouse
+6453:2203,Saint Denis - Equinix
+6453:2204,Marseille - Netcenter
+6453:2205,Vitry-sur-Seine - Iliad DC3
+6453:2300,DACH region
+6453:2302,Frankfurt - InterXion
+6453:2304,Frankfurt - Ancotel
+6453:2305,Frankfurt - Itenos
+6453:2306,Zurich
+6453:2400,Benelux
+6453:2401,Amsterdam - SARA
+6453:2402,Brussels - Interxion
+6453:2403,Amsterdam - Telecity 2
+6453:2404,Amsterdam - Equinix-AM2
+6453:2500,Portugal and Spain
+6453:2502,Madrid - ESPANIX Co-location
+6453:2503,Barcelona - Telvent
+6453:2504,Derio - Cable Station
+6453:2505,Madrid - InterXion
+6453:2506,Madrid - Carrier House
+6453:2511,Lisbon - Prior Velho
+6453:2512,Seixal
+6453:2700,Norway and Sweden
+6453:2701,Oslo - Digiplex Co-location
+6453:2702,Stockholm - TeleCity
+6453:2800,Italy
+6453:2801,Milan - INET
+6453:2802,Rome - Caspur
+6453:2900,Far East Europe
+6453:2901,Warsaw - Energis Polska
+6453:2902,Warsaw - Netia
+6453:2903,Moscow - MSK-IX
+6453:2904,Istanbul
+6453:2905,Ankara
+6453:3000,Asia Pacific
+6453:3100,Hong-Kong
+6453:3101,Hong-Kong - Kowloon
+6453:3102,Hong-Kong - Mega-I
+6453:3103,Hong-Kong - Equinix HK1
+6453:3104,Hong Kong - Billion Center
+6453:3200,The Philippines and Guam
+6453:3201,Manila - Quezon City
+6453:3203,Guam
+6453:3300,Australia
+6453:3301,Sydney - Equinix
+6453:3302,Sydney - Equinix
+6453:3303,Sydney - Global switch
+6453:3400,Malaysia Singapore and Thailand
+6453:3401,Kuala Lumpur - AIMS
+6453:3402,Singapore - Equinix
+6453:3403,Singapore - Global Switch
+6453:3404,Bangkok
+6453:3405,Singapore - TCX
+6453:3406,Singapore - DRT
+6453:3407,Singapore - Equinix SG2
+6453:3500,Indonesia
+6453:3501,Djakarta
+6453:3600,Japan
+6453:3601,Tokyo - Equinix
+6453:3602,Tokyo - Otemachi
+6453:3603,Osaka - Equinix
+6453:3604,Chiba - EMI
+6453:3700,Taiwan
+6453:3701,Taipei
+6453:4000,Middle East and Africa
+6453:4100,Egypt
+6453:4101,Cairo
+6453:4200,Saudi Arabia
+6453:4201,Riyadh
+6453:4202,Jeddah
+6453:4203,Riyadh
+6453:4204,Fujairah
+6453:4300,South Africa
+6453:4301,Johannesburg
+6453:4302,Cape Town
+6453:4400,Kenya
+6453:4401,Nairobi
+6453:4500,Tanzania
+6453:4501,Dar es Salaam
+6453:4502,Dar es Salaam
+6453:6000,India
+6453:6100,Maharashtra
+6453:6101,Mumbai - LVSB
+6453:6102,Mumbai - LVSB
+6453:6200,Tamil Nadu
+6453:6201,Chennai - VSB
+6453:6202,Chennai - VSB
+6453:6300,Kerala
+6453:6301,Cochin
