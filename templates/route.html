@@ -23,7 +23,14 @@
     <a href="/whois?q={{prefix}}" class="btn btn-community btn-primary btn-sms whois"><i class="bi bi-search"></i> WHOIS</a>
 {%- for route in routes[prefix] %}
 {% if peer != route.peer %}
-<span class="d-block p-2 peername"><span class="badge bg-secondary">{{loop.index}}</span> {{ route.peer }}</span>
+<div class="d-flex bd-highlight mb-3 peername">
+    <div class="me-auto p-2 bd-highlight">
+        <span class="badge bg-secondary">{{loop.index}}</span> {{ route.peer }}
+    </div>
+    <div class="p-2 bd-highlight"><a href="/prefix?q={{prefix}}&match={{match}}&peer={{route.peer}}"><i class="bi bi-box-arrow-up-right"></i></a>
+    </div>
+  </div>
+
 {% endif %}
 <table class="table">
     <tr>
