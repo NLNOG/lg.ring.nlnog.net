@@ -1,5 +1,4 @@
 # GoCodeIT communities. From: https://as62513.net/communities/
-# Make sure to copy this file between AS835 and AS62513
 
 # Sources
 835:150,Downstream
