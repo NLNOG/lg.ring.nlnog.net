@@ -1,0 +1,61 @@
+# From AS3303 whois
+3303:3046,route received in Budapest
+3303:3047,route received in Sao Paulo
+3303:3048,route received in Istanbul
+3303:3049,route received in Taipeh
+3303:3050,route received in London
+3303:3051,route received in Amsterdam
+3303:3052,route received in Frankfurt-Itenos
+3303:3053,route received in Paris
+3303:3054,route received in Stockholm
+3303:3055,route received in Milan
+3303:3056,route received in Frankfurt-InterXion
+3303:3057,route received in Hong Kong
+3303:3058,route received in Singapore
+3303:3059,route received in Dubai
+3303:3060,route received in Ashburn
+3303:3061,route received in Los Angeles
+3303:3062,route received in Chicago
+3303:3063,route received in Dallas
+3303:3064,route received in New York
+3303:3065,route received in Miami
+3303:3066,route received in Geneva
+3303:3067,route received in Zurich
+3303:3068,route received in Bern
+3303:3069,route received in Basel
+3303:3070,route received in Olten
+3303:3071,route received in Lugano/Bellinzona
+3303:3072,route received in Lausanne
+3303:3073,route received in Sydney
+3303:3074,route received in Johannesburg
+3303:3075,route received in Marseille
+3303:3076,route received in Madrid
+3303:3077,route received in Vienna
+3303:3078,route received in Capetown
+3303:3079,route received in Tokyo
+3303:3080,route received in Perth
+3303:3081,route received in Kiev
+3303:3082,route received in Mumbai
+3303:3083,route received in Fortaleza
+3303:3085,route received in Toronto
+3303:3086,route received in Duesseldorf
+3303:3087,route received in Copenhagen
+3303:3088,route received in Seoul
+3303:3089,route received in Muenchen
+3303:3090,route received in Lupfig
+3303:3091,route received in St.Gallen/Wil
+3303:3092,route received in Lyon
+3303:3093,route received in Torino
+3303:3094,route received in Roma
+3303:3095,route received in Luzern
+3303:3096,route received in Seattle
+3303:3097,route received in Dublin
+3303:3098,route received in Chur
+
+3303:1000,customer route
+3303:1004,peering route
+3303:1005,North American route
+3303:1006,European route
+3303:1007,Swiss route
+3303:1009,Asian route
+3303:1014,African or South American route
