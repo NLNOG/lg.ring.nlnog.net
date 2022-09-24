@@ -1,0 +1,185 @@
+# From AS3356 RIPE whois
+
+3356:123,Customer route
+3356:666,Peer route
+
+3356:2001,CHI1 - Chicago
+3356:2002,SDG1 - San Diego
+3356:2003,LAX1 - Los Angeles
+3356:2004,DEN1 - Denver
+3356:2005,PHI1 - Philadelphia
+3356:2006,WDC1 - Washington DC
+3356:2007,DET1 - Detroit
+3356:2008,DAL1 - Dallas
+3356:2009,SFO1 - San Francisco
+3356:2010,NYC1 - New York City
+3356:2011,SJO1 - San Jose
+3356:2012,SEA1 - Seattle
+3356:2013,ATL1 - Atlanta
+3356:2014,HOU1 - Houston
+3356:2015,BOS1 - Boston
+3356:2016,MIN1 - Minneapolis
+3356:2017,HON1 - Honolulu
+3356:2018,WEE1 - Weehawken
+3356:2019,BAL1 - Baltimore
+3356:2020,CIN1 - Cincinnati
+3356:2021,STM1 - Stamford
+3356:2022,MIA1 - Miami
+3356:2023,TMP1 - Tampa
+3356:2024,ORL1 - Orlando
+3356:2025,STL1 - St Louis
+3356:2026,PHX1 - Phoenix
+3356:2027,RCH1 - Richmond
+3356:2029,SLC1 - Salt Lake City
+3356:2030,SAC1 - Sacramento
+3356:2031,RAL1 - Raleigh
+3356:2032,SAT1 - San Antonio
+3356:2033,LVG1 - Las Vegas
+3356:2034,CLT1 - Charlotte
+3356:2035,CLE1 - Cleveland
+3356:2036,OAK1 - Oakland
+3356:2038,TUS1 - Tustin
+3356:2039,NWR1 - Newark
+3356:2040,PIT1 - Pittsburgh
+3356:2041,KAC1 - Kansas City
+3356:2042,CHI2 - Chicago 2
+3356:2043,NYC2 - New York City 2
+3356:2044,LOU1 - Louisville
+3356:2045,NVL1 - Nashville
+3356:2046,BUF1 - Buffalo
+3356:2047,TOR2 - Toronto 2
+3356:2048,MON2 - Montreal 2
+3356:2049,SYR2 - Syracuse 2
+3356:2050,WDC12 - Washington DC 12
+3356:2051,SJO5 - San Jose 5
+3356:2052,TOR1 - Toronto 1
+3356:2053,POR1 - Portland
+3356:2054,MEM1 - Memphis
+3356:2055,TUL2 - Tulsa
+3356:2056,NYC6 - New York City
+3356:2057,WDC111 - Washington DC (Washington111
+3356:2058,CHO1 - Charlottesville Virginia
+3356:2064,LON1 - London
+3356:2065,FRF1 - Frankfurt
+3356:2066,PAR1 - Paris
+3356:2067,AMS1 - Amsterdam
+3356:2068,BRU1 - Brussels
+3356:2069,DUS1 - Dusseldorf
+3356:2070,HAM1 - Hamburg
+3356:2071,BER1 - Berlin
+3356:2072,MUN1 - Munich
+3356:2073,LON2 - London 2
+3356:2074,MLN1 - Milan
+3356:2075,ZUR1 - Zurich
+3356:2076,STK1 - Stockholm
+3356:2077,MAD2 - Madrid 2
+3356:2078,GEN1 - Geneva
+3356:2079,MAN1 - Manchester
+3356:2080,DUB1 - Dublin
+3356:2081,COP1 - Copenhagen
+3356:2082,VIE1 - Vienna
+3356:2083,PRG1 - Prague
+3356:2084,WAW1 - Warsaw
+3356:2085,VAL3 - Valencia 3
+3356:2086,BCL1 - Barcelona
+3356:2087,SOF1 - Sofia
+3356:2088,BCH1 - Bucharest
+3356:2089,BDP1 - Budapest
+3356:2090,MRS1 - Marseille
+3356:2091,COP2 - Copenhagen 2
+3356:2092,OSL1 - Oslo
+3356:2093,BTS1 - Bratislava
+3356:2094,HEL1 - Helsinki
+3356:2095,DUB3 - Dublin 3
+3356:2096,WAW3 - Warsaw 3
+3356:2097,LUX1 - Luxembourg 1
+3356:2098,TLS1 - Toulouse 1
+3356:2099,LYS1 - Lyon 1
+3356:2100,JED1 - Jeddah 1
+3356:2101,ZAG1 - Zagreb 1
+3356:2102,LJU1 - Ljubljana 1
+3356:2103,MAD1 - Madrid 1
+3356:2104,DJB1 - Djibouti 1
+3356:2105,LON16 - London 16
+3356:2106,LON15 - London 15
+3356:2107,CPT2 - CapeTown2
+3356:2108,JNB2 - Johannesburg2
+3356:2109,XKE3 - Kenya3
+3356:2110,XAE3 - UnitedArabEmirates3
+3356:2111,STK2 - Stockholm2
+3356:2112,MRS2 - Marseille2
+3356:2113,XEE2 - Estonia2
+3356:2114,PAR10 - Paris10
+3356:2115,SOF2 - Sofia2
+3356:2116,XRU2 - Russia2
+3356:2117,XIT2 - Italy2
+3356:2118,XRS2 - RepublicOfSerbia2
+3356:2119,OSL2 - Oslo2
+3356:2120,MAN2 - Manchester2
+3356:2121,MLN2 - Milan2
+3356:2122,XAE2 - UnitedArabEmirates2
+3356:2123,XIS2 - Iceland2
+3356:2124,PAR7 - Paris7
+3356:2125,LON4 - London4
+3356:2126,XIS4 - Iceland4
+3356:2127,IST2 - Istanbul2
+3356:2128,LDS1 - Leeds1
+3356:2129,BHE1 - Birmingham1
+3356:2130,TLV1 - TelAviv1
+3356:2131,ZUR3 - Zurich3
+3356:2132,LON14 - London14
+3356:2133,ANK1 - Ankara1
+3356:2171,HKG3 - HongKong3
+3356:2172,SNG3 - Singapore3
+3356:2173,SYD1 - Sydney1
+3356:2174,TOK4 - Tokyo4
+3356:2190,Sao Paulo
+
+3356:500,UK
+3356:501,Germany
+3356:502,France
+3356:503,Netherlands
+3356:504,Belgium
+3356:505,Italy
+3356:506,Switzerland
+3356:507,Sweden
+3356:508,Spain
+3356:509,Ireland
+3356:510,Denmark
+3356:511,Austria
+3356:512,Czech Republic
+3356:513,Poland
+3356:514,Bulgaria
+3356:515,Romania
+3356:516,Hungary
+3356:517,Norway
+3356:518,Slovakia
+3356:519,Finland
+3356:520,Luxembourg
+3356:521,Croatia
+3356:522,Slovenia
+3356:523,Estonia
+3356:524,Serbia
+3356:525,Iceland
+3356:550,Saudi Arabia
+3356:551,Djibouti
+3356:552,South Africa
+3356:553,United Arab Emirates
+3356:554,Russia
+3356:555,Kenya
+3356:556,Turkey
+3356:557,Israel
+3356:575,USA
+3356:576,Canada
+3356:577,Mexico
+3356:701,China
+3356:702,Australia
+3356:703,Singapore
+3356:704,Japan
+3356:800,Brazil
+3356:801,Argentina
+
+3356:2,Europe
+3356:3,North America
+3356:4,APAC
+3356:5,LATAM
