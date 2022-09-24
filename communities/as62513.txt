@@ -1,0 +1,49 @@
+# GoCodeIT communities. From: https://as62513.net/communities/
+# Make sure to copy this file between AS835 and AS62513
+
+# Sources
+835:150,Downstream
+835:10000,Source: Cogent Transit
+835:10001,Source: HE Transit
+835:10002,Source: Zayo Transit
+835:11000,Source: TORIX
+835:11001,Source: Equinix Toronto
+835:11002,Source: Google
+
+# Validity
+835:5000,IRR Valid
+835:5001,IRR Missing or Invalid
+835:5010,RPKI Valid
+835:5011,RPKI Missing
+835:5012,RPKI Invalid
+
+# Downstream Action Communities
+835:20001,Append 1x to Cogent
+835:20002,Append 2x to Cogent
+835:20003,Append 3x to Cogent
+835:20009,Drop to Cogent
+
+835:20011,Append 1x to HE
+835:20012,Append 2x to HE
+835:20013,Append 3x to HE
+835:20019,Drop to HE
+
+835:20021,Append 1x to Zayo
+835:20022,Append 2x to Zayo
+835:20023,Append 3x to Zayo
+835:20029,Drop to Zayo
+
+835:21001,Append 1x to TORIX
+835:21001,Append 2x to TORIX
+835:21001,Append 3x to TORIX
+835:21001,Drop to TORIX
+
+835:21011,Append 1x to Equinix Toronto
+835:21012,Append 2x to Equinix Toronto
+835:21013,Append 3x to Equinix Toronto
+835:21019,Drop to Equinix Toronto
+
+835:22001,Append 1x to Google
+835:22002,Append 2x to Google
+835:22003,Append 3x to Google
+835:22009,Drop to Google
