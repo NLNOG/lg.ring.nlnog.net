@@ -1,6 +1,6 @@
 name: check-communities
 
-on:  [push,pull_requst]
+on:  [push,pull_request]
 
 jobs:
   build:
