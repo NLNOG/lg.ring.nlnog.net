@@ -1,5 +1,63 @@
-# AS174 communities taken from https://onestep.net/communities/as174/
+# AS174 communities taken from Cogent Customer User Guide
 174:21000,Route is learned from NA (North America) non-customer.
 174:21001,Route is NA internal or customer route.
 174:21100,Route is learned from EU (Europe) non-customer.
-174:21101,Route is a EU internal or customer route.
+174:21101,Route is an EU internal or customer route.
+174:21200,Route is learned from AP (Asia Pacific) non-customer.
+174:21201,Route is an AP internal or customer route.
+174:21300,Route is learned from SA (South America) non-customer.
+174:21301,Route is a SA internal or customer route.
+174:21400,Route is learned from AU (Australia) non-customer.
+174:21401,Route is an AU internal or customer route.
+174:21500,Route is learned from AF (Africa) non-customer.
+174:21501,Route is an AF internal or customer route.
+174:22001,Austria
+174:22002,Belgium
+174:22003,Canada
+174:22004,Switzerland
+174:22005,Germany
+174:22006,Denmark
+174:22007,Spain
+174:22008,France
+174:22009,Italy
+174:22010,Netherlands
+174:22011,Portugal
+174:22012,United Kingdom
+174:22013,United States
+174:22014,Sweden
+174:22015,Norway
+174:22016,Czech Republic
+174:22017,Slovakia
+174:22018,Hungary
+174:22019,Ireland
+174:22020,Romania
+174:22021,Croatia (locally Hrvatska)
+174:22022,Slovenia
+174:22023,Bulgaria
+174:22024,Finland
+174:22025,Estonia
+174:22026,Ukraine
+174:22027,Mexico
+174:22028,Poland
+174:22029,Luxembourg
+174:22030,Serbia
+174:22031,Greece
+174:22032,Japan
+174:22033,Macedonia
+174:22034,Lithuania
+174:22035,Turkey
+174:22036,Moldova
+174:22037,Latvia
+174:22038,Singapore
+174:22039,Hong Kong
+174:22040,Montenegro
+174:22041,Albania
+174:22042,Brazil
+174:22043,Australia
+174:22044,Korea
+174:22045,Taiwan
+174:22046,Colombia
+174:22047,South Africa
+174:22048,New Zealand
+174:22049,Chile
+174:22050,Argentina
