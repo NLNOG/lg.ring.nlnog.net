@@ -1,6 +1,12 @@
 name: check-communities
 
-on:  [push,pull_request]
+on:
+  push:
+    paths:
+      - communities/*.txt
+  pull_request:
+    paths:
+      - communities/*.txt
 
 jobs:
   build:
