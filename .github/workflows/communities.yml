@@ -1,4 +1,4 @@
-name: lint
+name: check-communities
 
 on: [push]
 
