@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+{% block body %}
+<br/>
+<h2>
+   Known BGP Communities
+</h2>
+<p>
+This Looking Glass uses a collection of known BGP communities to provide additional information on routes received. New community descriptions and updates can be added sending a pull request on the <a href="https://github.com/NLNOG/lg.ring.nlnog.net/">Github repostory</a>, which also provides information on the file format. For any questions, feel free to contact the <a href=""mailto:ring-admins@nlnog.net">ring-admins@nlnog.net</a>. Please note that you don't need to be
+the owner of the ASN to provide information!
+</p>
+<p>
+Community descriptions are available for the following ASNs:
+</p>
+<table class="table table-striped table-bordered table-condensed table-summary">
+    <thead>
+        <tr>
+            <td>ASN</td>
+            <td>description</td>
+        </tr>
+    </thead>
+    <tbody>
+        {% for asn, desc in communities %}
+        <tr class="{{ loop.cycle('odd', 'even') }}">
+            <td class="text-end">{{asn}}</td>
+            <td>{{desc}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}
