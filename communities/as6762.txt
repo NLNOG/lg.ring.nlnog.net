@@ -1,0 +1,56 @@
+# From https://etabeta.noc.seabone.net/communities.html
+
+6762:30,Route learnt in Europe
+6762:31,Route learnt in North-America
+6762:32,Route learnt in South-America
+6762:33,Route learnt in Asia
+6762:34,Route learnt in Africa
+6762:40,Route learnt from a customer
+
+6762:13100,Route learnt in Amsterdam
+6762:10130,Route learnt in Ashburn
+6762:13000,Route learnt in Athens
+6762:19623,Route learnt in Aqaba
+6762:15701,Route learnt in Bogota
+6762:14000,Route learnt in Bucarest
+6762:15400,Route learnt in Buenos Aires
+6762:15759,Route learnt in Cartagena
+6762:13930,Route learnt in Catania
+6762:10190,Route learnt in Chicago
+6762:10120,Route learnt in Dallas
+6762:12550,Route learnt in Dar Es Salaam
+6762:12500,Route learnt in Djibouti
+6762:10160,Route learnt in El Paso
+6762:15580,Route learnt in Fortaleza
+6762:14900,Route learnt in Frankfurt
+6762:18400,Route learnt in Ho Chi Minh City
+6762:18500,Route learnt in Hong Kong
+6762:19000,Route learnt in Istanbul
+6762:16000,Route learnt in Kuala Lumpur
+6762:12341,Route learnt in Lagos
+6762:15100,Route learnt in Lima
+6762:13510,Route learnt in Lisbona
+6762:14400,Route learnt in London
+6762:10140,Route learnt in Los Angeles
+6762:13400,Route learnt in Madrid
+6762:13370,Route learnt in Marseille
+6762:10190,Route learnt in McAllen
+6762:10150,Route learnt in Miami
+6762:13900,Route learnt in Milano
+6762:10100,Route learnt in Newark/NYC
+6762:13950,Route learnt in Palermo
+6762:10180,Route learnt in Palo Alto
+6762:15070,Route learnt in Panama
+6762:13300,Route learnt in Paris
+6762:14200,Route learnt in Prague
+6762:15550,Route learnt in Rio De Janeiro
+6762:13980,Route learnt in Roma
+6762:15500,Route learnt in Sao Paulo
+6762:15600,Route learnt in Santiago
+6762:13590,Route learnt in Sofia
+6762:16500,Route learnt in Singapore
+6762:14600,Route learnt in Stockolm
+6762:19821,Route learnt in Teheran
+6762:14300,Route learnt in Wien
+6762:13741,Route learnt in Yerevan
+6762:14100,Route learnt in Zurich
