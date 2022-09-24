@@ -1,10 +1,6 @@
 name: check-communities
 
-on: 
-  push
-  pull_request:
-    branches:
-      - master
+on:  [push,pull_requst]
 
 jobs:
   build:
