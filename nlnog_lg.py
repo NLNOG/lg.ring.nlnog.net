@@ -19,7 +19,7 @@
 
  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
- MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ MERCHANTABILITY AND FITNESS. IN NO EVENT SH671025ALL THE AUTHOR BE LIABLE FOR
  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
@@ -142,7 +142,6 @@ def get_community_descr_from_list(community: str, communitylist: dict):
 def get_asn_name(asn: str):
     """ Lookup the name for an ASN. Keep it in a cache because we probably need it again.
     """
-
     if not asn.isnumeric():
         return None
     asn = int(asn)
@@ -468,6 +467,16 @@ def about():
     """
     return render_template("about.html")
 
+
+@app.route("/communitylist")
+def communitylist():
+    """ Handle the communitylist page.
+    """
+    communities = []
+    for community in sorted([int(c) for c in read_communities().keys()]):
+        communities.append((community, get_asn_name(str(community))))
+
+    return render_template("communities.html", communities=communities)
 
 @app.errorhandler(400)
 def incorrect_request(_: str):
