@@ -1,0 +1,35 @@
+#AS38195 local-pref control codes
+38195:192,AS38195:Set LP=192
+38195:193,AS38195:Set LP=193
+38195:194,AS38195:Set LP=194
+38195:195,AS38195:Set LP=195
+38195:196,AS38195:Set LP=196
+
+#AS38195 Origin country codes
+38195:6613,CC=Australia
+38195:6676,CC=France
+38195:6700,CC=Hong Kong
+38195:6712,CC=Japan
+38195:6759,CC=New Zealand
+38195:6800,CC=Singapore
+38195:6835,CC=United States of America
+
+#AS38195 Origin region codes
+38195:8000,AU/Northern Territory
+38195:8001,AU/Australian Capital Territory
+38195:8002,AU/New South Wales
+38195:8003,AU/Victoria
+38195:8004,AU/Queensland
+38195:8005,AU/South Australia
+38195:8006,AU/Western Australia
+38195:8007,AU/Tasmania
+38195:8008,NZ/Auckland
+38195:8009,US/California
+38195:8010,SG/Singapore
+38195:8011,HK/Hong Kong
+38195:8012,JP/Kanto
+
+#AS38195 Route type codes
+38195:9700,Origin=Internal
+38195:9701,Origin=Customer
+38195:9790,Origin=Non-BGP
