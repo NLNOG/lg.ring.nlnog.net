@@ -1,0 +1,46 @@
+4637:30501,Asia-Pacific (including Mainland China) customer route
+4637:30502,Europe customer route
+4637:30504,USA customer route
+4637:30507,Mainland China customer route
+4637:31501,Asia-Pacific (including Mainland China) internal route
+4637:31502,Europe internal route
+4637:31504,USA internal route
+4637:31507,Mainland China internal route
+4637:32501,Asia-Pacific (including Mainland China) peer route
+4637:32502,Europe peer route
+4637:32504,USA peer route
+4637:32507,Mainland China peer route
+4637:33501,Asia-Pacific (including Mainland China) transit route
+4637:33502,Europe transit route
+4637:33504,USA transit route
+4637:33507,Mainland China transit route
+4637:3xx00,Australia
+4637:3xx01,Hong Kong SAR
+4637:3xx02,Japan
+4637:3xx03,Korea
+4637:3xx04,Singapore
+4637:3xx05,Indonesia
+4637:3xx06,Philippines
+4637:3xx07,Malaysia
+4637:3xx08,Thailand
+4637:3xx09,Taiwan PRC
+4637:3xx10,India
+4637:3xx11,New Zealand
+4637:3xx12,UK
+4637:3xx13,Netherlands
+4637:3xx14,USA
+4637:3xx15,Mainland China
+4637:3xx16,Pakistan
+4637:3xx17,Bangladesh
+4637:3xx18,Macau SAR
+4637:3xx19,Maldives
+4637:3xx20,Myanmar
+4637:3xx21,Vietnam
+4637:3xx22,Papua New Gineau
+4637:3xx23,Mongolia
+4637:3xx24,Seyschelles
+4637:3xx25,Deigo Garcia
+4637:3xx26,Nauru
+4637:3xx27,Samoa
+4637:3xx28,Kiribati
+4637:3xx29,UAE
