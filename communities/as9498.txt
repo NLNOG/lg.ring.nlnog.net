@@ -1,0 +1,29 @@
+# taken from AS9498 BGP Communities document
+34111:21111,learned in APNIC
+31111:21111,learned in USA
+33111:21111,learned in Europe
+9498:93,all international routes
+9498:55,don't export to international peers
+10111:34111,advertise in Asia only
+11111:34111,restrict to Asia only
+10111:31111,advertise in USA only
+11111:31111,restrict to USA only
+10111:33111,advertise in Europe only
+11111:33111,restrict to Europe only
+10111:33111,advertise in Europe
+34111:21111,APNIC routes
+31111:21111,USA routes
+33111:21111,Euorpe routes
+9498:93,All international routes
+13111:34111,Prepend once in APNIC
+14111:34111,Prepend twice in APNIC
+15111:34111,Prepend 3x in APNIC
+23111:34111,Prepend 5x in APNIC
+13111:31111,Prepend once in North America
+14111:31111,Prepend twice in North America
+15111:31111,Prepend 3x in North America
+23111:31111,Prepend 5x in North America
+13111:33111,Prepend once in Europe
+14111:33111,Prepend twice in Europe
+15111:33111,Prepend 3x in Europe
+23111:33111,Prepend 5x in Europe
