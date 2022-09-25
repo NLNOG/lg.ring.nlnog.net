@@ -2,12 +2,12 @@
 {% block body %}
 <br/>
 <h2>
-   Known BGP communities for AS{{ASN}}
+   Known BGP communities for AS{{ASN}} - {{asname}}
 </h2>
 <p>
 Community descriptions are available for the following ASNs:
 </p>
-<table class="table table-striped table-bordered table-condensed table-summary">
+<table class="table table-striped table-bordered table-condensed table-communities">
     <thead>
         <tr>
             <td>Community</td>
@@ -23,5 +23,9 @@ Community descriptions are available for the following ASNs:
       {% endfor %}
     </tbody>
 </table>
-
+<p>
+<i>nnn</i> = any number<br>
+<i>x</i> = any single digit</br>
+</p>
+Information on how to submit additions or updates can be found on <a href="/communitylist">this page</a>.
 {% endblock %}

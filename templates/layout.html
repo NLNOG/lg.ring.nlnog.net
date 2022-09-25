@@ -182,9 +182,18 @@
 </div>
 <script>
 	t = $('.table-summary')
-    if (t) t.dataTable( {
+    if (t) {
+		t.dataTable( {
         "bPaginate": false,
         } );
+		$('#table-communities').dataTable( {
+		"bPaginate": false,
+		 "columns": [
+    	{ "type": "int" },
+    	null,
+  		]
+		} );
+	};
 </script>
 </body>
 </html>

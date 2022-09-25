@@ -486,8 +486,8 @@ def communitylist_specific(asn):
     communitylist = read_communities()
     if asn not in communitylist:
         abort(400)
-
-    return render_template("communities-specific.html", ASN=asn, communities=communitylist[asn]["raw"])
+    asname = get_asn_name(asn)
+    return render_template("communities-specific.html", ASN=asn, communities=communitylist[asn]["raw"], asname=asname)
 
 
 @app.errorhandler(400)
