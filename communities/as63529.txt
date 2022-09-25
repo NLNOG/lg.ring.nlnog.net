@@ -1,0 +1,26 @@
+# taken from:
+#   https://bknix.co.th/en/technical/ops-comm/
+#   https://bknix.co.th/en/technical/info-comm/
+#   https://bknix.co.th/en/technical/blackholing/
+0:nnn,do not announce to peer AS
+0:63529,do not announce to any peer
+63529:nnn,announce to peer AS
+63529:65010,RPKI valid
+63529:65011,RPKI not found
+63529:65014,RPKI invalid
+63529:65020,IIRDB found
+63529:65021,IRRDB not found
+63529:63529,announce to all peers
+65003:nnn,prepend 3 times to peer
+65002:nnn,prepend 2 times to peer
+65001:nnn,prepend once to peer
+65100:764,Thailand
+65101:1,Bangkok
+65101:2,Chiang Mai
+65102:1,TCCT Bangna (BNDC)
+65102:2,CSL CW
+65102:3,Symphony CMI
+65102:4,NTT Bangkok2 (Nexcenter)
+65102:5,AIMS DC TH (ADCTH)
+65102:6,Chiang Mai University (ITSC)
+65535:666,Blackhole
