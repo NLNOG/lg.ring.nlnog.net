@@ -15,13 +15,13 @@ Community descriptions are available for the following ASNs:
     <thead>
         <tr>
             <td>ASN</td>
-            <td>description</td>
+            <td>Description</td>
         </tr>
     </thead>
     <tbody>
         {% for asn, desc in communities %}
         <tr class="{{ loop.cycle('odd', 'even') }}">
-            <td class="text-end">{{asn}}</td>
+            <td class="text-end"><a href="/communitylist/{{asn}}">{{asn}}</a></td>
             <td>{{desc}}</td>
         </tr>
         {% endfor %}
