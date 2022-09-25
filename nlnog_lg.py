@@ -75,9 +75,10 @@ def read_communities():
                 (asn, value) = comm.split(":", 1)
                 if value.isnumeric():
                     if asn not in communitylist:
-                        communitylist[asn] = {"exact": {comm: desc}, "re": [], "range": []}
+                        communitylist[asn] = {"exact": {comm: desc}, "re": [], "range": [], "raw" : {}}
                     else:
                         communitylist[asn]["exact"][comm] = desc
+                        communitylist[asn]["raw"][comm] = desc
                 else:
                     # funky notations:
                     # nnn -> any number
@@ -101,9 +102,10 @@ def read_communities():
                             communitylist[asn]["range"].append((first, last, desc))
                     if regex:
                         if asn not in communitylist:
-                            communitylist[asn] = {"exact": {}, "re": [(regex, desc)], "range": []}
+                            communitylist[asn] = {"exact": {}, "re": [(regex, desc)], "range": [], "raw": {}}
                         else:
                             communitylist[asn]["re"].append((regex, desc))
+                            communitylist[asn]["raw"][comm] = desc
 
     return communitylist
 
@@ -477,6 +479,16 @@ def communitylist():
         communities.append((community, get_asn_name(str(community))))
 
     return render_template("communities.html", communities=communities)
+
+@app.route('/communitylist/<asn>')
+def communitylist_specific(asn):
+    asn = unquote(asn.strip())
+    communitylist = read_communities()
+    if asn not in communitylist:
+        abort(400)
+
+    return render_template("communities-specific.html", ASN=asn, communities=communitylist[asn]["raw"])
+
 
 @app.errorhandler(400)
 def incorrect_request(_: str):
