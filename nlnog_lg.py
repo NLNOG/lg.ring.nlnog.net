@@ -75,7 +75,7 @@ def read_communities():
                 (asn, value) = comm.split(":", 1)
                 if value.isnumeric():
                     if asn not in communitylist:
-                        communitylist[asn] = {"exact": {comm: desc}, "re": [], "range": [], "raw" : {}}
+                        communitylist[asn] = {"exact": {comm: desc}, "re": [], "range": [], "raw": {}}
                     else:
                         communitylist[asn]["exact"][comm] = desc
                         communitylist[asn]["raw"][comm] = desc
@@ -467,7 +467,8 @@ def show_route_for_prefix():
 def about():
     """ Handle the about page.
     """
-    return render_template("about.html")
+    peers = get_peer_info(names_only=True, established_only=True)
+    return render_template("about.html", peers=peers)
 
 
 @app.route("/communitylist")
@@ -475,19 +476,24 @@ def communitylist():
     """ Handle the communitylist page.
     """
     communities = []
-    for community in sorted([int(c) for c in read_communities().keys()]):
+    peers = get_peer_info(names_only=True, established_only=True)
+    for community in sorted([int(c) for c in read_communities()]):
         communities.append((community, get_asn_name(str(community))))
 
-    return render_template("communities.html", communities=communities)
+    return render_template("communities.html", communities=communities, peers=peers)
+
 
 @app.route('/communitylist/<asn>')
 def communitylist_specific(asn):
+    """ Handle the community details page.
+    """
     asn = unquote(asn.strip())
     communitylist = read_communities()
     if asn not in communitylist:
         abort(400)
     asname = get_asn_name(asn)
-    return render_template("communities-specific.html", ASN=asn, communities=communitylist[asn]["raw"], asname=asname)
+    peers = get_peer_info(names_only=True, established_only=True)
+    return render_template("communities-specific.html", ASN=asn, communities=communitylist[asn]["raw"], asname=asname, peers=peers)
 
 
 @app.errorhandler(400)
