@@ -1,0 +1,184 @@
+# From AS61423 network site: https://as61423.net/
+
+61423:666,Blackhole route
+
+65000:0,no export to any
+65001:0,prepend 1 to anyone
+65002:0,prepend 2 to anyone
+65003:0,prepend 3 to anyone
+65004:0,prepend 4 to anyone
+
+65000:1112,no export to any customer
+65000:1113,no export to any IXP
+65000:1114,no export to any PNI
+65000:1115,no export to any transit
+
+65000:1251,no export in Europe
+
+65000:1261,no export in Switzerland - CH
+65000:1262,no export in Germany - DE
+65000:1263,no export in Austria - AT
+
+65000:1271,no export in Zug - CH
+65000:1272,no export in Zurich - CH
+65000:1273,no export in Frankfurt - DE
+65000:1274,no export in Vienna - AT
+65000:1275,no export in Klagenfurt - AT
+
+65000:1311,no export to IXP SwissIX
+65000:1312,no export to IXP VIX
+65000:1313,no export to DE-CIX Frankfurt
+65000:1314,no export to IXP AAIX
+
+65000:1333,no export to transit Arelion in Vienna - AT
+65000:1339,no export to transit Colt in Vienna - AT
+65000:1336,no export to transit Lumen in Vienna - AT
+65000:1331,no export to transit Arelion in Zurich - CH
+65000:1337,no export to transit Colt in Zurich - CH
+65000:1334,no export to transit Lumen in Zurich - CH
+65000:1332,no export to transit Arelion in Frankfurt - DE
+65000:1338,no export to transit Colt in Frankfurt - DE
+65000:1335,no export to transit Lumen in Frankfurt - DE
+
+65001:1112,prepend 1 to any customer
+65001:1113,prepend 1 to any IXP
+65001:1115,prepend 1 to any transit
+
+65001:1251,prepend 1 to anyone in Europe
+
+65001:1271,prepend 1 to anyone in Zug - CH
+65001:1272,prepend 1 to anyone in Zurich - CH
+65001:1273,prepend 1 to anyone in Frankfurt - DE
+65001:1274,prepend 1 to anyone in Vienna - AT
+65001:1275,prepend 1 to anyone in Klagenfurt - AT
+
+65001:1261,prepend 1 to anyone in Switzerland - CH
+65001:1262,prepend 1 to anyone in Frankfurt - DE
+65001:1263,prepend 1 to anyone in Austria - AT
+
+65001:1311,prepend 1 to IXP SwissIX
+65001:1312,prepend 1 to IXP VIX
+65001:1313,prepend 1 to IXP DE-CIX Frankfurt
+65001:1314,prepend 1 to IXP AAIX
+
+65002:1112,prepend 2 to any customer
+65002:1113,prepend 2 to any IXP
+65002:1115,prepend 2 to any transit
+
+65002:1251,prepend 2 to anyone in Europe
+
+65002:1271,prepend 2 to anyone in Zug - CH
+65002:1272,prepend 2 to anyone in Zurich - CH
+65002:1273,prepend 2 to anyone in Frankfurt - DE
+65002:1274,prepend 2 to anyone in Vienna - AT
+65002:1275,prepend 2 to anyone in Klagenfurt - AT
+
+65002:1261,prepend 2 to anyone in Switzerland - CH
+65002:1262,prepend 2 to anyone in Frankfurt - DE
+65002:1263,prepend 2 to anyone in Austria - AT
+
+65002:1311,prepend 2 to IXP SwissIX
+65002:1312,prepend 2 to IXP VIX
+65002:1313,prepend 2 to IXP DE-CIX Frankfurt
+65002:1314,prepend 2 to IXP AAIX
+
+65003:1112,prepend 3 to any customer
+65003:1113,prepend 3 to any IXP
+65003:1115,prepend 3 to any transit
+
+65003:1251,prepend 3 to anyone in Europe
+
+65003:1271,prepend 3 to anyone in Zug - CH
+65003:1272,prepend 3 to anyone in Zurich - CH
+65003:1273,prepend 3 to anyone in Frankfurt - DE
+65003:1274,prepend 3 to anyone in Vienna - AT
+65003:1275,prepend 3 to anyone in Klagenfurt - AT
+
+65003:1261,prepend 3 to anyone in Switzerland - CH
+65003:1262,prepend 3 to anyone in Frankfurt - DE
+65003:1263,prepend 3 to anyone in Austria - AT
+
+65003:1311,prepend 3 to IXP SwissIX
+65003:1312,prepend 3 to IXP VIX
+65003:1313,prepend 3 to IXP DE-CIX Frankfurt
+65003:1314,prepend 3 to IXP AAIX
+
+65004:1112,prepend 4 to any customer
+65004:1113,prepend 4 to any IXP
+65004:1115,prepend 4 to any transit
+
+65004:1251,prepend 4 to anyone in Europe
+
+65004:1271,prepend 4 to anyone in Zug - CH
+65004:1272,prepend 4 to anyone in Zurich - CH
+65004:1273,prepend 4 to anyone in Frankfurt - DE
+65004:1274,prepend 4 to anyone in Vienna - AT
+65004:1275,prepend 4 to anyone in Klagenfurt - AT
+
+65004:1261,prepend 4 to anyone in Switzerland - CH
+65004:1262,prepend 4 to anyone in Frankfurt - DE
+65004:1263,prepend 4 to anyone in Austria - AT
+
+65004:1311,prepend 4 to IXP SwissIX
+65004:1312,prepend 4 to IXP VIX
+65004:1313,prepend 4 to IXP DE-CIX Frankfurt
+65004:1314,prepend 4 to IXP AAIX
+
+65001:1333,prepend 1 to transit Arelion in Vienna - AT
+65001:1339,prepend 1 to transit Colt in Vienna - AT
+65001:1336,prepend 1 to transit Lumen in Vienna - AT
+65001:1331,prepend 1 to transit Arelion in Zurich - CH
+65001:1337,prepend 1 to transit Colt in Zurich - CH
+65001:1334,prepend 1 to transit Lumen in Zurich - CH
+65001:1332,prepend 1 to transit Arelion in Frankfurt - DE
+65001:1338,prepend 1 to transit Colt in Frankfurt - DE
+65001:1335,prepend 1 to transit Lumen in Frankfurt - DE
+
+65105:1,change MED to 1
+65105:5,change MED to 5
+65105:10,change MED to 10
+65105:15,change MED to 15
+65105:20,change MED to 20
+
+65105:50,change local-preference to 50
+65105:75,change local-preference to 75
+65105:100,change local-preference to 100
+65105:125,change local-preference to 125
+65105:150,change local-preference to 150
+65105:175,change local-preference to 175
+
+61423:1101,RPKI valid
+61423:1102,RPKI invalid
+61423:1103,RPKI unknown
+61423:1104,RPKI not checked
+
+61423:1111,JMP prefix
+61423:1112,JMP customer route
+61423:1113,JMP IXP peering route
+61423:1114,JMP PNI private route
+61423:1115,JMP transit route
+
+61423:1201,learned at WWZ DC - Zug (jmp01.zlm.ch)
+61423:1202,learned at AtlasEdge DC - Zurich (jmp02.zrh.ch)
+61423:1203,learned at Interxion ZUR1 - Zurich (jmp03.zrh.ch)
+61423:1204,learned at Interxion FRA15 - Frankfurt (jmp04.fra.de)
+61423:1205,learned at Interxion VIE1 - Vienna (jmp05.vie.at)
+61423:1206,learned at STW DC - Klagenfurt (jmp06.klu.at)
+61423:1207,learned at Kelag DC - Klagenfurt (jmp07.klu.at)
+61423:1208,learned at Equinix ZH4 - Zurich (jmp08.zrh.ch)
+
+61423:1251,learned in Europe
+61423:1261,learned in Switzerland
+61423:1262,learned in Germany
+61423:1263,learned in Austria
+
+61423:1271,learned in Zug - CH
+61423:1272,learned in Zurich - CH
+61423:1273,learned in Frankfurt - DE
+61423:1274,learned in Vienna - AT
+61423:1275,learned in Klagenfurt - AT
+
+61423:1311,learned at SwissIX
+61423:1312,learned at VIX
+61423:1313,learned at DE-CIX Frankfurt
+61423:1314,learned at AAIX
