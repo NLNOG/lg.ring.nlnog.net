@@ -1,0 +1,59 @@
+# AS3320, public communities from Deutsche Telekom
+3320:1x, dtag:tag.origin.country.CC, route received in country x (ISO 3166)
+3320:112x:0, dtag:tag.origin.country.CC, route received in country x (ISO 3166)
+3320:1276, dtag:tag.origin.country.de, route received in Germany
+3320:112276:0, dtag:tag.origin.country.de, route received in Germany
+3320:1724, dtag:tag.origin.country.es, route received in Spain
+3320:1840, dtag:tag.origin.country.US, route received in USA
+3320:112826:0, dtag:tag.origin.country.gb, route received in Great Britain
+
+3320:2010, dtag:tag.origin.region.eu, route received in Europe
+3320:1111:0, dtag:tag.origin.region.eu, route received in Europe
+3320:2020, dtag:tag.origin.region.na, route received in North America
+3320:1112:0, dtag:tag.origin.region.na, route received in North America
+3320:2030, dtag:tag.origin.region.pacrim, route received in PacRim
+3320:1113:0, dtag:tag.origin.region.pacrim, route received in PacRim
+
+3320:9010, dtag:tag.origin.type.customer, route received by customer
+3320:1101:0, dtag:tag.origin.type.customer, route received by customer
+3320:9020, dtag:tag.origin.type.peer, route received by peer
+3320:1102:0, dtag:tag.origin.type.peer, route received by peer
+3320:9030, dtag:tag.origin.type.upstream, route received by upstream
+3320:1103:0, dtag:tag.origin.type.upstream, route received by upstream
+
+65012:65001, dtag:req.prepend.to.peer, prepend AS3320 twice on export to peer
+65013:65001, dtag:req.prepend.to.peer.3x, prepend AS3320 thrice on export to peer
+
+65012:65006, dtag:req.prepend.to.customer+upstream, prepend AS3320 twice on export to peer and upstreams
+65012:n, dtag:req.prepend.to.ASn, prepend AS3320 twice on export to ASn
+3320:252200:n, dtag:req.prepend.to.ASn
+65112:65001, dtag:req.prepend.in.eu.to.peer, prepend AS3320 twice on export to peer in Europe
+65133:n, dtag:req.prepend.in.parcrim.toASn.3x, prepend AS3320 thrice on export to ASn in Pac Rim
+3320:252330:n, dtag:req.prepend.in.parcrim.toASn.3x
+
+65010:65001, dtag:req.no-export.to.peer
+3320:2501:0, dtag:req.no-export.to.peer
+65010:65003, dtag:req.no-export.to.peer+upstream
+3320:2503:0, dtag:req.no-export.to.peer+upstream
+65010:65007, dtag:req.no-export.to.all
+3320:2507:0, dtag:req.no-export.to.all
+
+65001:10, dtag:req.local-pref.10
+3320:211010:0, dtag:req.local-pref.10
+65001:50, dtag:req.local-pref.50
+3320:211050:0, dtag:req.local-pref.50
+65001:150, dtag:req.local-pref.150
+3320:211150:0, dtag:req.local-pref.160
+
+65000:0, dtag:req.blackhole
+3320:2100:0, dtag:req.blackhole
+65000:1, dtag:req.blackhole.local
+3320:2101:0, dtag:req.blackhole.local
+
+65011:65007, dtag:req.announce.to.all
+3320:2517:0, dtag:req.announce.to.all
+65011:65003, dtag:req.announce.to.peer+upstream
+3320:2513:0, dtag:req.announce.to.peer+upstream
+65011:n, dtag:req.announce.to.ASn
+3320:2510:n, dtag:req.announce.to.ASn
+
