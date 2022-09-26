@@ -3,21 +3,15 @@
 3292:1000,Customer route
 3292:1100,Peer route
 3292:1200,Upstream route
-3292:1xxxx,NAM - North America
-3292:2xxxx,EUR - Europe
-3292:3xxxx,ASI - Asia
-3292:4xxxx,AUS - Australia (and Antarctica)
-3292:5xxxx,SAM - South America
-3292:6xxxx,AFR - Africa
-3292:101xx,US - USA
-3292:231xx,NL - Netherlands
-3292:235xx,FI - Finland
-3292:237xx,EE - Estonia (Baltics)
-3292:244xx,UK - United Kingdom
-3292:245xx,DK - Denmark
-3292:246xx,SE - Sweden
-3292:247xx,NO - Norway
-3292:249xx,DE - Germany
+3292:10100,US - USA
+3292:23100,NL - Netherlands
+3292:23500,FI - Finland
+3292:23700,EE - Estonia (Baltics)
+3292:24400,UK - United Kingdom
+3292:24500,DK - Denmark
+3292:24600,SE - Sweden
+3292:24700,NO - Norway
+3292:24900,DE - Germany
 3292:10101,NYK - New York City
 3292:10102,ASHB - Ashburn, Washington DC
 3292:10103,SJOS - San Jose
@@ -25,8 +19,12 @@
 3292:23501,HEL - Helsinki
 3292:23701,TLN - Tallinn
 3292:24401,LDN - London
-3292:24501,CPH - Copenhagen
-3292:24502,ARC - Aarhus
+3292:24501,KHK - Copenhagen
+3292:24502,AR - Aarhus
+3292:24503,ALB - Albertslund
+3292:24504,KD - Kolding
+3292:24580,EAST - Denmark East
+3292:24590,WEST - Denmark West
 3292:24601,STO - Stockholm
 3292:24701,OSLO - Oslo
 3292:24901,FFM - Frankfurt am Main
