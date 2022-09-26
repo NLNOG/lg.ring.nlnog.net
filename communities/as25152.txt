@@ -1,0 +1,5 @@
+25152:1,K-ROOT core site nl-ams
+25152:2,K-ROOT core site gb-lon
+25152:3,K-ROOT core site jp-tyo
+25152:5,K-ROOT core site us-mia
+25152:11,K-ROOT core site de-fra
