@@ -22,7 +22,7 @@
 24115:24115,Default Open Policy
 24115:24115:0:xxx,Default Open except for ASN
 # Extended
-24115:xxx,Allow Export to ASN
+24115:1-64495,Allow Export to ASN
 # Large
 24115:1:24115,Default Open Policy
 24115:0:24115,Default Closed Policy
