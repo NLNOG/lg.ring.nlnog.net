@@ -3,51 +3,51 @@
 # Informational and Peer Operational Communities – Distributed to Peers
 #
 # Standard	
-24115:65012, RPKI Valid
-24115:65023, RPKI Unknown
+24115:65012,RPKI Valid
+24115:65023,RPKI Unknown
 # Large	
-24115:1000:1, RPKI Valid
-24115:1000:2, RPKI Unknown
-24115:1000:3, RPKI Not Checked
-24115:1001:1, IRRDB Valid
-24115:1001:2, IRRDB Not Checked
-24115:1002:xxx, Route Server Tracer
-24115:1003:xx, Peer Round Trip Time
-24115:1004:xxx, Incoming Peer ASN
+24115:1000:1,RPKI Valid
+24115:1000:2,RPKI Unknown
+24115:1000:3,RPKI Not Checked
+24115:1001:1,IRRDB Valid
+24115:1001:2,IRRDB Not Checked
+24115:1002:xxx,Route Server Tracer
+24115:1003:xx,Peer Round Trip Time
+24115:1004:1-401308,Incoming Peer ASN
 #
 # Operational Communities – Received from Peers
 #
 # Standard
-24115:65281-65283, No Export
-24115:24115, Default Open Policy
-24115:24115:0:ASN, Default Open except for ASN
+24115:65281-65283,No Export
+24115:24115,Default Open Policy
+24115:24115:0:1-401308,Default Open except for ASN
 # Extended
-24115:ASN, Allow Export to ASN
+24115:1-401308,Allow Export to ASN
 # Large
-24115:1:24115, Default Open Policy
-24115:0:24115, Default Closed Policy
-24115:0:xxx, No Export to ASN
-24115:1:xxx, Allow Export to ASN
-24115:2:xx, No Export to Neighbors above MS
-24115:101:xxx, Prepend 1x to Neighbor ASN
-24115:102:xxx, Prepend 2x to Neighbor ASN
-24115:103:xx, Prepend 3x to Neighbor ASN
-24115:111:xx, Prepend 1x for Latency greater than MS
-24115:112:xx, Prepend 2x for Latency greater than MS
-24115:113:xx, Prepend 3x for Latency greater than MS
+24115:1:24115,Default Open Policy
+24115:0:24115,Default Closed Policy
+24115:0:1-401308,No Export to ASN
+24115:1:1-401308,Allow Export to ASN
+24115:2:xx,No Export to Neighbors above MS
+24115:101:1-401308,Prepend 1x to Neighbor ASN
+24115:102:1-401308,Prepend 2x to Neighbor ASN
+24115:103:1-401308,Prepend 3x to Neighbor ASN
+24115:111:xx,Prepend 1x for Latency greater than MS
+24115:112:xx,Prepend 2x for Latency greater than MS
+24115:113:xx,Prepend 3x for Latency greater than MS
 #
 # Filtered Informational Communities – Looking Glass and IXRS
 #
 # Large
-24115:1101:1, Prefix Length too long
-24115:1101:2, Prefix Length too short
-24115:1101:3, Bogon Prefix
-24115:1101:4, Bogon ASN in Path
-24115:1101:5, AS Path too long
-24115:1101:6, AS Path too short
-24115:1101:7, Invalid First ASN
-24115:1101:8, Invalid Next Hop Address
-24115:1101:9, IRRDB Prefix not found
-24115:1101:13, RPKI Invalid
-24115:1101:20, AS Loop
-24115:1102:1, Advertising Peer declines Prefix
+24115:1101:1,Prefix Length too long
+24115:1101:2,Prefix Length too short
+24115:1101:3,Bogon Prefix
+24115:1101:4,Bogon ASN in Path
+24115:1101:5,AS Path too long
+24115:1101:6,AS Path too short
+24115:1101:7,Invalid First ASN
+24115:1101:8,Invalid Next Hop Address
+24115:1101:9,IRRDB Prefix not found
+24115:1101:13,RPKI Invalid
+24115:1101:20,AS Loop
+24115:1102:1,Advertising Peer declines Prefix
