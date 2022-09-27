@@ -54,43 +54,55 @@ app.version = "0.2.1"
 asnlist = {}
 
 
-def is_regular_community(community):
+def is_regular_community(community: str) -> bool:
+    """ check if a community string matches a regular community, with optional ranges
+    """
     re_community = re.compile(r"^[\w\-]+:[\w\-]+$")
     return re_community.match(community)
 
 
-def is_large_community(community):
+def is_large_community(community: str) -> bool:
+    """ check if a community string matches a large community, with optional ranges
+    """
     re_large = re.compile(r"^[\w\-]+:[\w\-]+:[\w\-]+$")
     return re_large.match(community)
 
 
-def is_extended_community(community):
-    re_extended = re.compile("^\w+ [\w\-]+(:[\w+\-])?$")
+def is_extended_community(community: str) -> bool:
+    """ check if a community string is an extended community, with optional ranges
+    """
+    re_extended = re.compile(r"^\w+ [\w\-]+(:[\w\-]+)?$")
     return re_extended.match(community)
 
 
-def get_community_type(community):
+def get_community_type(community: str) -> str:
+    """ determine the community type of a community.
+    """
     if is_regular_community(community):
         return "regular"
-    elif is_large_community(community):
+    if is_large_community(community):
         return "large"
-    elif is_extended_community(community):
+    if is_extended_community(community):
         return "extended"
-    else:
-        return "unknown"
+
+    print(f"unknown community type for '{community}'")
+    return "unknown"
 
 
-def read_communities():
+def read_communities() -> dict:
     """ Read the list of community definitions from communities/*.txt and translate them
         into a dictionary containing community lists for exact matches, ranges and regexps.
     """
     communitylist = {
-        "regular": { "exact": {}, "re": [], "range": [], "raw": {}},
-        "large": { "exact": {}, "re": [], "range": [], "raw": {}},
-        "extended": { "exact": {}, "re": [], "range": [], "raw": {}},
+        "regular": {"exact": {}, "re": [], "range": [], "raw": {}},
+        "large": {"exact": {}, "re": [], "range": [], "raw": {}},
+        "extended": {"exact": {}, "re": [], "range": [], "raw": {}},
     }
     re_range = re.compile(r"^(\d+)\-(\d+)$")
-    re_exact = re.compile(r"^((\w+ )?\d+(:\d+)?|\d+(:\d+){1,2})$")
+    re_exact = re.compile(r"^((\w+ )?\w+(:\w+)?|\w+(:\w+){1,2})$")
+    re_regular_exact = re.compile(r"^\d+:\d+$")
+    re_large_exact = re.compile(r"^\d+:\d+:\d+$")
+    re_extended_exact = re.compile(r"^\w+ \w+(:\w+)$")
 
     currentdir = os.path.dirname(os.path.realpath(__file__))
     files = glob.glob(f"{currentdir}/communities/*.txt")
@@ -105,8 +117,10 @@ def read_communities():
                     print(f"unknown communtity format: '{comm}'")
                     continue
 
-                if re_exact.match(comm):
-                    # exact community name, no ranges or wildcards
+                if (ctype == "regular" and re_regular_exact.match(comm)) or \
+                   (ctype == "large" and re_large_exact.match(comm)) or \
+                   (ctype == "extended" and re_extended_exact.match(comm)):
+                    # exact community, no ranges or wildcards
                     communitylist[ctype]["exact"][comm] = desc
                     communitylist[ctype]["raw"][comm] = desc
                 else:
@@ -124,7 +138,7 @@ def read_communities():
                         match = re_range.match(comm)
                         first, last = int(match.group(1)), int(match.group(2))
                         if first > last:
-                            print(f"Bad range for as {asn}, {first} should be less than {last}")
+                            print(f"Bad range for as {comm}, {first} should be less than {last}")
                             continue
                         communitylist[ctype]["range"].append((first, last, desc))
                     if regex:
@@ -134,16 +148,16 @@ def read_communities():
     return communitylist
 
 
-def get_community_descr_from_list(community: str, communitylist: dict):
+def get_community_descr_from_list(community: str, communitylist: dict) -> str:
     """Given a community try to figure out if we can match it to something in the list
     """
 
+    community = community.strip()
     ctype = get_community_type(community)
     if ctype == "unknown":
         print(f"Unknown community requested: {community}")
         return ""
 
-    print(community, ctype)
     # first try to find an exact match
     if community in communitylist[ctype]["exact"]:
         return communitylist[ctype]["exact"][community]
@@ -448,9 +462,12 @@ def show_route_for_prefix():
                 "aspath": [(r, get_asn_name(r)) for r in route["aspath"].split(" ")],
                 "origin": route["origin"],
                 "source": route["source"],
-                "communities": [(c, get_community_descr_from_list(c, communitylist)) for c in route.get("communities", ["-"])],
-                "extended_communities": [(c, get_community_descr_from_list(c, communitylist)) for c in route.get("extended_communities", ["-"])],
-                "large_communities": [(c, get_community_descr_from_list(c, communitylist)) for c in route.get("large_communities", ["-"])],
+                "communities": [(c, get_community_descr_from_list(c.strip(), communitylist))
+                                for c in route.get("communities", ["-"])],
+                "extended_communities": [(c, get_community_descr_from_list(c.strip(), communitylist))
+                                         for c in route.get("extended_communities", ["-"])],
+                "large_communities": [(c, get_community_descr_from_list(c.strip(), communitylist))
+                                      for c in route.get("large_communities", ["-"])],
                 "valid": route["valid"],
                 "ovs": route["ovs"],
                 "exit_nexthop": route["exit_nexthop"],
