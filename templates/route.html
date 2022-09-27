@@ -59,11 +59,13 @@
     </tr>
     <tr>
         <td>Extended communities</td>
-	<td class="data"d>{% for community in route.extended_communities %}<button type="button" class="btn btn-community btn-sm btn-outline-secondary">{{ community }}</button>&nbsp;{% endfor %}</td>
+        <td class="data">{% for community in route.extended_communities %}{% if community[1]  %}<button type="button" class="btn btn-community btn-sm btn-outline-primary" data-toggle="tooltip" data-placement="bottom" animation="true" title="{{ community[1] }}">{{ community[0] }} <span class="comm2text">({{ community[1][:25] }}{% if community[1] | length >25 %}...{% endif %})</span></button>{% else %}<button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="tooltip" data-placement="bottom" animation="true" title="no communtiy details available">{{ community[0] }}</button>{% endif %} {% endfor %}
+        </td>
     </tr>
     <tr>
         <td>Large communities</td>
-	<td class="data"d>{% for community in route.large_communities %}<button type="button" class="btn btn-community btn-sm btn-outline-secondary">{{ community }}</button>&nbsp;{% endfor %}</td>
+	    <td class="data">{% for community in route.large_communities %}{% if community[1]  %}<button type="button" class="btn btn-community btn-sm btn-outline-primary" data-toggle="tooltip" data-placement="bottom" animation="true" title="{{ community[1] }}">{{ community[0] }} <span class="comm2text">({{ community[1][:25] }}{% if community[1] | length >25 %}...{% endif %})</span></button>{% else %}<button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="tooltip" data-placement="bottom" animation="true" title="no communtiy details available">{{ community[0] }}</button>{% endif %} {% endfor %}
+        </td>
     </tr>
 </table>
 

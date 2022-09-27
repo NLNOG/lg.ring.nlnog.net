@@ -22,8 +22,8 @@ Prefix: {{ prefix }} ({{ routes[prefix] | length }} items)
     MED:                   {{route.metric}}
     Last update:           {{route.last_update_at}} ({{route.last_update}} ago)
     Communities:           {% for community in route.communities %}{% if community[1] %}<span class="community" data-toggle="tooltip" data-placement="bottom" animation="true" title="{{ community[1] }}">{{ community[0] }}</span>{% else %}{{ community[0] }}{% endif %} {% endfor %}
-    Extended communities:  {{ route.extended_communities | join(" ") }}
-    Large communities:     {{ route.large_communities | join(" ") }}
+    Extended communities:  {% for community in route.extended_communities %}{% if community[1] %}<span class="community" data-toggle="tooltip" data-placement="bottom" animation="true" title="{{ community[1] }}">{{ community[0] }}</span>{% else %}{{ community[0] }}{% endif %} {% endfor %}
+    Large communities:     {% for community in route.large_communities %}{% if community[1] %}<span class="community" data-toggle="tooltip" data-placement="bottom" animation="true" title="{{ community[1] }}">{{ community[0] }}</span>{% else %}{{ community[0] }}{% endif %} {% endfor %}
 {% endfor %}{% endfor %}
 
 </pre>
