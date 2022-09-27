@@ -54,12 +54,55 @@ app.version = "0.2.1"
 asnlist = {}
 
 
-def read_communities():
+def is_regular_community(community: str) -> bool:
+    """ check if a community string matches a regular community, with optional ranges
+    """
+    re_community = re.compile(r"^[\w\-]+:[\w\-]+$")
+    return re_community.match(community)
+
+
+def is_large_community(community: str) -> bool:
+    """ check if a community string matches a large community, with optional ranges
+    """
+    re_large = re.compile(r"^[\w\-]+:[\w\-]+:[\w\-]+$")
+    return re_large.match(community)
+
+
+def is_extended_community(community: str) -> bool:
+    """ check if a community string is an extended community, with optional ranges
+    """
+    re_extended = re.compile(r"^\w+ [\w\-]+(:[\w\-]+)?$")
+    return re_extended.match(community)
+
+
+def get_community_type(community: str) -> str:
+    """ determine the community type of a community.
+    """
+    if is_regular_community(community):
+        return "regular"
+    if is_large_community(community):
+        return "large"
+    if is_extended_community(community):
+        return "extended"
+
+    print(f"unknown community type for '{community}'")
+    return "unknown"
+
+
+def read_communities() -> dict:
     """ Read the list of community definitions from communities/*.txt and translate them
         into a dictionary containing community lists for exact matches, ranges and regexps.
     """
-    communitylist = {}
+    communitylist = {
+        "regular": {"exact": {}, "re": [], "range": [], "raw": {}},
+        "large": {"exact": {}, "re": [], "range": [], "raw": {}},
+        "extended": {"exact": {}, "re": [], "range": [], "raw": {}},
+    }
     re_range = re.compile(r"^(\d+)\-(\d+)$")
+    re_exact = re.compile(r"^((\w+ )?\w+(:\w+)?|\w+(:\w+){1,2})$")
+    re_regular_exact = re.compile(r"^\d+:\d+$")
+    re_large_exact = re.compile(r"^\d+:\d+:\d+$")
+    re_extended_exact = re.compile(r"^\w+ \w+(:\w+)$")
 
     currentdir = os.path.dirname(os.path.realpath(__file__))
     files = glob.glob(f"{currentdir}/communities/*.txt")
@@ -69,72 +112,65 @@ def read_communities():
                 if entry.startswith("#") or "," not in entry:
                     continue
                 (comm, desc) = entry.split(",", 1)
-                if ":" not in comm:
-                    print(f"Doesn't look like a community: {entry}")
+                ctype = get_community_type(comm)
+                if ctype == "unknown":
+                    print(f"unknown communtity format: '{comm}'")
                     continue
-                (asn, value) = comm.split(":", 1)
-                if value.isnumeric():
-                    if asn not in communitylist:
-                        communitylist[asn] = {"exact": {comm: desc}, "re": [], "range": [], "raw": {}}
-                    else:
-                        communitylist[asn]["exact"][comm] = desc
-                        communitylist[asn]["raw"][comm] = desc
+
+                if (ctype == "regular" and re_regular_exact.match(comm)) or \
+                   (ctype == "large" and re_large_exact.match(comm)) or \
+                   (ctype == "extended" and re_extended_exact.match(comm)):
+                    # exact community, no ranges or wildcards
+                    communitylist[ctype]["exact"][comm] = desc
+                    communitylist[ctype]["raw"][comm] = desc
                 else:
                     # funky notations:
                     # nnn -> any number
                     # x -> any digit
                     # a-b -> numeric range a upto b
-                    value = value.lower()
+                    comm = comm.lower()
                     regex = None
-                    if value == "nnn":
-                        regex = re.compile(value.replace("nnn", r"\d+"))
-                    elif "x" in value:
-                        regex = re.compile(value.replace("x", r"\d"))
-                    elif re_range.match(value):
-                        match = re_range.match(value)
+                    if "nnn" in comm:
+                        regex = re.compile(comm.replace("nnn", r"\d+"))
+                    elif "x" in comm:
+                        regex = re.compile(comm.replace("x", r"\d"))
+                    elif re_range.match(comm):
+                        match = re_range.match(comm)
                         first, last = int(match.group(1)), int(match.group(2))
                         if first > last:
-                            print(f"Bad range for as {asn}, {first} should be less than {last}")
+                            print(f"Bad range for as {comm}, {first} should be less than {last}")
                             continue
-                        if asn not in communitylist:
-                            communitylist[asn] = {"exact": {}, "re": [], "range": [(first, last, desc)]}
-                        else:
-                            communitylist[asn]["range"].append((first, last, desc))
+                        communitylist[ctype]["range"].append((first, last, desc))
                     if regex:
-                        if asn not in communitylist:
-                            communitylist[asn] = {"exact": {}, "re": [(regex, desc)], "range": [], "raw": {}}
-                        else:
-                            communitylist[asn]["re"].append((regex, desc))
-                            communitylist[asn]["raw"][comm] = desc
+                        communitylist[ctype]["re"].append((regex, desc))
+                        communitylist[ctype]["raw"][comm] = desc
 
     return communitylist
 
 
-def get_community_descr_from_list(community: str, communitylist: dict):
+def get_community_descr_from_list(community: str, communitylist: dict) -> str:
     """Given a community try to figure out if we can match it to something in the list
     """
 
-    # inore anything that doesn't look like a community
-    if ":" not in community:
-        return ""
-    (asn, value) = community.split(":", 1)
-
-    # if we can't find the ASN, we stop
-    if asn not in communitylist:
+    community = community.strip()
+    ctype = get_community_type(community)
+    if ctype == "unknown":
+        print(f"Unknown community requested: {community}")
         return ""
 
     # first try to find an exact match
-    if community in communitylist[asn]["exact"]:
-        return communitylist[asn]["exact"][community]
+    if community in communitylist[ctype]["exact"]:
+        return communitylist[ctype]["exact"][community]
 
     # try if it matches a range
-    for (start, end, desc) in communitylist[asn]["range"]:
-        if start <= int(value) <= end:
+    # TODO FIX THIS, we don't know where to apply the range here!
+    for (start, end, desc) in communitylist[ctype]["range"]:
+        if start <= int(community) <= end:
             return desc
 
     # try a regexp instead
-    for (regex, desc) in communitylist[asn]["re"]:
-        if regex.match(value):
+    for (regex, desc) in communitylist[ctype]["re"]:
+        if regex.match(community):
             return desc
 
     # no luck
@@ -426,9 +462,12 @@ def show_route_for_prefix():
                 "aspath": [(r, get_asn_name(r)) for r in route["aspath"].split(" ")],
                 "origin": route["origin"],
                 "source": route["source"],
-                "communities": [(c, get_community_descr_from_list(c, communitylist)) for c in route.get("communities", ["-"])],
-                "extended_communities": route.get("extended_communities", ["-"]),
-                "large_communities": route.get("large_communities", ["-"]),
+                "communities": [(c, get_community_descr_from_list(c.strip(), communitylist))
+                                for c in route.get("communities", ["-"])],
+                "extended_communities": [(c, get_community_descr_from_list(c.strip(), communitylist))
+                                         for c in route.get("extended_communities", ["-"])],
+                "large_communities": [(c, get_community_descr_from_list(c.strip(), communitylist))
+                                      for c in route.get("large_communities", ["-"])],
                 "valid": route["valid"],
                 "ovs": route["ovs"],
                 "exit_nexthop": route["exit_nexthop"],
