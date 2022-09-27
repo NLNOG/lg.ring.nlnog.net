@@ -4,23 +4,24 @@
 6830:13000,Liberty Global transit customers
 6830:16000,Prefixes learned from public peers (via an IXP)
 6830:17000,Prefixes learned from private peers
-6830:1102,Origin: Belgium
-6830:1111,Origin: Switzerland
-6830:1119,Origin: Germany
-6830:1105,Origin: Ireland
-6830:1101,Origin: The Netherlands
-6830:1118,Origin: Poland
-6830:1121,Origin: Slovakia
-6830:1114,Origin: United Kingdom
-6830:343,Learned in Austria
-6830:332,Learned in Belgium
-6830:341,Learned in Switzerland
-6830:349,Learned in Germany
-6830:333,Learned in France
-6830:335,Learned in Ireland
-6830:339,Learned in Italy
-6830:331,Learned in the Netherlands
-6830:348,Learned in Poland
-6830:351,Learned in Slovakia
-6830:344,Learned in United Kingdom
-6830:353,Learned in United States
+6830:1102x,Origin: Belgium
+6830:1111x,Origin: Switzerland
+6830:1119x,Origin: Germany
+6830:1105x,Origin: Ireland
+6830:1101x,Origin: The Netherlands
+6830:1118x,Origin: Poland
+6830:1121x,Origin: Slovakia
+6830:1114x,Origin: United Kingdom
+6830:343xx,Learned in Austria
+6830:332xx,Learned in Belgium
+6830:341xx,Learned in Switzerland
+6830:349xx,Learned in Germany
+6830:333xx,Learned in France
+6830:335xx,Learned in Ireland
+6830:339xx,Learned in Italy
+6830:331xx,Learned in the Netherlands
+6830:348xx,Learned in Poland
+6830:351xx,Learned in Slovakia
+6830:344xx,Learned in United Kingdom
+6830:353xx,Learned in United States
+
