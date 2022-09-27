@@ -1,9 +1,8 @@
-6830:6830,Non-residential prefixes
-6830:11000,Residential customers: more specific prefixes
-6830:12000,Residential customers: aggregated prefixes
-6830:13000,Liberty Global transit customers
-6830:16000,Prefixes learned from public peers (via an IXP)
-6830:17000,Prefixes learned from private peers
+6830:6830,Liberty Global (Aorta): Non-residential
+6830:11000,Residential customers: more specific route
+6830:12000,Residential customers: aggregated route
+6830:16000,Learned from public peers (via an IXP)
+6830:17000,Learned from private peers
 6830:1102x,Origin: Belgium
 6830:1111x,Origin: Switzerland
 6830:1119x,Origin: Germany
