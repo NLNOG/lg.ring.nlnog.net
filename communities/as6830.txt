@@ -1,0 +1,26 @@
+6830:6830,Non-residential prefixes
+6830:11000,Residential customers: more specific prefixes
+6830:12000,Residential customers: aggregated prefixes
+6830:13000,Liberty Global transit customers
+6830:16000,Prefixes learned from public peers (via an IXP)
+6830:17000,Prefixes learned from private peers
+6830:1102,Origin: Belgium
+6830:1111,Origin: Switzerland
+6830:1119,Origin: Germany
+6830:1105,Origin: Ireland
+6830:1101,Origin: The Netherlands
+6830:1118,Origin: Poland
+6830:1121,Origin: Slovakia
+6830:1114,Origin: United Kingdom
+6830:343,Learned in Austria
+6830:332,Learned in Belgium
+6830:341,Learned in Switzerland
+6830:349,Learned in Germany
+6830:333,Learned in France
+6830:335,Learned in Ireland
+6830:339,Learned in Italy
+6830:331,Learned in the Netherlands
+6830:348,Learned in Poland
+6830:351,Learned in Slovakia
+6830:344,Learned in United Kingdom
+6830:353,Learned in United States
