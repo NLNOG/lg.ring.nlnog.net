@@ -2,3 +2,10 @@
 201376:0:0,prevent announcement to peers
 201376:0:x,prevent announcement to peer
 201376:1:x,force announcement to peer
+soo 201376:1080,Learned from FranceIX Lyon (AS43100)
+soo 201376:1180,Learned from Equinix IX Paris (AS24115)
+soo 201376:1190,Learned from Hurricane Elecric (AS6939)
+soo 201376:1170,Learned from OVH (AS16276)
+soo 201376:1081,OVS valid
+soo 201376:1082,OVS not-found
+soo 201376:1083,OVS invalid (not announced to any peer)

@@ -33,3 +33,55 @@
 38195:9700,Origin=Internal
 38195:9701,Origin=Customer
 38195:9790,Origin=Non-BGP
+
+#AS38195 Large global control communities
+38195:nnn:0,Global DNA to ASN
+38195:nnn:1,Global Prepend x1 to ASN
+38195:nnn:2,Global Prepend x2 to ASN
+38195:nnn:3.Global Prepend x3 to ASN
+38195:nnn:9,Global Set no-export to ASN
+
+#AS38195 Large DNA control communities
+38195:nnn:66130,DNA to ASN in AU
+38195:nnn:66760,DNA to ASN in FR
+38195:nnn:67000,DNA to ASN in HK
+38195:nnn:67120,DNA to ASN in JP
+38195:nnn:67590,DNA to ASN in NZ
+38195:nnn:68000,DNA to ASN in SG
+38195:nnn:68350,DNA to ASN in US
+
+#AS38195 Large Prepend x1 control communities
+38195:nnn:66131,Prepend x1 to ASN in AU
+38195:nnn:66761,Prepend x1 to ASN in FR
+38195:nnn:67001,Prepend x1 to ASN in HK
+38195:nnn:67121,Prepend x1 to ASN in JP
+38195:nnn:67591,Prepend x1 to ASN in NZ
+38195:nnn:68001,Prepend x1 to ASN in SG
+38195:nnn:68351,Prepend x1 to ASN in US
+
+#AS38195 Large Prepend x2 control communities
+38195:nnn:66132,Prepend x2 to ASN in AU
+38195:nnn:66762,Prepend x2 to ASN in FR
+38195:nnn:67002,Prepend x2 to ASN in HK
+38195:nnn:67122,Prepend x2 to ASN in JP
+38195:nnn:67592,Prepend x2 to ASN in NZ
+38195:nnn:68002,Prepend x2 to ASN in SG
+38195:nnn:68352,Prepend x2 to ASN in US
+
+#AS38195 Large Prepend x3 control communities
+38195:nnn:66133,Prepend x3 to ASN in AU
+38195:nnn:66763,Prepend x3 to ASN in FR
+38195:nnn:67003,Prepend x3 to ASN in HK
+38195:nnn:67123,Prepend x3 to ASN in JP
+38195:nnn:67593,Prepend x3 to ASN in NZ
+38195:nnn:68003,Prepend x3 to ASN in SG
+38195:nnn:68353,Prepend x3 to ASN in US
+
+#AS38195 Large Set no-export control communities
+38195:nnn:66139,Set no-export to ASN in AU
+38195:nnn:66769,Set no-export to ASN in FR
+38195:nnn:67009,Set no-export to ASN in HK
+38195:nnn:67129,Set no-export to ASN in JP
+38195:nnn:67599,Set no-export to ASN in NZ
+38195:nnn:68009,Set no-export to ASN in SG
+38195:nnn:68359,Set no-export to ASN in US
