@@ -1,0 +1,3 @@
+soo 197000:1,AuthDNS core site nl-ams
+soo 197000:2,AuthDNS core site gb-lon
+soo 197000:3,AuthDNS core site se-sto
