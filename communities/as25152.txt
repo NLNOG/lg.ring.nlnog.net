@@ -1,5 +1,184 @@
 25152:1,K-ROOT core site nl-ams
+25152:1001,K-ROOT hosted site us-sgu
+25152:1003,K-ROOT hosted site fr-par
+25152:1006,K-ROOT hosted site kw-kwi
+25152:1009,K-ROOT hosted site ru-mow
+25152:1010,K-ROOT hosted site ru-ovb
+25152:1011,K-ROOT hosted site am-abo
+25152:1012,K-ROOT hosted site am-evn
+25152:1013,K-ROOT hosted site at-vie
+25152:1014,K-ROOT hosted site au-bne
+25152:1015,K-ROOT hosted site ch-gva
+25152:1016,K-ROOT hosted site ch-zrh
+25152:1017,K-ROOT hosted site cz-prg
+25152:1018,K-ROOT hosted site de-kae
+25152:1019,K-ROOT hosted site es-bcn
+25152:1020,K-ROOT hosted site fi-hel
+25152:1023,K-ROOT hosted site gr-ath
+25152:1024,K-ROOT hosted site hu-bud
+25152:1025,K-ROOT hosted site in-del
+25152:1026,K-ROOT hosted site ir-thr
+25152:1027,K-ROOT hosted site is-rey
+25152:1028,K-ROOT hosted site it-mil
+25152:1029,K-ROOT hosted site kw-kwi
+25152:1030,K-ROOT hosted site kz-plx
+25152:1031,K-ROOT hosted site lv-rix
+25152:1032,K-ROOT hosted site pl-poz
+25152:1034,K-ROOT hosted site rs-beg
+25152:1035,K-ROOT hosted site ru-led
+25152:1036,K-ROOT hosted site us-mkc
+25152:1037,K-ROOT hosted site us-rno
+25152:1039,K-ROOT hosted site uy-mvd
+25152:1040,K-ROOT hosted site za-jnb
+25152:1041,K-ROOT hosted site at-vie
+25152:1043,K-ROOT hosted site ir-thr
+25152:1045,K-ROOT hosted site ir-thr
+25152:1046,K-ROOT hosted site pl-gdy
+25152:1060,K-ROOT hosted site lb-bey
+25152:1063,K-ROOT hosted site cr-sjo
+25152:1064,K-ROOT hosted site us-ric
+25152:1066,K-ROOT hosted site in-bom
+25152:1068,K-ROOT hosted site bg-sof
+25152:1069,K-ROOT hosted site qa-doh
+25152:1070,K-ROOT hosted site bg-sof
+25152:1074,K-ROOT hosted site ro-buh
+25152:1075,K-ROOT hosted site de-ber
+25152:1077,K-ROOT hosted site ge-tbs
+25152:1079,K-ROOT hosted site cl-scl
+25152:1081,K-ROOT hosted site de-ham
+25152:1083,K-ROOT hosted site ca-cal
+25152:1086,K-ROOT hosted site ar-bue
+25152:1088,K-ROOT hosted site ie-ork
+25152:1090,K-ROOT hosted site gl-goh
+25152:1093,K-ROOT hosted site bh-amh
+25152:1094,K-ROOT hosted site tw-tpe
+25152:1095,K-ROOT hosted site lu-lux
+25152:1097,K-ROOT hosted site es-mad
+25152:1099,K-ROOT hosted site fr-lio
+25152:11,K-ROOT core site de-fra
+25152:1100,K-ROOT hosted site tj-dyu
+25152:1104,K-ROOT hosted site pa-pty
+25152:1106,K-ROOT hosted site ua-vsg
+25152:1107,K-ROOT hosted site de-ber
+25152:1110,K-ROOT hosted site cn-bjs
+25152:1112,K-ROOT hosted site bt-thi
+25152:1117,K-ROOT hosted site us-cmh
+25152:1119,K-ROOT hosted site br-ssa
+25152:1121,K-ROOT hosted site mm-rgn
+25152:1123,K-ROOT hosted site cn-ggz
+25152:1124,K-ROOT hosted site cn-gya
+25152:1126,K-ROOT hosted site ee-tll
+25152:1127,K-ROOT hosted site vn-han
+25152:1128,K-ROOT hosted site it-pmo
+25152:1129,K-ROOT hosted site pl-waw
+25152:1130,K-ROOT hosted site it-ota
+25152:1133,K-ROOT hosted site at-fkt
+25152:1138,K-ROOT hosted site sa-ruh
+25152:1148,K-ROOT hosted site ca-van
+25152:1154,K-ROOT hosted site kh-pnh
+25152:1155,K-ROOT hosted site ae-dxb
+25152:1157,K-ROOT hosted site fo-tor
+25152:1161,K-ROOT hosted site id-jog
+25152:1163,K-ROOT hosted site id-jkt
+25152:1164,K-ROOT hosted site bh-amh
+25152:1181,K-ROOT hosted site br-pgz
+25152:1189,K-ROOT hosted site at-szg
+25152:1191,K-ROOT hosted site ba-sjj
+25152:1201,K-ROOT hosted site id-dps
+25152:1222,K-ROOT hosted site it-pmo
+25152:1223,K-ROOT hosted site kz-pwq
 25152:2,K-ROOT core site gb-lon
 25152:3,K-ROOT core site jp-tyo
 25152:5,K-ROOT core site us-mia
-25152:11,K-ROOT core site de-fra
+25152:1001:nnn,K-ROOT:us-sgu:<peer>
+25152:1003:nnn,K-ROOT:fr-par:<peer>
+25152:1006:nnn,K-ROOT:kw-kwi:<peer>
+25152:1009:nnn,K-ROOT:ru-mow:<peer>
+25152:1010:nnn,K-ROOT:ru-ovb:<peer>
+25152:1011:nnn,K-ROOT:am-abo:<peer>
+25152:1012:nnn,K-ROOT:am-evn:<peer>
+25152:1013:nnn,K-ROOT:at-vie:<peer>
+25152:1014:nnn,K-ROOT:au-bne:<peer>
+25152:1015:nnn,K-ROOT:ch-gva:<peer>
+25152:1016:nnn,K-ROOT:ch-zrh:<peer>
+25152:1017:nnn,K-ROOT:cz-prg:<peer>
+25152:1018:nnn,K-ROOT:de-kae:<peer>
+25152:1019:nnn,K-ROOT:es-bcn:<peer>
+25152:1020:nnn,K-ROOT:fi-hel:<peer>
+25152:1023:nnn,K-ROOT:gr-ath:<peer>
+25152:1024:nnn,K-ROOT:hu-bud:<peer>
+25152:1025:nnn,K-ROOT:in-del:<peer>
+25152:1026:nnn,K-ROOT:ir-thr:<peer>
+25152:1027:nnn,K-ROOT:is-rey:<peer>
+25152:1028:nnn,K-ROOT:it-mil:<peer>
+25152:1029:nnn,K-ROOT:kw-kwi:<peer>
+25152:1030:nnn,K-ROOT:kz-plx:<peer>
+25152:1031:nnn,K-ROOT:lv-rix:<peer>
+25152:1032:nnn,K-ROOT:pl-poz:<peer>
+25152:1034:nnn,K-ROOT:rs-beg:<peer>
+25152:1035:nnn,K-ROOT:ru-led:<peer>
+25152:1036:nnn,K-ROOT:us-mkc:<peer>
+25152:1037:nnn,K-ROOT:us-rno:<peer>
+25152:1039:nnn,K-ROOT:uy-mvd:<peer>
+25152:1040:nnn,K-ROOT:za-jnb:<peer>
+25152:1041:nnn,K-ROOT:at-vie:<peer>
+25152:1043:nnn,K-ROOT:ir-thr:<peer>
+25152:1045:nnn,K-ROOT:ir-thr:<peer>
+25152:1046:nnn,K-ROOT:pl-gdy:<peer>
+25152:1060:nnn,K-ROOT:lb-bey:<peer>
+25152:1063:nnn,K-ROOT:cr-sjo:<peer>
+25152:1064:nnn,K-ROOT:us-ric:<peer>
+25152:1066:nnn,K-ROOT:in-bom:<peer>
+25152:1068:nnn,K-ROOT:bg-sof:<peer>
+25152:1069:nnn,K-ROOT:qa-doh:<peer>
+25152:1070:nnn,K-ROOT:bg-sof:<peer>
+25152:1074:nnn,K-ROOT:ro-buh:<peer>
+25152:1075:nnn,K-ROOT:de-ber:<peer>
+25152:1077:nnn,K-ROOT:ge-tbs:<peer>
+25152:1079:nnn,K-ROOT:cl-scl:<peer>
+25152:1081:nnn,K-ROOT:de-ham:<peer>
+25152:1083:nnn,K-ROOT:ca-cal:<peer>
+25152:1086:nnn,K-ROOT:ar-bue:<peer>
+25152:1088:nnn,K-ROOT:ie-ork:<peer>
+25152:1090:nnn,K-ROOT:gl-goh:<peer>
+25152:1093:nnn,K-ROOT:bh-amh:<peer>
+25152:1094:nnn,K-ROOT:tw-tpe:<peer>
+25152:1095:nnn,K-ROOT:lu-lux:<peer>
+25152:1097:nnn,K-ROOT:es-mad:<peer>
+25152:1099:nnn,K-ROOT:fr-lio:<peer>
+25152:1100:nnn,K-ROOT:tj-dyu:<peer>
+25152:1104:nnn,K-ROOT:pa-pty:<peer>
+25152:1106:nnn,K-ROOT:ua-vsg:<peer>
+25152:1107:nnn,K-ROOT:de-ber:<peer>
+25152:1110:nnn,K-ROOT:cn-bjs:<peer>
+25152:1112:nnn,K-ROOT:bt-thi:<peer>
+25152:1117:nnn,K-ROOT:us-cmh:<peer>
+25152:1119:nnn,K-ROOT:br-ssa:<peer>
+25152:1121:nnn,K-ROOT:mm-rgn:<peer>
+25152:1123:nnn,K-ROOT:cn-ggz:<peer>
+25152:1124:nnn,K-ROOT:cn-gya:<peer>
+25152:1126:nnn,K-ROOT:ee-tll:<peer>
+25152:1127:nnn,K-ROOT:vn-han:<peer>
+25152:1128:nnn,K-ROOT:it-pmo:<peer>
+25152:1129:nnn,K-ROOT:pl-waw:<peer>
+25152:1130:nnn,K-ROOT:it-ota:<peer>
+25152:1133:nnn,K-ROOT:at-fkt:<peer>
+25152:1138:nnn,K-ROOT:sa-ruh:<peer>
+25152:1148:nnn,K-ROOT:ca-van:<peer>
+25152:1154:nnn,K-ROOT:kh-pnh:<peer>
+25152:1155:nnn,K-ROOT:ae-dxb:<peer>
+25152:1157:nnn,K-ROOT:fo-tor:<peer>
+25152:1161:nnn,K-ROOT:id-jog:<peer>
+25152:1163:nnn,K-ROOT:id-jkt:<peer>
+25152:1164:nnn,K-ROOT:bh-amh:<peer>
+25152:1181:nnn,K-ROOT:br-pgz:<peer>
+25152:1189:nnn,K-ROOT:at-szg:<peer>
+25152:1191:nnn,K-ROOT:ba-sjj:<peer>
+25152:11:nnn,K-ROOT:de-fra:<peer>
+25152:1201:nnn,K-ROOT:id-dps:<peer>
+25152:1222:nnn,K-ROOT:it-pmo:<peer>
+25152:1223:nnn,K-ROOT:kz-pwq:<peer>
+25152:1:nnn,K-ROOT:nl-ams:<peer>
+25152:2:nnn,K-ROOT:gb-lon:<peer>
+25152:3:nnn,K-ROOT:jp-tyo:<peer>
+25152:5:nnn,K-ROOT:us-mia:<peer>
