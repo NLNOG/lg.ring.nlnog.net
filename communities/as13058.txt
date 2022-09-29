@@ -1,0 +1,13 @@
+# serve-u / FMT32 communities -- contact noc@fmt32.net for any questions
+13058:20361,Learned at Berlin, A36-X
+13058:20362,Learned at Berlin, A36-X
+13058:21051,Learned at Berlin, L105-X
+13058:21052,Learned at Berlin, L105-Y
+#
+13058:30361,Advertised from Berlin, A36-X
+13058:30362,Advertised from Berlin, A36-X
+13058:31051,Advertised from Berlin, L105-X
+13058:31052,Advertised from Berlin, L105-Y
+#
+13058:44930,via BCIX
+13058:44969,via DE-CIX-FRA
