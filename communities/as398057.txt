@@ -1,0 +1,12 @@
+# Latest data may be found via: whois -h whois.altdb.net AS398057
+
+# Sources
+398057:0:1000,Originated internally
+398057:0:1010,Learned from peer
+398057:0:1011,Learned from peer via route server
+398057:0:1020,Learned from downstream / customer
+
+# Internal information
+398057:0:0,Retain Internally
+398057:0:1900,Multiple internal hops
+398057:0:2001,Rewritten next-hop
