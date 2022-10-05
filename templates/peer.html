@@ -30,16 +30,30 @@
     </tr>
     <tr>
         <td>Capabilities</td>
-        <td><button type="button" class="btn btn-sm btn-outline-{% if data.session.capabilities.as4byte %}success{% else %}danger{% endif %}">4-byte ASN</button> <button type="button" class="btn btn-sm btn-outline-{% if data.session.capabilities.refresh %}success{% else %}danger{% endif %}">refresh</button> <button type="button" class="btn btn-sm btn-outline-{% if data.session.capabilities.enhanced_refresh %}success{% else %}danger{% endif %}">enhanced refresh</button></td>
+        <td>
+            <button type="button" class="btn btn-sm btn-outline-{% if data.session.capabilities.as4byte %}success{% else %}danger{% endif %}" data-toggle="tooltip" data-placement="bottom" animation="true" title="4-by ASN is {% if not data.session.capabilities.as4byte %}not {% endif %} supported">4-byte ASN</button>&nbsp;
+            <button type="button" class="btn btn-sm btn-outline-{% if data.session.capabilities.refresh %}success{% else %}danger{% endif %}" data-toggle="tooltip" data-placement="bottom" animation="true" title="refresh is {% if not data.session.capabilities.refresh %}not {% endif %} supported"">refresh</button>&nbsp;
+            <button type="button" class="btn btn-sm btn-outline-{% if data.session.capabilities.enhanced_refresh %}success{% else %}danger{% endif %}" data-toggle="tooltip" data-placement="bottom" animation="true" title="enhanced refreshis {% if not data.session.capabilities.enhanced_refresh %}not {% endif %} supported">enhanced refresh</button>
+        </td>
     </tr>
     <tr>
         <td>Protocols</td>
-        <td> {% for proto in data.session.capabilities.multiprotocol %}<button type="button" class="btn btn-sm btn-outline-secondary">{{ proto }}</button> {% endfor %}</td>
+        <td>{% for proto in data.session.capabilities.multiprotocol %}
+            <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="tooltip" data-placement="bottom" animation="true" title="{{ proto }} is supported">{{ proto }}</button>
+            {% endfor %}
+        </td>
     </tr>
     <tr>
         <td>Add-path</td>
-        <td>{% if data.session.capabilities["add-path"] %}{% for ap in data.session.capabilities["add-path"] %}<span class="label">{{ ap.mode }} {{ ap.family }}</span> {% endfor %}{% else %}<span class="label label-important">not supported</span>{% endif %}</td>
-    </tr>         
+        <td>{% if data.session.remote.capabilities["add-path"] %}
+                {% for ap in data.session.remote.capabilities["add-path"] %}
+                    <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="tooltip" data-placement="bottom" animation="true" title="{{ ap.mode }} {{ ap.family }} is supported">{{ ap.mode }} {{ ap.family }}</button>
+                {% endfor %}
+            {% else %}
+                <button type="button" class="btn btn-sm btn-outline-danger"  data-toggle="tooltip" data-placement="bottom" animation="true" title="Add-path is not supported">Not supported</button>
+            {% endif %}
+        </td>
+    </tr>
     {% endif %}
 </table>
 </pre>
