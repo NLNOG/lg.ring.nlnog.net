@@ -6,6 +6,7 @@ disable=
     R0912, # too-many-branches
     R0913, # too-many-arguments
     R0914, # too-many-locals
+    R0916, # too-many-boolean-expressions
     R0915, # too-many-statements
     R1702, # too-many-nested-blocks
     W0511, # fixme
