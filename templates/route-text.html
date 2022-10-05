@@ -2,7 +2,7 @@
 {% block body %}
 <br/>
 <h2>
-    Routes found{% if peer != 'all' %} on {{ peer }}{% endif %} for '{{ prefix }}' <a href="/prefix/map?{{ request.query_string.decode() }}" class="btn btn-secondary btn-sm" style="margin-bottom: 0.25rem; line-height: 1.2;">map</a> <a href="/prefix?{{ request.query_string.decode() }}" class="btn btn-secondary btn-sm" style="margin-bottom: 0.25rem; line-height: 1.2;">tables</a>
+    Routes found{% if peer != 'all' %} on {{ peer }}{% endif %} for '{{ prefix }}' <a href="/prefix/map?{{ request.query_string.decode() }}" class="btn btn-secondary btn-sm" style="margin-bottom: 0.25rem; line-height: 1.2;"><i class="bi bi-map"></i> map</a> <a href="/prefix?{{ request.query_string.decode() }}" class="btn btn-secondary btn-sm" style="margin-bottom: 0.25rem; line-height: 1.2;"><i class="bi bi-code"></i> tables</a>
 </h2>
 <br/>
 
