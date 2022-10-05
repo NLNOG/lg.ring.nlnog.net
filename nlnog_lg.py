@@ -99,7 +99,6 @@ def read_communities() -> dict:
         "extended": {"exact": {}, "re": [], "range": [], "raw": {}},
     }
     re_range = re.compile(r"^(\d+)\-(\d+)$")
-    re_exact = re.compile(r"^((\w+ )?\w+(:\w+)?|\w+(:\w+){1,2})$")
     re_regular_exact = re.compile(r"^\d+:\d+$")
     re_large_exact = re.compile(r"^\d+:\d+:\d+$")
     re_extended_exact = re.compile(r"^\w+ \w+(:\w+)$")
@@ -228,7 +227,11 @@ def openbgpd_command(router: str, command: str, args: dict = None):
         args = {}
 
     url = f"{router}/bgplgd/{command_map[command]}"
-    data = requests.get(url, verify=False, params=args, timeout=60)
+    try:
+        data = requests.get(url, verify=False, params=args, timeout=60)
+    except requests.exceptions.ConnectionError:
+        return False, "The NLNOG LG API is not available."
+
     if data.status_code == 200:
         try:
             return True, data.json()
@@ -255,7 +258,9 @@ def get_peer_info(names_only: bool = False, established_only: bool = False):
 
     status, result = openbgpd_command(app.config["ROUTER"], "summary")
     if not status:
-        return render_template("error.html", warnings=["NLNOG LG API not available"])
+        if names_only:
+            return []
+        return ({}, totals)
 
     data = []
 
@@ -370,9 +375,11 @@ def mainpage():
     """ Handle the main page: show a form.
     """
     (peerinfo, totals) = get_peer_info(names_only=False, established_only=True)
+    if len(peerinfo) == 0:
+        return render_template("error.html", warning=["No data received from the NLNOG Ring API endpoint."])
     peers = [peer["name"] for peer in peerinfo]
     peers.sort()
-    return render_template("form.html", peers=peers, totals=totals)
+    return render_template("form.html", peers=peers, totals=totals, hideform=True)
 
 
 @app.route("/summary")
@@ -380,6 +387,8 @@ def bgp_summary():
     """ Handle the BGP peer summary page.
     """
     (data, totals) = get_peer_info(names_only=False)
+    if len(data) == 0:
+        return render_template("error.html", warning=["No data received from the NLNOG Ring API endpoint."])
     peers = [peer["name"] for peer in data]
     return render_template('summary.html', peers=peers, summary=data, totals=totals)
 
@@ -446,6 +455,9 @@ def show_route_for_prefix():
 
     # get a list of peers for the dropdown list in the menu
     peers = get_peer_info(names_only=True, established_only=True)
+    if len(peers) == 0:
+        return render_template("error.html", warning=["No data received from the NLNOG Ring API endpoint."])
+
     communitylist = read_communities()
 
     if "rib" in result:
@@ -507,6 +519,9 @@ def about():
     """ Handle the about page.
     """
     peers = get_peer_info(names_only=True, established_only=True)
+    if len(peers) == 0:
+        return render_template("error.html", warning=["No data received from the NLNOG Ring API endpoint."])
+
     return render_template("about.html", peers=peers)
 
 
@@ -516,6 +531,8 @@ def communitylist():
     """
     communities = []
     peers = get_peer_info(names_only=True, established_only=True)
+    if len(peers) == 0:
+        return render_template("error.html", warning=["No data received from the NLNOG Ring API endpoint."])
     for community in sorted([int(c) for c in read_communities()]):
         communities.append((community, get_asn_name(str(community))))
 
@@ -532,6 +549,8 @@ def communitylist_specific(asn):
         abort(400)
     asname = get_asn_name(asn)
     peers = get_peer_info(names_only=True, established_only=True)
+    if len(peers) == 0:
+        return render_template("error.html", warning=["No data received from the NLNOG Ring API endpoint."])
     return render_template("communities-specific.html", ASN=asn, communities=communitylist[asn]["raw"], asname=asname, peers=peers)
 
 
