@@ -1,0 +1,11 @@
+# Documented at https://www.as50156.net/network/communities
+50156:50156,Boxed IT route
+50156:3000,Transit route
+50156:3010,Unix-Solutions transit
+50156:3020,IPWorks transit
+50156:3030,BCH transit
+50156:3040,Hurricane Electric transit
+50156:4000,Peering route
+50156:4010,BelgiumIX peer
+50156:4011,BelgiumIX peer (direct)
+50156:4012,BelgiumIX peer (route server)
