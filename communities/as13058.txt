@@ -1,6 +1,15 @@
 # serve-u / FMT32 communities -- contact noc@fmt32.net for any questions
+13058:1001,Local originated A-side
+13058:1002,Local originated B-side
+13058:1100,Locally held
+13058:1510,Learned from direct peer
+13058:1550,Learned from direct peer at IX
+13058:1570,Learned from IX route-server
+13058:1200,Learned from customer
+13058:1900,Learned from transit
+#
 13058:20361,Learned at Berlin, A36-X
-13058:20362,Learned at Berlin, A36-X
+13058:20362,Learned at Berlin, A36-Y
 13058:21051,Learned at Berlin, L105-X
 13058:21052,Learned at Berlin, L105-Y
 #
