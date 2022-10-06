@@ -14,9 +14,12 @@
 13058:21052,Learned at Berlin, L105-Y
 #
 13058:30361,Advertised from Berlin, A36-X
-13058:30362,Advertised from Berlin, A36-X
+13058:30362,Advertised from Berlin, A36-Y
 13058:31051,Advertised from Berlin, L105-X
 13058:31052,Advertised from Berlin, L105-Y
 #
 13058:44930,via BCIX
 13058:44969,via DE-CIX-FRA
+#
+13058:0:0,Do not advertise
+13058:1:nnn,Advertise to
