@@ -22,4 +22,4 @@
 13058:44969,via DE-CIX-FRA
 #
 13058:0:0,Do not advertise
-13058:1:nnnn,Advertise to
+13058:1:nnn,Advertise to
