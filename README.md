@@ -12,7 +12,11 @@ The following types of entries are accepted for communities:
 * **exact matches**, for example: `65535:666`, only matching this exact community
 * **ranges**, for example: `65535:0-100`, matching anything from `65535:0` upto `65535:100`
 * **single digit wildcards**, for example: `65535:x0`, matching for `65535:00`, `65535:10`, `65535:20`, etc
-* **any number**, for example: `65535:nnn`, which matches any community staring with `65535:`
+* **any number**, for example: `65535:nnn`, which matches any community staring with `65535:` followed by any number.
+
+**Large communities** are supported as well. They can be formatted similar to regular communities, only contain three parts separated by semicolons. For example: `65535:0:12345`, `65535:nnn:0`, `65535:123:100x`.
+
+**Extended communities** can be specified by the `label number` or `label number:number` notation, using the same wildcard options. For example: `soo 65535:0`, `soo 65535:nnn`.
 
 Additions and updates to the list of communities are welcome, if possible please provide a source for the data as a comment on the first line of the file, and name the file `asNNN.txt`, where `NNN` is the ASN.
 
