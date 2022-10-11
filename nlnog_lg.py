@@ -567,6 +567,7 @@ def stats():
         return render_template("error.html", warning=["No data received from the NLNOG Ring API endpoint."])
     return render_template("statistics.html", stats=stats, peers=peers)
 
+
 @app.errorhandler(400)
 def incorrect_request(_: str):
     """ A generic error handler for 400 errors.
