@@ -29,7 +29,11 @@
 
 import os
 import re
+import bz2
 import glob
+import json
+import uuid
+import sqlite3
 import textwrap
 import argparse
 import subprocess
@@ -52,6 +56,10 @@ app.secret_key = app.config["SESSION_KEY"]
 app.debug = arguments.debug
 app.version = "0.2.1"
 asnlist = {}
+
+
+class LGException(Exception):
+    pass
 
 
 def is_regular_community(community: str) -> bool:
@@ -217,6 +225,56 @@ def whois_command(query: str):
     if app.config.get("WHOIS_SERVER", ""):
         server = ["-h", app.config.get("WHOIS_SERVER")]
     return subprocess.Popen(['whois'] + server + [query], stdout=subprocess.PIPE).communicate()[0].decode('utf-8', 'ignore')
+
+
+def write_archive(data: dict, prefix: str, peer: str) -> str:
+    """ Save LG output JSON, store data in a sqlite db, return the ID if successful
+    """
+    try:
+        id = uuid.uuid4()
+        now = datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")
+        currentdir = os.path.dirname(os.path.realpath(__file__))
+        fname = "%s/%s/%s.json.bz2" % (currentdir, app.config.get("ARCHIVE_DIR", ""), now)
+        compressed = bz2.compress(bytes(json.dumps(data), "utf-8"))
+
+        f = open(fname, "wb")
+        f.write(compressed)
+        f.close()
+        conn = sqlite3.connect("%s/%s" % (currentdir, app.config.get("DB_FILE", "nlnog-lg.sqlite")))
+        cur = conn.cursor()
+        cur.execute("""CREATE TABLE IF NOT EXISTS archive
+                    ([id] TEXT PRIMARY KEY, [filename] TEXT, [created] DATETIME,
+                    [prefix] TEXT, [peer] TEXT)""")
+        conn.commit()
+
+        cur.execute(f"INSERT INTO archive (id, filename, created, prefix, peer) VALUES ('{id}', '{fname}', strftime('%s', 'now'), '{prefix}', '{peer}')")
+        conn.commit()
+        conn.close()
+
+        return id
+    except Exception as e:
+        print(e)
+        return None
+
+
+def read_archive(id):
+    try:
+        currentdir = os.path.dirname(os.path.realpath(__file__))
+        conn = sqlite3.connect("%s/%s" % (currentdir, app.config.get("DB_FILE", "nlnog-lg.sqlite")))
+        cur = conn.cursor()
+        cur.execute(f"SELECT filename, prefix, peer, created FROM archive WHERE id='{id}'")
+        result = cur.fetchall()
+        if len(result) != 1:
+            raise LGException("ID not found.")
+        (filename, prefix, peer, created) = result[0]
+        if not os.path.exists(filename):
+            raise LGException("Data not found.")
+        with bz2.open(filename, "rb") as f:
+            data = json.loads(f.read())
+            data["created"] = created
+            return (data, prefix, peer)
+    except Exception as e:
+        print(e)
 
 
 def openbgpd_command(router: str, command: str, args: dict = None):
@@ -415,53 +473,61 @@ def show_peer_details(peer: str):
 @app.route("/prefix/map/fullscreen")
 @app.route("/prefix/text")
 @app.route("/query/<prefix>/<netmask>")
-def show_route_for_prefix(prefix=None, netmask=None):
+def show_route_for_prefix(prefix=None, netmask=None, id=None):
+@app.route("/static/<id>")
+def show_route_for_prefix(id=None):
     """ Handle the prefix details page.
 
         Look up BGP routes.
     """
     warnings = []
     errors = []
-    if not prefix:
-        prefix = unquote(request.args.get('q', '').strip())
+    result = None
+
+    if id:
+        (result, prefix, peer) = read_archive(id)
     else:
-        prefix = f"{prefix}/{netmask}"
-    peer = unquote(request.args.get('peer', 'all').strip())
-    if not prefix:
-        abort(400)
+        if not prefix:
+            prefix = unquote(request.args.get('q', '').strip())
+        else:
+            prefix = f"{prefix}/{netmask}"
+        peer = unquote(request.args.get('peer', 'all').strip())
+        if not prefix:
+            abort(400)
 
-    args = {}
-    if peer != "all":
-        args["neighbor"] = peer
+        args = {}
+        if peer != "all":
+            args["neighbor"] = peer
 
-    # try to see if the argument is a network by typecasting it to IPNetwork
-    try:
-        net = netaddr.IPNetwork(prefix)
-        # single addresses without a netmask would be a valid IPNetwork too, ignore them
-        if "/" in prefix:
-            if (netaddr.valid_ipv4(str(net.ip)) and net.prefixlen <= 16) or \
-               (netaddr.valid_ipv6(str(net.ip)) and net.prefixlen <= 48):
-                warnings.append("Not showing more specific routes, too many results, showing exact matches only.")
-            elif request.args.get("match") == "orlonger" and request.path != '/prefix/map':
-                args["all"] = 1
-    except netaddr.core.AddrFormatError:
-        if not netaddr.valid_ipv4(prefix) and not netaddr.valid_ipv6(prefix):
-            # Test domain resolution
-            resolved = resolve(prefix)
+        # try to see if the argument is a network by typecasting it to IPNetwork
+        try:
+            net = netaddr.IPNetwork(prefix)
+            # single addresses without a netmask would be a valid IPNetwork too, ignore them
+            if "/" in prefix:
+                if (netaddr.valid_ipv4(str(net.ip)) and net.prefixlen <= 16) or \
+                (netaddr.valid_ipv6(str(net.ip)) and net.prefixlen <= 48):
+                    warnings.append("Not showing more specific routes, too many results, showing exact matches only.")
+                elif request.args.get("match") == "orlonger" and request.path != '/prefix/map':
+                    args["all"] = 1
+        except netaddr.core.AddrFormatError:
+            if not netaddr.valid_ipv4(prefix) and not netaddr.valid_ipv6(prefix):
+                # Test domain resolution
+                resolved = resolve(prefix)
 
-            # Make sure the received answer is either valid IPv4 or IPv6
-            if resolved and (netaddr.valid_ipv4(resolved) or netaddr.valid_ipv6(resolved)):
-                prefix = resolved
-            else:
-                return render_template('error.html', errors=[f"{prefix} is not a valid IPv4 or IPv6 address."]), 400
-    args["prefix"] = prefix
+                # Make sure the received answer is either valid IPv4 or IPv6
+                if resolved and (netaddr.valid_ipv4(resolved) or netaddr.valid_ipv6(resolved)):
+                    prefix = resolved
+                else:
+                    return render_template('error.html', errors=[f"{prefix} is not a valid IPv4 or IPv6 address."]), 400
+        args["prefix"] = prefix
+
+        # query the OpenBGPD API endpoint
+        status, result = openbgpd_command(app.config["ROUTER"], "route", args=args)
+        if not status:
+            return render_template('error.html', errors=["Failed to query the NLNOG Looking Glass backend."]), 400
+
 
     routes = {}
-
-    # query the OpenBGPD API endpoint
-    status, result = openbgpd_command(app.config["ROUTER"], "route", args=args)
-    if not status:
-        return render_template('error.html', errors=["Failed to query the NLNOG Looking Glass backend."]), 400
 
     # get a list of peers for the dropdown list in the menu
     peers = get_peer_info(names_only=True, established_only=True)
@@ -496,7 +562,10 @@ def show_route_for_prefix(prefix=None, netmask=None):
                 "last_update": route["last_update"],
                 "last_update_at": timestamp.strftime("%Y-%m-%d %H:%M:%S UTC"),
                 "metric": route["metric"],
+                "created": route.get("created", ""),
             })
+
+    print(write_archive(result, prefix, peer))
 
     # pylint: disable=undefined-loop-variable
     if request.path == '/prefix/map/fullscreen':

@@ -27,9 +27,16 @@
         <span class="badge bg-secondary">{{loop.index}}</span> {{ route.peer }}
     </div>
     <div class="p-2 bd-highlight"><a href="/prefix?q={{prefix}}&match={{match}}&peer={{route.peer}}"><i class="bi bi-box-arrow-up-right"></i></a>
+        <a class="link" href="/link"><i class="bi bi-link-45deg"></i></a>
     </div>
   </div>
 <table class="table">
+    {% if route.created %}
+    <tr>
+        <td>Data collected at</td>
+        <td>{{ route.created }}</td>
+    </tr>
+    {% endif %}
     <tr>
         <td width="15%">AS-Path</td>
 	<td class="data">{% for as in route.aspath %}<span data-toggle="tooltip" data-placement="top" title="{{ as[1] }}"><a href="/whois?q={{ as[0] }}" class="whois">{{ as[0] }}</a></span> {% endfor %}via next-hop <a href="/whois?q={{ route.exit_nexthop }}" class="whois">{{ route.exit_nexthop }}</a></td>

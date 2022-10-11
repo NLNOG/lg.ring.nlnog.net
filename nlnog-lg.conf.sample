@@ -7,3 +7,6 @@ ROUTER = "https://your.openbgpd.api.endpoint.org"
 SESSION_KEY = 'MakeThisSomethingSecret'
 
 LOOKING_GLASS_NAME = "lg.ring.nlnog.net"
+
+ARCHIVE_DIR = "archive/"
+DB_FILE = "nlnog-lg.sqlite"

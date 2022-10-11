@@ -1,5 +1,6 @@
 *.swp
 *.pyc
+archive/
 venv/
 .vscode/
 nlnog-lg.conf
