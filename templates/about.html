@@ -8,9 +8,9 @@
     </div>
 <p>
 <h2>
-    NLNOG Looking Glass
+About the NLNOG Looking Glass
 </h2>
-This Looking Glass is hosted by <a href="https://nlnog.net">NLNOG</a>, The Dutch Network Operators Group. The Looking Glass runs <a href="http://openbgpd.org/">OpenBGPD</a> as backend and a custom made front end,
+This Looking Glass is hosted by <a href="https://nlnog.net">NLNOG</a>, The Dutch Network Operators Group. The Looking Glass runs <a href="http://openbgpd.org/">OpenBGPD</a> as backend and a custom made front end written by Teun Vink,
 for which the source code can be found <a href="https://www.github.com/NLNOG/lg.ring.nlnog.net">on GitHub</a>. The code was inspired on <a href="https://github.com/sileht/bird-lg/">bird-lg</a> by Mehdi Abaakouk.
 </p>
 <p>
@@ -22,6 +22,19 @@ You can contact them for questions, reporting issues or setting up new BGP sessi
 This Looking Glass uses a collection of known BGP communities to provide additional information on routes received. A list of ASNs for which communities are known can be found <a href="https://github.com/NLNOG/lg.ring.nlnog.net/tree/main/communities">here</a>.</p>
 <p>New community descriptions and updates can be added sending a pull request on the <a href="https://github.com/NLNOG/lg.ring.nlnog.net/">Github repostory</a>, which also provides information on the file format. For any questions, feel free to contact the <a href=""mailto:ring-admins@nlnog.net">ring-admins@nlnog.net</a>.
 <p>
+<h3>Peering with the Looking Glass</h3>
+Peering with this Looking Glass is optional for ring users. If you want to peer with NLNOG Looking Glass, send us your details or <a href="https://github.com/NLNOG/ring-ansible/blob/master/roles/openbgpd/vars/peers.yml"></a>create a pull-request</a>, and configure a session with the following information:
+<pre>
+
+    AS: 199036
+    IPv4: 212.114.120.72 (lg02.infra.ring.nlnog.net)
+    IPv6: 2001:7b8:62b:1:0:d4ff:fe72:7848 (lg02.infra.ring.nlnog.net)
+    Type: eBGP Multi-Hop
+    Policy: import NONE from AS199036, export ANY
+
+</pre>
+Our looking glass support 'add-path', so if supported on your side, feel free to configure it.
+<p></p>
 <h3>Sponsor</h3>
 Hosting of this Looking Glass is generously sponsored by <a href="https://bit.nl">BIT</a>.
 </p>
