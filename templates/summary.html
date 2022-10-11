@@ -13,7 +13,7 @@
         <td><a href="/detail/{{row.name}}">{{ row.name }}</a></td>
         <td><button type="button" class="btn btn-sm btn-outline-{% if row.state == "up" or row.state == "Established" %}success{% else %}danger{% endif %}">{{row.state}}</button></td>
         <td>{{ row.since }}</td>
-        <td class="right">{{ '{:,}'.format(row.prefixes) }}</td>
+        <td class="data">{{ row.prefixes }}</td>
     </tr>
 	{% else %}
 	<tr><td>{{summary.error}}</td><td></td><td></td><td></td><td></td><td></td></tr>
