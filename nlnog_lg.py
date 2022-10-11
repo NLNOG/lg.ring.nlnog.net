@@ -221,6 +221,7 @@ def openbgpd_command(router: str, command: str, args: dict = None):
         "summary": "neighbors",
         "route": "rib",
         "peer": "neighbors",
+        "memory": "memory",
     }
 
     if args is None:
@@ -553,6 +554,18 @@ def communitylist_specific(asn):
         return render_template("error.html", warning=["No data received from the NLNOG Ring API endpoint."])
     return render_template("communities-specific.html", ASN=asn, communities=communitylist[asn]["raw"], asname=asname, peers=peers)
 
+
+@app.route("/statistics")
+def stats():
+    """ Handle the statistics page.
+    """
+    result, stats = openbgpd_command(app.config["ROUTER"], "memory")
+    if not result:
+        return render_template("error.html", errors=["Failed to retrieve Looking glass server statistics."])
+    peers = get_peer_info(names_only=True, established_only=True)
+    if len(peers) == 0:
+        return render_template("error.html", warning=["No data received from the NLNOG Ring API endpoint."])
+    return render_template("statistics.html", stats=stats, peers=peers)
 
 @app.errorhandler(400)
 def incorrect_request(_: str):

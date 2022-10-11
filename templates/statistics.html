@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+{% block body %}
+<br/>
+<h2>
+    NLNOG Looking Glass statistics
+</h2>
+<br/>
+In this table you can find statistics on the number of items and their memory usage as reported by OpenBGPD:
+<table class="table table-striped table-bordered table-condensed">
+    <thead>
+        <tr>
+            <th>Item</th>
+            <th>Count</th>
+            <th>Size (MB)</th>
+        </tr>
+    </thead>
+    <tbody>
+{% for item in ["IPv4 unicast", "IPv6 unicast", "rib", "prefix", "rde_aspath", "aspath", "community_entries", "community", "attributes_entries", "attributes"] %}
+    <tr class="{{ loop.cycle('odd', 'even') }}">
+        <td>{{ item }}</td>
+        <td class="data">{{ stats['memory'][item].count | default('') }}</td>
+        <td class="data">{{ (stats['memory'][item].size / 1024 / 1024) | int }}</td>
+    </tr>
+{% endfor %}
+{% for item in ["as_set", "as_set_tables", "prefix_set"] %}
+    <tr class="{{ loop.cycle('odd', 'even') }}">
+        <td>{{ item }}</td>
+        <td class="data">{{ stats['sets'][item].count | default('') }}</td>
+        <td class="data">{{ (stats['sets'][item].size | default(0) / 1024 / 1024) | int }}</td>
+    </tr>
+{% endfor %}
+</table>
+</table>
+{% endblock %}
