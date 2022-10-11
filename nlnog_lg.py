@@ -475,11 +475,11 @@ def show_route_for_prefix():
                 "origin": route["origin"],
                 "source": route["source"],
                 "communities": [(c, get_community_descr_from_list(c.strip(), communitylist))
-                                for c in route.get("communities", ["-"])],
+                                for c in route.get("communities", [])],
                 "extended_communities": [(c, get_community_descr_from_list(c.strip(), communitylist))
-                                         for c in route.get("extended_communities", ["-"])],
+                                         for c in route.get("extended_communities", [])],
                 "large_communities": [(c, get_community_descr_from_list(c.strip(), communitylist))
-                                      for c in route.get("large_communities", ["-"])],
+                                      for c in route.get("large_communities", [])],
                 "valid": route["valid"],
                 "ovs": route["ovs"],
                 "exit_nexthop": route["exit_nexthop"],

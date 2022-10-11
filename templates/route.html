@@ -22,7 +22,6 @@
     <a href="https://irrexplorer.nlnog.net/prefix/{{prefix}}" class="btn btn-community btn-primary"><i class="bi bi-patch-check"></i> IRR Explorer</a>
     <a href="/whois?q={{prefix}}" class="btn btn-community btn-primary btn-sms whois"><i class="bi bi-search"></i> WHOIS</a>
 {%- for route in routes[prefix] %}
-{% if peer != route.peer %}
 <div class="d-flex bd-highlight mb-3 peername">
     <div class="me-auto p-2 bd-highlight">
         <span class="badge bg-secondary">{{loop.index}}</span> {{ route.peer }}
@@ -30,8 +29,6 @@
     <div class="p-2 bd-highlight"><a href="/prefix?q={{prefix}}&match={{match}}&peer={{route.peer}}"><i class="bi bi-box-arrow-up-right"></i></a>
     </div>
   </div>
-
-{% endif %}
 <table class="table">
     <tr>
         <td width="15%">AS-Path</td>
@@ -53,20 +50,26 @@
         <td>Last update</td>
         <td class=""data">{{route.last_update_at}} ({{route.last_update}} ago)</td>
     </tr>
+    {% if route.communities %}
     <tr>
         <td>Communities</td>
         <td class="data">{% for community in route.communities %}{% if community[1]  %}<button type="button" class="btn btn-community btn-sm btn-outline-primary" data-toggle="tooltip" data-placement="bottom" animation="true" title="{{ community[1] }}">{{ community[0] }} <span class="comm2text">({{ community[1][:25] }}{% if community[1] | length >25 %}...{% endif %})</span></button>{% else %}<button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="tooltip" data-placement="bottom" animation="true" title="no community details available">{{ community[0] }}</button>{% endif %} {% endfor %}</td>
     </tr>
+    {% endif %}
+    {% if route.extended_communities %}
     <tr>
         <td>Extended communities</td>
         <td class="data">{% for community in route.extended_communities %}{% if community[1]  %}<button type="button" class="btn btn-community btn-sm btn-outline-primary" data-toggle="tooltip" data-placement="bottom" animation="true" title="{{ community[1] }}">{{ community[0] }} <span class="comm2text">({{ community[1][:25] }}{% if community[1] | length >25 %}...{% endif %})</span></button>{% else %}<button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="tooltip" data-placement="bottom" animation="true" title="no community details available">{{ community[0] }}</button>{% endif %} {% endfor %}
         </td>
     </tr>
+    {% endif %}
+    {% if route.large_communities %}
     <tr>
         <td>Large communities</td>
 	    <td class="data">{% for community in route.large_communities %}{% if community[1]  %}<button type="button" class="btn btn-community btn-sm btn-outline-primary" data-toggle="tooltip" data-placement="bottom" animation="true" title="{{ community[1] }}">{{ community[0] }} <span class="comm2text">({{ community[1][:25] }}{% if community[1] | length >25 %}...{% endif %})</span></button>{% else %}<button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="tooltip" data-placement="bottom" animation="true" title="no community details available">{{ community[0] }}</button>{% endif %} {% endfor %}
         </td>
     </tr>
+    {% endif %}
 </table>
 
 {% endfor %}
