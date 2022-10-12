@@ -18,6 +18,12 @@ The following types of entries are accepted for communities:
 
 **Extended communities** can be specified by the `label number` or `label number:number` notation, using the same wildcard options. For example: `soo 65535:0`, `soo 65535:nnn`.
 
+When using wildcards, wildcard values can be replaced in the description by referencing them by number. For example:
+```
+65535:0:nnn,do not announce to AS$0
+65535:x:nnn,prepend $0 times to AS$1
+```
+
 Additions and updates to the list of communities are welcome, if possible please provide a source for the data as a comment on the first line of the file, and name the file `asNNN.txt`, where `NNN` is the ASN.
 
 ## License
