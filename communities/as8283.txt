@@ -21,7 +21,7 @@
 8283:203,Prepend 8283 twice to all eBGP peers
 8283:204,Do not export to eBGP peers
 8283:2:0,Prepend 8283 once to all eBGP peers
-8283:2:nnn,Prepend 8283 once to peer AS nnn
+8283:2:nnn,Prepend 8283 once to peer AS$0
 8283:301,Do not export to other Coloclue members
 8283:301:0,Do not export to other Coloclue members
 8283:302,Do not export to transit providers
@@ -29,10 +29,10 @@
 8283:303,Do not export to direct peers
 8283:303:0,Do not export to direct peers
 8283:3:0,Prepend 8283 twice to all eBGP peers
-8283:3:nnn,Prepend 8283 twice to peer AS nnn
+8283:3:nnn,Prepend 8283 twice to peer AS$0
 8283:450,Set LOCAL_PREF to 450 (default is 500)
 8283:4:0,Do not export to eBGP peers
-8283:4:nnn,Do not export to peer AS nnn
+8283:4:nnn,Do not export to peer AS$0
 8283:50,Set LOCAL_PREF to 50 (default is 100)
 8283:50,Set LOCAL_PREF to 50 (default is 500)
 8283:550,Set LOCAL_PREF to 550 (default is 500)

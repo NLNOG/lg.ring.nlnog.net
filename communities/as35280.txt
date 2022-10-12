@@ -51,4 +51,4 @@
 35280:3250,Chennai
 35280:30000,Customers
 35280:35280,F5 prefixes
-35280:64999:nnn,Prefixes originally received from ASN
+35280:64999:nnn,Prefixes originally received from ASN$0

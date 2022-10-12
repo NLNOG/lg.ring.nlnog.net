@@ -10,15 +10,15 @@ soo 197000:1209,AUTHDNS hosted site at-szg
 soo 197000:1217,AUTHDNS hosted site ch-zrh
 soo 197000:2,AUTHDNS core site gb-lon
 soo 197000:3,AUTHDNS core site se-sto
-197000:1176:nnn,AUTHDNS:at-vie:<peer>
-197000:1177:nnn,AUTHDNS:it-rom:<peer>
-197000:1178:nnn,AUTHDNS:no-osl:<peer>
-197000:1182:nnn,AUTHDNS:br-pgz:<peer>
-197000:1188:nnn,AUTHDNS:bh-amh:<peer>
-197000:1192:nnn,AUTHDNS:ba-sjj:<peer>
-197000:1194:nnn,AUTHDNS:am-evn:<peer>
-197000:1209:nnn,AUTHDNS:at-szg:<peer>
-197000:1217:nnn,AUTHDNS:ch-zrh:<peer>
-197000:1:nnn,AUTHDNS:nl-ams:<peer>
-197000:2:nnn,AUTHDNS:gb-lon:<peer>
-197000:3:nnn,AUTHDNS:se-sto:<peer>
+197000:1176:nnn,AUTHDNS:at-vie:AS$0
+197000:1177:nnn,AUTHDNS:it-rom:AS$0
+197000:1178:nnn,AUTHDNS:no-osl:AS$0
+197000:1182:nnn,AUTHDNS:br-pgz:AS$0
+197000:1188:nnn,AUTHDNS:bh-amh:AS$0
+197000:1192:nnn,AUTHDNS:ba-sjj:AS$0
+197000:1194:nnn,AUTHDNS:am-evn:AS$0
+197000:1209:nnn,AUTHDNS:at-szg:AS$0
+197000:1217:nnn,AUTHDNS:ch-zrh:AS$0
+197000:1:nnn,AUTHDNS:nl-ams:AS$0
+197000:2:nnn,AUTHDNS:gb-lon:AS$0
+197000:3:nnn,AUTHDNS:se-sto:AS$0

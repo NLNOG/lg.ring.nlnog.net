@@ -130,9 +130,9 @@ def read_communities() -> dict:
                     comm = comm.lower()
                     regex = None
                     if "nnn" in comm:
-                        regex = re.compile(comm.replace("nnn", r"\d+"))
+                        regex = re.compile(comm.replace("nnn", r"(\d+)"))
                     elif "x" in comm:
-                        regex = re.compile(comm.replace("x", r"\d"))
+                        regex = re.compile(comm.replace("x", r"(\d)"))
                     elif re_range.match(comm):
                         match = re_range.match(comm)
                         first, last = int(match.group(1)), int(match.group(2))
@@ -169,7 +169,12 @@ def get_community_descr_from_list(community: str, communitylist: dict) -> str:
 
     # try a regexp instead
     for (regex, desc) in communitylist[ctype]["re"]:
-        if regex.match(community):
+        match = regex.match(community)
+        if match:
+            print(regex)
+            print(regex.match(community).groups())
+            for count, group in enumerate(match.groups()):
+                desc = desc.replace(f"${count}", group)
             return desc
 
     # no luck
