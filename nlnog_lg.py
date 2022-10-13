@@ -414,14 +414,18 @@ def show_peer_details(peer: str):
 @app.route("/prefix/map")
 @app.route("/prefix/map/fullscreen")
 @app.route("/prefix/text")
-def show_route_for_prefix():
+@app.route("/query/<prefix>/<netmask>")
+def show_route_for_prefix(prefix=None, netmask=None):
     """ Handle the prefix details page.
 
         Look up BGP routes.
     """
     warnings = []
     errors = []
-    prefix = unquote(request.args.get('q', '').strip())
+    if not prefix:
+        prefix = unquote(request.args.get('q', '').strip())
+    else:
+        prefix = f"{prefix}/{netmask}"
     peer = unquote(request.args.get('peer', 'all').strip())
     if not prefix:
         abort(400)
