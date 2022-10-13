@@ -1,0 +1,120 @@
+# AS3399 communities provided by noc@obe.net
+#
+3399:100,Transit route
+3399:103,Learned from GTT
+3399:105,Learned from Lumen
+#
+# Exchanges
+#
+3399:200,Peer route
+3399:201,Learned from PNI
+3399:202,Learned from STHIX Stockholm
+3399:204,Learned from SONIX Stockholm
+3399:205,Learned from Netnod Stockholm
+3399:206,Learned from Netnod Copenhagen
+3399:207,Learned from Netnod Oslo
+3399:208,Learned from SOLIX
+3399:209,Learned from AMS-IX
+3399:210,Learned from FIXO
+3399:211,Learned from IXOR
+3399:212,Learned from DATA-IX Stockholm
+3399:213,Learned from STHIX Sundsvall
+3399:214,Learned from Equinix SK
+3399:215,Learned from Netnod Gothenburg
+3399:216,Learned from Netnod Sundsvall
+3399:217,Learned from SONIX Gothenburg
+#
+3399:300,Customer route
+#
+# Regions
+#
+3399:500,Learned from Region Stockholm
+3399:501,Learned from Region Gothenburg
+3399:502,Learned from Region Malmo
+3399:503,Learned from Region Oslo
+3399:504,Learned from Region Amsterdam
+3399:505,Learned from Region Copenhagen
+3399:506,Learned from Region Sundsvall
+#
+# RPKI validation state
+#
+3399:600,RPKI Valid
+3399:601,RPKI Unknown
+3399:602,RPKI Invalid
+#
+# Points of Presence
+#
+3399:700,Learned from PoP Kista Gate
+3399:701,Learned from PoP BGC
+3399:702,Learned from PoP Equinix SK1
+3399:703,Learned from PoP Stokab KN5
+3399:704,Learned from PoP Stokab KN6
+3399:705,Learned from PoP Stokab KN7
+3399:706,Learned from PoP Interxion Stockholm
+3399:707,Learned from PoP Interxion Copenhagen
+3399:708,Learned from PoP Servanet
+3399:709,Learned from PoP OS-IX
+3399:710,Learned from PoP GothNet
+3399:711,Learned from PoP IMDC Amsterdam
+3399:712,Learned from PoP VBDC
+3399:713,Learned from PoP VG4
+3399:714,Learned from PoP Stokab KIS03
+3399:715,Learned from PoP Skanova NHN
+3399:716,Learned from PoP Stokab BRM01
+3399:717,Learned from PoP NSC Solna
+3399:718,Learned from PoP Equinix SK2
+3399:719,Learned from PoP Blix BDC
+#
+# Customer control communities
+#
+65000:nnn,Normal announce to AS$0
+65001:nnn,Prepend 1x to AS$0
+65002:nnn,Prepend 2x to AS$0
+65003:nnn,Prepend 3x to AS$0
+65009:nnn,Do not announce to AS$0
+#
+65010:0,Normal announce to all upstreams
+65011:0,Prepend 1x to all upstreams
+65012:0,Prepend 2x to all upstreams
+65013:0,Prepend 3x to all upstreams
+65019:0,Do not announce to any upstreams
+#
+65010:1,Normal announce to all PNI
+65011:1,Prepend 1x to all PNI
+65012:1,Prepend 2x to all PNI
+65013:1,Prepend 3x to all PNI
+65019:1,Do not announce to any PNI
+#
+65010:2,Normal announce to all IX
+65011:2,Prepend 1x to all IX
+65012:2,Prepend 2x to all IX
+65013:2,Prepend 3x to all IX
+65019:2,Do not announce to any IX
+#
+65010:3,Normal announce to all IX and PNI
+65011:3,Prepend 1x to all IX and PNI
+65012:3,Prepend 2x to all IX and PNI
+65013:3,Prepend 3x to all IX and PNI
+65019:3,Do not announce to any IX and PNI
+#
+65020:200-299,Normal announce to IX
+65021:200-299,Prepend 1x to IX
+65022:200-299,Prepend 2x to IX
+65023:200-299,Prepend 3x to IX
+65029:200-299,Do not announce to IX
+#
+65030:500-599,Normal announce to region
+65031:500-599,Prepend 1x to region
+65032:500-599,Prepend 2x to region
+65033:500-599,Prepend 3x to region
+65039:500-599,Do not announce to region
+#
+65040:90,Local-pref lower than Upstreams
+65040:100,Local-pref equal to Upstreams
+65040:190,Local-pref lower than Peers
+65040:200,Local-pref equal to Peers
+65040:290,Local-pref lower than Downstreams (aka backup route)
+65040:300,Local-pref equal to Downstreams
+#
+3399:666,Blackhole
+64666:500-599,Regional blackhole
