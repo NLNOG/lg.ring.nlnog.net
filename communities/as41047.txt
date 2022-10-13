@@ -1,0 +1,66 @@
+# AS41047 netShelter communities -- contact noc@netshelter.org for any questions
+#
+# Standard communities
+# Transit
+41047:4001,Routes learned from upstream HE.NET
+41047:4002,Routes learned from upstream A2B
+41047:4003,Routes learned from upstream MyLOC
+41047:4004,Routes learned from upstream LNK
+41047:4005,Routes learned from upstream GHOSTnet
+41047:4006,Routes learned from upstream LWL
+41047:4007,Routes learned from upstream Asympto
+41047:4008,Routes learned from MOSS-IX Transit Service
+41047:4009,Routes learned from upstream Marbig
+# Locations
+41047:1011,Routes tagged from Dusseldorf routers
+41047:1012,Routes tagged from Amsterdam routers
+41047:1013,Routes tagged from Frankfurt routers
+41047:1014,Routes tagged from Paris routers
+41047:1015,Routes tagged from Helsinki routers
+# IXP/PNI
+41047:5001,Routes learned from IXP AMS-IX / NL-IX
+41047:5002,Routes learned from IXP DE-CIX
+41047:5003,Routes learned from IXP LS-IX
+41047:5004,Routes learned from IXP Speed-IX
+41047:5005,Routes learned from IXP Asteroid-IX
+41047:5006,Routes learned from IXP MOSS-IX
+41047:5007,Routes learned from IXP KleyREX
+41047:5008,Routes learned from IXP Net-IX
+41047:5009,Routes learned from IXP Frys-IX
+41047:5010,Routes learned from IXP EVIX
+41047:5011,Routes learned from IXP LocIX-NL
+41047:5012,Routes learned from IXP MOSSIX-AMS
+41047:5013,Routes learned from IXP MOSSIX-DUS
+41047:5014,Routes learned from IXP MOSSIX-FRA
+# Extended communities
+# Transit
+41047:0:4001,Routes learned from upstream HE.NET
+41047:0:4002,Routes learned from upstream A2B
+41047:0:4003,Routes learned from upstream MyLOC
+41047:0:4004,Routes learned from upstream LNK
+41047:0:4005,Routes learned from upstream GHOSTnet
+41047:0:4006,Routes learned from upstream LWL
+41047:0:4007,Routes learned from upstream Asympto
+41047:0:4008,Routes learned from MOSS-IX Transit Service
+41047:0:4009,Routes learned from upstream Marbig
+# Locations
+41047:0:1011,Routes tagged from Dusseldorf routers
+41047:0:1012,Routes tagged from Amsterdam routers
+41047:0:1013,Routes tagged from Frankfurt routers
+41047:0:1014,Routes tagged from Paris routers
+41047:0:1015,Routes tagged from Helsinki routers
+# IXP/PNI
+41047:0:5001,Routes learned from IXP AMS-IX / NL-IX
+41047:0:5002,Routes learned from IXP DE-CIX
+41047:0:5003,Routes learned from IXP LS-IX
+41047:0:5004,Routes learned from IXP Speed-IX
+41047:0:5005,Routes learned from IXP Asteroid-IX
+41047:0:5006,Routes learned from IXP MOSS-IX
+41047:0:5007,Routes learned from IXP KleyREX
+41047:0:5008,Routes learned from IXP Net-IX
+41047:0:5009,Routes learned from IXP Frys-IX
+41047:0:5010,Routes learned from IXP EVIX
+41047:0:5011,Routes learned from IXP LocIX-NL
+41047:0:5012,Routes learned from IXP MOSSIX-AMS
+41047:0:5013,Routes learned from IXP MOSSIX-DUS
+41047:0:5014,Routes learned from IXP MOSSIX-FRA
