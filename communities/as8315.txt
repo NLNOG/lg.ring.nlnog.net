@@ -1,0 +1,14 @@
+# AS8315 (Sentia) communities provided by Sentia
+8315:32:6774,Route learned through BICS
+8315:32:0,Prefix originated in Belgium
+8315:31:0,Prefix originated in the Netherlands
+8315:999,Customers IPv4
+8315:1000,Customers IPv6
+8315:31:16,Route originated from Equinix AM6
+8315:31:020,Route learned through AMSIX
+8315:31:023,Route learned through Frys-IX
+8315:31:6830,Route learned through LGI
+8315:31:021,Route learned through NLix
+315:31:1234,Route learned through PNI
+8315:31:022,Route learned through Speed-IX
+8315:31:1299,Route learned through Arelion
