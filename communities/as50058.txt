@@ -1,0 +1,57 @@
+# https://apps.db.ripe.net/db-web-ui/lookup?source=ripe&key=AS50058&type=aut-num
+50058:10,Learned from upstream
+50058:11,Learned from route server 
+50058:12,Learned from peer
+50058:13,Learned from downstream
+50058:201,Prepend 1x to all route servers
+50058:202,Prepend 2x to all route servers
+50058:203,Prepend 3x to all route servers
+50058:209,Do not announce to any route server
+50058:211,Prepend 1x to SIX
+50058:212,Prepend 2x to SIX
+50058:213,Prepend 3x to SIX
+50058:219,Do not announce to SIX
+50058:221,Prepend 1x to SIX (Jumbo)
+50058:222,Prepend 2x to SIX (Jumbo)
+50058:223,Prepend 3x to SIX (Jumbo)
+50058:229,Do not announce to SIX (Jumbo)
+50058:231,Prepend 1x to KCIX
+50058:232,Prepend 2x to KCIX
+50058:233,Prepend 3x to KCIX
+50058:239,Do not announce to KCIX
+50058:241,Prepend 1x to STLIX
+50058:242,Prepend 2x to STLIX
+50058:243,Prepend 3x to STLIX
+50058:249,Do not announce to STLIX
+50058:251,Prepend 1x to HOUIX
+50058:252,Prepend 2x to HOUIX
+50058:253,Prepend 3x to HOUIX
+50058:259,Do not announce to HOUIX
+50058:261,Prepend 1x to QCIX
+50058:262,Prepend 2x to QCIX
+50058:263,Prepend 3x to QCIX
+50058:269,Do not announce to QCIX
+50058:271,Prepend 1x to IX-Denver
+50058:272,Prepend 2x to IX-Denver
+50058:273,Prepend 3x to IX-Denver
+50059:279,Do not announce to IX-Denver
+50058:301,Prepend 1x to all transit providers
+50058:302,Prepend 2x to all transit providers
+50058:303,Prepend 3x to all transit providers
+50058:309,Do not announce to any transit provider
+50058:311,Prepend 1x to 1299
+50058:312,Prepend 2x to 1299
+50058:313,Prepend 3x to 1299
+50058:319,Do not announce to 1299
+50058:321,Prepend 1x to 6939
+50058:322,Prepend 2x to 6939
+50058:323,Prepend 3x to 6939
+50058:329,Do not announce to 6939
+50058:331,Prepend 1x to 32097
+50058:332,Prepend 2x to 32097
+50058:333,Prepend 3x to 32097
+50058:339,Do not announce to 32097
+50058:341,Prepend 1x to 174
+50058:342,Prepend 2x to 174
+50058:343,Prepend 3x to 174
+50058:349,Do not announce to 174
