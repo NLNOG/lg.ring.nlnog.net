@@ -2,6 +2,7 @@
 64515:100,Infrastructure Prefix
 64515:150,Learned from Downstream
 212934:0:174,Learned from Cogent
+212934:0:835,Learned from GoCodeIT
 212934:1:1,Learned from OGIX
 212934:2:1,Learned from Peer
 212934:3:1,Learned from Downstream
