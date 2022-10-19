@@ -12,3 +12,5 @@
 315:31:1234,Route learned through PNI
 8315:31:022,Route learned through Speed-IX
 8315:31:1299,Route learned through Arelion
+8315:31:5, Route learned in IX5
+8315:31:6, Route learned in AM6
