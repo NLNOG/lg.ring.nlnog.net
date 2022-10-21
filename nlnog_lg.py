@@ -179,8 +179,6 @@ def get_community_descr_from_list(community: str, communitylist: dict) -> str:
     for (regex, desc) in communitylist[ctype]["re"]:
         match = regex.match(community)
         if match:
-            print(regex)
-            print(regex.match(community).groups())
             for count, group in enumerate(match.groups()):
                 desc = desc.replace(f"${count}", group)
             return desc
@@ -244,10 +242,10 @@ def write_archive(data: dict, prefix: str, peer: str) -> str:
         cur = conn.cursor()
         cur.execute("""CREATE TABLE IF NOT EXISTS archive
                     ([id] TEXT PRIMARY KEY, [filename] TEXT, [created] DATETIME,
-                    [prefix] TEXT, [peer] TEXT)""")
+                    [prefix] TEXT, [peer] TEXT, [linked] INTEGER)""")
         conn.commit()
 
-        cur.execute(f"INSERT INTO archive (id, filename, created, prefix, peer) VALUES ('{id}', '{fname}', strftime('%s', 'now'), '{prefix}', '{peer}')")
+        cur.execute(f"INSERT INTO archive (id, filename, created, prefix, peer, linked) VALUES ('{id}', '{fname}', strftime('%s', 'now'), '{prefix}', '{peer}', 0)")
         conn.commit()
         conn.close()
 
@@ -257,7 +255,7 @@ def write_archive(data: dict, prefix: str, peer: str) -> str:
         return None
 
 
-def read_archive(id):
+def read_archive(id: str):
     try:
         currentdir = os.path.dirname(os.path.realpath(__file__))
         conn = sqlite3.connect("%s/%s" % (currentdir, app.config.get("DB_FILE", "nlnog-lg.sqlite")))
@@ -473,9 +471,8 @@ def show_peer_details(peer: str):
 @app.route("/prefix/map/fullscreen")
 @app.route("/prefix/text")
 @app.route("/query/<prefix>/<netmask>")
+@app.route("/saved/<id>")
 def show_route_for_prefix(prefix=None, netmask=None, id=None):
-@app.route("/static/<id>")
-def show_route_for_prefix(id=None):
     """ Handle the prefix details page.
 
         Look up BGP routes.
@@ -527,6 +524,9 @@ def show_route_for_prefix(id=None):
             return render_template('error.html', errors=["Failed to query the NLNOG Looking Glass backend."]), 400
 
 
+        id = write_archive(result, prefix, peer)
+        print(f"wrote to {id}")
+
     routes = {}
 
     # get a list of peers for the dropdown list in the menu
@@ -565,8 +565,6 @@ def show_route_for_prefix(id=None):
                 "created": route.get("created", ""),
             })
 
-    print(write_archive(result, prefix, peer))
-
     # pylint: disable=undefined-loop-variable
     if request.path == '/prefix/map/fullscreen':
         # Return a fullscreen map svg
@@ -578,18 +576,18 @@ def show_route_for_prefix(id=None):
 
     if request.path == '/prefix/map':
         # Return a map page
-        return render_template("map.html", peer=peer, peers=peers, routes=routes, prefix=route["prefix"],
+        return render_template("map.html", peer=peer, peers=peers, routes=routes, prefix=route["prefix"], id=id,
                                warnings=warnings, errors=errors, match=request.args.get("match"))
 
     if request.path == "/prefix/text":
         # return a route view in plain text style
-        return render_template("route-text.html", peer=peer, peers=peers, routes=routes, prefix=prefix,
+        return render_template("route-text.html", peer=peer, peers=peers, routes=routes, prefix=prefix, id=id,
                                warnings=warnings, errors=errors, match=request.args.get("match"))
 
     # pylint: enable=undefined-loop-variable
 
     # Return a route view in HTML table style
-    return render_template("route.html", peer=peer, peers=peers, routes=routes, prefix=prefix,
+    return render_template("route.html", peer=peer, peers=peers, routes=routes, prefix=prefix, id=id,
                            warnings=warnings, errors=errors, match=request.args.get("match"))
 
 

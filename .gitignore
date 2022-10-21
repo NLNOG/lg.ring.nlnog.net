@@ -4,3 +4,4 @@ archive/
 venv/
 .vscode/
 nlnog-lg.conf
+nlnog-lg.sqlite
