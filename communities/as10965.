@@ -1,0 +1,8 @@
+# per member communication, contact Dave Milton <dmilton at mrnet dot mb dot ca> for cany clarifications
+65530:666,Blackhole(pre-standard)
+65535:10965,No-advertise to MRnet
+65535:6509,No-advertise to CANARIE
+65535:64698,No-advertise to CANARIE R&E
+65535:64699,No-advertise to CANARIE CDN
+65535:16395,No-advertise to MBIX
+65535:16796,No-advertise to MERLIN
