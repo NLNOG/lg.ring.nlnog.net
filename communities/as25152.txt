@@ -85,6 +85,7 @@
 25152:1189,K-ROOT hosted site at-szg
 25152:1191,K-ROOT hosted site ba-sjj
 25152:1201,K-ROOT hosted site id-dps
+25152:1219,K-ROOT hosted site in-maa
 25152:1221,K-ROOT hosted site us-mkc
 25152:1222,K-ROOT hosted site it-pmo
 25152:1223,K-ROOT hosted site kz-pwq
