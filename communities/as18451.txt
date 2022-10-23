@@ -1,0 +1,5 @@
+# Les.net
+18451:320,set localpref to 320
+18451:300,set localpref to 300
+18451:280,set localpref to 280
+18451:666,blackhole
