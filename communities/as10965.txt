@@ -12,4 +12,4 @@
 65001-65004:64698,Prepend to CANARIE R&E
 65001-65004:64699,Prepend to CANARIE CDN
 65001-65004:16395,Prepend to MBIX
-65535:nnn,Blackhole to peer <nnn>
+65535:nnn,Blackhole to peer $0
