@@ -1,0 +1,7 @@
+# AS21700 communities taken from Neptune Networks peering page: https://neptunenetworks.org/peering
+21700:101:1,Route is originated by Neptune Networks
+21700:101:2,Route was learned by a customer of Neptune Networks
+21700:101:3,Route was learned by a peer of Neptune Networks
+21700:101:4,Route was learned by an upstream of Neptune Networks
+21700:102:840,Route was learned in the US
+21700:103:1,Route was learned in NYC
