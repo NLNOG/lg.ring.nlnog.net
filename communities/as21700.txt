@@ -1,8 +1,8 @@
 # AS21700 communities taken from Neptune Networks peering page: https://neptunenetworks.org/peering
-21700:101:1,Originated
-21700:101:2,Customers
-21700:101:3,Peers
-21700:101:4,Upstreams
+21700:101:1,Originated Route
+21700:101:2,Customer Route
+21700:101:3,Peer Route
+21700:101:4,Upstream Route
 21700:102:840,Source: US
 21700:103:1,Source: NYC
 21700:600:1,Prepended once
