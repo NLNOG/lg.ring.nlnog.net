@@ -1,0 +1,62 @@
+# AS8220 communities taken from https://as8220.net/communities
+8220:65000,Europe
+8220:65001,North America
+8220:65002,Asia Pacific
+8220:65003,Africa
+8220:65004,South America
+8220:65005,Oceania
+8220:65040,Amsterdam
+8220:65256,Atlanta
+8220:65070,Barcelona
+8220:65111,Basel
+8220:65035,Berlin
+8220:65011,Birmingham
+8220:65025,Bordeaux
+8220:65102,Bratislava
+8220:65080,Brussels
+8220:65104,Bucharest
+8220:65103,Budapest
+8220:65250,Chicago
+8220:65031,Cologne
+8220:65160,Copenhagen
+8220:65255,Dallas
+8220:65140,Dublin
+8220:65032,Duesseldorf
+8220:65030,Frankfurt
+8220:65120,Geneva
+8220:65033,Hamburg
+8220:65034,Hannover
+8220:65131,Helsinki
+8220:65300,Hong Kong
+8220:65180,Lisbon
+8220:65010,London
+8220:65253,Los Angeles
+8220:65022,Lyon
+8220:65050,Madrid
+8220:65024,Marseille
+8220:65060,Milan
+8220:65037,Munich
+8220:65152,Nantes
+8220:65201,New York
+8220:65201,Newark
+8220:65301,Osaka
+8220:65020,Paris
+8220:65254,Phoenix
+8220:65101,Prague
+8220:65062,Rome
+8220:65151,Rouen
+8220:65252,San Jose
+8220:65251,Seattle
+8220:65302,Singapore
+8220:65105,Sofia
+8220:65130,Stockholm
+8220:65036,Stuttgart
+8220:65304,Sydney
+8220:65303,Tokyo
+8220:65023,Toulouse
+8220:65061,Turin
+8220:65051,Valencia
+8220:65090,Vienna
+8220:65100,Warsaw
+8220:65257,Washington
+8220:65110,Zurich
