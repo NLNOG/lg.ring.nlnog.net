@@ -1,0 +1,15 @@
+# Latest data may be found via: whois -h rr.arin.net AS54041
+
+# Action
+54041:0,Do not export
+54041:0:nnn,Do not export to AS$0
+54041:11:nnn,Prepend 1x to AS$0
+54041:12:nnn,Prepend 2x to AS$0
+54041:13:nnn,Prepend 3x to AS$0
+
+# Info
+54041:201,Nexthop physically connected
+54041:202,Nexthop via tunnel
+54041:210,Nexthop is regular peer
+54041:211,Nexthop is transit
+54041:212,Nexthop is customer
