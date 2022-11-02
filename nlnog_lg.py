@@ -59,7 +59,8 @@ asnlist = {}
 
 
 class LGException(Exception):
-    pass
+    """ Custom exception
+    """
 
 
 def is_regular_community(community: str) -> bool:
@@ -229,15 +230,15 @@ def write_archive(data: dict, prefix: str, peer: str) -> str:
     """ Save LG output JSON, store data in a sqlite db, return the ID if successful
     """
     try:
-        id = uuid.uuid4()
+        archive_id = uuid.uuid4()
         now = datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")
         currentdir = os.path.dirname(os.path.realpath(__file__))
         fname = "%s/%s/%s.json.bz2" % (currentdir, app.config.get("ARCHIVE_DIR", ""), now)
         compressed = bz2.compress(bytes(json.dumps(data), "utf-8"))
 
-        f = open(fname, "wb")
-        f.write(compressed)
-        f.close()
+        fhandle = open(fname, "wb")
+        fhandle.write(compressed)
+        fhandle.close()
         conn = sqlite3.connect("%s/%s" % (currentdir, app.config.get("DB_FILE", "nlnog-lg.sqlite")))
         cur = conn.cursor()
         cur.execute("""CREATE TABLE IF NOT EXISTS archive
@@ -245,13 +246,14 @@ def write_archive(data: dict, prefix: str, peer: str) -> str:
                     [prefix] TEXT, [peer] TEXT, [linked] INTEGER)""")
         conn.commit()
 
-        cur.execute(f"INSERT INTO archive (id, filename, created, prefix, peer, linked) VALUES ('{id}', '{fname}', strftime('%s', 'now'), '{prefix}', '{peer}', 0)")
+        cur.execute(f"INSERT INTO archive (id, filename, created, prefix, peer, linked) VALUES ('{archive_id}',"
+                    " '{fname}', strftime('%s', 'now'), '{prefix}', '{peer}', 0)")
         conn.commit()
         conn.close()
 
         return id
-    except Exception as e:
-        print(e)
+    except Exception as err:
+        print(err)
         return None
 
 
@@ -267,12 +269,12 @@ def read_archive(id: str):
         (filename, prefix, peer, created) = result[0]
         if not os.path.exists(filename):
             raise LGException("Data not found.")
-        with bz2.open(filename, "rb") as f:
-            data = json.loads(f.read())
+        with bz2.open(filename, "rb") as fhandle:
+            data = json.loads(fhandle.read())
             data["created"] = created
             return (data, prefix, peer)
-    except Exception as e:
-        print(e)
+    except Exception as err:
+        print(err)
 
 
 def openbgpd_command(router: str, command: str, args: dict = None):
@@ -471,7 +473,6 @@ def show_peer_details(peer: str):
 @app.route("/prefix/map/fullscreen")
 @app.route("/prefix/text")
 @app.route("/query/<prefix>/<netmask>")
-@app.route("/saved/<id>")
 def show_route_for_prefix(prefix=None, netmask=None, id=None):
     """ Handle the prefix details page.
 
@@ -481,16 +482,17 @@ def show_route_for_prefix(prefix=None, netmask=None, id=None):
     errors = []
     result = None
 
-    if id:
-        (result, prefix, peer) = read_archive(id)
+    if "saved" in request.args:
+        id = request.args["saved"]
+        (result, prefix, peer) = read_archive(request.args["saved"])
     else:
-        if not prefix:
-            prefix = unquote(request.args.get('q', '').strip())
-        else:
+        if netmask:
             prefix = f"{prefix}/{netmask}"
-        peer = unquote(request.args.get('peer', 'all').strip())
+        prefix = unquote(request.args.get('q', '').strip())
         if not prefix:
             abort(400)
+
+        peer = unquote(request.args.get('peer', 'all').strip())
 
         args = {}
         if peer != "all":
@@ -502,7 +504,7 @@ def show_route_for_prefix(prefix=None, netmask=None, id=None):
             # single addresses without a netmask would be a valid IPNetwork too, ignore them
             if "/" in prefix:
                 if (netaddr.valid_ipv4(str(net.ip)) and net.prefixlen <= 16) or \
-                (netaddr.valid_ipv6(str(net.ip)) and net.prefixlen <= 48):
+                   (netaddr.valid_ipv6(str(net.ip)) and net.prefixlen <= 48):
                     warnings.append("Not showing more specific routes, too many results, showing exact matches only.")
                 elif request.args.get("match") == "orlonger" and request.path != '/prefix/map':
                     args["all"] = 1
@@ -523,9 +525,7 @@ def show_route_for_prefix(prefix=None, netmask=None, id=None):
         if not status:
             return render_template('error.html', errors=["Failed to query the NLNOG Looking Glass backend."]), 400
 
-
         id = write_archive(result, prefix, peer)
-        print(f"wrote to {id}")
 
     routes = {}
 

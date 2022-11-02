@@ -10,7 +10,7 @@
     <div class="alert alert-danger" role="alert">No matching routes found.
 {% else %}
 <pre>
-Static URL for these results: <a href="/saved/{{id}}">{{ id }}</a>
+Static URL for these results: <a href="/prefix?saved={{id}}">{{ id }}</a>
 {% for prefix  in routes %}
 Prefix: {{ prefix }} ({{ routes[prefix] | length }} items)
 ----------------------------------------------------------------------------------------------------
