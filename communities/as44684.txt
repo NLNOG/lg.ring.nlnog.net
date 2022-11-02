@@ -1,0 +1,103 @@
+# Source: https://www.mythic-beasts.com/support/topics/communities
+
+# Info
+44684:0:1000,Route learned from self
+44684:0:900,Route learned from a customer
+44684:0:800,Route learned from private peer
+44684:0:700,Route learned from peer
+44684:0:600,Route learned from transit
+44684:1:0,Route learned at Digital Realty Sovereign House / SOV
+44684:1:1,Route learned at Equinix LD8 / Harbour Exchange / HEX
+44684:1:2,Route learned at Redcentric Cambridge / CAM
+44684:1:3,Route learned at Digital Realty Memaco House / MER
+44684:1:4,Route learned at Equinix AM5 / Schepenbergweg / AMS
+44684:1:5,Route learned at Redcentric Shoreditch / CLL
+44684:2:nnn,Route learned from AS$0
+44684:3:26,Route learned from AMSIX / Amsterdam Internet Exchange
+44684:3:18,Route learned from LINX LON1 / London Internet Exchange 1
+44684:3:321,Route learned from LINX LON2 / London Internet Exchange 2
+44684:3:53,Route learned from LONAP / London Network Access Point
+44684:3:1842,Route learned from SPEED-IX / Speed Internet Exchange
+
+# Global
+44684:1000:0,Global no export
+44684:1000:1,Global prepend 1x
+44684:1000:2,Global prepend 2x
+44684:1000:3,Global prepend 3x
+
+# IXP
+44684:2000:26,No export to AMSIX / Amsterdam Internet Exchange
+44684:2000:18,No export to LINX LON1 / London Internet Exchange 1
+44684:2000:321,No export to LINX LON2 / London Internet Exchange 2
+44684:2000:53,No export to LONAP / London Network Access Point
+44684:2000:1842,No export to SPEED-IX / Speed Internet Exchange
+
+# Per AS
+44684:3000:nnn,No export to AS$0
+44684:3001:nnn,Prepend 1x to AS$0
+44684:3002:nnn,Prepend 2x to AS$0
+44684:3003:nnn,Prepend 3x to AS$0
+44684:3999:nnn,Override no-export to AS$0
+
+# Per site
+44684:4000:0,No export to Digital Realty Sovereign House / SOV
+44684:4001:0,Prepend 1x to Digital Realty Sovereign House / SOV
+44684:4002:0,Prepend 2x to Digital Realty Sovereign House / SOV
+44684:4003:0,Prepend 3x to Digital Realty Sovereign House / SOV
+44684:4999:0,Override no-export to Digital Realty Sovereign House / SOV
+44684:4000:1,No export to Equinix LD8 / Harbour Exchange / HEX
+44684:4001:1,Prepend 1x to Equinix LD8 / Harbour Exchange / HEX
+44684:4002:1,Prepend 2x to Equinix LD8 / Harbour Exchange / HEX
+44684:4003:1,Prepend 3x to Equinix LD8 / Harbour Exchange / HEX
+44684:4999:1,Override no-export to Equinix LD8 / Harbour Exchange / HEX
+44684:4000:2,No export to Redcentric Cambridge / CAM
+44684:4001:2,Prepend 1x to Redcentric Cambridge / CAM
+44684:4002:2,Prepend 2x to Redcentric Cambridge / CAM
+44684:4003:2,Prepend 3x to Redcentric Cambridge / CAM
+44684:4999:2,Override no-export to Redcentric Cambridge / CAM
+44684:4000:3,No export to Digital Realty Memaco House / MER
+44684:4001:3,Prepend 1x to Digital Realty Memaco House / MER
+44684:4002:3,Prepend 2x to Digital Realty Memaco House / MER
+44684:4003:3,Prepend 3x to Digital Realty Memaco House / MER
+44684:4999:3,Override no-export to Digital Realty Memaco House / MER
+44684:4000:4,No export to Equinix AM5 / Schepenbergweg / AMS
+44684:4001:4,Prepend 1x to Equinix AM5 / Schepenbergweg / AMS
+44684:4002:4,Prepend 2x to Equinix AM5 / Schepenbergweg / AMS
+44684:4003:4,Prepend 3x to Equinix AM5 / Schepenbergweg / AMS
+44684:4999:4,Override no-export to Equinix AM5 / Schepenbergweg / AMS
+44684:4000:5,No export to Redcentric Shoreditch / CLL
+44684:4001:5,Prepend 1x to Redcentric Shoreditch / CLL
+44684:4002:5,Prepend 2x to Redcentric Shoreditch / CLL
+44684:4003:5,Prepend 3x to Redcentric Shoreditch / CLL
+44684:4999:5,Override no-export to Redcentric Shoreditch / CLL
+
+# Per type
+44684:5000:1000,No export to self
+44684:5001:1000,Prepend 1x to self
+44684:5002:1000,Prepend 2x to self
+44684:5003:1000,Prepend 3x to self
+44684:5999:1000,Override no-export to self
+44684:5000:900,No export to customers
+44684:5001:900,Prepend 1x to customers
+44684:5002:900,Prepend 2x to customers
+44684:5003:900,Prepend 3x to customers
+44684:5999:900,Override no-export to customers
+44684:5000:800,No export to private peers
+44684:5001:800,Prepend 1x to private peers
+44684:5002:800,Prepend 2x to private peers
+44684:5003:800,Prepend 3x to private peers
+44684:5999:800,Override no-export to private peers
+44684:5000:700,No export to peers
+44684:5001:700,Prepend 1x to peers
+44684:5002:700,Prepend 2x to peers
+44684:5003:700,Prepend 3x to peers
+44684:5999:700,Override no-export to peers
+44684:5000:600,No export to transit
+44684:5001:600,Prepend 1x to transit
+44684:5002:600,Prepend 2x to transit
+44684:5003:600,Prepend 3x to transit
+44684:5999:600,Override no-export to transit
+
+
+
+
