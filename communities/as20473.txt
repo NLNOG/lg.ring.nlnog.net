@@ -8,9 +8,9 @@
 20473:4000,Prefix originated by Customer
 20473:500,Prefix originated by 20473
 20473:nnn,Prefix learned from AS$0
-20473­:100­:nnn,Prefix learned from Transit AS$0
-20473­:200­:nnn,Prefix learned from Public Peer AS$0
-20473­:300­:nnn,Prefix learned from Private Peer AS$0
+20473:100:nnn,Prefix learned from Transit AS$0
+20473:200:nnn,Prefix learned from Public Peer AS$0
+20473:300:nnn,Prefix learned from Private Peer AS$0
 
 # Locations
 20473:13,United States - Chicago, IL
