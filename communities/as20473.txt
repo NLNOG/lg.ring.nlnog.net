@@ -1,0 +1,60 @@
+# Source: https://github.com/vultr/vultr-docs/tree/main/faq/as20473-bgp-customer-guide#readme
+
+# Sources
+20473:100,Prefix learned from Transit
+20473:200,Prefix learned from Public Peer
+20473:300,Prefix learned from Private Peer
+20473:400,Prefix originated by Customer
+20473:4000,Prefix originated by Customer
+20473:500,Prefix originated by 20473
+20473:nnn,Prefix learned from AS$0
+20473­:100­:nnn,Prefix learned from Transit AS$0
+20473­:200­:nnn,Prefix learned from Public Peer AS$0
+20473­:300­:nnn,Prefix learned from Private Peer AS$0
+
+# Locations
+20473:13,United States - Chicago, IL
+20473:14,United States - Atlanta, GA
+20473:15,United States - Dallas, TX
+20473:16,United States - Seattle, WA
+20473:17,United States - Los Angeles, CA
+20473:18,United States - San Jose, CA
+20473:19,Europe - London, GB
+20473:20,Europe - Amsterdam, NL
+20473:21,Europe - Paris, FR
+20473:22,Europe - Frankfurt, DE
+20473:23,Asia & Pacific - Tokyo, JP
+20473:24,Asia & Pacific - Sydney, AU
+20473:25,Asia & Pacific - Singapore, SG
+20473:26,Asia & Pacific - Korea, KR
+20473:27,Europe - Stockholm, SE
+20473:28,Americas - Mexico, MX
+20473:29,Europe - Warsaw, PL
+20473:30,Americas - Sao Paulo, BR
+20473:31,Europe - Madrid, ES
+20473:32,Asia & Pacific - Melbourne, AU
+20473:33,Americas - Toronto, CA
+20473:34,United States - Honolulu, HI
+20473:35,Asia & Pacific - Mumbai, IN
+20473:43,Asia & Pacific - Bangalore, IN
+20473:44,Asia & Pacific - New Delhi, IN.
+
+# Extended location
+20473:0:3xxxxxx1xx,region+country: $0 location: $1
+
+# Actions
+20473:6000:nnn,Do not announce to AS$0
+20473:6001:nnn,Prepend 1x to AS$0
+20473:6002:nnn,Prepend 2x to AS$0
+20473:6003:nnn,Prepend 3x to AS$0
+20473:6009:nnn,Set metric to 0 for AS$0
+20473:6099:nnn,Force announce to AS$0
+20473:6601,Do not announce to IXP peers
+20473:6602,Announce to IXP route servers only
+20473:6000,Do not announce to any peer
+20473:64609,Set Metric to 0 to all AS’s
+20473:6001,Prepend 1x to all AS’s
+20473:6002,Prepend 2x to all AS’s
+20473:6003,Prepend 3x to all AS’s
+20473:666,Export blackhole to all AS’s
+
