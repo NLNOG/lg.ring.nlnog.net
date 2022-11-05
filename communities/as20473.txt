@@ -40,7 +40,7 @@
 20473:44,Asia & Pacific - New Delhi, IN.
 
 # Extended location
-20473:0:3xxxxxx1xx,region+country: $0 location: $1
+20473:0:3xxxxxx1xx,region: $0$1$2 country: $3$4$5 location: $6$7
 
 # Actions
 20473:6000:nnn,Do not announce to AS$0
