@@ -27,11 +27,17 @@
 		font-family:'Lucida Sans', 'Courier New', Courier, monospace !important;
 	}
 	.community {
-		color: #338;
+		color: #383;
 		background-color: #eee;
 		border: solid 1px #ccc;
 		padding: 2px;
 		cursor: help;
+	}
+	.unknown_community {
+		color: #338;
+		background-color: #f8f8f8;
+		border: solid 1px #ccc;
+		padding: 2px;
 	}
 	td.data {
 		font-family: monospace;
@@ -45,11 +51,28 @@
 	a.whois {
 		text-decoration: none;
 	}
+	a.whois.asn:hover {
+		color: #fff;
+	}
+	a.whois.asnumber {
+		background-color: #eee;
+		border: solid 1px #ccc;
+		padding: 2px;
+	}
 	.peername {
 		margin-top: 12px;
 		background-color: #ddd;
-		color: black;
+		color: #f4511e;
+		font-size: 14pt;
 		font-weight: bold;
+	}
+	.prefix {
+		margin-top: 12px;
+		color: #f4511e;;
+		font-size: 16pt;
+		font-weight: bold;
+		border-bottom: solid 2px #999;
+
 	}
 	.form-select {
 		background: #fff;
@@ -73,7 +96,6 @@
 	}
 	.comm2text {
 		font-size: 8pt;
-		color: #33c;
 	}
 	input {
 		font-family: monospace;

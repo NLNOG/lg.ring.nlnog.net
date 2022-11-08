@@ -2,7 +2,10 @@
 {% block body %}
 <br/>
 <h2>
-    Routes found{% if peer != 'all' %} on {{ peer }}{% endif %} for '{{ prefix }}' <a href="/prefix/map?{{ request.query_string.decode() }}" class="btn btn-secondary btn-sm" style="margin-bottom: 0.25rem; line-height: 1.2;"><i class="bi bi-map"></i> map</a> <a href="/prefix?{{ request.query_string.decode() }}" class="btn btn-secondary btn-sm" style="margin-bottom: 0.25rem; line-height: 1.2;"><i class="bi bi-code"></i> tables</a>
+    Routes found{% if peer != 'all' %} on {{ peer }}{% endif %} for '{{ prefix }}'
+    <a href="/prefix/map?{{ request.query_string.decode() }}" class="btn btn-primary btn-sm" style="margin-bottom: 0.25rem; line-height: 1.2;"><i class="bi bi-map"></i> map</a>
+    <a href="/prefix/text?{{ request.query_string.decode() }}" class="btn btn-primary btn-sm" style="margin-bottom: 0.25rem; line-height: 1.2;"><i class="bi bi-body-text"></i> plain text</a>
+    <a href="/prefix?saved={{query_id}}" class="btn btn-primary btn-sm" style="margin-bottom: 0.25rem; line-height: 1.2;"><i class="bi bi-link-45deg"></i> permalink</a>
 </h2>
 <br/>
 
@@ -10,21 +13,21 @@
     <div class="alert alert-danger" role="alert">No matching routes found.
 {% else %}
 <pre>
-Static URL for these results: <a href="/prefix?saved={{id}}">{{ id }}</a>
 {% for prefix  in routes %}
-Prefix: {{ prefix }} ({{ routes[prefix] | length }} items)
-----------------------------------------------------------------------------------------------------
-{% for route in routes[prefix] %}
-
-    Peer:                  {{route.peer }}
-    AS-Path:               {% for as in route.aspath %}<span data-toggle="tooltip" data-placement="top" title="{{ as[1] }}"><a href="/whois?q={{ as[0] }}" class="whois">{{ as[0] }}</a></span> {% endfor %}{% if route.origin == "IGP" %}I{% elif route.origin == "EGP" %}E{% else %}?{% endif %}
+<div class="prefix">Prefix: {{ prefix }} ({{ routes[prefix] | length }} items)</div>
+{%- for route in routes[prefix] %}
+<div class="peername">  {{route.peer }}</div>
+    AS-Path:               {% for as in route.aspath %}<span data-toggle="tooltip" data-placement="top" title="{{ as[1] }}"><a href="/whois?q={{ as[0] }}" class="whois asnumber">{{ as[0] }}</a></span> {% endfor %}{% if route.origin == "IGP" %}I{% elif route.origin == "EGP" %}E{% else %}?{% endif %}
     Next-hop:              <a href="/whois?q={{ route.exit_nexthop }}" class="whois">{{ route.exit_nexthop }}</a>
     Validation state:      <span class="{{route.ovs}}">{{route.ovs}}</span>
     MED:                   {{route.metric}}
     Last update:           {{route.last_update_at}} ({{route.last_update}} ago)
-{% if route.communities %}    Communities:           {% for community in route.communities %}{% if community[1] %}<span class="community" data-toggle="tooltip" data-placement="bottom" animation="true" title="{{ community[1] }}">{{ community[0] }}</span>{% else %}{{ community[0] }}{% endif %} {% endfor %}{% endif %}
-{%-if route.extended_communities %}    Extended communities:  {% for community in route.extended_communities %}{% if community[1] %}<span class="community" data-toggle="tooltip" data-placement="bottom" animation="true" title="{{ community[1] }}">{{ community[0] }}</span>{% else %}{{ community[0] }}{% endif %} {% endfor %}{% endif %}
-{% if route.large_communities %}    Large communities:     {% for community in route.large_communities %}{% if community[1] %}<span class="community" data-toggle="tooltip" data-placement="bottom" animation="true" title="{{ community[1] }}">{{ community[0] }}</span>{% else %}{{ community[0] }}{% endif %} {% endfor %}{% endif %}
+{%- if route.communities %}
+    Communities:           {% for community in route.communities %}{% if community[1] %}<span class="community" data-toggle="tooltip" data-placement="bottom" animation="true" title="{{ community[1] }}">{{ community[0] }}</span>{% else %}<span class="unknown_community">{{ community[0] }}</span>{% endif %} {% endfor %}{% endif %}
+{%- if route.extended_communities %}
+    Extended communities:  {% for community in route.extended_communities %}{% if community[1] %}<span class="community" data-toggle="tooltip" data-placement="bottom" animation="true" title="{{ community[1] }}">{{ community[0] }}</span>{% else %}<span class="unknown_community">{{ community[0] }}</span>{% endif %} {% endfor %}{% endif %}
+{%- if route.large_communities %}
+    Large communities:     {% for community in route.large_communities %}{% if community[1] %}<span class="community" data-toggle="tooltip" data-placement="bottom" animation="true" title="{{ community[1] }}">{{ community[0] }}</span>{% else %}<span class="unknown_community">{{ community[0] }}</span>{% endif %} {% endfor %}{% endif %}
 {% endfor %}{% endfor %}
 
 </pre>
