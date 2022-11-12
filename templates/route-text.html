@@ -3,9 +3,11 @@
 <br/>
 <h2>
     Routes found{% if peer != 'all' %} on {{ peer }}{% endif %} for '{{ prefix }}'
-    <a href="/prefix/map?{{ request.query_string.decode() }}" class="btn btn-primary btn-sm" style="margin-bottom: 0.25rem; line-height: 1.2;"><i class="bi bi-map"></i> map</a>
-    <a href="/prefix?{{ request.query_string.decode() }}" class="btn btn-primary btn-sm" style="margin-bottom: 0.25rem; line-height: 1.2;"><i class="bi bi-code"></i> tables</a>
+    <a href="/prefix/map?saved={{query_id}}" class="btn btn-primary btn-sm" style="margin-bottom: 0.25rem; line-height: 1.2;"><i class="bi bi-map"></i> map</a>
+    <a href="/prefix?saved={{query_id}}" class="btn btn-primary btn-sm" style="margin-bottom: 0.25rem; line-height: 1.2;"><i class="bi bi-code"></i> tables</a>
     <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#staticModal" style="margin-bottom: 0.25rem; line-height: 1.2;"><i class="bi bi-link-45deg"></i> permalink</button>
+    <button type="button" class="btn btn-primary btn-sm" onclick="navigator.clipboard.writeText(document.getElementById('routes').innerText)" style="margin-bottom: 0.25rem; line-height: 1.2;"><i class="bi bi-clipboard"></i> copy</button>
+
 </h2>
 <br/>
   <!-- Modal -->
@@ -30,6 +32,7 @@
       </div>
     </div>
   </div>
+<div id="routes">
 {% if routes | length == 0 %}
     <div class="alert alert-danger" role="alert">No matching routes found.
 {% else %}
@@ -56,4 +59,5 @@
 
 </pre>
 {% endif %}
+</div>
 {% endblock %}

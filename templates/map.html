@@ -3,8 +3,10 @@
 <br/>
 <h2>
     Routing map{% if peer != 'all' %} on {{ peer }}{% endif %} for '{{ prefix }}'
-    <a href="/prefix?{{ request.query_string.decode() }}" class="btn btn-primary btn-sm" style="margin-bottom: 0.25rem; line-height: 1.2;"><i class="bi bi-body-text"></i>&nbsp;route view</a>
-    <a href="/prefix/map/fullscreen?{{ request.query_string.decode() }}" class="btn btn-primary btn-sm" style="margin-bottom: 0.25rem; line-height: 1.2;"><i class="bi bi-arrows-fullscreen"></i>&nbsp;fullscreen map</a>
+    <a href="/prefix/text?saved={{query_id}}" class="btn btn-primary btn-sm" style="margin-bottom: 0.25rem; line-height: 1.2;"><i class="bi bi-body-text"></i> plain text</a>
+    <a href="/prefix?saved={{query_id}}" class="btn btn-primary btn-sm" style="margin-bottom: 0.25rem; line-height: 1.2;"><i class="bi bi-code"></i> tables</a>
+    <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#staticModal" style="margin-bottom: 0.25rem; line-height: 1.2;"><i class="bi bi-link-45deg"></i> permalink</button>
+    <a href="/prefix/map/fullscreen?saved={{query_id}}" class="btn btn-primary btn-sm" style="margin-bottom: 0.25rem; line-height: 1.2;"><i class="bi bi-arrows-fullscreen"></i>&nbsp;fullscreen map</a>
 </h2>
 <br/>
 
@@ -13,7 +15,7 @@
 {% endif %}
 
 <div class="svgmap">
-    <img src="/prefix/map/fullscreen?{{ request.query_string.decode() }}" style="max-width: 100%">
+    <a href="/prefix/map/fullscreen?saved={{query_id}}"><img src="/prefix/map/fullscreen?{{ request.query_string.decode() }}" style="max-width: 100%"></a>
 </div>
 
 {% endblock %}
