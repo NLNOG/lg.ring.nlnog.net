@@ -37,6 +37,7 @@ import string
 import sqlite3
 import textwrap
 import argparse
+import operator
 import subprocess
 from urllib.parse import unquote
 from datetime import datetime, timezone, timedelta
@@ -582,6 +583,8 @@ def show_route_for_prefix(prefix=None, netmask=None):
                 "metric": route["metric"],
                 "created": create_date,
             })
+    for pfx in routes.keys():
+        routes[pfx].sort(key=operator.itemgetter('peer'))
 
     # pylint: disable=undefined-loop-variable
     if request.path == '/prefix/map/fullscreen':
