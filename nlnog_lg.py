@@ -252,7 +252,7 @@ def write_archive(data: dict, prefix: str, peer: str) -> str:
         conn.close()
 
         return archive_id
-    except Exception as err: # pylint: disable=broad-except
+    except Exception as err:  # pylint: disable=broad-except
         print(err)
         raise LGException("Failed to store data.") from err
 
@@ -426,12 +426,12 @@ def generate_map(routes: dict, prefix: str):
             add_link(ashop[0], route['aspath'][idx+1][0], fillcolor="#%x" % color)
 
     # Add the prefix node
-    pfxnode = pydot.Node(prefix, label=prefix, shape="box", fillcolor="#F5A9A9", style="filled", fontsize="10")
+    pfxnode = pydot.Node(prefix, label=prefix, shape="box", fillcolor="#f4511e", style="filled", fontsize="10")
     graph.add_node(pfxnode)
 
     # Add the looking glass node
     lgnode = pydot.Node("lgnode", label=f"{app.config['LOOKING_GLASS_NAME'].upper()}",
-                        shape="box", fillcolor="#F5A9A9", style="filled", fontsize="10")
+                        shape="box", fillcolor="#f4511e", style="filled", fontsize="10")
     graph.add_node(lgnode)
 
     # Visualize every path
@@ -538,7 +538,7 @@ def show_route_for_prefix(prefix=None, netmask=None):
 
         try:
             query_id = write_archive(result, prefix, peer)
-        except LGException as err:
+        except LGException:
             return render_template("error.html", errors=["Failed to store results."]), 400
 
     routes = {}
@@ -549,6 +549,10 @@ def show_route_for_prefix(prefix=None, netmask=None):
         return render_template("error.html", warning=["No data received from the NLNOG Ring API endpoint."])
 
     communitylist = read_communities()
+
+    create_date = None
+    if result.get("created", False):
+        create_date = datetime.utcfromtimestamp(result["created"]).strftime("%Y-%m-%d %H:%M:%S UTC")
 
     if "rib" in result:
         now = datetime.now(timezone.utc)
@@ -576,7 +580,7 @@ def show_route_for_prefix(prefix=None, netmask=None):
                 "last_update": route["last_update"],
                 "last_update_at": timestamp.strftime("%Y-%m-%d %H:%M:%S UTC"),
                 "metric": route["metric"],
-                "created": route.get("created", ""),
+                "created": create_date,
             })
 
     # pylint: disable=undefined-loop-variable

@@ -140,15 +140,6 @@
 				$(".modal").modal('show');
 			});
 		});
-		$("a.link").click(function (event){
-			event.preventDefault();
-			link = $(this).attr('href');
-			$.getJSON(link, function(data) {
-				$(".modal h3").html("static link ");
-				$(".modal .modal-body > p").css("white-space", "pre-line").text(data.output);
-				$(".modal").modal('show');
-			});
-		});
 	});
 </script>
 </head>
@@ -218,8 +209,8 @@
 		</div>
 	  </div>
 	</div>
-  </div>
-  <main class="flex-shrink-0">
+</div>
+<main class="flex-shrink-0">
 	{% if warnings %}
 	<div class="alert alert-warning">
 		{% for warning in warnings %}{{warning}}<br />{% endfor %}
@@ -255,6 +246,10 @@
   		]
 		} );
 	};
+	var myModal = document.getElementById('myModal')
+var myInput = document.getElementById('myInput')
+
+
 </script>
 </body>
 </html>

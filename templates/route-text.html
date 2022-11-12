@@ -4,11 +4,32 @@
 <h2>
     Routes found{% if peer != 'all' %} on {{ peer }}{% endif %} for '{{ prefix }}'
     <a href="/prefix/map?{{ request.query_string.decode() }}" class="btn btn-primary btn-sm" style="margin-bottom: 0.25rem; line-height: 1.2;"><i class="bi bi-map"></i> map</a>
-    <a href="/prefix/text?{{ request.query_string.decode() }}" class="btn btn-primary btn-sm" style="margin-bottom: 0.25rem; line-height: 1.2;"><i class="bi bi-body-text"></i> plain text</a>
-    <a href="/prefix?saved={{query_id}}" class="btn btn-primary btn-sm" style="margin-bottom: 0.25rem; line-height: 1.2;"><i class="bi bi-link-45deg"></i> permalink</a>
+    <a href="/prefix?{{ request.query_string.decode() }}" class="btn btn-primary btn-sm" style="margin-bottom: 0.25rem; line-height: 1.2;"><i class="bi bi-code"></i> tables</a>
+    <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#staticModal" style="margin-bottom: 0.25rem; line-height: 1.2;"><i class="bi bi-link-45deg"></i> permalink</button>
 </h2>
 <br/>
+  <!-- Modal -->
+  <div class="modal fade" id="staticModal" tabindex="-1" aria-labelledby="staticModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticModalLabel">Permalink</h5>
+          <button type="button" class="btn-close btn-sm" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            The current looking glass output is stored at:
+            <pre>
 
+<a href="{{request.host_url}}prefix?saved={{query_id}}">{{request.host_url}}prefix?saved={{query_id}}</a></pre>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary btn-sm" onclick="navigator.clipboard.writeText('{{request.host_url}}prefix?saved={{query_id}}');">Copy URL</button>
+          <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 {% if routes | length == 0 %}
     <div class="alert alert-danger" role="alert">No matching routes found.
 {% else %}
@@ -17,6 +38,9 @@
 <div class="prefix">Prefix: {{ prefix }} ({{ routes[prefix] | length }} items)</div>
 {%- for route in routes[prefix] %}
 <div class="peername">  {{route.peer }}</div>
+{%- if route.created %}
+    Data collected at:     {{ route.created }}
+{%- endif %}
     AS-Path:               {% for as in route.aspath %}<span data-toggle="tooltip" data-placement="top" title="{{ as[1] }}"><a href="/whois?q={{ as[0] }}" class="whois asnumber">{{ as[0] }}</a></span> {% endfor %}{% if route.origin == "IGP" %}I{% elif route.origin == "EGP" %}E{% else %}?{% endif %}
     Next-hop:              <a href="/whois?q={{ route.exit_nexthop }}" class="whois">{{ route.exit_nexthop }}</a>
     Validation state:      <span class="{{route.ovs}}">{{route.ovs}}</span>
