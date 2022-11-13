@@ -583,6 +583,8 @@ def show_route_for_prefix(prefix=None, netmask=None):
                 "metric": route["metric"],
                 "created": create_date,
             })
+
+    # sort output by peername per prefix
     for pfx in routes.keys():
         routes[pfx].sort(key=operator.itemgetter('peer'))
 
