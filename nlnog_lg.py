@@ -500,7 +500,8 @@ def show_route_for_prefix(prefix=None, netmask=None):
     else:
         if netmask:
             prefix = f"{prefix}/{netmask}"
-        prefix = unquote(request.args.get('q', '').strip())
+        else:
+            prefix = unquote(request.args.get('q', '').strip())
         if not prefix:
             abort(400)
 
