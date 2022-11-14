@@ -29,9 +29,15 @@
 
 import os
 import re
+import bz2
 import glob
+import json
+import random
+import string
+import sqlite3
 import textwrap
 import argparse
+import operator
 import subprocess
 from urllib.parse import unquote
 from datetime import datetime, timezone, timedelta
@@ -52,6 +58,11 @@ app.secret_key = app.config["SESSION_KEY"]
 app.debug = arguments.debug
 app.version = "0.2.1"
 asnlist = {}
+
+
+class LGException(Exception):
+    """ Custom exception
+    """
 
 
 def is_regular_community(community: str) -> bool:
@@ -171,8 +182,6 @@ def get_community_descr_from_list(community: str, communitylist: dict) -> str:
     for (regex, desc) in communitylist[ctype]["re"]:
         match = regex.match(community)
         if match:
-            print(regex)
-            print(regex.match(community).groups())
             for count, group in enumerate(match.groups()):
                 desc = desc.replace(f"${count}", group)
             return desc
@@ -217,6 +226,63 @@ def whois_command(query: str):
     if app.config.get("WHOIS_SERVER", ""):
         server = ["-h", app.config.get("WHOIS_SERVER")]
     return subprocess.Popen(['whois'] + server + [query], stdout=subprocess.PIPE).communicate()[0].decode('utf-8', 'ignore')
+
+
+def write_archive(data: dict, prefix: str, peer: str) -> str:
+    """ Save LG output JSON, store data in a sqlite db, return the ID if successful
+    """
+    try:
+        archive_id = ''.join(random.SystemRandom().choice(string.ascii_letters + string.digits) for _ in range(10))
+        currentdir = os.path.dirname(os.path.realpath(__file__))
+        fname = "%s/%s/%s.json.bz2" % (currentdir, app.config.get("ARCHIVE_DIR", ""), archive_id)
+        compressed = bz2.compress(bytes(json.dumps(data), "utf-8"))
+
+        with open(fname, "wb") as fhandle:
+            fhandle.write(compressed)
+            fhandle.close()
+        conn = sqlite3.connect("%s/%s" % (currentdir, app.config.get("DB_FILE", "nlnog-lg.sqlite")))
+        cur = conn.cursor()
+        cur.execute("""CREATE TABLE IF NOT EXISTS archive
+                    ([id] TEXT PRIMARY KEY, [created] DATETIME,
+                    [prefix] TEXT, [peer] TEXT, [linked] INTEGER)""")
+        conn.commit()
+
+        cur.execute(f"INSERT INTO archive (id, created, prefix, peer, linked) VALUES ('{archive_id}',"
+                    f"strftime('%s', 'now'), '{prefix}', '{peer}', 0)")
+        conn.commit()
+        conn.close()
+
+        return archive_id
+    except Exception as err:  # pylint: disable=broad-except
+        print(err)
+        raise LGException("Failed to store data.") from err
+
+
+def read_archive(archive_id: str):
+    """ Read LG output from a stored file.
+    """
+    try:
+        currentdir = os.path.dirname(os.path.realpath(__file__))
+        conn = sqlite3.connect("%s/%s" % (currentdir, app.config.get("DB_FILE", "nlnog-lg.sqlite")))
+        cur = conn.cursor()
+        cur.execute(f"SELECT prefix, peer, created FROM archive WHERE id='{archive_id}'")
+        result = cur.fetchall()
+        if len(result) != 1:
+            raise LGException("ID not found.")
+        (prefix, peer, created) = result[0]
+        currentdir = os.path.dirname(os.path.realpath(__file__))
+        filename = "%s/%s/%s.json.bz2" % (currentdir, app.config.get("ARCHIVE_DIR", ""), archive_id)
+        if not os.path.exists(filename):
+            print(f"Failed to find {filename}.")
+            raise LGException("Data not found.")
+        with bz2.open(filename, "rb") as fhandle:
+            data = json.loads(fhandle.read())
+            data["created"] = created
+            cur.execute(f"UPDATE archive SET linked=linked+1 WHERE id='{archive_id}'")
+            conn.commit()
+            return (data, prefix, peer)
+    except Exception as err:
+        raise LGException("Failed to read stored output.") from err
 
 
 def openbgpd_command(router: str, command: str, args: dict = None):
@@ -361,12 +427,12 @@ def generate_map(routes: dict, prefix: str):
             add_link(ashop[0], route['aspath'][idx+1][0], fillcolor="#%x" % color)
 
     # Add the prefix node
-    pfxnode = pydot.Node(prefix, label=prefix, shape="box", fillcolor="#F5A9A9", style="filled", fontsize="10")
+    pfxnode = pydot.Node(prefix, label=prefix, shape="box", fillcolor="#f4511e", style="filled", fontsize="10")
     graph.add_node(pfxnode)
 
     # Add the looking glass node
     lgnode = pydot.Node("lgnode", label=f"{app.config['LOOKING_GLASS_NAME'].upper()}",
-                        shape="box", fillcolor="#F5A9A9", style="filled", fontsize="10")
+                        shape="box", fillcolor="#f4511e", style="filled", fontsize="10")
     graph.add_node(lgnode)
 
     # Visualize every path
@@ -422,46 +488,61 @@ def show_route_for_prefix(prefix=None, netmask=None):
     """
     warnings = []
     errors = []
-    if not prefix:
-        prefix = unquote(request.args.get('q', '').strip())
+    result = None
+    query_id = "bla"
+
+    if "saved" in request.args:
+        query_id = request.args["saved"]
+        try:
+            (result, prefix, peer) = read_archive(request.args["saved"])
+        except LGException as err:
+            return render_template('error.html', errors=[err]), 400
     else:
-        prefix = f"{prefix}/{netmask}"
-    peer = unquote(request.args.get('peer', 'all').strip())
-    if not prefix:
-        abort(400)
+        if netmask:
+            prefix = f"{prefix}/{netmask}"
+        prefix = unquote(request.args.get('q', '').strip())
+        if not prefix:
+            abort(400)
 
-    args = {}
-    if peer != "all":
-        args["neighbor"] = peer
+        peer = unquote(request.args.get('peer', 'all').strip())
 
-    # try to see if the argument is a network by typecasting it to IPNetwork
-    try:
-        net = netaddr.IPNetwork(prefix)
-        # single addresses without a netmask would be a valid IPNetwork too, ignore them
-        if "/" in prefix:
-            if (netaddr.valid_ipv4(str(net.ip)) and net.prefixlen <= 16) or \
-               (netaddr.valid_ipv6(str(net.ip)) and net.prefixlen <= 48):
-                warnings.append("Not showing more specific routes, too many results, showing exact matches only.")
-            elif request.args.get("match") == "orlonger" and request.path != '/prefix/map':
-                args["all"] = 1
-    except netaddr.core.AddrFormatError:
-        if not netaddr.valid_ipv4(prefix) and not netaddr.valid_ipv6(prefix):
-            # Test domain resolution
-            resolved = resolve(prefix)
+        args = {}
+        if peer != "all":
+            args["neighbor"] = peer
 
-            # Make sure the received answer is either valid IPv4 or IPv6
-            if resolved and (netaddr.valid_ipv4(resolved) or netaddr.valid_ipv6(resolved)):
-                prefix = resolved
-            else:
-                return render_template('error.html', errors=[f"{prefix} is not a valid IPv4 or IPv6 address."]), 400
-    args["prefix"] = prefix
+        # try to see if the argument is a network by typecasting it to IPNetwork
+        try:
+            net = netaddr.IPNetwork(prefix)
+            # single addresses without a netmask would be a valid IPNetwork too, ignore them
+            if "/" in prefix:
+                if (netaddr.valid_ipv4(str(net.ip)) and net.prefixlen <= 16) or \
+                   (netaddr.valid_ipv6(str(net.ip)) and net.prefixlen <= 48):
+                    warnings.append("Not showing more specific routes, too many results, showing exact matches only.")
+                elif request.args.get("match") == "orlonger" and request.path != '/prefix/map':
+                    args["all"] = 1
+        except netaddr.core.AddrFormatError:
+            if not netaddr.valid_ipv4(prefix) and not netaddr.valid_ipv6(prefix):
+                # Test domain resolution
+                resolved = resolve(prefix)
+
+                # Make sure the received answer is either valid IPv4 or IPv6
+                if resolved and (netaddr.valid_ipv4(resolved) or netaddr.valid_ipv6(resolved)):
+                    prefix = resolved
+                else:
+                    return render_template('error.html', errors=[f"{prefix} is not a valid IPv4 or IPv6 address."]), 400
+        args["prefix"] = prefix
+
+        # query the OpenBGPD API endpoint
+        status, result = openbgpd_command(app.config["ROUTER"], "route", args=args)
+        if not status:
+            return render_template('error.html', errors=["Failed to query the NLNOG Looking Glass backend."]), 400
+
+        try:
+            query_id = write_archive(result, prefix, peer)
+        except LGException:
+            return render_template("error.html", errors=["Failed to store results."]), 400
 
     routes = {}
-
-    # query the OpenBGPD API endpoint
-    status, result = openbgpd_command(app.config["ROUTER"], "route", args=args)
-    if not status:
-        return render_template('error.html', errors=["Failed to query the NLNOG Looking Glass backend."]), 400
 
     # get a list of peers for the dropdown list in the menu
     peers = get_peer_info(names_only=True, established_only=True)
@@ -469,6 +550,10 @@ def show_route_for_prefix(prefix=None, netmask=None):
         return render_template("error.html", warning=["No data received from the NLNOG Ring API endpoint."])
 
     communitylist = read_communities()
+
+    create_date = None
+    if result.get("created", False):
+        create_date = datetime.utcfromtimestamp(result["created"]).strftime("%Y-%m-%d %H:%M:%S UTC")
 
     if "rib" in result:
         now = datetime.now(timezone.utc)
@@ -496,7 +581,12 @@ def show_route_for_prefix(prefix=None, netmask=None):
                 "last_update": route["last_update"],
                 "last_update_at": timestamp.strftime("%Y-%m-%d %H:%M:%S UTC"),
                 "metric": route["metric"],
+                "created": create_date,
             })
+
+    # sort output by peername per prefix
+    for pfx in routes.keys():
+        routes[pfx].sort(key=operator.itemgetter('peer'))
 
     # pylint: disable=undefined-loop-variable
     if request.path == '/prefix/map/fullscreen':
@@ -509,18 +599,18 @@ def show_route_for_prefix(prefix=None, netmask=None):
 
     if request.path == '/prefix/map':
         # Return a map page
-        return render_template("map.html", peer=peer, peers=peers, routes=routes, prefix=route["prefix"],
+        return render_template("map.html", peer=peer, peers=peers, routes=routes, prefix=route["prefix"], query_id=query_id,
                                warnings=warnings, errors=errors, match=request.args.get("match"))
 
     if request.path == "/prefix/text":
         # return a route view in plain text style
-        return render_template("route-text.html", peer=peer, peers=peers, routes=routes, prefix=prefix,
+        return render_template("route-text.html", peer=peer, peers=peers, routes=routes, prefix=prefix, query_id=query_id,
                                warnings=warnings, errors=errors, match=request.args.get("match"))
 
     # pylint: enable=undefined-loop-variable
 
     # Return a route view in HTML table style
-    return render_template("route.html", peer=peer, peers=peers, routes=routes, prefix=prefix,
+    return render_template("route.html", peer=peer, peers=peers, routes=routes, prefix=prefix, query_id=query_id,
                            warnings=warnings, errors=errors, match=request.args.get("match"))
 
 
