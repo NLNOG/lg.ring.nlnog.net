@@ -1,0 +1,5 @@
+15693:1000,NL-IX peering
+15693:3000,Jointtransit transit
+15693:4000,Nextpertise transit
+15693:6000,Atom86 transit
+15693:10000,Equinix peering
