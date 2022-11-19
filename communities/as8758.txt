@@ -1,0 +1,40 @@
+#Communities taken from https://www.as8758.net/
+8758:100,Learnt from Customer
+8758:105,Learnt from Peer
+8758:110,Learnt from Transit
+8758:200,Learnt from SwissIX Peer
+8758:205,Learnt from SwissIX Route Server
+8758:220,Learnt from AMS-IX Peer
+8758:225,Learnt from AMS-IX Route Server
+8758:230,Learnt from DE-CIX Peer
+8758:235,Learnt from DE-CIX Route Server
+8758:240,Learnt from Rheintal-IX Peer
+8758:245,Learnt from Rheintal-IX Server
+8758:300,Learnt in Zürich
+8758:301,Learnt in Glattbrugg
+8758:302,Learnt in Gais,
+8758:8758,AS8758 own prefixes
+8758:666,Blackhole this route (only /32)
+8758:1000,Do not announce to Customers
+8758:1100,Do not announce to any Privat Peer
+8758:1101,Do not announce to Google PNI
+8758:1102,Do not announce to Netflix OCA PNI
+8758:1103,Do not announce to Google GGC PNI
+8758:1104,Do not announce to Zattoo PNI
+8758:2000,Do not announce to any Internet Exchange
+8758:2001,Do not announce to SwissIX in Zurich
+8758:2002,Do not announce to SwissIX in Glattbrugg
+8758:2009,Do not announce to SwissIX Routeservers
+8758:2022,Do not announce to AMS-IX in Glattbrugg
+8758:2029,Do not announce to AMS-IX Routeservers
+8758:2032,Do not announce to DE-CIX in Glattbrugg
+8758:2039,Do not announce to DE-CIX Routeservers
+8758:2043,Do not announce to Rheintal-IX in Gais
+8758:2049,Do not announce to Rheintal-IX Routeservers
+8758:3000,Do not announce to any Upstream
+8758:3001,Do not announce to Colt (AS8220)
+8758:3002,Do not announce to Cogent (AS174)
+8758:3003,Do not announce to UPC (AS6830))
+8758:3004,Do not announce to NTS (AS15576)
+8758:3005,Do not announce to Telia (AS1299)
+8758:3006,Do not announce to Swisscom (AS3303)
