@@ -44,7 +44,7 @@ from datetime import datetime, timezone, timedelta
 import pydot
 import netaddr
 import requests
-from flask import Flask, abort, jsonify, render_template, request, escape, Response
+from flask import Flask, abort, jsonify, render_template, request, escape, Response, make_response
 from dns.resolver import Resolver, NXDOMAIN, Timeout, NoAnswer, NoNameservers
 
 parser = argparse.ArgumentParser()
@@ -337,12 +337,13 @@ def get_peer_info(names_only: bool = False, established_only: bool = False):
     data = []
 
     if names_only:
-        return sorted([neighbor.get("description", "no name") for neighbor in
+        return sorted(["%s (AS%s)" % (neighbor.get("description", "no name"), neighbor.get("remote_as", "unknown")) for neighbor in
                        result.get("neighbors", []) if neighbor["state"].lower() in ["up", "established"]])
 
     for neighbor in result.get("neighbors", []):
         props = {}
         props["name"] = neighbor.get("description", "no name")
+        props["remote_as"] = neighbor["remote_as"]
         props["state"] = neighbor["state"]
         props["since"] = neighbor["last_updown"]
         props["prefixes"] = neighbor["stats"]["prefixes"]["received"]
@@ -451,7 +452,13 @@ def mainpage():
         return render_template("error.html", warning=["No data received from the NLNOG Ring API endpoint."])
     peers = [peer["name"] for peer in peerinfo]
     peers.sort()
-    return render_template("form.html", peers=peers, totals=totals, hideform=True)
+    peer = None
+    print(request.args.get("peer", "_"))
+    if request.args.get("peer", "_") in peers:
+        peer = request.args.get("peer")
+    searchquery = request.cookies.get("searchquery", "")
+    match = request.cookies.get("match", "exact")
+    return render_template("form.html", peers=peers, totals=totals, hideform=True, searchquery=searchquery, match=match, peer=peer)
 
 
 @app.route("/summary")
@@ -480,6 +487,7 @@ def show_peer_details(peer: str):
 @app.route("/prefix/map")
 @app.route("/prefix/map/fullscreen")
 @app.route("/prefix/text")
+@app.route("/prefix/html")
 @app.route("/query/<prefix>/<netmask>")
 def show_route_for_prefix(prefix=None, netmask=None):
     """ Handle the prefix details page.
@@ -603,7 +611,7 @@ def show_route_for_prefix(prefix=None, netmask=None):
         return render_template("map.html", peer=peer, peers=peers, routes=routes, prefix=route["prefix"], query_id=query_id,
                                warnings=warnings, errors=errors, match=request.args.get("match"))
 
-    if request.path == "/prefix/text":
+    if request.path == "/prefix/text" or (request.cookies.get("output") == "text" and request.path != "/prefix/html"):
         # return a route view in plain text style
         return render_template("route-text.html", peer=peer, peers=peers, routes=routes, prefix=prefix, query_id=query_id,
                                warnings=warnings, errors=errors, match=request.args.get("match"))
@@ -666,6 +674,43 @@ def stats():
     if len(peers) == 0:
         return render_template("error.html", warning=["No data received from the NLNOG Ring API endpoint."])
     return render_template("statistics.html", stats=stats, peers=peers)
+
+
+@app.route("/preferences", methods=["GET", "POST"])
+def store_preferences():
+    """ Handle the preferences page.
+    """
+    peers = get_peer_info(names_only=True, established_only=True)
+    if len(peers) == 0:
+        return render_template("error.html", warning=["No data received from the NLNOG Ring API endpoint."])
+
+    if request.method == "GET":
+        outformat = request.cookies.get("output", "html")
+        searchquery = request.cookies.get("searchquery", "")
+        match = request.cookies.get("match", "exact")
+        return render_template("preferences.html", peers=peers, outformat=outformat, searchquery=searchquery, match=match)
+
+    outformat = request.form.get("output")
+    searchquery = request.form.get("searchquery", "")
+    match = request.form.get("match", "")
+    errors = []
+
+    if searchquery:
+        try:
+            net = netaddr.IPNetwork(searchquery)
+        except netaddr.core.AddrFormatError:
+            if not netaddr.valid_ipv4(searchquery) and not netaddr.valid_ipv6(searchquery):
+                resolved = resolve(searchquery)
+                if not (resolved and (netaddr.valid_ipv4(resolved) or netaddr.valid_ipv6(resolved))):
+                    errors.append(f"'{searchquery}' is not a valid IPv4 or IPv6 address.")
+                    searchquery = ""
+
+    output = render_template("preferences.html", infoitems=["preferences stored."], outformat=outformat, peers=peers, searchquery=searchquery, errors=errors, match=match)
+    response = make_response(output)
+    response.set_cookie("output", outformat, max_age=60*60*24*365*2)
+    response.set_cookie("searchquery", searchquery, max_age=60*60*24*365*2)
+    response.set_cookie("match", match, max_age=60*60*24*365*2)
+    return response
 
 
 @app.errorhandler(400)

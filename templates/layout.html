@@ -157,6 +157,7 @@
 					</a>
 					<ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
 					  <li><a class="dropdown-item" href="/"><i class="bi bi-house-door"></i>&nbsp;&nbsp;Home</a></li>
+					  <li><a class="dropdown-item" href="/preferences"><i class="bi bi-gear"></i>&nbsp;&nbsp;Preferences</a></li>
 					  <li><a class="dropdown-item" href="/summary"><i class="bi bi-people"></i>&nbsp;&nbsp;BGP peer summary</a></li>
 					  <li><a class="dropdown-item" href="/statistics"><i class="bi bi-graph-up"></i>&nbsp;&nbsp;Looking glass statistics</a></li>
 					  <!--<li><a class="dropdown-item" href="/communitylist"><i class="bi bi-tag"></i>&nbsp;&nbsp;BGP Community list</a></li>-->
@@ -211,6 +212,11 @@
 	</div>
 </div>
 <main class="flex-shrink-0">
+	{% if infoitems %}
+	<div class="alert alert-info">
+		{% for infoitem in infoitems %}{{infoitem}}<br />{% endfor %}
+	</div>
+	{% endif %}
 	{% if warnings %}
 	<div class="alert alert-warning">
 		{% for warning in warnings %}{{warning}}<br />{% endfor %}

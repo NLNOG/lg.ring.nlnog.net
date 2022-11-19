@@ -11,24 +11,24 @@
         </div>
         <div class="input-group justify-content-center">
             <p>
-            Please enter an IP address or prefix to look up in our routing tables.
+            Please enter an IP address, prefix or hostname to look up in our routing tables.
             </p>
         </div>
         <div class="input-group input-group">
-            <span class="input-group-text" id="inputGroup-lg">IP or prefix</span>
-            <input type="text" required="true" autofocus="autofocus" class="form-control" placeholder="192.0.2.0/24" aria-describedby="inputGroup-sizing-lg" name="q">
+            <span class="input-group-text" id="inputGroup-lg">Search</span>
+            <input type="text" required="true" autofocus="autofocus" class="form-control" placeholder="2001:db8::/32" aria-describedby="inputGroup-sizing-lg" name="q" {% if searchquery %}value="{{searchquery}}"{% endif %}>
             <div class="input-group-btn input-group-lg">
                 <select class="form-select" name="match">
-                    <option value="exact" selected>Exact match</option>
-                    <option value="orlonger">Or longer</option>
+                    <option value="exact" {% if match == "exact" %}selected{% endif %}>Exact match</option>
+                    <option value="orlonger" {% if match == "longer" %}selected{% endif %}>Or longer</option>
                 </select>
             </div>
             &nbsp; <span class="input-group-text">on</span>
             <div class="input-group-btn input-group-lg">
                 <select class="form-select" name="peer">
                     <option selected value="all">all peers</option>
-                    {% for peer in peers %}
-                    <option>{{ peer }}</option>
+                    {% for item in peers %}
+                    <option {% if item == peer %}selected{% endif %}>{{ item }}</option>
                     {% endfor %}
                 </select>
             </div>&nbsp;
