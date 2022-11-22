@@ -608,7 +608,7 @@ def show_route_for_prefix(prefix=None, netmask=None):
 
     if request.path == '/prefix/map':
         # Return a map page
-        return render_template("map.html", peer=peer, peers=peers, routes=routes, prefix=route["prefix"], query_id=query_id,
+        return render_template("map.html", peer=peer, peers=peers, routes=routes, prefix=prefix, query_id=query_id,
                                warnings=warnings, errors=errors, match=request.args.get("match"))
 
     if request.path == "/prefix/text" or (request.cookies.get("output") == "text" and request.path != "/prefix/html"):
