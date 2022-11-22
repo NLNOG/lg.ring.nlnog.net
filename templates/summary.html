@@ -5,12 +5,13 @@
 <br/>
 <table class="table table-striped table-bordered table-condensed table-summary">
 <thead>
-	<tr><th>Name</th><th>state</th><th>since</th></th><th>prefixes received</th></tr>
+	<tr><th>Name</th><th>ASN</th><th>state</th><th>since</th></th><th>prefixes received</th></tr>
 </thead>
 <tbody>
 	{% for row in summary %}
 	<tr class="{{ loop.cycle('odd', 'even') }}">
         <td><a href="/detail/{{row.name}}">{{ row.name }}</a></td>
+		<td><a href="/whois?q={{row.remote_as}}" class="whois">{{ row.remote_as }}</a></td>
         <td><button type="button" class="btn btn-sm btn-outline-{% if row.state == "up" or row.state == "Established" %}success{% else %}danger{% endif %}">{{row.state}}</button></td>
         <td>{{ row.since }}</td>
         <td class="data">{{ row.prefixes }}</td>
