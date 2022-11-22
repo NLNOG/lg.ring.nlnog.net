@@ -262,8 +262,7 @@ def read_archive(archive_id: str):
     """ Read LG output from a stored file.
     """
     try:
-        currentdir = os.path.dirname(os.path.realpath(__file__))
-        conn = sqlite3.connect("%s/%s" % (currentdir, app.config.get("DB_FILE", "nlnog-lg.sqlite")))
+        conn = sqlite3.connect("%s" % app.config.get("DB_FILE", "nlnog-lg.sqlite"))
         cur = conn.cursor()
         cur.execute(f"SELECT prefix, peer, created FROM archive WHERE id='{archive_id}'")
         result = cur.fetchall()
