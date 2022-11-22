@@ -240,7 +240,7 @@ def write_archive(data: dict, prefix: str, peer: str) -> str:
         with open(fname, "wb") as fhandle:
             fhandle.write(compressed)
             fhandle.close()
-        conn = sqlite3.connect("%s/%s" % (currentdir, app.config.get("DB_FILE", "nlnog-lg.sqlite")))
+        conn = sqlite3.connect(app.config.get("DB_FILE", "nlnog-lg.sqlite"))
         cur = conn.cursor()
         cur.execute("""CREATE TABLE IF NOT EXISTS archive
                     ([id] TEXT PRIMARY KEY, [created] DATETIME,
