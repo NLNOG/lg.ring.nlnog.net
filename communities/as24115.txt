@@ -2,10 +2,10 @@
 #
 # Informational and Peer Operational Communities – Distributed to Peers
 #
-# Standard	
+# Standard
 24115:65012,RPKI Valid
 24115:65023,RPKI Unknown
-# Large	
+# Large
 24115:1000:1,RPKI Valid
 24115:1000:2,RPKI Unknown
 24115:1000:3,RPKI Not Checked
@@ -20,7 +20,7 @@
 # Standard
 24115:65281-65283,No Export
 24115:24115,Default Open Policy
-24115:24115:0:1-401308,Default Open except for ASN
+24115:24115:1-401308,Default Open except for ASN
 # Extended
 24115:1-401308,Allow Export to ASN
 # Large
