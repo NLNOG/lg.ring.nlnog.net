@@ -6,7 +6,6 @@
 8283:101,Valid IRR entry
 8283:102,Valid ROA
 8283:104,Whitelisted
-8283:11,8283:6:11,received from Atom86
 8283:11,received from Atom86
 8283:14,received from FiberRing
 8283:15,received from Fusix
@@ -40,5 +39,21 @@
 8283:5:2,Valid ROA
 8283:5:4,Whitelisted
 8283:6:10,received from TRUE
+8283:6:11,received from Atom86
 8283:6:14,received from FiberRing
 8283:6:15,received from Fusix
+8283:7:1,More specifics covering AS8283 space are considered hijacks
+8283:7:2,Somewhere in the AS_PATH a Bogon ASN is present (0, 23456, 64496..65534, 4200000000+)
+8283:7:3,The prefix is Bogon garbage (rfc1918, rfc4291 etc)
+8283:7:4,The prefix is an RPKI Invalid and as such rejected
+8283:7:5,The route's prefix length is unacceptable (too small or too large)
+8283:7:6,There is no IRR object that covers this route announcement
+8283:7:7,Coloclue member is not authorized to announce this route
+8283:8:26,received via AMS-IX
+8283:8:64,received via NL-IX
+8283:8:1812,received via Asteroid
+8283:8:1842,received via SpeedIX
+8283:8:3512,received via Frys-IX
+8283:8:31,received via DE-CIX
+8283:8:359,received via France-IX
+8283:8:60,received via SwissIX
