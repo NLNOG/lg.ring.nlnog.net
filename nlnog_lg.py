@@ -593,7 +593,7 @@ def show_route_for_prefix(prefix=None, netmask=None):
             })
 
     # sort output by peername per prefix
-    for pfx in routes.keys():
+    for pfx in routes:
         routes[pfx].sort(key=operator.itemgetter('peer'))
 
     # pylint: disable=undefined-loop-variable
@@ -696,7 +696,7 @@ def store_preferences():
 
     if searchquery:
         try:
-            net = netaddr.IPNetwork(searchquery)
+            netaddr.IPNetwork(searchquery)
         except netaddr.core.AddrFormatError:
             if not netaddr.valid_ipv4(searchquery) and not netaddr.valid_ipv6(searchquery):
                 resolved = resolve(searchquery)
@@ -704,7 +704,8 @@ def store_preferences():
                     errors.append(f"'{searchquery}' is not a valid IPv4 or IPv6 address.")
                     searchquery = ""
 
-    output = render_template("preferences.html", infoitems=["preferences stored."], outformat=outformat, peers=peers, searchquery=searchquery, errors=errors, match=match)
+    output = render_template("preferences.html", infoitems=["preferences stored."],
+                             outformat=outformat, peers=peers, searchquery=searchquery, errors=errors, match=match)
     response = make_response(output)
     response.set_cookie("output", outformat, max_age=60*60*24*365*2)
     response.set_cookie("searchquery", searchquery, max_age=60*60*24*365*2)
