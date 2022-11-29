@@ -138,7 +138,9 @@
 			$.getJSON(link, function(data) {
 				$(".modal h3").html("whois information for " + data.title);
 				$(".modal .modal-body > p").css("white-space", "pre-line").text(data.output);
-				$(".modal").modal('show');
+				var whois = document.getElementById("whoisModal");
+				console.log(whois);
+				$(whois).modal("show");
 			});
 		});
 	});
@@ -196,7 +198,7 @@
 	  </nav>
 
 <!-- Modal -->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal fade" id="whoisModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
 	<div class="modal-dialog modal-xl">
 	  <div class="modal-content">
 		<div class="modal-header">
@@ -253,7 +255,6 @@
   		]
 		} );
 	};
-	var myModal = document.getElementById('myModal')
 </script>
 </body>
 </html>
