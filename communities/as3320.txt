@@ -26,10 +26,10 @@
 
 65012:65006,prepend AS3320 twice on export to peer and upstreams
 65012:nnn,prepend AS3320 twice on export to AS$0
-3320:252200:n,prepend AS3320 to AS$0
+3320:252200:nnn,prepend AS3320 to AS$0
 65112:65001,prepend AS3320 twice on export to peer in Europe
 65133:nnn,prepend AS3320 thrice on export to AS$0 in Pac Rim
-3320:252330:n,prepend AS3320 thrise on export to AS$0 in Pac Rim
+3320:252330:nnn,prepend AS3320 thrise on export to AS$0 in Pac Rim
 
 65010:65001,dtag:req.no-export.to.peer
 3320:2501:0,dtag:req.no-export.to.peer
