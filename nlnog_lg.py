@@ -65,6 +65,13 @@ class LGException(Exception):
     """
 
 
+def valid_archive_id(archive_id: str) -> bool:
+    """ check if a string is a valid archive ID name
+    """
+    re_id = re.compile(r"[a-zA-Z0-9]{10}")
+    return re_id.match(archive_id)
+
+
 def is_regular_community(community: str) -> bool:
     """ check if a community string matches a regular community, with optional ranges
     """
@@ -261,6 +268,10 @@ def write_archive(data: dict, prefix: str, peer: str) -> str:
 def read_archive(archive_id: str):
     """ Read LG output from a stored file.
     """
+
+    if not valid_archive_id(archive_id):
+        raise LGException("Invalid archive id.")
+
     try:
         conn = sqlite3.connect("%s" % app.config.get("DB_FILE", "nlnog-lg.sqlite"))
         cur = conn.cursor()
@@ -452,7 +463,6 @@ def mainpage():
     peers = [peer["name"] for peer in peerinfo]
     peers.sort()
     peer = None
-    print(request.args.get("peer", "_"))
     if request.args.get("peer", "_") in peers:
         peer = request.args.get("peer")
     searchquery = request.cookies.get("searchquery", "")
@@ -516,6 +526,8 @@ def show_route_for_prefix(prefix=None, netmask=None):
 
         args = {}
         if peer != "all":
+            # split the peer name so we don't include the ASN
+            peer = peer.split(" ")[0]
             args["neighbor"] = peer
 
         # try to see if the argument is a network by typecasting it to IPNetwork
@@ -739,9 +751,10 @@ def whois():
         asnum = int(query)
         query = "as%d" % asnum
     except ValueError:
-        match = re.match(r"[\w\d-]*\.(?P<domain>[\d\w-]+\.[\d\w-]+)$", query)
-        if match:
-            query = query.groupdict()["domain"]
+        try:
+            netaddr.IPNetwork(query)
+        except netaddr.core.AddrFormatError:
+            abort(400)
 
     output = whois_command(query)
 
