@@ -605,8 +605,8 @@ def show_route_for_prefix(prefix=None, netmask=None):
             })
 
     # sort output by peername per prefix
-    for (_, route) in routes.items():
-        route.sort(key=operator.itemgetter('peer'))
+    for pfx in routes:  # pylint: disable=consider-using-dict-items
+        routes[pfx].sort(key=operator.itemgetter('peer'))
 
     # pylint: disable=undefined-loop-variable
     if request.path == '/prefix/map/fullscreen':
