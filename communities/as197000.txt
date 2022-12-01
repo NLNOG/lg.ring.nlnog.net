@@ -1,24 +1,28 @@
-soo 197000:1,AUTHDNS core site nl-ams
-soo 197000:1176,AUTHDNS hosted site at-vie
-soo 197000:1177,AUTHDNS hosted site it-rom
-soo 197000:1178,AUTHDNS hosted site no-osl
-soo 197000:1182,AUTHDNS hosted site br-pgz
-soo 197000:1188,AUTHDNS hosted site bh-amh
-soo 197000:1192,AUTHDNS hosted site ba-sjj
-soo 197000:1194,AUTHDNS hosted site am-evn
-soo 197000:1209,AUTHDNS hosted site at-szg
-soo 197000:1217,AUTHDNS hosted site ch-zrh
-soo 197000:2,AUTHDNS core site gb-lon
-soo 197000:3,AUTHDNS core site se-sto
-197000:1176:nnn,AUTHDNS:at-vie:AS$0
-197000:1177:nnn,AUTHDNS:it-rom:AS$0
-197000:1178:nnn,AUTHDNS:no-osl:AS$0
-197000:1182:nnn,AUTHDNS:br-pgz:AS$0
-197000:1188:nnn,AUTHDNS:bh-amh:AS$0
-197000:1192:nnn,AUTHDNS:ba-sjj:AS$0
-197000:1194:nnn,AUTHDNS:am-evn:AS$0
-197000:1209:nnn,AUTHDNS:at-szg:AS$0
-197000:1217:nnn,AUTHDNS:ch-zrh:AS$0
-197000:1:nnn,AUTHDNS:nl-ams:AS$0
-197000:2:nnn,AUTHDNS:gb-lon:AS$0
-197000:3:nnn,AUTHDNS:se-sto:AS$0
+soo 197000:1,authdns core site nl-ams
+soo 197000:1176,authdns hosted site at-vie
+soo 197000:1177,authdns hosted site it-rom
+soo 197000:1178,authdns hosted site no-osl
+soo 197000:1182,authdns hosted site br-pgz
+soo 197000:1188,authdns hosted site bh-amh
+soo 197000:1192,authdns hosted site ba-sjj
+soo 197000:1194,authdns hosted site am-evn
+soo 197000:1209,authdns hosted site at-szg
+soo 197000:1210,authdns hosted site ro-buh
+soo 197000:1217,authdns hosted site ch-zrh
+soo 197000:1231,authdns hosted site us-mkc
+soo 197000:2,authdns core site gb-lon
+soo 197000:3,authdns core site se-sto
+197000:1176:nnn,authdns hosted site at-vie peer-as $0
+197000:1177:nnn,authdns hosted site it-rom peer-as $0
+197000:1178:nnn,authdns hosted site no-osl peer-as $0
+197000:1182:nnn,authdns hosted site br-pgz peer-as $0
+197000:1188:nnn,authdns hosted site bh-amh peer-as $0
+197000:1192:nnn,authdns hosted site ba-sjj peer-as $0
+197000:1194:nnn,authdns hosted site am-evn peer-as $0
+197000:1209:nnn,authdns hosted site at-szg peer-as $0
+197000:1210:nnn,authdns hosted site ro-buh peer-as $0
+197000:1217:nnn,authdns hosted site ch-zrh peer-as $0
+197000:1231:nnn,authdns hosted site us-mkc peer-as $0
+197000:1:nnn,authdns core site nl-ams peer-as $0
+197000:2:nnn,authdns core site gb-lon peer-as $0
+197000:3:nnn,authdns core site se-sto peer-as $0
