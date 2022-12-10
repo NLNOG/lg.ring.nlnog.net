@@ -1,0 +1,27 @@
+# Fetched from https://as52210.net/communities
+# BEGIN Info Communities
+52210:100,Infrastructure Prefix
+52210:150,Downstream Customer
+52210:0:174,Received from Cogent (Transit)
+52210:0:835,Received from GoCodeIT (Transit)
+52210:0:6939,Received from Hurricane Electric (Transit)
+52210:1:1,Received from OGIX (Peer)
+# END Info Communities
+# BEGIN Action Communities
+52210:20001,Prepend 1x to Cogent (Transit)
+52210:20002,Prepend 2x to Cogent (Transit)
+52210:20003,Prepend 3x to Cogent (Transit)
+52210:20009,No-Export to Cogent (Transit)
+52210:20011,Prepend 1x to GoCodeIT (Transit)
+52210:20012,Prepend 2x to GoCodeIT (Transit)
+52210:20013,Prepend 3x to GoCodeIT (Transit)
+52210:20019,No-Export to GoCodeIT (Transit)
+52210:20021,Prepend 1x to Hurricane Electric (Transit)
+52210:20022,Prepend 2x to Hurricane Electric (Transit)
+52210:20023,Prepend 3x to Hurricane Electric (Transit)
+52210:20029,No-Export to Hurricane Electric (Transit)
+52210:21001,Prepend 1x to OGIX (Peer)
+52210:21002,Prepend 2x to OGIX (Peer)
+52210:21003,Prepend 3x to OGIX (Peer)
+52210:21009,No-Export to OGIX (Peer)
+# END Action Communities
