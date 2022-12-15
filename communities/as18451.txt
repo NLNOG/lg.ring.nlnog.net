@@ -1,4 +1,11 @@
 # Les.net
+18451:1,Self routes
+18451:2,Customer routes
+18451:3,Private peer (NNI) routes
+18451:4,Public peer (IXP) routes
+18451:5,Transit routes
+18451:8003,learned via R3
+18451:8004,learned via R4
 18451:320,set localpref to 320
 18451:300,set localpref to 300
 18451:280,set localpref to 280
