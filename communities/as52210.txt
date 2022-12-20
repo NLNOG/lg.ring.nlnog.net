@@ -2,11 +2,11 @@
 # BEGIN Info Communities
 52210:100,Infrastructure Prefix
 52210:150,Downstream Customer
-52210:0:174,Received from Cogent (Transit)
-52210:0:835,Received from GoCodeIT (Transit)
-52210:0:6939,Received from Hurricane Electric (Transit)
-52210:0:18655,Received from OGIX Route Server (Peer)
-52210:1:1,Received from OGIX (Peer)
+52210:0:174,Learned from Cogent (Transit)
+52210:0:835,Learned from GoCodeIT (Transit)
+52210:0:6939,Learned from Hurricane Electric (Transit)
+52210:0:18655,Learned from OGIX Route Server (Peer)
+52210:1:1,Learned from OGIX (Peer)
 # END Info Communities
 # BEGIN Action Communities
 52210:20001,Prepend 1x to Cogent (Transit)
