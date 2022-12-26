@@ -1,0 +1,33 @@
+#andrewnet contact noc@as1003.net
+1003:1300,Learned in Kansas City
+1003:1301,Learned from Peer
+1003:1302,Learned from Transit
+1003:1399,Locally Originated	
+1003:1360,Learned from RS
+1003:1361,Learned from KCIX RS
+1003:1362,Learned from STLIX RS
+1003:1363,Learned from HOUIX RS
+1003:1303,Learned from Hurricane MCI
+1003:1304,Learned from Hurricane STL
+1003:1305,Learned from Hurricane HOU
+1003:1306,Learned from GVVME MCI
+1003:1307,Learned from Downstream
+1003:1310,Learned from Akamai MCI
+1003:1311,Learned from Netflix MCI
+1003:1312,Learned from Facebook MCI
+1003:1313,Learned from Ionos MCI
+1003:1314,Learned from Cloudflare MCI
+1003:1315,Learned from Cloudflare STL
+1003:1316,Learned from Yahoo MCI
+1003:1317,Learned from MIDnet HOU
+1003:1318,Learned from Unitas MCI
+1003:1319,Learned from Jacob Slater MCI
+1003:1320,Learned from Transtelco HOU
+1003:1321,Learned from TwinCityVOIP MCI
+1003:1322,Learned from Nate Sales MCI
+1003:1323,Learned from NetActuate MCI
+1003:1324,Learned from PCHResearch MCI
+1003:1325,Learned from PCH42 MCI
+1003:1326,Learned from Cloudie MCI
+1003:1327,Learned from August MCI
+1003:1328,Learned from iFog MCI
