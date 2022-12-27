@@ -1,0 +1,33 @@
+# WiscNet bgp communities https://confluence.wiscnet.net/display/WPKB/BGP+Communities
+
+# Actions
+2381:911,RTBH
+2381:1000,Prepend 1x
+2381:2000,Prepend 2x
+2381:4000,Prepend 4x
+2381:6000,Do not advertise
+2381:8760,Lpref -40
+2381:8780,Lpref -20
+2381:8820,Lpref +20
+2381:8840,Lpref +40
+
+# Peer Relationships
+2381:5xx1,Peer Type Transit
+2381:5xx2,Peer Type Peer (IX)
+2381:5xx3,Peer Type Peer (PNI)
+2381:5xx4,Peer Type Peer (Research)
+2381:5xx5,Peer Type Cache
+2381:5xx7,Peer Type Aggregate
+2381:5xx8,Peer Type Customer
+
+# Region Learned
+2381:51xx,Region NorthWest Wisconsin
+2381:52xx,Region NorthCentral Wisconsin
+2381:53xx,Region NorthEast Wisconsin
+2381:54xx,Region West Wisconsin
+2381:55xx,Region Central Wisconsin
+2381:56xx,Region East Wisconsin
+2381:57xx,Region SouthWest Wisconsin
+2381:58xx,Region South Wisconsin
+2381:59xx,Region SouthEast Wisconsin
+
