@@ -11,22 +11,75 @@
 2381:8820,Lpref +20
 2381:8840,Lpref +40
 
-# Region Learned
-2381:51xxx,Region NorthWest Wisconsin
-2381:52xxx,Region NorthCentral Wisconsin
-2381:53xxx,Region NorthEast Wisconsin
-2381:54xxx,Region West Wisconsin
-2381:55xxx,Region Central Wisconsin
-2381:56xxx,Region East Wisconsin
-2381:57xxx,Region SouthWest Wisconsin
-2381:58xxx,Region South Wisconsin
-2381:59xxx,Region SouthEast Wisconsin
+# Region - Relationship
+2381:51xx1,NorthWest - Transit
+2381:51xx2,NorthWest - Peer (IX)
+2381:51xx3,NorthWest - Peer (PNI)
+2381:51xx4,NorthWest - Peer (Research)
+2381:51xx5,NorthWest - Cache
+2381:51xx7,NorthWest - Aggregate
+2381:51xx8,NorthWest - Customer
 
-# Peer Relationships
-2381:5xxx1,Peer Type Transit
-2381:5xxx2,Peer Type Peer (IX)
-2381:5xxx3,Peer Type Peer (PNI)
-2381:5xxx4,Peer Type Peer (Research)
-2381:5xxx5,Peer Type Cache
-2381:5xxx7,Peer Type Aggregate
-2381:5xxx8,Peer Type Customer
+2381:52xx1,NorthCentral - Transit
+2381:52xx2,NorthCentral - Peer (IX)
+2381:52xx3,NorthCentral - Peer (PNI)
+2381:52xx4,NorthCentral - Peer (Research)
+2381:52xx5,NorthCentral - Cache
+2381:52xx7,NorthCentral - Aggregate
+2381:52xx8,NorthCentral - Customer
+
+2381:53xx1,NorthEast - Transit
+2381:53xx2,NorthEast - Peer (IX)
+2381:53xx3,NorthEast - Peer (PNI)
+2381:53xx4,NorthEast - Peer (Research)
+2381:53xx5,NorthEast - Cache
+2381:53xx7,NorthEast - Aggregate
+2381:53xx8,NorthEast - Customer
+
+2381:54xx1,West - Transit
+2381:54xx2,West - Peer (IX)
+2381:54xx3,West - Peer (PNI)
+2381:54xx4,West - Peer (Research)
+2381:54xx5,West - Cache
+2381:54xx7,West - Aggregate
+2381:54xx8,West - Customer
+
+2381:55xx1,Central - Transit
+2381:55xx2,Central - Peer (IX)
+2381:55xx3,Central - Peer (PNI)
+2381:55xx4,Central - Peer (Research)
+2381:55xx5,Central - Cache
+2381:55xx7,Central - Aggregate
+2381:55xx8,Central - Customer
+
+2381:56xx1,East - Transit
+2381:56xx2,East - Peer (IX)
+2381:56xx3,East - Peer (PNI)
+2381:56xx4,East - Peer (Research)
+2381:56xx5,East - Cache
+2381:56xx7,East - Aggregate
+2381:56xx8,East - Customer
+
+2381:57xx1,SouthWest - Transit
+2381:57xx2,SouthWest - Peer (IX)
+2381:57xx3,SouthWest - Peer (PNI)
+2381:57xx4,SouthWest - Peer (Research)
+2381:57xx5,SouthWest - Cache
+2381:57xx7,SouthWest - Aggregate
+2381:57xx8,SouthWest - Customer
+
+2381:58xx1,South - Transit
+2381:58xx2,South - Peer (IX)
+2381:58xx3,South - Peer (PNI)
+2381:58xx4,South - Peer (Research)
+2381:58xx5,South - Cache
+2381:58xx7,South - Aggregate
+2381:58xx8,South - Customer
+
+2381:59xx1,SouthEast - Transit
+2381:59xx2,SouthEast - Peer (IX)
+2381:59xx3,SouthEast - Peer (PNI)
+2381:59xx4,SouthEast - Peer (Research)
+2381:59xx5,SouthEast - Cache
+2381:59xx7,SouthEast - Aggregate
+2381:59xx8,SouthEast - Customer
