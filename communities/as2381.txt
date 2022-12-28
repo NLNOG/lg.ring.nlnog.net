@@ -11,23 +11,22 @@
 2381:8820,Lpref +20
 2381:8840,Lpref +40
 
-# Peer Relationships
-2381:5xx1,Peer Type Transit
-2381:5xx2,Peer Type Peer (IX)
-2381:5xx3,Peer Type Peer (PNI)
-2381:5xx4,Peer Type Peer (Research)
-2381:5xx5,Peer Type Cache
-2381:5xx7,Peer Type Aggregate
-2381:5xx8,Peer Type Customer
-
 # Region Learned
-2381:51xx,Region NorthWest Wisconsin
-2381:52xx,Region NorthCentral Wisconsin
-2381:53xx,Region NorthEast Wisconsin
-2381:54xx,Region West Wisconsin
-2381:55xx,Region Central Wisconsin
-2381:56xx,Region East Wisconsin
-2381:57xx,Region SouthWest Wisconsin
-2381:58xx,Region South Wisconsin
-2381:59xx,Region SouthEast Wisconsin
+2381:51xxx,Region NorthWest Wisconsin
+2381:52xxx,Region NorthCentral Wisconsin
+2381:53xxx,Region NorthEast Wisconsin
+2381:54xxx,Region West Wisconsin
+2381:55xxx,Region Central Wisconsin
+2381:56xxx,Region East Wisconsin
+2381:57xxx,Region SouthWest Wisconsin
+2381:58xxx,Region South Wisconsin
+2381:59xxx,Region SouthEast Wisconsin
 
+# Peer Relationships
+2381:5xxx1,Peer Type Transit
+2381:5xxx2,Peer Type Peer (IX)
+2381:5xxx3,Peer Type Peer (PNI)
+2381:5xxx4,Peer Type Peer (Research)
+2381:5xxx5,Peer Type Cache
+2381:5xxx7,Peer Type Aggregate
+2381:5xxx8,Peer Type Customer
