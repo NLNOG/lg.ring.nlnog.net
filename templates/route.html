@@ -61,7 +61,7 @@
 <table class="table">
     <tr>
         <td width="15%">AS-Path</td>
-	<td class="data">{% for as in route.aspath %}{% if as[0] == '{' or as[0] == '}'%}{{ as[0] }}{% else %}<button type="button" class="btn btn-community btn-outline-primary" data-toggle="tooltip" data-placement="top" title="{{ as[1] }}{% if as[0]|int in ringnodes.keys() %}<br><span class=ringnodes>NLNOG RING nodes: {{ ringnodes[as[0]|int]|length}}</span>{% endif %}"><a href="/whois?q={{ as[0] }}" class="whois asn">{{ as[0] }}</a></button>{% endif %} {% endfor %}via next-hop <a href="/whois?q={{ route.exit_nexthop }}" class="whois">{{ route.exit_nexthop }}</a></td>
+	<td class="data">{% for as in route.aspath %}{% if as[0] == '{' or as[0] == '}'%}{{ as[0] }}{% else %}<button type="button" class="btn btn-community btn-outline-primary" data-toggle="tooltip" data-placement="top" title="{{ as[1] }}{% if as[0]|int in ringnodes.keys() %}<br><span class=ringnodes>{{ ringnodes[as[0]|int]|length}} NLNOG RING node{% if ringnodes[as[0]|int]|length > 1 %}s{% endif %}</span>{% endif %}"><a href="/whois?q={{ as[0] }}" class="whois asn">{{ as[0] }}</a></button>{% endif %} {% endfor %}via next-hop <a href="/whois?q={{ route.exit_nexthop }}" class="whois">{{ route.exit_nexthop }}</a></td>
     </tr>
     <tr>
 	 <td>Validation state</td>
@@ -111,4 +111,9 @@
 </div>
 </div>
 {% endif %}
+
+<div class="footer">
+    The NLNOG Looking Glass is provided by <a href="https://nlnog.net">NLNOG</a>. Hosting is sponsored by <a href="https://bit.nl">BIT</a>.
+    Questions? Please contact us at <a href="mailto:ring-admins@nlnog.net">ring-admins@nlnog.net</a>.
+</div>
 {% endblock %}
