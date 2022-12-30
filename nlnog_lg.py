@@ -280,6 +280,7 @@ def read_archive(archive_id: str):
         if len(result) != 1:
             raise LGException("ID not found.")
         (prefix, peer, created) = result[0]
+        peer = peer.split(",")
         currentdir = os.path.dirname(os.path.realpath(__file__))
         filename = "%s/%s/%s.json.bz2" % (currentdir, app.config.get("ARCHIVE_DIR", ""), archive_id)
         if not os.path.exists(filename):
@@ -311,7 +312,7 @@ def openbgpd_command(router: str, command: str, args: dict = None):
     url = f"{router}/bgplgd/{command_map[command]}"
     try:
         data = requests.get(url, verify=False, params=args, timeout=60)
-    except requests.exceptions.ConnectionError:
+    except (requests.exceptions.ConnectionError, requests.exceptions.ReadTimeout):
         return False, "The NLNOG LG API is not available."
 
     if data.status_code == 200:
@@ -396,61 +397,106 @@ def generate_map(routes: dict, prefix: str):
     """ Generate a SVG map for routes for a prefix.
     """
     graph = pydot.Dot('map', graph_type='digraph')
-
     asns = {}
     links = []
 
-    def add_asn(peer):
+    def add_asn(peer, fgcolor, bgcolor):
         if peer[0] not in asns:
             label = '\n'.join(textwrap.wrap(f"AS{peer[0]} | {escape(peer[1])}", width=28))
-            asns[peer[0]] = pydot.Node(peer[0], label=label, fontsize="10")
+            asns[peer[0]] = pydot.Node(peer[0], label=label, fontsize="10", style="filled",
+                                       fillcolor=bgcolor, fontcolor=fgcolor, fontname="Arial")
 
             graph.add_node(asns[peer[0]])
 
-    def add_link(src, dest, label='', fontsize=10, fillcolor="black"):
+    def add_link(src, dest, label='', fontsize=10, color="black"):
         if f'{src}_{dest}' not in links or label != '':
             links.append(f'{src}_{dest}')
 
-            edge = pydot.Edge(src, dest, label=label, fontsize=fontsize)
-            edge.set_color(fillcolor)  # pylint: disable=no-member
+            edge = pydot.Edge(src, dest, label=label, fontsize=fontsize, fontname="Arial")
+            edge.set_color(color)  # pylint: disable=no-member
             graph.add_edge(edge)  # pylint: disable=no-member
 
     def visualize_route(route):
         # Generate a consistent color hash
         color = 0xffffff
         for _ in route['aspath']:
-            color *= int(_[0])
+            try:
+                color *= int(_[0])
+            except ValueError:
+                continue
         color &= 0xffffff
 
+        fontcolor = "#000000"
+        # invert font color if the background is dark
+        (red, green, blue) = tuple(int(("%x" % color)[i:i+2], 16) for i in (0, 2, 4))
+        if (red + green + blue) / 3 < 100:
+            fontcolor = "#ffffff"
+
+        is_subgraph = False
+        subgraph = []
         for idx, ashop in enumerate(route['aspath']):
-            add_asn(ashop)
+            if ashop[0] == "{":
+                subgraph = []
+                is_subgraph = True
+            elif ashop[0] == "}":
+                is_subgraph = False
+                subg = pydot.Cluster('subgraph', graph_type="digraph")
+                for item in subgraph:
+                    label = '\n'.join(textwrap.wrap(f"AS{item[0]} | {escape(item[1])}", width=28))
+                    asns[item[0]] = pydot.Node(item[0], label=label, fontsize="10", style="filled", fontname="Arial")
+                    subg.add_node(asns[item[0]])
+                graph.add_subgraph(subg)
+            elif is_subgraph:
+                subgraph.append(ashop)
+                continue
+            else:
+                add_asn(ashop, fgcolor=fontcolor, bgcolor="#%x" % color)
 
             # Add a link from the looking glass node node
             if idx == 0:
-                add_link("lgnode", route['aspath'][0][0], label=route['peer'].upper(), fontsize=9, fillcolor="#%x" % color)
+                add_link("lgnode", route['aspath'][0][0], label=route['peer'].upper(), fontsize=9)
 
             # Add a link towards the prefix
             if idx+1 == len(route['aspath']):
-                add_link(ashop[0], prefix, fillcolor="#%x" % color)
+                if ashop[0] == "}":
+                    new_idx = idx - 1
+                    while route['aspath'][new_idx][0] != "{":
+                        add_link(route['aspath'][new_idx][0], "DESTINATION", color="#%x" % color)
+                        new_idx -= 1
+                else:
+                    add_link(ashop[0], "DESTINATION", color="#%x" % color)
                 continue
 
             # Add links in between
-            add_link(ashop[0], route['aspath'][idx+1][0], fillcolor="#%x" % color)
+            if route['aspath'][idx+1][0] == "{":
+                new_idx = idx + 2
+                # pull in all aggregates
+                while route['aspath'][new_idx][0] != "}" and new_idx <= len(route['aspath']):
+                    add_link(ashop[0], route['aspath'][new_idx][0], color="#%x" % color)
+                    new_idx += 1
+            elif route['aspath'][idx][0] == "}":
+                new_idx = idx - 1
+                while route['aspath'][new_idx][0] != "{":
+                    print(route['aspath'][new_idx][0])
+                    add_link(route['aspath'][idx - 1][0], route['aspath'][new_idx][0], color="#%x" % color)
+                    new_idx -= 1
+            elif not is_subgraph:
+                add_link(ashop[0], route['aspath'][idx+1][0], color="#%x" % color)
 
     # Add the prefix node
-    pfxnode = pydot.Node(prefix, label=prefix, shape="box", fillcolor="#f4511e", style="filled", fontsize="10")
+    pfxnode = pydot.Node("DESTINATION", label=prefix, shape="box", fillcolor="#f4511e", style="filled", fontsize="10", fontname="Arial")
     graph.add_node(pfxnode)
 
     # Add the looking glass node
     lgnode = pydot.Node("lgnode", label=f"{app.config['LOOKING_GLASS_NAME'].upper()}",
-                        shape="box", fillcolor="#f4511e", style="filled", fontsize="10")
+                        shape="box", fillcolor="#f4511e", style="filled", fontsize="10", fontname="Arial")
     graph.add_node(lgnode)
 
     # Visualize every path
     for route in routes:
         visualize_route(route)
 
-    return graph.create_svg().decode()  # pylint: disable=no-member
+    return graph
 
 
 @app.route("/")
@@ -460,14 +506,14 @@ def mainpage():
     (peerinfo, totals) = get_peer_info(names_only=False, established_only=True)
     if len(peerinfo) == 0:
         return render_template("error.html", warning=["No data received from the NLNOG Ring API endpoint."])
-    peers = [peer["name"] for peer in peerinfo]
-    peers.sort()
+
     peer = None
-    if request.args.get("peer", "_") in peers:
-        peer = request.args.get("peer")
+    if request.args.get("peer", "_") in [p["name"] for p in peerinfo]:
+        peer = [p.split(" ")[0] for p in request.args.getlist('peer')]
+        print(peer)
     searchquery = request.cookies.get("searchquery", "")
     match = request.cookies.get("match", "exact")
-    return render_template("form.html", peers=peers, totals=totals, hideform=True, searchquery=searchquery, match=match, peer=peer)
+    return render_template("form.html", peers=peerinfo, totals=totals, hideform=True, searchquery=searchquery, match=match, peer=peer)
 
 
 @app.route("/summary")
@@ -495,6 +541,7 @@ def show_peer_details(peer: str):
 @app.route("/prefix")
 @app.route("/prefix/map")
 @app.route("/prefix/map/fullscreen")
+@app.route("/prefix/map/source")
 @app.route("/prefix/text")
 @app.route("/prefix/html")
 @app.route("/query/<prefix>/<netmask>")
@@ -511,7 +558,7 @@ def show_route_for_prefix(prefix=None, netmask=None):
     if "saved" in request.args:
         query_id = request.args["saved"]
         try:
-            (result, prefix, peer) = read_archive(request.args["saved"])
+            (result, prefix, nodelist) = read_archive(request.args["saved"])
         except LGException as err:
             return render_template('error.html', errors=[err]), 400
     else:
@@ -522,13 +569,7 @@ def show_route_for_prefix(prefix=None, netmask=None):
         if not prefix:
             abort(400)
 
-        peer = unquote(request.args.get('peer', 'all').strip())
-
         args = {}
-        if peer != "all":
-            # split the peer name so we don't include the ASN
-            peer = peer.split(" ")[0]
-            args["neighbor"] = peer
 
         # try to see if the argument is a network by typecasting it to IPNetwork
         try:
@@ -552,13 +593,27 @@ def show_route_for_prefix(prefix=None, netmask=None):
                     return render_template('error.html', errors=[f"{prefix} is not a valid IPv4 or IPv6 address."]), 400
         args["prefix"] = prefix
 
-        # query the OpenBGPD API endpoint
-        status, result = openbgpd_command(app.config["ROUTER"], "route", args=args)
-        if not status:
-            return render_template('error.html', errors=["Failed to query the NLNOG Looking Glass backend."]), 400
+        result = {"rib": []}
+
+        nodelist = []
+        if request.args.get("all") == "all":
+            nodelist = ["all"]
+        else:
+            nodelist = [p.split(" ")[0] for p in request.args.getlist('peer')]
+
+        for peername in nodelist:
+            if peername != "all":
+                args["neighbor"] = peername
+
+            # query the OpenBGPD API endpoint
+            status, peerresult = openbgpd_command(app.config["ROUTER"], "route", args=args)
+            if not status:
+                return render_template('error.html', errors=["Failed to query the NLNOG Looking Glass backend."]), 400
+            if "rib" in peerresult:
+                result["rib"] = result["rib"] + peerresult["rib"]
 
         try:
-            query_id = write_archive(result, prefix, peer)
+            query_id = write_archive(result, prefix, ",".join(nodelist))
         except LGException:
             return render_template("error.html", errors=["Failed to store results."]), 400
 
@@ -601,7 +656,6 @@ def show_route_for_prefix(prefix=None, netmask=None):
                 "last_update": route["last_update"],
                 "last_update_at": timestamp.strftime("%Y-%m-%d %H:%M:%S UTC"),
                 "metric": route["metric"],
-                "created": create_date,
             })
 
     # sort output by peername per prefix
@@ -611,7 +665,8 @@ def show_route_for_prefix(prefix=None, netmask=None):
     # pylint: disable=undefined-loop-variable
     if request.path == '/prefix/map/fullscreen':
         # Return a fullscreen map svg
-        svgmap = generate_map(routes[route["prefix"]], route["prefix"])
+        dot = generate_map(routes[route["prefix"]], route["prefix"])
+        svgmap = dot.create_svg().decode()  # pylint: disable=no-member
         response = Response(svgmap, mimetype='image/svg+xml')
         response.headers['Cache-Control'] = 'no-cache, no-store, max-age=0'
 
@@ -619,19 +674,21 @@ def show_route_for_prefix(prefix=None, netmask=None):
 
     if request.path == '/prefix/map':
         # Return a map page
-        return render_template("map.html", peer=peer, peers=peers, routes=routes, prefix=prefix, query_id=query_id,
-                               warnings=warnings, errors=errors, match=request.args.get("match"))
+        dot = generate_map(routes[route["prefix"]], route["prefix"]).to_string()
+        return render_template("map.html", peer=nodelist, peers=peers, routes=routes, prefix=prefix, query_id=query_id,
+                               warnings=warnings, errors=errors, match=request.args.get("match"), collected=create_date,
+                               dot=dot)
 
     if request.path == "/prefix/text" or (request.cookies.get("output") == "text" and request.path != "/prefix/html"):
         # return a route view in plain text style
-        return render_template("route-text.html", peer=peer, peers=peers, routes=routes, prefix=prefix, query_id=query_id,
-                               warnings=warnings, errors=errors, match=request.args.get("match"))
+        return render_template("route-text.html", peer=nodelist, peers=peers, routes=routes, prefix=prefix, query_id=query_id,
+                               warnings=warnings, errors=errors, match=request.args.get("match"), collected=create_date)
 
     # pylint: enable=undefined-loop-variable
 
     # Return a route view in HTML table style
-    return render_template("route.html", peer=peer, peers=peers, routes=routes, prefix=prefix, query_id=query_id,
-                           warnings=warnings, errors=errors, match=request.args.get("match"))
+    return render_template("route.html", peer=nodelist, peers=peers, routes=routes, prefix=prefix, query_id=query_id,
+                           warnings=warnings, errors=errors, match=request.args.get("match"), collected=create_date)
 
 
 @app.route("/about")

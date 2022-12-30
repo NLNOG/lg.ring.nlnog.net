@@ -16,7 +16,7 @@
         </div>
         <div class="input-group input-group">
             <span class="input-group-text" id="inputGroup-lg">Search</span>
-            <input type="text" required="true" autofocus="autofocus" class="form-control" placeholder="2001:db8::/32" aria-describedby="inputGroup-sizing-lg" name="q" {% if searchquery %}value="{{searchquery}}"{% endif %}>
+            <input type="text" required="true" autofocus="autofocus" class="form-control ip" placeholder="2001:db8::/32" aria-describedby="inputGroup-sizing-lg" name="q" {% if searchquery %}value="{{searchquery}}"{% endif %}>
             <div class="input-group-btn input-group-lg">
                 <select class="form-select" name="match">
                     <option value="exact" {% if match == "exact" %}selected{% endif %}>Exact match</option>
@@ -25,11 +25,8 @@
             </div>
             &nbsp; <span class="input-group-text">on</span>
             <div class="input-group-btn input-group-lg">
-                <select class="form-select" name="peer">
-                    <option selected value="all">all peers</option>
-                    {% for item in peers %}
-                    <option {% if item == peer %}selected{% endif %}>{{ item }}</option>
-                    {% endfor %}
+                <select class="multi-select form-control" name="peer" id="peerselect" multiple="multiple">
+                    {% for item in peers %}{% if item.state == "Established" and item.prefixes > 0 %}<option {% if peer and item.name.split(' ')[0] in peer %}selected{% endif %} value="{{item.name}}">{{ item.name }} (AS{{ item.remote_as }})</option>{% endif %}{% endfor %}
                 </select>
             </div>&nbsp;
             <button type="submit" class="btn btn-danger" type="submit">Show routes</button>

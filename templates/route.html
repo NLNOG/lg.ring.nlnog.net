@@ -2,12 +2,12 @@
 {% block body %}
 <br/>
 <h2>
-    Routes found{% if peer != 'all' %} on {{ peer }}{% endif %} for '{{ prefix }}'
-    <a href="/prefix/map?saved={{query_id}}" class="btn btn-primary btn-sm" style="margin-bottom: 0.25rem; line-height: 1.2;"><i class="bi bi-map"></i> map</a>
-    <a href="/prefix/text?saved={{query_id}}" class="btn btn-primary btn-sm" style="margin-bottom: 0.25rem; line-height: 1.2;"><i class="bi bi-body-text"></i> plain text</a>
-    <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#staticModal" style="margin-bottom: 0.25rem; line-height: 1.2;"><i class="bi bi-link-45deg"></i> permalink</button>
-    <a href='/prefix?q={{prefix}}&peer={{peer}}&match={{match}}' class="btn btn-primary btn-sm" style="margin-bottom: 0.25rem; line-height: 1.2;"><i class="bi bi-arrow-clockwise"></i> renew</a>
+    Routes found{% if peer != 'all' %} on {{ peer | join(", ") }}{% endif %} for '{{ prefix }}'
 </h2>
+<a href="/prefix/map?saved={{query_id}}" class="btn btn-primary btn-sm" style="margin-bottom: 0.25rem; line-height: 1.2;"><i class="bi bi-map"></i> map</a>
+<a href="/prefix/text?saved={{query_id}}" class="btn btn-primary btn-sm" style="margin-bottom: 0.25rem; line-height: 1.2;"><i class="bi bi-body-text"></i> plain text</a>
+<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#staticModal" style="margin-bottom: 0.25rem; line-height: 1.2;"><i class="bi bi-link-45deg"></i> permalink</button>
+<a href='/prefix?q={{prefix}}&peer={{peer}}&match={{match}}' class="btn btn-primary btn-sm" style="margin-bottom: 0.25rem; line-height: 1.2;"><i class="bi bi-arrow-clockwise"></i> renew</a>
 <br/>
   <!-- Modal -->
   <div class="modal fade" id="staticModal" tabindex="-1" aria-labelledby="staticModalLabel" aria-hidden="true">
@@ -33,8 +33,11 @@
   </div>
 <div id="routes">
 {% if routes | length == 0 %}
-    <div class="alert alert-danger" role="alert">No matching routes found.
+    <div class="alert alert-danger" role="alert">No matching routes found.</div>
 {% else %}
+{% if collected %}
+    <div class="alert alert-warning" role="alert">This data was previously collected at {{ collected }}</div>
+{% endif %}
 <div class="accordion accordion-flush" id="prefix{{prefix}}">
 {% for prefix in routes %}
 <div class="accordion-item">
@@ -56,15 +59,9 @@
     </div>
   </div>
 <table class="table">
-    {% if route.created %}
-    <tr>
-        <td>Data collected at</td>
-        <td>{{ route.created }}</td>
-    </tr>
-    {% endif %}
     <tr>
         <td width="15%">AS-Path</td>
-	<td class="data">{% for as in route.aspath %}<button type="button" class="btn btn-community btn-sm btn-outline-primary" data-toggle="tooltip" data-placement="top" title="{{ as[1] }}"><a href="/whois?q={{ as[0] }}" class="whois asn">{{ as[0] }}</a></button> {% endfor %}via next-hop <a href="/whois?q={{ route.exit_nexthop }}" class="whois">{{ route.exit_nexthop }}</a></td>
+	<td class="data">{% for as in route.aspath %}{% if as[0] == '{' or as[0] == '}'%}{{ as[0] }}{% else %}<button type="button" class="btn btn-community btn-sm btn-outline-primary" data-toggle="tooltip" data-placement="top" title="{{ as[1] }}"><a href="/whois?q={{ as[0] }}" class="whois asn">{{ as[0] }}</a></button>{% endif %} {% endfor %}via next-hop <a href="/whois?q={{ route.exit_nexthop }}" class="whois">{{ route.exit_nexthop }}</a></td>
     </tr>
     <tr>
 	 <td>Validation state</td>

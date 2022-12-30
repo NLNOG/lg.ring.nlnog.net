@@ -2,14 +2,14 @@
 {% block body %}
 <br/>
 <h2>
-    Routes found{% if peer != 'all' %} on {{ peer }}{% endif %} for '{{ prefix }}'
+    Routes found{% if peer != 'all' %} on {{ peer | join(', ') }}{% endif %} for '{{ prefix }}'
+</h2>
     <a href="/prefix/map?saved={{query_id}}" class="btn btn-primary btn-sm" style="margin-bottom: 0.25rem; line-height: 1.2;"><i class="bi bi-map"></i> map</a>
     <a href="/prefix/html?saved={{query_id}}" class="btn btn-primary btn-sm" style="margin-bottom: 0.25rem; line-height: 1.2;"><i class="bi bi-code"></i> tables</a>
     <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#staticModal" style="margin-bottom: 0.25rem; line-height: 1.2;"><i class="bi bi-link-45deg"></i> permalink</button>
     <button type="button" class="btn btn-primary btn-sm" onclick="navigator.clipboard.writeText(document.getElementById('routes').innerText)" style="margin-bottom: 0.25rem; line-height: 1.2;"><i class="bi bi-clipboard"></i> copy</button>
     <a href='/prefix/text?q={{prefix}}&peer={{peer}}&match={{match}}' class="btn btn-primary btn-sm" style="margin-bottom: 0.25rem; line-height: 1.2;"><i class="bi bi-arrow-clockwise"></i> renew</a>
 
-</h2>
 <br/>
   <!-- Modal -->
   <div class="modal fade" id="staticModal" tabindex="-1" aria-labelledby="staticModalLabel" aria-hidden="true">
@@ -35,17 +35,19 @@
   </div>
 <div id="routes">
 {% if routes | length == 0 %}
-    <div class="alert alert-danger" role="alert">No matching routes found.
+    <div class="alert alert-danger" role="alert">No matching routes found.</div>
 {% else %}
 <pre>
+{% if collected %}
+This data previously was collected at: <strong>{{ collected }}</strong>
+{% endif %}
 {% for prefix  in routes %}
 <div class="prefix">Prefix: {{ prefix }} ({{ routes[prefix] | length }} items)</div>
+* <a href="https://irrexplorer.nlnog.net/prefix/{{prefix}}">IRR Explorer</a>
+* <a href="/whois?q={{prefix}}" class="whois">WHOIS</a>
 {%- for route in routes[prefix] %}
 <div class="peername">  {{route.peer }}</div>
-{%- if route.created %}
-    Data collected at:     {{ route.created }}
-{%- endif %}
-    AS-Path:               {% for as in route.aspath %}<span data-toggle="tooltip" data-placement="top" title="{{ as[1] }}"><a href="/whois?q={{ as[0] }}" class="whois asnumber">{{ as[0] }}</a></span> {% endfor %}{% if route.origin == "IGP" %}I{% elif route.origin == "EGP" %}E{% else %}?{% endif %}
+    AS-Path:               {% for as in route.aspath %}{% if as[0] == '{' or as[0] == '}'%}{{ as[0] }}{% else %}<span data-toggle="tooltip" data-placement="top" title="{{ as[1] }}"><a href="/whois?q={{ as[0] }}" class="whois asnumber">{{ as[0] }}</a></span>{% endif %} {% endfor %}{% if route.origin == "IGP" %}I{% elif route.origin == "EGP" %}E{% else %}?{% endif %}
     Next-hop:              <a href="/whois?q={{ route.exit_nexthop }}" class="whois">{{ route.exit_nexthop }}</a>
     Validation state:      <span class="{{route.ovs}}">{{route.ovs}}</span>
     MED:                   {{route.metric}}

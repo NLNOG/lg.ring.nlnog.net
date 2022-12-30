@@ -1,14 +1,57 @@
 {% extends "layout.html" %}
 {% block body %}
+  <!-- Modal -->
+  <div class="modal fade" id="staticModal" tabindex="-1" aria-labelledby="staticModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticModalLabel">Permalink</h5>
+          <button type="button" class="btn-close btn-sm" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            The current looking glass output is stored at:
+            <pre>
+
+<a href="{{request.host_url}}prefix?saved={{query_id}}">{{request.host_url}}prefix?saved={{query_id}}</a></pre>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary btn-sm" onclick="navigator.clipboard.writeText('{{request.host_url}}prefix?saved={{query_id}}');">Copy URL</button>
+          <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- Modal -->
+<div class="modal fade" id="dotModal" tabindex="-1" aria-labelledby="dotModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-xl">
+    <div class="modal-content">
+    <div class="modal-header">
+        <h5 class="modal-title" id="dotModalLabel">DOT source for this graph</h5>
+        <button type="button" class="btn-close btn-sm" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+        <pre>
+ {{dot}}
+        </pre>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+    </div>
+    </div>
+</div>
+</div>
 <br/>
 <h2>
-    Routing map{% if peer != 'all' %} on {{ peer }}{% endif %} for '{{ prefix }}'
-    <a href="/prefix/text?saved={{query_id}}" class="btn btn-primary btn-sm" style="margin-bottom: 0.25rem; line-height: 1.2;"><i class="bi bi-body-text"></i> plain text</a>
-    <a href="/prefix/html?saved={{query_id}}" class="btn btn-primary btn-sm" style="margin-bottom: 0.25rem; line-height: 1.2;"><i class="bi bi-code"></i> tables</a>
-    <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#staticModal" style="margin-bottom: 0.25rem; line-height: 1.2;"><i class="bi bi-link-45deg"></i> permalink</button>
-    <a href="/prefix/map/fullscreen?saved={{query_id}}" class="btn btn-primary btn-sm" style="margin-bottom: 0.25rem; line-height: 1.2;"><i class="bi bi-arrows-fullscreen"></i>&nbsp;fullscreen map</a>
-    <a href='/prefix/map?q={{prefix}}&peer={{peer}}&match={{match}}' class="btn btn-primary btn-sm" style="margin-bottom: 0.25rem; line-height: 1.2;"><i class="bi bi-arrow-clockwise"></i> renew</a>
+    Routing map{% if peer != 'all' %} on {{ peer | join(", ") }}{% endif %} for '{{ prefix }}'
 </h2>
+<a href="/prefix/text?saved={{query_id}}" class="btn btn-primary btn-sm" style="margin-bottom: 0.25rem; line-height: 1.2;"><i class="bi bi-body-text"></i> plain text</a>
+<a href="/prefix/html?saved={{query_id}}" class="btn btn-primary btn-sm" style="margin-bottom: 0.25rem; line-height: 1.2;"><i class="bi bi-code"></i> tables</a>
+<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#staticModal" style="margin-bottom: 0.25rem; line-height: 1.2;"><i class="bi bi-link-45deg"></i> permalink</button>
+<a href="/prefix/map/fullscreen?saved={{query_id}}" class="btn btn-primary btn-sm" style="margin-bottom: 0.25rem; line-height: 1.2;"><i class="bi bi-arrows-fullscreen"></i>&nbsp;fullscreen map</a>
+<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#dotModal" style="margin-bottom: 0.25rem; line-height: 1.2;"><i class="bi bi-download"></i> map source</button>
+<a href='/prefix/map?q={{prefix}}&peer={{peer}}&match={{match}}' class="btn btn-primary btn-sm" style="margin-bottom: 0.25rem; line-height: 1.2;"><i class="bi bi-arrow-clockwise"></i> renew</a>
+<br/>
 <br/>
 
 {% if routes | length == 0 %}

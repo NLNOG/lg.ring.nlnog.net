@@ -9,6 +9,7 @@
   <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/bootstrap-responsive.min.css') }}">
   <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/DT_bootstrap.css') }}">
   <link rel=stylesheet href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-multiselect.css') }}" type="text/css">
   <style>
 	.btn-danger {
     	background-color: #f4511e;
@@ -119,11 +120,18 @@
 	.main {
 		margin: 10pt;
 	}
+	.multiselect-container .multiselect-option.active:not(.multiselect-active-item-fallback) {
+		background-color: white;
+	}
+	.multiselect-container {
+		font-size: smaller;
+	}
  </style>
  <script type="text/javascript" src="{{url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
  <script type="text/javascript" src="{{url_for('static', filename='js/jquery.min.js') }}"></script>
  <script type="text/javascript" src="{{url_for('static', filename='js/jquery.dataTables.js') }}"></script>
  <script type="text/javascript" src="{{url_for('static', filename='js/DT_bootstrap.js') }}"></script>
+ <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap-multiselect.js') }}"></script>
   <script type="text/javascript">
 	$(document).ready(function(){
 	  $('[data-toggle="tooltip"]').tooltip();
@@ -175,7 +183,7 @@
 			  <form action="/prefix" method="get">
 				  <div class="input-group input-group-sm">
 					  <span class="input-group-text" id="inputGroup-sm">IP or prefix</span>
-					  <input type="text" required="true" class="form-control" value="{{prefix}}" aria-describedby="inputGroup-sizing-sm" name="q">
+					  <input type="text" required="true" class="form-control ip" value="{{prefix}}" aria-describedby="inputGroup-sizing-sm" name="q">
 					  <div class="input-group-btn input-group-sm">
 						  <select class="form-select" name="match">
 							  <option value="exact" {% if match == "exact" %}selected{% endif %}>Exact match</option>
@@ -184,9 +192,8 @@
 					  </div>
 					  &nbsp; <span class="input-group-text">on</span>
 					  <div class="input-group-btn input-group-sm">
-						  <select class="form-select" name="peer">
-							  <option value="all">all peers</option>
-							  {% for peername in peers %}<option {% if peername == peer %}selected{% endif %}>{{ peername }}</option>{% endfor %}
+						  <select class="multi-select form-control" name="peer" id="headerselect" multiple="multiple">
+							  {% for peername in peers %}<option {% if peername.split(" ")[0] in peer %}selected{% endif %}>{{ peername }}</option>{% endfor %}
 						  </select>
 					  </div>&nbsp;
 					  <button type="submit" class="btn btn-danger" type="submit">Show routes</button>
@@ -255,6 +262,53 @@
   		]
 		} );
 	};
+	$(document).on('focus', '.ip', function() {
+    this.select();
+	}).on('mouseup', '.ip', function(e) {
+    e.preventDefault();
+	});
+    $(document).ready(function() {
+        $('#peerselect').multiselect({
+			includeSelectAllOption: true,
+			numberDisplayed: 1,
+			buttonWidth: '200px',
+			maxHeight: 400,
+			enableCaseInsensitiveFiltering: true,
+			selectAllText: 'All peers',
+			selectAllName: 'all',
+			selectAllValue: 'all',
+			selectAllNumber: true,
+			allSelectedText: 'All peers',
+			includeResetOption: true,
+			resetText: "Deselect all",
+			templates: {
+               button: '<button type="button" class="multiselect dropdown-toggle btn btn-lg btn-outline-secondary" data-bs-toggle="dropdown" aria-expanded="false"><span class="multiselect-selected-text"></span></button>',
+            },
+		});
+		{% if not peer %}
+		$('#peerselect').multiselect('selectAll', true);
+		{% else %}
+		// peer
+		{% endif %}
+
+        $('#headerselect').multiselect({
+			includeSelectAllOption: true,
+			numberDisplayed: 1,
+			buttonWidth: '200px',
+			maxHeight: 400,
+			enableCaseInsensitiveFiltering: true,
+			selectAllText: 'All peers',
+			selectAllName: 'all',
+			selectAllValue: 'all',
+			selectAllNumber: true,
+			allSelectedText: 'All peers',
+			includeResetOption: true,
+			resetText: "Deselect all",
+			templates: {
+               button: '<button type="button" class="multiselect dropdown-toggle btn btn-sm btn-light" data-bs-toggle="dropdown" aria-expanded="false"><span class="multiselect-selected-text"></span></button>',
+            },
+		});
+    });
 </script>
 </body>
 </html>
