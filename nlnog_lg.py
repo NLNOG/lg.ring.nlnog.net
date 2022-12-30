@@ -425,12 +425,16 @@ def generate_map(routes: dict, prefix: str):
             except ValueError:
                 continue
         color &= 0xffffff
+        print(route['aspath'], color)
 
         fontcolor = "#000000"
         # invert font color if the background is dark
-        (red, green, blue) = tuple(int(("%x" % color)[i:i+2], 16) for i in (0, 2, 4))
-        if (red + green + blue) / 3 < 100:
-            fontcolor = "#ffffff"
+        try:
+            (red, green, blue) = tuple(int(("%x" % color)[i:i+2], 16) for i in (0, 2, 4))
+            if (red + green + blue) / 3 < 100:
+                fontcolor = "#ffffff"
+        except ValueError:
+            pass
 
         is_subgraph = False
         subgraph = []
