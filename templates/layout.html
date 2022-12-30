@@ -126,6 +126,10 @@
 	.multiselect-container {
 		font-size: smaller;
 	}
+	.ringnodes {
+		font-size: smaller;
+		color: #f4511e;
+	}
  </style>
  <script type="text/javascript" src="{{url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
  <script type="text/javascript" src="{{url_for('static', filename='js/jquery.min.js') }}"></script>
@@ -134,7 +138,7 @@
  <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap-multiselect.js') }}"></script>
   <script type="text/javascript">
 	$(document).ready(function(){
-	  $('[data-toggle="tooltip"]').tooltip();
+	  $('[data-toggle="tooltip"]').tooltip({html: true});
 	});
 	$(function(){
 		$(".modal .modal-footer .btn").click(function(){

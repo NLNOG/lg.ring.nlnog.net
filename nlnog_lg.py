@@ -425,7 +425,6 @@ def generate_map(routes: dict, prefix: str):
             except ValueError:
                 continue
         color &= 0xffffff
-        print(route['aspath'], color)
 
         fontcolor = "#000000"
         # invert font color if the background is dark
@@ -481,7 +480,6 @@ def generate_map(routes: dict, prefix: str):
             elif route['aspath'][idx][0] == "}":
                 new_idx = idx - 1
                 while route['aspath'][new_idx][0] != "{":
-                    print(route['aspath'][new_idx][0])
                     add_link(route['aspath'][idx - 1][0], route['aspath'][new_idx][0], color="#%x" % color)
                     new_idx -= 1
             elif not is_subgraph:
@@ -503,6 +501,22 @@ def generate_map(routes: dict, prefix: str):
     return graph
 
 
+def get_ringnodes():
+    try:
+        data = requests.get("https://api.ring.nlnog.net/1.0/nodes").json()
+        if data["info"]["success"] != 1:
+            return {}
+        nodes = {}
+        for node in data["results"]["nodes"]:
+            if node["asn"] not in nodes:
+                nodes[node["asn"]] = [node["hostname"].replace(".ring.nlnog.net", "")]
+            else:
+                nodes[node["asn"]].append(node["hostname"].replace(".ring.nlnog.net", ""))
+        return nodes
+    except Exception:
+        return {}
+
+
 @app.route("/")
 def mainpage():
     """ Handle the main page: show a form.
@@ -514,7 +528,6 @@ def mainpage():
     peer = None
     if request.args.get("peer", "_") in [p["name"] for p in peerinfo]:
         peer = [p.split(" ")[0] for p in request.args.getlist('peer')]
-        print(peer)
     searchquery = request.cookies.get("searchquery", "")
     match = request.cookies.get("match", "exact")
     return render_template("form.html", peers=peerinfo, totals=totals, hideform=True, searchquery=searchquery, match=match, peer=peer)
@@ -626,8 +639,9 @@ def show_route_for_prefix(prefix=None, netmask=None):
     # get a list of peers for the dropdown list in the menu
     peers = get_peer_info(names_only=True, established_only=True)
     if len(peers) == 0:
-        return render_template("error.html", warning=["No data received from the NLNOG Ring API endpoint."])
+        return render_template("error.html", warning=["No data received from the NLNOG LG API endpoint."])
 
+    ringnodes = get_ringnodes()
     communitylist = read_communities()
 
     create_date = None
@@ -686,13 +700,15 @@ def show_route_for_prefix(prefix=None, netmask=None):
     if request.path == "/prefix/text" or (request.cookies.get("output") == "text" and request.path != "/prefix/html"):
         # return a route view in plain text style
         return render_template("route-text.html", peer=nodelist, peers=peers, routes=routes, prefix=prefix, query_id=query_id,
-                               warnings=warnings, errors=errors, match=request.args.get("match"), collected=create_date)
+                               warnings=warnings, errors=errors, match=request.args.get("match"), collected=create_date,
+                               ringnodes=ringnodes)
 
     # pylint: enable=undefined-loop-variable
 
     # Return a route view in HTML table style
     return render_template("route.html", peer=nodelist, peers=peers, routes=routes, prefix=prefix, query_id=query_id,
-                           warnings=warnings, errors=errors, match=request.args.get("match"), collected=create_date)
+                           warnings=warnings, errors=errors, match=request.args.get("match"), collected=create_date,
+                           ringnodes=ringnodes)
 
 
 @app.route("/about")
