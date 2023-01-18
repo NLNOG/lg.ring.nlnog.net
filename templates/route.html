@@ -1,6 +1,7 @@
 {% extends "layout.html" %}
 {% block body %}
 <br/>
+{{peers}}
 <h2>
     Routes found{% if peer != 'all' %} on {{ peer | join(", ") }}{% endif %} for '{{ prefix }}'
 </h2>

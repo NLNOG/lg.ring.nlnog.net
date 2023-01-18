@@ -130,12 +130,15 @@
 		font-size: smaller;
 		color: #f4511e;
 	}
+	.orange {
+		color: #f4511e;
+	}
  </style>
  <script type="text/javascript" src="{{url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
  <script type="text/javascript" src="{{url_for('static', filename='js/jquery.min.js') }}"></script>
  <script type="text/javascript" src="{{url_for('static', filename='js/jquery.dataTables.js') }}"></script>
  <script type="text/javascript" src="{{url_for('static', filename='js/DT_bootstrap.js') }}"></script>
- <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap-multiselect.js') }}"></script>
+ <script type="text/javascript" src="{{url_for('static', filename='js/bootstrap-multiselect.js') }}"></script>
   <script type="text/javascript">
 	$(document).ready(function(){
 	  $('[data-toggle="tooltip"]').tooltip({html: true});
@@ -197,7 +200,7 @@
 					  &nbsp; <span class="input-group-text">on</span>
 					  <div class="input-group-btn input-group-sm">
 						  <select class="multi-select form-control" name="peer" id="headerselect" multiple="multiple">
-							  {% for peername in peers %}<option {% if peername.split(" ")[0] in peer %}selected{% endif %}>{{ peername }}</option>{% endfor %}
+							  {% for peername in peers %}<option {% if peername.split(" ")[0] in peer or "all" in peer %}selected{% endif %}>{{ peername }}</option>{% endfor %}
 						  </select>
 					  </div>&nbsp;
 					  <button type="submit" class="btn btn-danger" type="submit">Show routes</button>

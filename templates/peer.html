@@ -8,7 +8,7 @@
 <table class="table">
     <tr>
         <td>Remote ASN</td>
-        <td><a href="/whois?q={{ data.remote_as }}" class="whois">{{ data.remote_as }}</a></td>
+        <td><a href="/whois?q={{ data.remote_as }}" class="whois">{{ data.remote_as }}</a>{% if ringnodes %}<br>NLNOG RING node{% if ringnodes|length > 1 %}s{% endif %}: {% for node in ringnodes|sort %}<span class=orange>{{ node }}</span> ({{ ringnodes[node]["countrycode"] }}) {% endfor %}{% endif %}</td>
     </tr>
     <tr>
         <td>Remote IP</td>
@@ -16,7 +16,7 @@
     </tr>
     <tr>
         <td>BGP State</td>
-        <td><button type="button" class="btn btn-sm btn-outline-{% if data.state == "up" or data.state == "Established" %}success{% else %}danger{% endif %}">{{data.state}}</button>
+        <td><button type="button" class="btn btn-sm btn-{% if data.state == "up" or data.state == "Established" %}success{% else %}danger{% endif %}">{{data.state}}</button>
         </td>
     </tr>
     <tr>
@@ -39,7 +39,7 @@
     <tr>
         <td>Protocols</td>
         <td>{% for proto in data.session.capabilities.multiprotocol %}
-            <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="tooltip" data-placement="bottom" animation="true" title="{{ proto }} is supported">{{ proto }}</button>
+            <button type="button" class="btn btn-sm btn-outline-success" data-toggle="tooltip" data-placement="bottom" animation="true" title="{{ proto }} is supported">{{ proto }}</button>
             {% endfor %}
         </td>
     </tr>
@@ -47,7 +47,7 @@
         <td>Add-path</td>
         <td>{% if data.session.remote.capabilities["add-path"] %}
                 {% for ap in data.session.remote.capabilities["add-path"] %}
-                    <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="tooltip" data-placement="bottom" animation="true" title="{{ ap.mode }} {{ ap.family }} is supported">{{ ap.mode }} {{ ap.family }}</button>
+                    <button type="button" class="btn btn-sm btn-outline-success" data-toggle="tooltip" data-placement="bottom" animation="true" title="{{ ap.mode }} {{ ap.family }} is supported">{{ ap.mode }} {{ ap.family }}</button>
                 {% endfor %}
             {% else %}
                 <button type="button" class="btn btn-sm btn-outline-danger"  data-toggle="tooltip" data-placement="bottom" animation="true" title="Add-path is not supported">Not supported</button>

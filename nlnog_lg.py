@@ -446,14 +446,15 @@ def generate_map(routes: dict, prefix: str):
                 subg = pydot.Cluster('subgraph', graph_type="digraph")
                 for item in subgraph:
                     label = '\n'.join(textwrap.wrap(f"AS{item[0]} | {escape(item[1])}", width=28))
-                    asns[item[0]] = pydot.Node(item[0], label=label, fontsize="10", style="filled", fontname="Arial")
+                    asns[item[0]] = pydot.Node(item[0], label=label, fontsize="10", style="filled", fontname="Arial",
+                                               fontcolor=fontcolor)
                     subg.add_node(asns[item[0]])
                 graph.add_subgraph(subg)
             elif is_subgraph:
                 subgraph.append(ashop)
                 continue
             else:
-                add_asn(ashop, fgcolor=fontcolor, bgcolor="#%x" % color)
+                add_asn(ashop, fgcolor=fontcolor, bgcolor="#%06x" % color)
 
             # Add a link from the looking glass node node
             if idx == 0:
@@ -464,10 +465,10 @@ def generate_map(routes: dict, prefix: str):
                 if ashop[0] == "}":
                     new_idx = idx - 1
                     while route['aspath'][new_idx][0] != "{":
-                        add_link(route['aspath'][new_idx][0], "DESTINATION", color="#%x" % color)
+                        add_link(route['aspath'][new_idx][0], "DESTINATION", color="#%06x" % color)
                         new_idx -= 1
                 else:
-                    add_link(ashop[0], "DESTINATION", color="#%x" % color)
+                    add_link(ashop[0], "DESTINATION", color="#%06x" % color)
                 continue
 
             # Add links in between
@@ -475,15 +476,15 @@ def generate_map(routes: dict, prefix: str):
                 new_idx = idx + 2
                 # pull in all aggregates
                 while route['aspath'][new_idx][0] != "}" and new_idx <= len(route['aspath']):
-                    add_link(ashop[0], route['aspath'][new_idx][0], color="#%x" % color)
+                    add_link(ashop[0], route['aspath'][new_idx][0], color="#%06x" % color)
                     new_idx += 1
             elif route['aspath'][idx][0] == "}":
                 new_idx = idx - 1
                 while route['aspath'][new_idx][0] != "{":
-                    add_link(route['aspath'][idx - 1][0], route['aspath'][new_idx][0], color="#%x" % color)
+                    add_link(route['aspath'][idx - 1][0], route['aspath'][new_idx][0], color="#%06x" % color)
                     new_idx -= 1
             elif not is_subgraph:
-                add_link(ashop[0], route['aspath'][idx+1][0], color="#%x" % color)
+                add_link(ashop[0], route['aspath'][idx+1][0], color="#%06x" % color)
 
     # Add the prefix node
     pfxnode = pydot.Node("DESTINATION", label=prefix, shape="box", fillcolor="#f4511e", style="filled", fontsize="10", fontname="Arial")
@@ -509,9 +510,9 @@ def get_ringnodes():
         nodes = {}
         for node in data["results"]["nodes"]:
             if node["asn"] not in nodes:
-                nodes[node["asn"]] = [node["hostname"].replace(".ring.nlnog.net", "")]
+                nodes[node["asn"]] = {node["hostname"].replace(".ring.nlnog.net", "") : node}
             else:
-                nodes[node["asn"]].append(node["hostname"].replace(".ring.nlnog.net", ""))
+                nodes[node["asn"]][node["hostname"].replace(".ring.nlnog.net", "")] = node
         return nodes
     except Exception:
         return {}
@@ -549,10 +550,15 @@ def show_peer_details(peer: str):
     """ Handle the peer details page.
     """
     ret, result = openbgpd_command(app.config["ROUTER"], "peer", {"neighbor": peer})
+    ringnodes = get_ringnodes()
+    remote_as = int(result["neighbors"][0]["remote_as"])
     errors = []
     if not ret:
         errors = [f"Failed to retrieve information for {peer}."]
-    return render_template('peer.html', peer=peer, data=result["neighbors"][0], errors=errors)
+    peers = get_peer_info(names_only=True, established_only=True)
+    if len(peers) == 0:
+        return render_template("error.html", warning=["No data received from the NLNOG Ring API endpoint."])
+    return render_template('peer.html', peer=peer, peers=peers, data=result["neighbors"][0], errors=errors, ringnodes=ringnodes.get(remote_as, {}))
 
 
 @app.route("/prefix")
