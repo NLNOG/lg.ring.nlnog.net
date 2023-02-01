@@ -396,7 +396,7 @@ def resolve(domain: str) -> str:
 def generate_map(routes: dict, prefix: str):
     """ Generate a SVG map for routes for a prefix.
     """
-    graph = pydot.Dot('map', graph_type='digraph')
+    graph = pydot.Dot('map', graph_type='digraph', rankdir='LR')
     asns = {}
     links = []
 

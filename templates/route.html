@@ -7,7 +7,7 @@
 <a href="/prefix/map?saved={{query_id}}" class="btn btn-primary btn-sm" style="margin-bottom: 0.25rem; line-height: 1.2;"><i class="bi bi-map"></i> map</a>
 <a href="/prefix/text?saved={{query_id}}" class="btn btn-primary btn-sm" style="margin-bottom: 0.25rem; line-height: 1.2;"><i class="bi bi-body-text"></i> plain text</a>
 <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#staticModal" style="margin-bottom: 0.25rem; line-height: 1.2;"><i class="bi bi-link-45deg"></i> permalink</button>
-<a href='/prefix?q={{prefix}}&peer={{peer}}&match={{match}}' class="btn btn-primary btn-sm" style="margin-bottom: 0.25rem; line-height: 1.2;"><i class="bi bi-arrow-clockwise"></i> renew</a>
+<a href='/prefix?q={{prefix}}{% for p in peer %}&peer={{p}}{% endfor %}&match={{match}}' class="btn btn-primary btn-sm" style="margin-bottom: 0.25rem; line-height: 1.2;"><i class="bi bi-arrow-clockwise"></i> renew</a>
 <br/>
   <!-- Modal -->
   <div class="modal fade" id="staticModal" tabindex="-1" aria-labelledby="staticModalLabel" aria-hidden="true">
