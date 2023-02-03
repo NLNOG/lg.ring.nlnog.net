@@ -1,0 +1,8 @@
+# Latest data available at https://docs.glauca.digital/net/
+
+207960:1:0,Learned from transit
+207960:1:1,Learned from peering
+207960:1:2,Learned from downstream
+207960:1:3,Learned from route servers
+
+207960:2:nnn,Learned from AS$0
