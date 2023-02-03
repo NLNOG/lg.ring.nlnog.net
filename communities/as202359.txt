@@ -1,0 +1,8 @@
+# Latest data available at https://docs.glauca.digital/net/
+
+202359:1:0,Learned from transit
+202359:1:1,Learned from peering
+202359:1:2,Learned from downstream
+202359:1:3,Learned from route servers
+
+202359:2:nnn,Learned from AS$0
