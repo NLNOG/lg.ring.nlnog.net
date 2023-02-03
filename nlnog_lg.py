@@ -662,7 +662,7 @@ def show_route_for_prefix(prefix=None, netmask=None):
             if route["prefix"] not in routes:
                 routes[route["prefix"]] = []
             routes[route["prefix"]].append({
-                "peer": route["neighbor"]["description"],
+                "peer": route["neighbor"].get("description", "no description"),
                 "ip": route["neighbor"]["remote_addr"],
                 "bgp_id": route["neighbor"]["bgp_id"],
                 "aspath": [(r, get_asn_name(r)) for r in route["aspath"].split(" ")],
@@ -676,6 +676,7 @@ def show_route_for_prefix(prefix=None, netmask=None):
                                       for c in route.get("large_communities", [])],
                 "valid": route["valid"],
                 "ovs": route["ovs"],
+                "avs": route.get("avs", "unknown"),
                 "exit_nexthop": route["exit_nexthop"],
                 "last_update": route["last_update"],
                 "last_update_at": timestamp.strftime("%Y-%m-%d %H:%M:%S UTC"),
