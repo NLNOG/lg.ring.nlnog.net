@@ -1,0 +1,90 @@
+# https://noc.lwlcom.net/info-communities/
+50629:180,origin transit
+50629:200,origin peer
+50629:201,origin peer via pni
+50629:220,origin customer
+50629:240,origin local
+50629:241,origin local more-specific
+50629:1000,rpki valid
+50629:1010,rpki invalid
+50629:1020,rpki unknown
+50629:1050,tier1 path rejected
+50629:10001,Germany
+50629:10002,Austria
+50629:10003,Netherlands
+50629:10101,Bremen, Germany
+50629:10102,Hamburg, Germany
+50629:10103,Berlin, Germany
+50629:10104,Dusseldorf, Germany
+50629:10105,Frankfurt, Germany
+50629:10106,Munich, Germany
+50629:10107,Vienna, Austria
+50629:10108,Amsterdam, Netherlands
+50629:10109,Luttum, Germany
+50629:10201,LWLcom BRE01, Bremen, Germany
+50629:10202,LWLcom BRE04, Bremen, Germany
+50629:10203,MTI Bremen, Bremen, Germany
+50629:10204,LWLcom BRE11, Bremen, Germany
+50629:10205,IPHH HH2, Hamburg, Germany
+50629:10206,n@work Wendenstraße, Hamburg, Germany
+50629:10207,I/P/B B, Berlin, Germany
+50629:10208,Interxion DUS1, Dusseldorf, Germany
+50629:10209,Interxion FRA6, Frankfurt, Germany
+50629:10210,Equinix FR5, Frankfurt, Germany
+50629:10211,EdgeConnex MUC, Munich, Germany
+50629:10212,Interxion VIE1, Vienna, Austria
+50629:10213,LWLcom BRE06, Bremen, Germany
+50629:10214,Nikhef, Amsterdam, Netherlands
+50629:10215,Interxion FRA16, Frankfurt, Germany
+50629:10216,Global Connect W379, Hamburg, Germany
+50629:10217,IPHH HH3, Hamburg, Germany
+50629:10218,EXA Datacenter, Bremen, Germany
+50629:10219,myLoc DUS6, Dusseldorf, Germany
+50629:401,DE-CIX FRA
+50629:402,ECIX FRA
+50629:403,NL-IX FRA
+50629:404,DE-CIX DUS
+50629:405,ECIX DUS
+50629:406,DO-IX
+50629:407,ECIX HAM
+50629:408,DE-CIX HAM
+50629:409,BCIX
+50629:410,Peering.CZ
+50629:411,AMS-IX
+50629:412,DE-CIX MUC
+50629:413,Equinix FRA
+50629:416,BREM-IX
+50629:417,DE-CIX NYC
+50629:420,LINX LON1
+50629:421,Speed-IX AMS
+50629:422,FrysIX
+50629:423,DataIX
+50629:424,GlobalIX
+50629:425,EraIX
+50629:301,DTAG
+50629:302,NTT
+50629:304,Cogent
+50629:305,Telia
+50629:306,Lumen
+50629:321,Google
+50629:322,Apple
+50629:323,MK
+50629:324,Init7
+50629:325,MyLoc
+50629:326,Amazon
+50629:327,Facebook
+50629:328,Valve
+50629:329,Hetzner
+50629:330,Meerfarbig
+50629:332,HAProxy
+50629:333,Netflix
+50629:334,Cloudflare
+50629:335,WaipuTV
+50629:337,Wobcom
+50629:338,GlobeDatacenter
+50629:339,Akamai
+50629:340,CCC
+50629:341,Microsoft
+50629:342,IP-Projects
+50629:343,Blazingfast
+50629:344,Fastly
