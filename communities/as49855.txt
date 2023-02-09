@@ -1,0 +1,7 @@
+# https://as49855.net/
+49855:180,Learned from transit
+49855:200,Learned from peering
+49855:201,Learned via PNI
+49855:202,Learned via IX
+49855:220,Learned from customer
+49855:240,Locally originated
