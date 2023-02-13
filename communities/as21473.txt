@@ -1,0 +1,16 @@
+21473:150,learned at Nikhef Amsterdam, NL
+21473:151,learned in Mannheim, DE
+21473:152,learned in Mutterstadt, DE
+21473:153,learned at Equinix FR5, DE
+21473:154,learned at Interxion FRA6, DE
+21473:210,learned via transit
+21473:220,learned via DE-CIX FRA route server
+21473:221,learned via Equinix IX FRA route server
+21473:222,learned via DE-CIX MUC route server
+21473:225,learned via Fryx-IX AMS route server
+21473:230,learned via DE-CIX FRA direct session
+21473:231,learned via Equinix IX FRA direct session
+21473:232,learned via DE-CIX MUC direct session
+21473:235,learned via Fryx-IX AMS direct session
+21473:240,learned via PNI
+21473:250,customer/own network
