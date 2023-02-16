@@ -1,0 +1,26 @@
+# received via IRC
+12856:4001,routes originated in Europe
+12856:4002,routes originated in South America
+12856:4003,routes originated in North America
+12856:4004,routes originated in Asia
+12856:4005,routes originated in Africa
+
+12859:4010,routes originated in Spain
+12859:4011,routes originated in France
+12859:4012,routes originated in the UK
+12859:4013,routes originated in the Netherlands
+12859:4014,routes originated in Germany
+
+12859:4020,routes originated in Brasil
+12859:4021,routes originated in Peru
+12859:4022,routes originated in Argentina
+12859:4023,routes originated in Chile
+12859:4024,routes originated in Equador
+12859:4025,routes originated in Colombia
+12859:4030,routes originated in USA
+12859:4032,routes originated in Guatemala
+12859:4033,routes originated in Panama
+12859:4035,routes originated in Puerto Rico
+12859:4036,routes originated in Costa Rica
+12859:4037,routes originated in Nicaragua
+
