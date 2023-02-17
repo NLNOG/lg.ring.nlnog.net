@@ -10,17 +10,105 @@
 12859:4012,routes originated in the UK
 12859:4013,routes originated in the Netherlands
 12859:4014,routes originated in Germany
-
+12956:4015,routes originated in Italy
+12956:4016,routes originated in Belgium
 12859:4020,routes originated in Brasil
 12859:4021,routes originated in Peru
 12859:4022,routes originated in Argentina
 12859:4023,routes originated in Chile
 12859:4024,routes originated in Equador
 12859:4025,routes originated in Colombia
+12859:4026,routes originated in Venezuela
+12859:4026,routes originated in Uruguay
 12859:4030,routes originated in USA
+12859:4031,routes originated in Mexico
 12859:4032,routes originated in Guatemala
 12859:4033,routes originated in Panama
+12859:4034,routes originated in Canada
 12859:4035,routes originated in Puerto Rico
 12859:4036,routes originated in Costa Rica
 12859:4037,routes originated in Nicaragua
 
+12956:4049,routes originated in China
+12956:4050,routes originated in Hong-Kong
+12956:4051,routes originated in Japan
+12956:4052,routes originated in India
+12956:4054,routes originated in United Arab Emirates
+12956:4060,routes originated in Czech Republic
+12956:4061,routes originated in Romania
+12956:4062,routes originated in Switzerland
+12956:4064,routes originated in Bulgaria
+12956:4065,routes originated in Denmark
+12956:4066,routes originated in Cyprus
+12956:4067,routes originated in Slovakia
+12956:4068,routes originated in Slovenia
+12956:4069,routes originated in Estonia
+12956:4070,routes originated in Finland
+12956:4071,routes originated in Greece
+12956:4072,routes originated in Ireland
+12956:4073,routes originated in Latvia
+12956:4074,routes originated in Lithuania
+12956:4075,routes originated in Luxembourg
+12956:4076,routes originated in Malta
+12956:4077,routes originated in Norway
+12956:4078,routes originated in Portugal
+12956:4079,routes originated in Sweden
+12956:4080,routes originated in Turkey
+12956:4081,routes originated in Austria
+12956:4082,routes originated in Hungary
+12956:4083,routes originated in Poland
+12956:4084,routes originated in Morocco
+12956:4085,routes originated in Singapore
+
+12956:4100,routes originated in Madrid
+12956:4101,routes originated in Alcalá de Henares
+12956:4103,routes originated in Viena
+12956:4110,routes originated in Paris
+12956:4117,routes originated in Prague
+12956:4120,routes originated in London
+12956:4130,routes originated in Amsterdam
+12956:4140,routes originated in Frankfurt
+12956:4141,routes originated in Munich
+12956:4142,routes originated in Düsseldorf
+12956:4143,routes originated in Oslo
+12956:4144,routes originated in Hamburg
+12956:4145,routes originated in Berlin
+12956:4150,routes originated in Barcelona
+12956:4153,routes originated in Luxembourg
+12956:4157,routes originated in Oporto
+12956:4158,routes originated in Lisbon
+12956:4170,routes originated in Brussels
+12956:4200,routes originated in São Paolo
+12956:4201,routes originated in Santos
+12956:4202,routes originated in Río de Janeiro
+12956:4203,routes originated in Fortaleza
+12956:4204,routes originated in Salvador de Bahia
+12956:4210,routes originated in Lima
+12956:4211,routes originated in Lurín
+12956:4212,routes originated in Máncora
+12956:4213,routes originated in Arica
+12956:4220,routes originated in Buenos Aires
+12956:4221,routes originated in Las Toninas
+12956:4230,routes originated in Valparaíso
+12956:4231,routes originated in Santiago de Chile
+12956:4240,routes originated in Guayaquil
+12956:4241,routes originated in Quito
+12956:4242,routes originated in Salinas
+12956:4250,routes originated in Bogotá
+12956:4251,routes originated in Barranquilla
+12956:4260,routes originated in Caracas
+12956:4270,routes originated in Montevideo
+12956:4280,routes originated in San José (Costa Rica)
+12956:4300,routes originated in Washington
+12956:4301,routes originated in Nueva York
+12956:4302,routes originated in Miami
+12956:4303,routes originated in Dallas
+12956:4304,routes originated in Palo Alto
+12956:4305,routes originated in Mc Allen
+12956:4306,routes originated in San Juan de Puerto Rico
+12956:4307,routes originated in Laredo
+12956:4308,routes originated in Jacksonville
+12956:4310,routes originated in Monterrey
+12956:4311,routes originated in Mexico DF
+12956:4320,routes originated in Ciudad Guatemala
+12956:4330,routes originated in Ciudad Panama
