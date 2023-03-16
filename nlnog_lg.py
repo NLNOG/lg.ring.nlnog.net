@@ -659,6 +659,10 @@ def show_route_for_prefix(prefix=None, netmask=None):
         for route in result.get("rib", []):
             delta = timedelta(seconds=int(route.get("last_update_sec", 0)))
             timestamp = now - delta
+            otc = ""
+            for attribute in route.get("attributes", []):
+                if attribute["type"] == "OTC":
+                    otc = (attribute["as"], get_asn_name(str(attribute["as"])))
             if route["prefix"] not in routes:
                 routes[route["prefix"]] = []
             routes[route["prefix"]].append({
@@ -681,6 +685,7 @@ def show_route_for_prefix(prefix=None, netmask=None):
                 "last_update": route["last_update"],
                 "last_update_at": timestamp.strftime("%Y-%m-%d %H:%M:%S UTC"),
                 "metric": route["metric"],
+                "otc": otc,
             })
 
     # sort output by peername per prefix
