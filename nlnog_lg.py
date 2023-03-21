@@ -429,7 +429,7 @@ def generate_map(routes: dict, prefix: str):
         fontcolor = "#000000"
         # invert font color if the background is dark
         try:
-            (red, green, blue) = tuple(int(("%x" % color)[i:i+2], 16) for i in (0, 2, 4))
+            (red, green, blue) = tuple(int(("%06x" % color)[i:i+2], 16) for i in (0, 2, 4))
             if (red + green + blue) / 3 < 100:
                 fontcolor = "#ffffff"
         except ValueError:
