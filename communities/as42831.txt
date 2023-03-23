@@ -1,0 +1,37 @@
+# AS42831 Communities found at as42831.net
+42831:3257,No Advertise to GTT
+42831:1002,Prepended 3x to GTT
+42831:174,No Advertise to Cogent
+42831:1004,Prepended 3x to Cogent
+42831:2001,No Advertise to OVH
+42831:2002,Prepend 3x to OVH
+42831:2003,No Advertise to CoreBackbone
+42831:2004,Prepend 3x to CoreBackbone
+42831:2005,No Advertise to Google
+42831:2006,Prepend 3x to Google
+42831:2007,No Advertise to Sky
+42831:2008,Prepend 3x to Sky
+42831:2009,No Advertise to BT
+42831:2010,Prepend 3x to BT
+42831:2011,No Advertise to Virgin
+42831:2012,Prepend 3x to Virgin
+42831:2015,No Advertise to TalkTalk
+42831:2016,Prepend 3x to TalkTalk
+42831:2017,Prepend 3x to Datacamp
+42831:2018,No Advertise to Datacamp
+42831:2019,Prepend 3x to Meta
+42831:2020,No Aadvertise to Meta
+42831:2021,Prepend 3x to ZetServers
+42831:2022,No Advertise to ZetServers
+42831:3001,No Advertise prefix to LINX
+42831:3002,Prepend 3x to LINX RS
+42831:3005,No Advertise prefix to LONAP
+42831:3006,Prepend 3x to LONAP RS
+42831:4404,Learnt from downstream BGP v4
+42831:4406,Learnt from downstream BGP v6
+42831:14011,Advertised via GTT-A
+42831:24011,Advertised via GTT-B
+42831:24022,Advertised via Cogent-A
+42831:12022,Advertised via Cogent-B
+42831:24099,Advertised via LINX
+42831:12099,Advertised via LONAP
