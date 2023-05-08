@@ -89,6 +89,7 @@
 25152:1221,k-root hosted site us-mkc
 25152:1222,k-root hosted site it-pmo
 25152:1223,k-root hosted site kz-pwq
+25152:1239,k-root hosted site in-del
 25152:2,k-root core site gb-lon
 25152:3,k-root core site jp-tyo
 25152:5,k-root core site us-mia
@@ -182,6 +183,7 @@
 25152:1221:nnn,k-root hosted site us-mkc peer-as $0
 25152:1222:nnn,k-root hosted site it-pmo peer-as $0
 25152:1223:nnn,k-root hosted site kz-pwq peer-as $0
+25152:1239:nnn,k-root hosted site in-del peer-as $0
 25152:1:nnn,k-root core site nl-ams peer-as $0
 25152:2:nnn,k-root core site gb-lon peer-as $0
 25152:3:nnn,k-root core site jp-tyo peer-as $0
