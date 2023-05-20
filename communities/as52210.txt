@@ -6,7 +6,9 @@
 52210:0:835,Learned from GoCodeIT (Transit)
 52210:0:6939,Learned from Hurricane Electric (Transit)
 52210:0:18655,Learned from OGIX Route Server (Peer)
+52210:0:12186,Learned from GVVME (Transit)
 52210:1:1,Learned from OGIX (Peer)
+52210:1:2,Learned from ONIX (Peer)
 # END Info Communities
 # BEGIN Action Communities
 52210:20001,Prepend 1x to Cogent (Transit)
