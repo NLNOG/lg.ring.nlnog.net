@@ -1,0 +1,6 @@
+#white2net contact gregoire@white2net.com
+64513:200,Learned from internet exchange
+64513:201,Learned from customer routes
+64513:203,AMS
+64513:204,DE
+64513:300,Private network
