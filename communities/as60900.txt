@@ -1,0 +1,14 @@
+# Ssmidge LLC
+# Contact: adrian.trifonov@gmail.com
+# BEGIN Info Communities
+60900:0:12,Learned from upstream (Transit)
+60900:0:13,Learned from route server (Peer)
+60900:0:14,Learned from peer (Peer)
+60900:0:15,Learned from downstream (Transit)
+# END Info Communities
+# BEGIN Action Communities
+60900:0:100,Prepend 1x to LocIX Frankfurt (Peer)
+60900:0:101,Prepend 2x to LocIX Frankfurt (Peer)
+60900:0:102,Prepend 3x to LocIX Frankfurt (Peer)
+60900:0:103,No-Export to LocIX Frankfurt (Peer)
+# END Action Communities
