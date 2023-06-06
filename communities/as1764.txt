@@ -1,0 +1,151 @@
+#nextlayer contact noc@nextlayer.at
+1764:10,Internet
+1764:14,AS1764 originated v4 routes
+1764:16,AS1764 originated v6 routes
+1764:19,AS1764 originated MCAST routes
+1764:24,AS1764 customer v4 routes as in AS-NEXTLAYER
+1764:26,AS1764 customer v6 routes as in AS-NEXTLAYER-V6
+1764:29,AS1764 customer MCAST routes as in AS-NEXTLAYER
+1764:81,AS1764 internal
+1764:100,AS1764 verified RPKI UNKNOWN
+1764:101,AS1764 verified RPKI VALID
+1764:102,AS1764 verified RPKI INVALID (invalids are not imported)
+1764:210,AS1764 local pref 80
+1764:215,AS1764 local pref 100
+1764:220,AS1764 local pref 120
+1764:666,AS1764 Blackhole
+1764:30001,Received in Vienna
+1764:30732,Received in Linz
+1764:30069,Received in Frankfurt
+1764:30011,Received in Amsterdam
+1764:30043,Received in Zurich
+1764:30662,Received in Salzburg
+1764:20043,Received in Austria
+1764:20049,Received in Germany
+1764:20031,Received in Nederlands
+1764:20041,Received in Switzerland
+1764:40010,Received via Level3/CenturyLink AS3356
+1764:40011,Prepend (1x) to Level3/CenturyLink AS3356
+1764:40012,Prepend (2x) to Level3/CenturyLink AS3356
+1764:40013,Prepend (3x) to Level3/CenturyLink AS3356
+1764:40019,Do not announce to Level3/CenturyLink AS3356
+1764:40020,Received via Cogent AS174
+1764:40021,Prepend (1x) to Cogent AS174
+1764:40022,Prepend (2x) to Cogent AS174
+1764:40023,Prepend (3x) to Cogent AS174
+1764:40029,Do not announce to Cogent AS174
+1764:40050,Received via GTT AS3257
+1764:40051,Prepend (1x) to GTT AS3257
+1764:40052,Prepend (2x) to GTT AS3257
+1764:40053,Prepend (3x) to GTT AS3257
+1764:40059,Do not announce to GTT AS3257
+1764:40061,Prepend (1x) to HE AS6939
+1764:40062,Prepend (2x) to HE AS6939
+1764:40063,Prepend (3x) to HE AS6939
+1764:40069,Do not announce to HE AS6939
+1764:40070,Received via NTT AS2914
+1764:40071,Prepend (1x) to NTT AS2914
+1764:40072,Prepend (2x) to NTT AS2914
+1764:40073,Prepend (3x) to NTT AS2914
+1764:40079,Do not announce to NTT AS2914
+1764:40080,Received via Telia AS1299,(non-settable)
+1764:40081,Prepend (1x) to Telia AS1299
+1764:40082,Prepend (2x) to Telia AS1299
+1764:40083,Prepend (3x) to Telia AS1299
+1764:40089,Do not announce to Telia AS1299
+1764:40300,Received via VIX
+1764:40301,Prepend (1x) to VIX
+1764:40302,Prepend (2x) to VIX
+1764:40303,Prepend (3x) to VIX
+1764:40309,Do not announce to VIX
+1764:40310,Received via DE-CIX (non-setable)
+1764:40311,Prepend (1x) to DE-CIX
+1764:40312,Prepend (2x) to DE-CIX
+1764:40313,Prepend (3x) to DE-CIX
+1764:40319,Do not announce to DE-CIX
+1764:40320,Received via SWISS-IX
+1764:40321,Prepend (1x) to SWISS-IX
+1764:40322,Prepend (2x) to SWISS-IX
+1764:40323,Prepend (3x) to SWISS-IX
+1764:40329,Do not announce to SWISS-IX
+1764:40330,Received via AMS-IX
+1764:40331,Prepend (1x) to AMS-IX
+1764:40332,Prepend (2x) to AMS-IX
+1764:40333,Prepend (3x) to AMS-IX
+1764:40339,Do not announce to AMS-IX
+1764:40350,Received via SAIX
+1764:40351,Prepend (1x) to SAIX
+1764:40352,Prepend (2x) to SAIX
+1764:40353,Prepend (3x) to SAIX
+1764:40359,Do not announce to SAIX
+1764:40610,Received via MICROSOFT Peering
+1764:40611,Prepend (1x) to MICROSOFT Peering
+1764:40612,Prepend (2x) to MICROSOFT Peering
+1764:40613,Prepend (3x) to MICROSOFT Peering
+1764:40619,Do not announce to MICROSOFT Peering
+1764:40630,Received via GOOGLE Peering
+1764:40631,Prepend (1x) to GOOGLE Peering
+1764:40632,Prepend (2x) to GOOGLE Peering
+1764:40633,Prepend (3x) to GOOGLE Peering
+1764:40639,Do not announce to GOOGLE Peering
+1764:40640,Received via LLNW LIMELIGHT NETWORKS Peering
+1764:40641,Prepend (1x) to LLNW LIMELIGHT NETWORKS Peering
+1764:40642,Prepend (2x) to LLNW LIMELIGHT NETWORKS Peering
+1764:40643,Prepend (3x) to LLNW LIMELIGHT NETWORKS Peering
+1764:40649,Do not announce to LLNW LIMELIGHT NETWORKS Peering
+1764:40650,Received via A1,TELEKOM AUSTRIA Peering
+1764:40651,Prepend (1x) to A1,TELEKOM AUSTRIA Peering
+1764:40652,Prepend (2x) to A1,TELEKOM AUSTRIA Peering
+1764:40653,Prepend (3x) to A1,TELEKOM AUSTRIA Peering
+1764:40659,Do not announce to A1,TELEKOM AUSTRIA Peering
+1764:40670,Received via FACEBOOK Peering
+1764:40671,Prepend (1x) to FACEBOOK Peering
+1764:40672,Prepend (2x) to FACEBOOK Peering
+1764:40673,Prepend (3x) to FACEBOOK Peering
+1764:40679,Do not announce to FACEBOOK Peering
+1764:40680,Received via APPLE Peering
+1764:40681,Prepend (1x) to APPLE Peering
+1764:40682,Prepend (2x) to APPLE Peering
+1764:40683,Prepend (3x) to APPLE Peering
+1764:40689,Do not announce to APPLE Peering
+1764:40690,Received via AMAZON Peering
+1764:40691,Prepend (1x) to AMAZON Peering
+1764:40692,Prepend (2x) to AMAZON Peering
+1764:40693,Prepend (3x) to AMAZON Peering
+1764:40699,Do not announce to AMAZON Peering
+1764:40700,Received via MAGENTA TMA Peering
+1764:40701,Prepend (1x) to MAGENTA TMA Peering
+1764:40702,Prepend (2x) to MAGENTA TMA Peering
+1764:40703,Prepend (3x) to MAGENTA TMA Peering
+1764:40709,Do not announce to MAGENTA TMA Peering
+1764:40710,Received via M247 Peering
+1764:40711,Prepend (1x) to M247 Peering
+1764:40712,Prepend (2x) to M247 Peering
+1764:40713,Prepend (3x) to M247 Peering
+1764:40719,Do not announce to M247 Peering
+1764:40720,Received via VALVE CORP. Peering
+1764:40721,Prepend (1x) to VALVE CORP. Peering
+1764:40722,Prepend (2x) to VALVE CORP. Peering
+1764:40723,Prepend (3x) to VALVE CORP. Peering
+1764:40729,Do not announce to VALVE CORP. Peering
+1764:40730,Received via NETFLIX Peering
+1764:40731,Prepend (1x) to NETFLIX Peering
+1764:40732,Prepend (2x) to NETFLIX Peering
+1764:40733,Prepend (3x) to NETFLIX Peering
+1764:40739,Do not announce to NETFLIX Peering
+1764:40740,Received via WORLDSTREAM Peering
+1764:40741,Prepend (1x) to WORLDSTREAM Peering
+1764:40742,Prepend (2x) to WORLDSTREAM Peering
+1764:40743,Prepend (3x) to WORLDSTREAM Peering
+1764:40749,Do not announce to WORLDSTREAM Peering
+1764:40750,Received via LEASEWEB Peering
+1764:40751,Prepend (1x) to LEASEWEB Peering
+1764:40752,Prepend (2x) to LEASEWEB Peering
+1764:40753,Prepend (3x) to LEASEWEB Peering
+1764:40759,Do not announce to LEASEWEB Peering
+1764:40770,Received via AKAMAI Peering
+1764:40771,Prepend (1x) to AKAMAI Peering
+1764:40772,Prepend (2x) to AKAMAI Peering
+1764:40773,Prepend (3x) to AKAMAI Peering
+1764:40778,Force announcement to AKAMAI Peering
+1764:40779,Do not announce to AKAMAI Peering
