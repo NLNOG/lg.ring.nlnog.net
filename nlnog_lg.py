@@ -503,6 +503,8 @@ def generate_map(routes: dict, prefix: str):
 
 
 def get_ringnodes():
+    """ Generate list of RING Nodes
+    """
     try:
         data = requests.get("https://api.ring.nlnog.net/1.0/nodes").json()
         if data["info"]["success"] != 1:
@@ -514,7 +516,7 @@ def get_ringnodes():
             else:
                 nodes[node["asn"]][node["hostname"].replace(".ring.nlnog.net", "")] = node
         return nodes
-    except Exception:
+    except requests.exceptions.RequestException:
         return {}
 
 
@@ -558,7 +560,7 @@ def show_peer_details(peer: str):
     peers = get_peer_info(names_only=True, established_only=True)
     if len(peers) == 0:
         return render_template("error.html", warning=["No data received from the NLNOG Ring API endpoint."])
-    return render_template('peer.html', peer=peer, peers=peers, data=result["neighbors"][0], errors=errors, ringnodes=ringnodes.get(remote_as, {}))
+    return render_template('peer.html', peer=peer, peers=peers, data=result["neighbors"][0], errors=errors, ringnodes=ringnodes.get(remote_as, {})) # pylint: disable=line-too-long
 
 
 @app.route("/prefix")
