@@ -14,3 +14,6 @@ disable=
 
 [FORMAT]
 max-line-length=140
+
+[SIMILARITIES]
+min-similarity-lines=16
