@@ -512,7 +512,7 @@ def get_ringnodes():
         nodes = {}
         for node in data["results"]["nodes"]:
             if node["asn"] not in nodes:
-                nodes[node["asn"]] = {node["hostname"].replace(".ring.nlnog.net", "") : node}
+                nodes[node["asn"]] = {node["hostname"].replace(".ring.nlnog.net", ""): node}
             else:
                 nodes[node["asn"]][node["hostname"].replace(".ring.nlnog.net", "")] = node
         return nodes
@@ -560,7 +560,7 @@ def show_peer_details(peer: str):
     peers = get_peer_info(names_only=True, established_only=True)
     if len(peers) == 0:
         return render_template("error.html", warning=["No data received from the NLNOG Ring API endpoint."])
-    return render_template('peer.html', peer=peer, peers=peers, data=result["neighbors"][0], errors=errors, ringnodes=ringnodes.get(remote_as, {})) # pylint: disable=line-too-long
+    return render_template('peer.html', peer=peer, peers=peers, data=result["neighbors"][0], errors=errors, ringnodes=ringnodes.get(remote_as, {}))  # pylint: disable=line-too-long # noqa: E501
 
 
 @app.route("/prefix")
