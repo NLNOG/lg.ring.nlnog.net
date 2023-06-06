@@ -2,12 +2,12 @@
 
 """ Check commmunity files for inconsistencies. """
 
+from nlnog_lg import get_community_type
 import os
 import re
 import sys
 import glob
 sys.path.append(".")
-from nlnog_lg import *
 
 re_range = re.compile(r"^(\d+)\-(\d+)$")
 
