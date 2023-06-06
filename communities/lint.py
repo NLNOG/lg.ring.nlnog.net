@@ -47,8 +47,8 @@ def check_communitydesc(filename):
                 warnings += 1
 
             if (ctype == "regular" and re_regular_exact.match(comm)) or \
-                (ctype == "large" and re_large_exact.match(comm)) or \
-                (ctype == "extended" and re_extended_exact.match(comm)):
+               (ctype == "large" and re_large_exact.match(comm)) or \
+               (ctype == "extended" and re_extended_exact.match(comm)):
                 # exact community, no ranges or wildcards
                 if len(desc) > 50:
                     lines.append(("WARN: too long", entry))
@@ -71,8 +71,6 @@ def check_communitydesc(filename):
                 if not regex:
                     lines.append(("WARN: unknown format", entry))
                     warnings += 1
-
-
     return (warnings, lines)
 
 
