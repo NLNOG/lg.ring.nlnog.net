@@ -1,0 +1,12 @@
+# provided by AS212635 NOC
+212635:0:1,Learned from peer
+212635:0:2,Learned from downstream (customer)
+212635:0:3,Leared from upstream (transit)
+212635:5:1,Valid IRR entry
+212635:5:2,Valid ROA
+212635:7:1,More specifics covering AS212635 space are considered hijacks
+212635:7:2,Somewhere in the AS_PATH a Bogon ASN is present (0, 23456, 64496..65534, 4200000000+)
+212635:7:3,The prefix is Bogon garbage (rfc1918, rfc4291 etc)
+212635:7:4,The prefix is an RPKI Invalid and as such rejected
+212635:7:5,The route's prefix length is unacceptable (too small or too large)
+212635:7:6,There is no IRR object that covers this route announcement
