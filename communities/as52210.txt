@@ -9,6 +9,10 @@
 52210:0:12186,Learned from GVVME (Transit)
 52210:1:1,Learned from OGIX (Peer)
 52210:1:2,Learned from ONIX (Peer)
+52210:1:3,Learned from KCIX (Peer)
+52210:1:4,Learned from HOUIX (Peer)
+52210:1:5,Learned from STLIX (Peer)
+52210:3:1,Downstream Customer
 # END Info Communities
 # BEGIN Action Communities
 52210:20001,Prepend 1x to Cogent (Transit)
