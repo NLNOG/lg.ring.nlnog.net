@@ -7,7 +7,9 @@
 835:10002,Source: Zayo Transit
 835:11000,Source: TORIX
 835:11001,Source: Equinix Toronto
-835:11002,Source: Google
+835:11002,Source: ONIX
+835:12000,Source: Google
+835:12001,Source: Meta
 
 # Validity
 835:5000,IRR Valid
@@ -33,16 +35,27 @@
 835:20029,Drop to Zayo
 
 835:21001,Append 1x to TORIX
-835:21001,Append 2x to TORIX
-835:21001,Append 3x to TORIX
-835:21001,Drop to TORIX
+835:21002,Append 2x to TORIX
+835:21003,Append 3x to TORIX
+835:21009,Drop to TORIX
 
-835:21011,Append 1x to Equinix Toronto
-835:21012,Append 2x to Equinix Toronto
-835:21013,Append 3x to Equinix Toronto
-835:21019,Drop to Equinix Toronto
+835:21011,Append 1x to EIE Tor
+835:21012,Append 2x to EIE Tor
+835:21013,Append 3x to EIE Tor
+835:21019,Drop to EIE Tor
+
+835:21021,Append 1x to ONIX
+835:21022,Append 2x to ONIX
+835:21023,Append 3x to ONIX
+835:21029,Drop to ONIX
 
 835:22001,Append 1x to Google
 835:22002,Append 2x to Google
 835:22003,Append 3x to Google
 835:22009,Drop to Google
+
+835:22011,Append 1x to Meta
+835:22012,Append 2x to Meta
+835:22013,Append 3x to Meta
+835:22019,Drop to Meta
+
