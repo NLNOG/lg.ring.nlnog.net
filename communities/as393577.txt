@@ -1,0 +1,11 @@
+393577:0:12,Route originated from transit provider.
+393577:0:13,Route originated from an internet exchange.
+393577:0:14,Route originated from direct peer.
+393577:0:15,Route originated from downstream.
+393577:0:16,Route originated from our internal routers.
+393577:0:17,Route originated from GPC.
+393577:0:18,Route originated from STLIX.
+393577:0:19,Route originated from HOUIX.
+393577:0:20,Route originated from KCIX.
+393577:0:21,Route originated from iFog.
+393577:0:22,Route originated from NL-IX.
