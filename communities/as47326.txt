@@ -1,0 +1,5 @@
+# AS47326 Advanced Micro, noc@advancedmicro.net
+47326:11,Redistributed to BGP in LON1
+47326:12,Redistributed to BGP in AMS1
+47326:30,Route accepted via private peering
+47326:31,Route accepted over FogIXP fabric
