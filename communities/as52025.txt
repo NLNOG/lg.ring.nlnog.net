@@ -90,6 +90,7 @@
 52025:60:2084,Learned from LOCIX Frankfurt
 52025:60:4059,Learned from ONIX
 52025:60:2365,Learned from CH-IX
+52025:60:18,Learned from LINX LON1
 52025:60:53,Learned from LONAP
 52025:60:249,Learned from KCIX
 52025:60:2835,Learned from HOUIX
@@ -117,6 +118,8 @@
 52025:204:4059,Do not announce to ONIX
 52025:20x:2365,Prepend $0x to CH-IX (max 3)
 52025:204:2365,Do not announce to CH-IX
+52025:20x:18,Prepend $0x to LINX LON1 (max 3)
+52025:204:18,Do not announce to LINX LON1
 52025:20x:53,Prepend $0x to LONAP (max 3)
 52025:204:53,Do not announce to LONAP
 52025:20x:249,Prepend $0x to KCIX (max 3)
