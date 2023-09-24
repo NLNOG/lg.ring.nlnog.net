@@ -3,7 +3,9 @@
 47326:12,Redistributed to BGP in AMS1
 47326:13,Redistributed to BGP in YOW1
 47326:14,Redistributed to BGP in MCI1
+47326:15,Redistributed to BGP in SEA1
 47326:30,Route accepted via private peering
 47326:31,Route accepted over FogIXP fabric
 47326:32,Route accepted over ACCURIX fabric
 47326:33,Route accepted over KCIX fabric
+47326:34,Route accepted over SIX fabric
