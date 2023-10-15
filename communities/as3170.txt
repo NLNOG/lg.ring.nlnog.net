@@ -1,0 +1,44 @@
+3170:1:1000, Origin - route learned from self / internal
+3170:1:900, Origin - route learned from downstream customer
+3170:1:300, Origin - route learned from private peer
+3170:1:200, Origin - route learned from peer
+3170:1:100, Origin - route learned from transit
+3170:100:3257, Origin - route learned from GTT 3257 transit
+3170:100:3356, Origin - route learned from Lumen 3356 transit
+3170:200:1, Origin - route learned from LINX LON1 peering
+3170:200:2, Origin - route learned from LINX MAN1 peering
+3170:200:nnn, Origin - route learned from IX peer AS$0
+3170:300:nnn, Origin - route learned from private peer AS$0
+3170:2:1, Origin - route learned in UK
+3170:3:1, Origin - route learned in London
+3170:3:2, Origin - route learned in Wolverhampton
+3170:3:3, Origin - route learned in Redditch
+3170:3:4, Origin - route learned in Manchester
+3170:4:1, Origin - route learned in PoP Telehouse East
+3170:4:2, Origin - route learned in PoP Interxion LON1
+3170:4:3, Origin - route learned in PoP Equinix LD8
+3170:4:4, Origin - route learned in PoP VeloxServ DC1
+3170:4:5, Origin - route learned in PoP VeloxServ DC2
+3170:4:6, Origin - route learned in PoP VeloxServ DC3
+3170:4:7, Origin - route learned in PoP VeloxServ WLV Central
+3170:4:8, Origin - route learned in PoP Teledata TD1
+3170:1000:1, Control - Global no export
+3170:1001:1, Control - Global prepend x1
+3170:1002:1, Control - Global prepend x2
+3170:1003:1, Control - Global prepend x3
+3170:2000:1, Control - no export to LINX LON1 peers
+3170:2001:1, Control - Prepend x1 to LINX LON1 peers
+3170:2002:1, Control - Prepend x2 to LINX LON1 peers
+3170:2003:1, Control - Prepend x3 to LINX LON1 peers
+3170:2000:2, Control - no export to LINX MAN1 peers
+3170:2001:2, Control - Prepend x1 to LINX MAN1 peers
+3170:2002:2, Control - Prepend x2 to LINX MAN1 peers
+3170:2003:2, Control - Prepend x3 to LINX MAN1 peers
+3170:3000:1, Control - no export to private peers
+3170:3001:1, Control - Prepend x1 to private peers
+3170:3002:1, Control - Prepend x2 to private peers
+3170:3003:1, Control - Prepend x3 to private peers
+3170:4000:nnn, Control - no export to AS$0
+3170:4001:nnn, Control - Prepend x1 to AS$0
+3170:4002:nnn, Control - Prepend x2 to AS$0
+3170:4003:nnn, Control - Prepend x3 to AS$0
