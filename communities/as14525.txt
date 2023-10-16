@@ -1,0 +1,29 @@
+# Stellar Technologies Inc.
+# For a complete list of BGP communities, see: https://stellar.tech/docs/interconnection/bgp-communities
+
+# Origin
+14525:1,All Originated Routes
+14525:2,Global Aggregate
+14525:3,Regional Aggregate
+14525:4,Metro Aggregate
+14525:5,POP Aggregate
+14525:6,Specific Prefix
+
+# External Routes
+14525:1x,Received From Customer
+14525:2x,Received From Private Peer
+14525:3x,Received From Public Peer/IX
+14525:4x,Received From Transit
+
+# Security
+14525:600,RPKI Valid
+14525:601,RPKI Unknown
+
+# Identifiers
+# For Region, Country, Metro, POP, and Peer community IDs, see: https://stellar.tech/docs/interconnection/bgp-communities
+14525:0,Any route that has ingressed or egressed AS14525
+14525:1xxxx,Routes from Region xxx (UN M.49)
+14525:2xxx,Routes from Country xxx (ISO 3166-1)
+14525:30xx,Routes from Metro xxx
+14525:4xxx,Routes from Point of Presence (POP) xxx
+14525:9xxx,Routes from a specific Peer xxx
