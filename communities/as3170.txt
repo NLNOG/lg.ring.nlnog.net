@@ -42,3 +42,31 @@
 3170:4001:nnn, Control - Prepend x1 to AS$0
 3170:4002:nnn, Control - Prepend x2 to AS$0
 3170:4003:nnn, Control - Prepend x3 to AS$0
+3170:5100:3257, Control - no export to GTT transit in PoP Telehouse East
+3170:5101:3257, Control - Prepend x1 to GTT transit in PoP Telehouse East
+3170:5102:3257, Control - Prepend x2 to GTT transit in PoP Telehouse East
+3170:5103:3257, Control - Prepend x3 to GTT transit in PoP Telehouse East
+3170:5200:3257, Control - no export to GTT transit in PoP Interxion LON1
+3170:5201:3257, Control - Prepend x1 to GTT transit in PoP Interxion LON1
+3170:5202:3257, Control - Prepend x2 to GTT transit in PoP Interxion LON1
+3170:5203:3257, Control - Prepend x3 to GTT transit in PoP Interxion LON1
+3170:5300:3257, Control - no export to GTT transit in PoP Equinix LD8
+3170:5301:3257, Control - Prepend x1 to GTT transit in PoP Equinix LD8
+3170:5302:3257, Control - Prepend x2 to GTT transit in PoP Equinix LD8
+3170:5303:3257, Control - Prepend x3 to GTT transit in PoP Equinix LD8
+3170:5800:3257, Control - no export to GTT transit in PoP Teledata TD1
+3170:5801:3257, Control - Prepend x1 to GTT transit in PoP Teledata TD1
+3170:5802:3257, Control - Prepend x2 to GTT transit in PoP Teledata TD1
+3170:5803:3257, Control - Prepend x3 to GTT transit in PoP Teledata TD1
+3170:5200:3356, Control - no export to Lumen transit in PoP Interxion LON1
+3170:5201:3356, Control - Prepend x1 to Lumen transit in PoP Interxion LON1
+3170:5202:3356, Control - Prepend x2 to Lumen transit in PoP Interxion LON1
+3170:5203:3356, Control - Prepend x3 to Lumen transit in PoP Interxion LON1
+3170:5300:3356, Control - no export to Lumen transit in PoP Equinix LD8
+3170:5301:3356, Control - Prepend x1 to Lumen transit in PoP Equinix LD8
+3170:5302:3356, Control - Prepend x2 to Lumen transit in PoP Equinix LD8
+3170:5303:3356, Control - Prepend x3 to Lumen transit in PoP Equinix LD8
+3170:5800:3356, Control - no export to Lumen transit in PoP Teledata TD1
+3170:5801:3356, Control - Prepend x1 to Lumen transit in PoP Teledata TD1
+3170:5802:3356, Control - Prepend x2 to Lumen transit in PoP Teledata TD1
+3170:5803:3356, Control - Prepend x3 to Lumen transit in PoP Teledata TD1
