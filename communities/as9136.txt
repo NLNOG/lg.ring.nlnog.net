@@ -1,0 +1,13 @@
+#wobcom contact peering@wobcom.de
+#communities taken from wobcom.net
+9136:200,From Internal
+9136:201,From Upstream
+9136:202,From Customer
+9136:203,From Peer
+9136:6000,From Country Germany
+9136:6100,From Country Netherlands
+9136:6001,From Region Wolfsburg
+9136:6002,From Region Berlin
+9136:6003,From Region Frankfurt
+9136:6004,From Region Düsseldorf
+9136:6101,From Region Amsterdam
