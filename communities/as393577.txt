@@ -10,12 +10,3 @@
 393577:0:21,Route originated from iFog.
 393577:0:22,Route originated from NL-IX.
 393577:0:23,Route originated from SIX.
-393577:0:24,Route originated from 4B42.
-393577:0:25,Route originated from IXPCat HEL.
-393577:0:26,Route originated from IXPCat LON.
-393577:0:27,Route originated from BGP.Exchange LON.
-393577:0:28,Route originated from BGP.Exchange KC.
-393577:0:29,Route originated from BGP.Exchange SEA.
-393577:0:30,Route originated from BGP.Exchange DE.
-393577:0:31,Route originated from BGP.Exchange FRE.
-393577:0:32,Route originated from ZeroIXP SJ.
