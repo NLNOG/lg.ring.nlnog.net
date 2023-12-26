@@ -1,94 +1,110 @@
-# Obtained from https://924.network/
-
-924:199,Originated by Cloudie
-924:100:199,Originated by Cloudie
-924:11,Originated in Fremont CA USA
-924:101:100,Originated in Fremont CA USA
-924:12,Originated in Toronto CA
-924:102:100,Originated in Toronto CA
-924:13,Learned from Adelaide AU
-924:103:100,Learned from Adelaide AU
-924:14,Learned from Kansas City MO USA
-924:104:100,Learned from Kansas City MO USA
-924:15,Learned from Auckland NZ
-924:105:100,Learned from Auckland NZ
-924:16,Learned from Frankfurt DE
-924:106:100,Learned from Frankfurt DE
-924:17,Learned from Spokane WA USA
-924:107:100,Learned from Spokane WA USA
-924:99,Learned from Downstream
-924:99:100,Learned from Downstream
-924:100,Learned from Transit
-924:100:100,Learned from Transit
-924:101,Learned from Hurricane Electric LLC in FMT
-924:101:101,Learned from Hurricane Electric LLC in FMT
-924:103,Learned from VNP Digital Ltd in FMT
-924:101:103,Learned from VNP Digital Ltd in FMT
-924:104,Learned from iFog GmbH in FMT
-924:101:104,Learned from iFog GmbH in FMT
-924:105,Learned from Ohanacraft in FMT
-924:101:105,Learned from Ohanacraft in FMT
-924:201,Learned from Hurricane Electric LLC in YYZ
-924:102:101,Learned from Hurricane Electric LLC in YYZ
-924:202,Learned from GoCodeIT Inc in YYZ
-924:102:102,Learned from GoCodeIT Inc in YYZ
-924:301,Learned from Intergrid Group Pty Ltd in ADL
-924:103:101,Learned from Intergrid Group Pty Ltd in ADL
-924:401,Learned from Hurricane Electric LLC in MCI
-924:104:101,Learned from Hurricane Electric LLC in MCI
-924:402,Learned from GVVME in MCI
-924:104:102,Learned from GVVME in MCI
-924:501,Learned from ZappieHost LLC in AKL
-924:105:101,Learned from ZappieHost LLC in AKL
-924:601,Learned from Hurricane Electric LLC in FFM
-924:106:101,Learned from Hurricane Electric LLC in FFM
-924:602,Learned from iFog GmbH in FFM
-924:106:102,Learned from iFog GmbH in FFM
-924:701,Learned from Hurricane Electric LLC in GEG
-924:107:101,Learned from Hurricane Electric LLC in GEG
-924:702,Learned from ReDoubt Networks in GEG
-924:107:102,Learned from ReDoubt Networks in GEG
-924:90,Learned from Routeserver
-924:90:100,Learned from Routeserver
-924:901,Learned from FREMIX in FMT
-924:901:100,Learned from FREMIX in FMT
-924:902,Learned from SBIX in FMT
-924:902:100,Learned from SBIX in FMT
-924:903,Learned from LAMBDA-IX in FMT
-924:903:100,Learned from LAMBDA-IX in FMT
-924:904,Learned from EVIX in FMT
-924:904:100,Learned from EVIX in FMT
-924:905,Learned from SFMIX in FMT
-924:905:100,Learned from SFMIX in FMT
-924:906,Learned from ONIX in YYZ
-924:906:100,Learned from ONIX in YYZ
-924:907,Learned from NVIX in LAS
-924:907:100,Learned from NVIX in LAS
-924:908,Learned from KCIX in MCI
-924:908:100,Learned from KCIX in MCI
-924:909,Learned from STLIX in MCI
-924:909:100,Learned from STLIX in MCI
-924:910,Learned from HOUIX in MCI
-924:910:100,Learned from HOUIX in MCI
-924:911,Learned from DESMOINESIX in MCI
-924:911:100,Learned from DESMOINESIX in MCI
-924:912,Learned from SIOUX in MCI
-924:912:100,Learned from SIOUX in MCI
-924:913,Learned from SPRINGIX in MCI
-924:913:100,Learned from SPRINGIX in MCI
-924:914,Learned from KlexReX in FFM
-924:914:100,Learned from KlexReX in FFM
-924:915,Learned from FogIXP in FFM
-924:915:100,Learned from FogIXP in FFM
-924:916,Learned from GlobalIXP in SYD
-924:916:100,Learned from GlobalIXP in SYD
-924:80,Learned from Peers
-924:80:100,Learned from Peers
-924:80:101,Learned from Netflix Inc in MCI
-924:80:102,Learned from Amazon in MCI
-924:80:103,Learned from Meta in MCI
-924:80:104,Learned from Yahoo Inc in MCI
-924:80:105,Learned from Cloudflare in MCI
-924:80:106,Learned from Fastly in MCI
-924:80:107,Learned from IONOS in MCI
-924:80:108,Learned from Akamai in MCI
+924:nnn:1,Prepend 1x to Upstream/RS ASN
+924:nnn:2,Prepend 2x to Upstream/RS ASN
+924:nnn:3,Prepend 3x to Upstream/RS ASN
+924:nnn:9,No Export Upstream/RS ASN
+924:90,Origin: Transit
+924:1:90,Origin: Transit
+924:99,Origin: IXP
+924:1:99,Origin: IXP
+924:40,Origin: Peering
+924:1:50,Origin: Downstream
+924:50,Origin: Downstream
+924:1:40,Origin: Peering
+924:190,Origin: Fremont, CA, USA [Transit]
+924:290,Origin: Adelaide, AU [Transit]
+924:390,Origin: Toronto, CA [Transit]
+924:490,Origin: Kansas City, MO, USA [Transit]
+924:590,Origin: Auckland, NZ [Transit]
+924:690,Origin: Liberty Lake, WA, USA [Transit]
+924:790,Origin: Frankfurt, DE [Transit]
+924:100:90,Origin: Fremont, CA, USA [Transit]
+924:200:90,Origin: Adelaide, AU [Transit]
+924:300:90,Origin: Toronto, CA [Transit]
+924:400:90,Origin: Kansas City, MO, USA [Transit]
+924:500:90,Origin: Auckland, NZ [Transit]
+924:600:90,Origin: Liberty Lake, WA, USA [Transit]
+924:700:90,Origin: Frankfurt, DE [Transit]
+924:199,Origin: Fremont, CA, USA [IXP]
+924:299,Origin: Adelaide, AU [IXP]
+924:399,Origin: Toronto, CA [IXP]
+924:499,Origin: Kansas City, MO, USA [IXP]
+924:599,Origin: Auckland, NZ [IXP]
+924:699,Origin: Liberty Lake, WA, USA [IXP]
+924:799,Origin: Frankfurt, DE [IXP]
+924:100:99,Origin: Fremont, CA, USA [IXP]
+924:200:99,Origin: Adelaide, AU [IXP]
+924:300:99,Origin: Toronto, CA [IXP]
+924:400:99,Origin: Kansas City, MO, USA [IXP]
+924:500:99,Origin: Auckland, NZ [IXP]
+924:600:99,Origin: Liberty Lake, WA, USA [IXP]
+924:700:99,Origin: Frankfurt, DE [IXP]
+924:140,Origin: Fremont, CA, USA [Peering]
+924:240,Origin: Adelaide, AU [Peering]
+924:340,Origin: Toronto, CA [Peering]
+924:440,Origin: Kansas City, MO, USA [Peering]
+924:540,Origin: Auckland, NZ [Peering]
+924:640,Origin: Liberty Lake, WA, USA [Peering]
+924:740,Origin: Frankfurt, DE [Peering]
+924:100:40,Origin: Fremont, CA, USA [Peering]
+924:200:40,Origin: Adelaide, AU [Peering]
+924:300:40,Origin: Toronto, CA [Peering]
+924:400:40,Origin: Kansas City, MO, USA [Peering]
+924:500:40,Origin: Auckland, NZ [Peering]
+924:600:40,Origin: Liberty Lake, WA, USA [Peering]
+924:700:40,Origin: Frankfurt, DE [Peering]
+924:150,Origin: Fremont, CA, USA [Downstream]
+924:250,Origin: Adelaide, AU [Downstream]
+924:350,Origin: Toronto, CA [Downstream]
+924:450,Origin: Kansas City, MO, USA [Downstream]
+924:550,Origin: Auckland, NZ [Downstream]
+924:650,Origin: Liberty Lake, WA, USA [Downstream]
+924:750,Origin: Frankfurt, DE [Downstream]
+924:100:50,Origin: Fremont, CA, USA [Downstream]
+924:200:50,Origin: Adelaide, AU [Downstream]
+924:300:50,Origin: Toronto, CA [Downstream]
+924:400:50,Origin: Kansas City, MO, USA [Downstream]
+924:500:50,Origin: Auckland, NZ [Downstream]
+924:600:50,Origin: Liberty Lake, WA, USA [Downstream]
+924:700:50,Origin: Frankfurt, DE [Downstream]
+924:150:nnn,Origin: Fremont, CA, USA [Customer Route]
+924:250:nnn,Origin: Adelaide, AU [Customer Route]
+924:350:nnn,Origin: Toronto, CA [Customer Route]
+924:450:nnn,Origin: Kansas City, MO, USA [Customer Route]
+924:550:nnn,Origin: Auckland, NZ [Customer Route]
+924:650:nnn,Origin: Liberty Lake, WA, USA [Customer Route]
+924:750:nnn,Origin: Frankfurt, DE [Customer Route]
+924:140:nnn,Origin: Fremont, CA, USA [Peering Route]
+924:240:nnn,Origin: Adelaide, AU [Peering Route]
+924:340:nnn,Origin: Toronto, CA [Peering Route]
+924:440:nnn,Origin: Kansas City, MO, USA [Peering Route]
+924:540:nnn,Origin: Auckland, NZ [Peering Route]
+924:640:nnn,Origin: Liberty Lake, WA, USA [Peering Route]
+924:740:nnn,Origin: Frankfurt, DE [Peering Route]
+924:1991,Origin: FREMIX (IXP - Fremont, CA, USA)
+924:101:901,Origin: FREMIX (IXP - Fremont, CA, USA)
+924:1992,Origin: FCIX (IXP - Fremont, CA, USA)
+924:101:902,Origin: FCIX (IXP - Fremont, CA, USA)
+924:1993,Origin: SFMIX (IXP - Fremont, CA, USA)
+924:101:903,Origin: SFMIX (IXP - Fremont, CA, USA)
+924:1994,Origin: EVIX (IXP - Fremont, CA, USA)
+924:101:904,Origin: EVIX (IXP - Fremont, CA, USA)
+924:1995,Origin: SBIX (IXP - Fremont, CA, USA)
+924:101:905,Origin: SBIX (IXP - Fremont, CA, USA)
+924:1996,Origin: LAMBDAIX (IXP - Fremont, CA, USA)
+924:101:906,Origin: LAMBDAIX (IXP - Fremont, CA, USA)
+924:3991,Origin: ONIX (IXP - Toronto, CA)
+924:301:901,Origin: ONIX (IXP - Toronto, CA)
+924:4991,Origin: KCIX (IXP - Kansas City, MO, USA)
+924:401:901,Origin: KCIX (IXP - Kansas City, MO, USA)
+924:4992,Origin: STLIX (IXP - Kansas City, MO, USA)
+924:401:902,Origin: STLIX (IXP - Kansas City, MO, USA)
+924:4993,Origin: HOUIX (IXP - Kansas City, MO, USA)
+924:401:903,Origin: HOUIX (IXP - Kansas City, MO, USA)
+924:4994,Origin: KCIX (IXP - Kansas City, MO, USA)
+924:401:904,Origin: FOGIXP (IXP - Kansas City, MO, USA)
+924:7991,Origin: KLEYREX (IXP - Frankfurt, DE)
+924:701:901,Origin: KLEYREX (IXP - Frankfurt, DE)
+924:7992,Origin: FOGIXP (IXP - Frankfurt, DE)
+924:701:902,Origin: FOGIXP (IXP - Frankfurt, DE)
+924:7993,Origin: LOCIX DUS (IXP - Frankfurt, DE)
+924:701:903,Origin: LOCIX DUS (IXP - Frankfurt, DE)
