@@ -5,49 +5,49 @@
 52025:1005,From upstream provider (transit)
 52025:1006,From upstream provider (peering)
 52025:1007,From downstream
-52025:10:13,Originiated in Taipei, Taiwan
+52025:10:13,Originated in Taipei, Taiwan
 52025:20:13,Learned in Taipei, Taiwan
-52025:10:14,Originiated in Mumbai, India
+52025:10:14,Originated in Mumbai, India
 52025:20:14,Learned in Mumbai, India
-52025:10:15,Originiated in Sao Paulo, Brazil
+52025:10:15,Originated in Sao Paulo, Brazil
 52025:20:15,Learned in Sao Paulo, Brazil
-52025:10:8,Originiated in Santiago, Chile
+52025:10:8,Originated in Santiago, Chile
 52025:20:8,Learned in Santiago, Chile
-52025:10:21,Originiated in Atlanta, United States
+52025:10:21,Originated in Atlanta, United States
 52025:20:21,Learned in Atlanta, United States
-52025:10:22,Originiated in Chicago, United States
+52025:10:22,Originated in Chicago, United States
 52025:20:22,Learned in Chicago, United States
-52025:10:19,Originiated in Manchester, United Kingdom
+52025:10:19,Originated in Manchester, United Kingdom
 52025:20:19,Learned in Manchester, United Kingdom
-52025:10:28,Originiated in Sofia, Bulgaria
+52025:10:28,Originated in Sofia, Bulgaria
 52025:20:28,Learned in Sofia, Bulgaria
-52025:10:4,Originiated in Toronto, Canada
+52025:10:4,Originated in Toronto, Canada
 52025:20:4,Learned in Toronto, Canada
-52025:10:5,Originiated in Amsterdam, Netherlands
+52025:10:5,Originated in Amsterdam, Netherlands
 52025:20:5,Learned in Amsterdam, Netherlands
-52025:10:26,Originiated in Barcelona, Spain
+52025:10:26,Originated in Barcelona, Spain
 52025:20:26,Learned in Barcelona, Spain
-52025:10:3,Originiated in Frankfurt, Germany
+52025:10:3,Originated in Frankfurt, Germany
 52025:20:3,Learned in Frankfurt, Germany
-52025:10:18,Originiated in Zurich, Switzerland
+52025:10:18,Originated in Zurich, Switzerland
 52025:20:18,Learned in Zurich, Switzerland
-52025:10:30,Originiated in Dallas, US
+52025:10:30,Originated in Dallas, US
 52025:20:30,Learned in Dallas, US
-52025:10:24,Originiated in Los Angeles, US
+52025:10:24,Originated in Los Angeles, US
 52025:20:24,Learned in Los Angeles, US
-52025:10:12,Originiated in New York City, United States
+52025:10:12,Originated in New York City, United States
 52025:20:12,Learned in New York City, United States
-52025:10:23,Originiated in Tampa, US
+52025:10:23,Originated in Tampa, US
 52025:20:23,Learned in Tampa, US
-52025:10:9,Originiated in Fremont, United States
+52025:10:9,Originated in Fremont, United States
 52025:20:9,Learned in Fremont, United States
-52025:10:1,Originiated in London, United Kingdom
+52025:10:1,Originated in London, United Kingdom
 52025:20:1,Learned in London, United Kingdom
-52025:10:6,Originiated in Ottawa, Canada
+52025:10:6,Originated in Ottawa, Canada
 52025:20:6,Learned in Ottawa, Canada
-52025:10:25,Originiated in Auckland, NZ
+52025:10:25,Originated in Auckland, NZ
 52025:20:25,Learned in Auckland, NZ
-52025:10:7,Originiated in Kansas City, United States
+52025:10:7,Originated in Kansas City, United States
 52025:20:7,Learned in Kansas City, United States
 52025:30:15,Originating router CHFTP
 52025:40:15,Learned at router CHFTP
