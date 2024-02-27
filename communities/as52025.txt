@@ -5,109 +5,107 @@
 52025:1005,From upstream provider (transit)
 52025:1006,From upstream provider (peering)
 52025:1007,From downstream
+52025:10:26,Originated in Barcelona, Spain
+52025:20:26,Learned in Barcelona, Spain
 52025:10:13,Originated in Taipei, Taiwan
 52025:20:13,Learned in Taipei, Taiwan
-52025:10:14,Originated in Mumbai, India
-52025:20:14,Learned in Mumbai, India
-52025:10:15,Originated in Sao Paulo, Brazil
-52025:20:15,Learned in Sao Paulo, Brazil
-52025:10:8,Originated in Santiago, Chile
-52025:20:8,Learned in Santiago, Chile
+52025:10:24,Originated in Los Angeles, US
+52025:20:24,Learned in Los Angeles, US
+52025:10:1,Originated in London, United Kingdom
+52025:20:1,Learned in London, United Kingdom
+52025:10:5,Originated in Amsterdam, Netherlands
+52025:20:5,Learned in Amsterdam, Netherlands
 52025:10:21,Originated in Atlanta, United States
 52025:20:21,Learned in Atlanta, United States
 52025:10:22,Originated in Chicago, United States
 52025:20:22,Learned in Chicago, United States
+52025:10:8,Originated in Seattle, United States
+52025:20:8,Learned in Seattle, United States
+52025:10:18,Originated in Zurich, Switzerland
+52025:20:18,Learned in Zurich, Switzerland
+52025:10:25,Originated in Auckland, NZ
+52025:20:25,Learned in Auckland, NZ
+52025:10:30,Originated in Dallas, US
+52025:20:30,Learned in Dallas, US
 52025:10:19,Originated in Manchester, United Kingdom
 52025:20:19,Learned in Manchester, United Kingdom
 52025:10:28,Originated in Sofia, Bulgaria
 52025:20:28,Learned in Sofia, Bulgaria
 52025:10:4,Originated in Toronto, Canada
 52025:20:4,Learned in Toronto, Canada
-52025:10:5,Originated in Amsterdam, Netherlands
-52025:20:5,Learned in Amsterdam, Netherlands
-52025:10:26,Originated in Barcelona, Spain
-52025:20:26,Learned in Barcelona, Spain
-52025:10:3,Originated in Frankfurt, Germany
-52025:20:3,Learned in Frankfurt, Germany
-52025:10:18,Originated in Zurich, Switzerland
-52025:20:18,Learned in Zurich, Switzerland
-52025:10:30,Originated in Dallas, US
-52025:20:30,Learned in Dallas, US
-52025:10:24,Originated in Los Angeles, US
-52025:20:24,Learned in Los Angeles, US
-52025:10:12,Originated in New York City, United States
-52025:20:12,Learned in New York City, United States
 52025:10:23,Originated in Tampa, US
 52025:20:23,Learned in Tampa, US
 52025:10:9,Originated in Fremont, United States
 52025:20:9,Learned in Fremont, United States
-52025:10:1,Originated in London, United Kingdom
-52025:20:1,Learned in London, United Kingdom
+52025:10:3,Originated in Frankfurt, Germany
+52025:20:3,Learned in Frankfurt, Germany
 52025:10:6,Originated in Ottawa, Canada
 52025:20:6,Learned in Ottawa, Canada
-52025:10:25,Originated in Auckland, NZ
-52025:20:25,Learned in Auckland, NZ
+52025:10:12,Originated in New York City, United States
+52025:20:12,Learned in New York City, United States
 52025:10:7,Originated in Kansas City, United States
 52025:20:7,Learned in Kansas City, United States
-52025:30:15,Originating router CHFTP
-52025:40:15,Learned at router CHFTP
-52025:30:16,Originating router CONBO
-52025:40:16,Learned at router CONBO
-52025:30:17,Originating router CONSA
-52025:40:17,Learned at router CONSA
-52025:30:22,Originating router CONSC
-52025:40:22,Learned at router CONSC
-52025:30:23,Originating router DRTAT
-52025:40:23,Learned at router DRTAT
-52025:30:24,Originating router DRTCH
-52025:40:24,Learned at router DRTCH
-52025:30:3,Originating router EQXMA
-52025:40:3,Learned at router EQXMA
-52025:30:30,Originating router EQXSO
-52025:40:30,Learned at router EQXSO
-52025:30:5,Originating router EQXTR
-52025:40:5,Learned at router EQXTR
-52025:30:7,Originating router FOGNL
-52025:40:7,Learned at router FOGNL
-52025:30:29,Originating router FOGBC
-52025:40:29,Learned at router FOGBC
-52025:30:6,Originating router FOGDE
-52025:40:6,Learned at router FOGDE
-52025:30:20,Originating router FOGZH
-52025:40:20,Learned at router FOGZH
-52025:30:32,Originating router HIVDA
-52025:40:32,Learned at router HIVDA
-52025:30:25,Originating router HIVLA
-52025:40:25,Learned at router HIVLA
-52025:30:27,Originating router HIVNY
-52025:40:27,Learned at router HIVNY
-52025:30:26,Originating router HIVTP
-52025:40:26,Learned at router HIVTP
-52025:30:11,Originating router HURFM
-52025:40:11,Learned at router HURFM
-52025:30:1,Originating router HYDLH
-52025:40:1,Learned at router HYDLH
-52025:30:8,Originating router OTAYO
-52025:40:8,Learned at router OTAYO
-52025:30:28,Originating router ZAPAK
-52025:40:28,Learned at router ZAPAK
-52025:30:9,Originating router NOCMCA
-52025:40:9,Learned at router NOCMCA
-52025:30:33,Originating router NOCMCB
-52025:40:33,Learned at router NOCMCB
+52025:30:29,Originating router BIT-BCN01
+52025:40:29,Learned at router BIT-BCN01
+52025:30:15,Originating router CHF-TPE01
+52025:40:15,Learned at router CHF-TPE01
+52025:30:25,Originating router COR-LAX01
+52025:40:25,Learned at router COR-LAX01
+52025:30:1,Originating router DOC-LHR01
+52025:40:1,Learned at router DOC-LHR01
+52025:30:7,Originating router DRT-AMS17
+52025:40:7,Learned at router DRT-AMS17
+52025:30:23,Originating router DRT-ATL01
+52025:40:23,Learned at router DRT-ATL01
+52025:30:24,Originating router DRT-CHI01
+52025:40:24,Learned at router DRT-CHI01
+52025:30:22,Originating router DRT-SEA10
+52025:40:22,Learned at router DRT-SEA10
+52025:30:20,Originating router DRT-ZRH01
+52025:40:20,Learned at router DRT-ZRH01
+52025:30:28,Originating router DVC-AKL01
+52025:40:28,Learned at router DVC-AKL01
+52025:30:32,Originating router EQX-DAL01
+52025:40:32,Learned at router EQX-DAL01
+52025:30:3,Originating router EQX-MAN03
+52025:40:3,Learned at router EQX-MAN03
+52025:30:30,Originating router EQX-SOF02
+52025:40:30,Learned at router EQX-SOF02
+52025:30:5,Originating router EQX-YYZ01
+52025:40:5,Learned at router EQX-YYZ01
+52025:30:26,Originating router HIV-TPA01
+52025:40:26,Learned at router HIV-TPA01
+52025:30:11,Originating router HUR-FMT01
+52025:40:11,Learned at router HUR-FMT01
+52025:30:6,Originating router NTT-FRA01
+52025:40:6,Learned at router NTT-FRA01
+52025:30:8,Originating router OTA-YOW01
+52025:40:8,Learned at router OTA-YOW01
+52025:30:4,Originating router QTS-EWR01
+52025:40:4,Learned at router QTS-EWR01
+52025:30:27,Originating router TEL-NYC01
+52025:40:27,Learned at router TEL-NYC01
+52025:30:9,Originating router NOC-MCI01A
+52025:40:9,Learned at router NOC-MCI01A
+52025:30:33,Originating router NOC-MCI01B
+52025:40:33,Learned at router NOC-MCI01B
+52025:30:13,Originating router DRT-SEA10
+52025:40:13,Learned at router DRT-SEA10
 52025:50:nnn,Learned from AS$0
-52025:60:3352,Learned from STUIX
-52025:60:4059,Learned from ONIX
-52025:60:3789,Learned from ERA-IX
-52025:60:3512,Learned from Frys-IX
-52025:60:64,Learned from NL-IX
-52025:60:3756,Learned from FOGIXP
 52025:60:4322,Learned from Barcelona-IX
-52025:60:2084,Learned from LOCIX Frankfurt
-52025:60:2365,Learned from CH-IX
-52025:60:3685,Learned from FREMIX
+52025:60:3352,Learned from STUIX
 52025:60:18,Learned from LINX LON1
 52025:60:53,Learned from LONAP
+52025:60:3789,Learned from ERA-IX
+52025:60:3512,Learned from Frys-IX
+52025:60:3990,Learned from INTERIX
+52025:60:64,Learned from NL-IX
+52025:60:3756,Learned from FOGIXP
+52025:60:2365,Learned from CH-IX
+52025:60:4059,Learned from ONIX
+52025:60:3685,Learned from FREMIX
+52025:60:2084,Learned from LOCIX Frankfurt
+52025:60:123,Learned from KLEYREX
 52025:60:4285,Learned from ACCURIX
 52025:60:249,Learned from KCIX
 52025:60:2835,Learned from HOUIX
@@ -120,30 +118,34 @@
 52025:10x:0,Prepend $0 times to all (max 3)
 52025:104:nnn,Do not announce to AS$0
 52025:10x:nnn,Prepend $0 times to AS$1 (max 3)
-52025:204:3352,Do not announce to STUIX
-52025:20x:3352,Prepend $0x to STUIX (max 3)
-52025:204:4059,Do not announce to ONIX
-52025:20x:4059,Prepend $0x to ONIX (max 3)
-52025:204:3789,Do not announce to ERA-IX
-52025:20x:3789,Prepend $0x to ERA-IX (max 3)
-52025:204:3512,Do not announce to Frys-IX
-52025:20x:3512,Prepend $0x to Frys-IX (max 3)
-52025:204:64,Do not announce to NL-IX
-52025:20x:64,Prepend $0x to NL-IX (max 3)
-52025:204:3756,Do not announce to FOGIXP
-52025:20x:3756,Prepend $0x to FOGIXP (max 3)
 52025:204:4322,Do not announce to Barcelona-IX
 52025:20x:4322,Prepend $0x to Barcelona-IX (max 3)
-52025:204:2084,Do not announce to LOCIX Frankfurt
-52025:20x:2084,Prepend $0x to LOCIX Frankfurt (max 3)
-52025:204:2365,Do not announce to CH-IX
-52025:20x:2365,Prepend $0x to CH-IX (max 3)
-52025:204:3685,Do not announce to FREMIX
-52025:20x:3685,Prepend $0x to FREMIX (max 3)
+52025:204:3352,Do not announce to STUIX
+52025:20x:3352,Prepend $0x to STUIX (max 3)
 52025:204:18,Do not announce to LINX LON1
 52025:20x:18,Prepend $0x to LINX LON1 (max 3)
 52025:204:53,Do not announce to LONAP
 52025:20x:53,Prepend $0x to LONAP (max 3)
+52025:204:3789,Do not announce to ERA-IX
+52025:20x:3789,Prepend $0x to ERA-IX (max 3)
+52025:204:3512,Do not announce to Frys-IX
+52025:20x:3512,Prepend $0x to Frys-IX (max 3)
+52025:204:3990,Do not announce to INTERIX
+52025:20x:3990,Prepend $0x to INTERIX (max 3)
+52025:204:64,Do not announce to NL-IX
+52025:20x:64,Prepend $0x to NL-IX (max 3)
+52025:204:3756,Do not announce to FOGIXP
+52025:20x:3756,Prepend $0x to FOGIXP (max 3)
+52025:204:2365,Do not announce to CH-IX
+52025:20x:2365,Prepend $0x to CH-IX (max 3)
+52025:204:4059,Do not announce to ONIX
+52025:20x:4059,Prepend $0x to ONIX (max 3)
+52025:204:3685,Do not announce to FREMIX
+52025:20x:3685,Prepend $0x to FREMIX (max 3)
+52025:204:2084,Do not announce to LOCIX Frankfurt
+52025:20x:2084,Prepend $0x to LOCIX Frankfurt (max 3)
+52025:204:123,Do not announce to KLEYREX
+52025:20x:123,Prepend $0x to KLEYREX (max 3)
 52025:204:4285,Do not announce to ACCURIX
 52025:20x:4285,Prepend $0x to ACCURIX (max 3)
 52025:204:249,Do not announce to KCIX
