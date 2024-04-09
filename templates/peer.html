@@ -31,10 +31,10 @@
     <tr>
         <td>Capabilities</td>
         <td>
-            <button type="button" class="btn btn-sm btn-outline-{% if data.session.capabilities.as4byte %}success{% else %}danger{% endif %}" data-toggle="tooltip" data-placement="bottom" animation="true" title="4-byte ASN is {% if not data.session.capabilities.as4byte %}not {% endif %} supported">4-byte ASN</button>&nbsp;
-            <button type="button" class="btn btn-sm btn-outline-{% if data.session.capabilities.refresh %}success{% else %}danger{% endif %}" data-toggle="tooltip" data-placement="bottom" animation="true" title="refresh is {% if not data.session.capabilities.refresh %}not {% endif %} supported"">refresh</button>&nbsp;
-            <button type="button" class="btn btn-sm btn-outline-{% if data.session.capabilities.enhanced_refresh %}success{% else %}danger{% endif %}" data-toggle="tooltip" data-placement="bottom" animation="true" title="enhanced refresh is {% if not data.session.capabilities.enhanced_refresh %}not {% endif %} supported">enhanced refresh</button>
-            <button type="button" class="btn btn-sm btn-outline-{% if data.session.capabilities.open_policy == "present" %}success{% else %}danger{% endif %}" data-toggle="tooltip" data-placement="bottom" animation="true" title="BGP Roles are {% if not data.session.capabilities.open_policy == "present" %}not {% endif %} supported">BGP roles</button>
+            <button type="button" class="btn btn-sm btn-outline-{% if data.session.capabilities.as4byte %}success{% else %}danger text-decoration-line-through{% endif %}" data-toggle="tooltip" data-placement="bottom" animation="true" title="4-byte ASN is {% if not data.session.capabilities.as4byte %}not {% endif %} supported">4-byte ASN</button>&nbsp;
+            <button type="button" class="btn btn-sm btn-outline-{% if data.session.capabilities.refresh %}success{% else %}danger text-decoration-line-through{% endif %}" data-toggle="tooltip" data-placement="bottom" animation="true" title="refresh is {% if not data.session.capabilities.refresh %}not {% endif %} supported"">refresh</button>&nbsp;
+            <button type="button" class="btn btn-sm btn-outline-{% if data.session.capabilities.enhanced_refresh %}success{% else %}danger text-decoration-line-through{% endif %}" data-toggle="tooltip" data-placement="bottom" animation="true" title="enhanced refresh is {% if not data.session.capabilities.enhanced_refresh %}not {% endif %} supported">enhanced refresh</button>
+            <button type="button" class="btn btn-sm btn-outline-{% if data.session.capabilities.open_policy == "present" %}success{% else %}danger text-decoration-line-through{% endif %}" data-toggle="tooltip" data-placement="bottom" animation="true" title="BGP Roles are {% if not data.session.capabilities.open_policy == "present" %}not {% endif %} supported">BGP roles</button>
         </td>
     </tr>
     {% if data.session.capabilities["open_policy"] == "present" %}
