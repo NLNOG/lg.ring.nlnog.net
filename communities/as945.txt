@@ -1,7 +1,6 @@
 # https://rr.bgp.co/v1/whois/?q=AS945
 945:30019,Do not announce to 1299
 945:30029,Do not announce to 6939
-945:30039,Do not announce to 32097
 945:30049,Do not announce to 174
 945:30069,Do not announce to 7018
 945:30079,Do not announce to 3491
