@@ -1,8 +1,9 @@
 # AS3399 communities provided by noc@obe.net
 #
 3399:100,Transit route
+3399:102,Learned from NTT
 3399:103,Learned from GTT
-3399:105,Learned from Lumen
+3399:106,Learned from Cogent
 #
 # Exchanges
 #
@@ -16,13 +17,14 @@
 3399:208,Learned from SOLIX
 3399:209,Learned from AMS-IX
 3399:210,Learned from FIXO
-3399:211,Learned from IXOR
 3399:212,Learned from DATA-IX Stockholm
 3399:213,Learned from STHIX Sundsvall
 3399:214,Learned from Equinix SK
 3399:215,Learned from Netnod Gothenburg
 3399:216,Learned from Netnod Sundsvall
 3399:217,Learned from SONIX Gothenburg
+3399:218,Learned from SONIX Malmo
+3399:219,Learned from ERA-IX
 #
 3399:300,Customer route
 #
@@ -50,8 +52,8 @@
 3399:703,Learned from PoP Stokab KN5
 3399:704,Learned from PoP Stokab KN6
 3399:705,Learned from PoP Stokab KN7
-3399:706,Learned from PoP Interxion Stockholm
-3399:707,Learned from PoP Interxion Copenhagen
+3399:706,Learned from PoP Digital Realty Stockholm
+3399:707,Learned from PoP Digital Realty Copenhagen
 3399:708,Learned from PoP Servanet
 3399:709,Learned from PoP OS-IX
 3399:710,Learned from PoP GothNet
