@@ -1,0 +1,7 @@
+# NyaNet communities (contact: nlnog[at]nyanet[dot]ru or peering[at]nyanet[dot]ru)
+200993:643:56630,Bypass your subnet to Melbicom RU peering (IPv4/v6 supported)
+200993:643:50340,Bypass your subnet to Selectel RU peering (IPv6-only supported)
+200993:752:20473,Bypass your subnet to Vultr SE peering (IPv4/v6 supported)
+200993:392:20473,Bypass your subnet to Vultr JP peering (IPv4/v6 supported)
+200993:208:199545,Bypass your subnet to Stacket Group DK peering (IPv4/v6 supported)
+200993:752:199580,Bypass your subnet to private DK peering (IPv4/v6 supported)
