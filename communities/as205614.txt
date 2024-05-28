@@ -1,7 +1,4 @@
 # Contact noc@medialine.ag for any questions.
-## Well-Known
-65535:0,Graceful shutdown
-65535:666,Blackhole
 ## Source
 205614:100:10x,Source
 205614:100:101,Internal
