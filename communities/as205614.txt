@@ -1,0 +1,17 @@
+# Contact noc@medialine.ag for any questions.
+## Well-Known
+65535:0,Graceful shutdown
+65535:666,Blackhole
+## Source
+205614:100:10x,Source
+205614:100:101,Internal
+205614:100:102,Downstream
+205614:100:103,Upstream
+205614:100:104,Peering
+205614:100:105,PNI
+## Location
+205614:105:nnn,Location
+205614:105:111,ITENOS Frankfurt 1
+205614:105:112,Telehouse Frankfurt
+205614:105:113,Equinix FR2
+205614:105:121,Medialine Bad Sobernheim
