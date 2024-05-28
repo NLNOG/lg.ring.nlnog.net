@@ -7,7 +7,6 @@
 205614:100:104,Peering
 205614:100:105,PNI
 ## Location
-205614:105:nnn,Location
 205614:105:111,ITENOS Frankfurt 1
 205614:105:112,Telehouse Frankfurt
 205614:105:113,Equinix FR2
