@@ -7,6 +7,7 @@
 
  Code contributions:
   * Filip Hruška
+  * Martin Pels
 
  Source code: https://github/com/NLNOG/nlnog-lg
 
@@ -32,6 +33,8 @@ import re
 import bz2
 import glob
 import json
+import time
+import yaml
 import random
 import string
 import sqlite3
@@ -44,7 +47,9 @@ from datetime import datetime, timezone, timedelta
 import pydot
 import netaddr
 import requests
-from flask import Flask, abort, jsonify, render_template, request, escape, Response, make_response
+from commparser import BGPCommunityParser
+from markupsafe import escape
+from flask import Flask, abort, jsonify, render_template, request, Response, make_response
 from dns.resolver import Resolver, NXDOMAIN, Timeout, NoAnswer, NoNameservers
 
 parser = argparse.ArgumentParser()
@@ -111,20 +116,46 @@ def read_communities() -> dict:
     """ Read the list of community definitions from communities/*.txt and translate them
         into a dictionary containing community lists for exact matches, ranges and regexps.
     """
-    communitylist = {
-        "regular": {"exact": {}, "re": [], "range": [], "raw": {}},
-        "large": {"exact": {}, "re": [], "range": [], "raw": {}},
-        "extended": {"exact": {}, "re": [], "range": [], "raw": {}},
-    }
+    start = time.time()
+    communitylist = {}
     re_range = re.compile(r"^(\d+)\-(\d+)$")
     re_regular_exact = re.compile(r"^\d+:\d+$")
     re_large_exact = re.compile(r"^\d+:\d+:\d+$")
     re_extended_exact = re.compile(r"^\w+ \w+(:\w+)$")
 
+    print("reading communities")
+    if app.config.get("COMMUNITY_FILE", ""):
+        with open(app.config["COMMUNITY_FILE"], "r") as fh:
+            try:
+                commlist = yaml.safe_load(fh)
+                sources = commlist.get("sources", {})
+                for asn in sources:
+                    if type(sources[asn]) == str:
+                        sources[asn] = [sources[asn]]
+                    commparser = BGPCommunityParser()
+                    for url in sources[asn]:
+                        commparser.load_source(url)
+                    communitylist[asn] = {
+                        "obj": commparser,
+                        "regular": {"exact": {}, "re": [], "range": [], "raw": {}},
+                        "large": {"exact": {}, "re": [], "range": [], "raw": {}},
+                        "extended": {"exact": {}, "re": [], "range": [], "raw": {}},
+                    }
+            except Exception as err:
+                print(f"Failed to parse community URL file: {err}")
+
     currentdir = os.path.dirname(os.path.realpath(__file__))
     files = glob.glob(f"{currentdir}/communities/*.txt")
     for filename in files:
         with open(filename, "r", encoding="utf8") as filehandle:
+            asn = filename.split("/")[-1].replace(".txt", "")
+            if asn not in communitylist:
+                communitylist[asn] = {
+                    "obj": None,
+                    "regular": {"exact": {}, "re": [], "range": [], "raw": {}},
+                    "large": {"exact": {}, "re": [], "range": [], "raw": {}},
+                    "extended": {"exact": {}, "re": [], "range": [], "raw": {}},
+                }
             for entry in [line.strip() for line in filehandle.readlines()]:
                 if entry.startswith("#") or "," not in entry:
                     continue
@@ -138,8 +169,8 @@ def read_communities() -> dict:
                    (ctype == "large" and re_large_exact.match(comm)) or \
                    (ctype == "extended" and re_extended_exact.match(comm)):
                     # exact community, no ranges or wildcards
-                    communitylist[ctype]["exact"][comm] = desc
-                    communitylist[ctype]["raw"][comm] = desc
+                    communitylist[asn][ctype]["exact"][comm] = desc
+                    communitylist[asn][ctype]["raw"][comm] = desc
                 else:
                     # funky notations:
                     # nnn -> any number
@@ -157,11 +188,12 @@ def read_communities() -> dict:
                         if first > last:
                             print(f"Bad range for as {comm}, {first} should be less than {last}")
                             continue
-                        communitylist[ctype]["range"].append((first, last, desc))
+                        communitylist[asn][ctype]["range"].append((first, last, desc))
                     if regex:
-                        communitylist[ctype]["re"].append((regex, desc))
-                        communitylist[ctype]["raw"][comm] = desc
+                        communitylist[asn][ctype]["re"].append((regex, desc))
+                        communitylist[asn][ctype]["raw"][comm] = desc
 
+    print(f"read communities in {time.time() - start} sec")
     return communitylist
 
 
@@ -170,23 +202,38 @@ def get_community_descr_from_list(community: str, communitylist: dict) -> str:
     """
 
     community = community.strip()
+    asn = f"as{community.split(':')[0]}"
     ctype = get_community_type(community)
+
     if ctype == "unknown":
         print(f"Unknown community requested: {community}")
         return ""
 
+    if asn not in communitylist.keys():
+        # no AS specific things found, let's check wellknown
+        if community in communitylist["well-known"][ctype]:
+            return communitylist["well-known"][ctype][community]
+        else:
+            return ""
+
+    # look if the bgpparser object can handle it
+    if communitylist[asn]["obj"]:
+        commdesc = communitylist[asn]["obj"].parse_community(community)
+        if commdesc:
+            return commdesc
+
     # first try to find an exact match
-    if community in communitylist[ctype]["exact"]:
-        return communitylist[ctype]["exact"][community]
+    if community in communitylist[asn][ctype]["exact"]:
+        return communitylist[asn][ctype]["exact"][community]
 
     # try if it matches a range
     # TODO FIX THIS, we don't know where to apply the range here!
-    for (start, end, desc) in communitylist[ctype]["range"]:
+    for (start, end, desc) in communitylist[asn][ctype]["range"]:
         if start <= int(community) <= end:
             return desc
 
     # try a regexp instead
-    for (regex, desc) in communitylist[ctype]["re"]:
+    for (regex, desc) in communitylist[asn][ctype]["re"]:
         match = regex.match(community)
         if match:
             for count, group in enumerate(match.groups()):
@@ -218,7 +265,7 @@ def get_asn_name(asn: str):
     resolver = Resolver()
     resolver.search = ""
     try:
-        query = resolver.query(f"AS{asn}.asn.cymru.com", "TXT")
+        query = resolver.resolve(f"AS{asn}.asn.cymru.com", "TXT")
         asname = query.rrset[0].to_text().split("|")[-1][:-1].strip()
         asnlist[asn] = asname
         return asname
@@ -510,7 +557,7 @@ def get_ringnodes():
         nodes = {}
         for node in data["results"]["nodes"]:
             if node["asn"] not in nodes:
-                nodes[node["asn"]] = {node["hostname"].replace(".ring.nlnog.net", "") : node}
+                nodes[node["asn"]] = {node["hostname"].replace(".ring.nlnog.net", ""): node}
             else:
                 nodes[node["asn"]][node["hostname"].replace(".ring.nlnog.net", "")] = node
         return nodes
@@ -558,7 +605,8 @@ def show_peer_details(peer: str):
     peers = get_peer_info(names_only=True, established_only=True)
     if len(peers) == 0:
         return render_template("error.html", warning=["No data received from the NLNOG Ring API endpoint."])
-    return render_template('peer.html', peer=peer, peers=peers, data=result["neighbors"][0], errors=errors, ringnodes=ringnodes.get(remote_as, {}))
+    return render_template('peer.html', peer=peer, peers=peers, data=result["neighbors"][0],
+                           errors=errors, ringnodes=ringnodes.get(remote_as, {}))
 
 
 @app.route("/prefix")
@@ -648,7 +696,6 @@ def show_route_for_prefix(prefix=None, netmask=None):
         return render_template("error.html", warning=["No data received from the NLNOG LG API endpoint."])
 
     ringnodes = get_ringnodes()
-    communitylist = read_communities()
 
     create_date = None
     if result.get("created", False):
@@ -672,11 +719,11 @@ def show_route_for_prefix(prefix=None, netmask=None):
                 "aspath": [(r, get_asn_name(r)) for r in route["aspath"].split(" ")],
                 "origin": route["origin"],
                 "source": route["source"],
-                "communities": [(c, get_community_descr_from_list(c.strip(), communitylist))
+                "communities": [(c, get_community_descr_from_list(c.strip(), app.communitylist))
                                 for c in route.get("communities", [])],
-                "extended_communities": [(c, get_community_descr_from_list(c.strip(), communitylist))
+                "extended_communities": [(c, get_community_descr_from_list(c.strip(), app.communitylist))
                                          for c in route.get("extended_communities", [])],
-                "large_communities": [(c, get_community_descr_from_list(c.strip(), communitylist))
+                "large_communities": [(c, get_community_descr_from_list(c.strip(), app.communitylist))
                                       for c in route.get("large_communities", [])],
                 "valid": route["valid"],
                 "ovs": route["ovs"],
@@ -852,4 +899,5 @@ def whois():
 
 
 if __name__ == "__main__":
+    app.communitylist = read_communities()
     app.run(app.config.get("BIND_IP", "0.0.0.0"), app.config.get("BIND_PORT", 5000))
