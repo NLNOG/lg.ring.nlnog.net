@@ -64,6 +64,9 @@ app.debug = arguments.debug
 app.version = "0.2.1"
 asnlist = {}
 
+class Datastore:
+    communitylist = {}
+
 
 class LGException(Exception):
     """ Custom exception
@@ -117,7 +120,7 @@ def read_communities() -> dict:
         into a dictionary containing community lists for exact matches, ranges and regexps.
     """
     start = time.time()
-    communitylist = {}
+    clist = {}
     re_range = re.compile(r"^(\d+)\-(\d+)$")
     re_regular_exact = re.compile(r"^\d+:\d+$")
     re_large_exact = re.compile(r"^\d+:\d+:\d+$")
@@ -135,7 +138,7 @@ def read_communities() -> dict:
                     commparser = BGPCommunityParser()
                     for url in sources[asn]:
                         commparser.load_source(url)
-                    communitylist[asn] = {
+                    clist[asn] = {
                         "obj": commparser,
                         "regular": {"exact": {}, "re": [], "range": [], "raw": {}},
                         "large": {"exact": {}, "re": [], "range": [], "raw": {}},
@@ -149,8 +152,8 @@ def read_communities() -> dict:
     for filename in files:
         with open(filename, "r", encoding="utf8") as filehandle:
             asn = filename.split("/")[-1].replace(".txt", "")
-            if asn not in communitylist:
-                communitylist[asn] = {
+            if asn not in clist:
+                clist[asn] = {
                     "obj": None,
                     "regular": {"exact": {}, "re": [], "range": [], "raw": {}},
                     "large": {"exact": {}, "re": [], "range": [], "raw": {}},
@@ -169,8 +172,8 @@ def read_communities() -> dict:
                    (ctype == "large" and re_large_exact.match(comm)) or \
                    (ctype == "extended" and re_extended_exact.match(comm)):
                     # exact community, no ranges or wildcards
-                    communitylist[asn][ctype]["exact"][comm] = desc
-                    communitylist[asn][ctype]["raw"][comm] = desc
+                    clist[asn][ctype]["exact"][comm] = desc
+                    clist[asn][ctype]["raw"][comm] = desc
                 else:
                     # funky notations:
                     # nnn -> any number
@@ -188,16 +191,16 @@ def read_communities() -> dict:
                         if first > last:
                             print(f"Bad range for as {comm}, {first} should be less than {last}")
                             continue
-                        communitylist[asn][ctype]["range"].append((first, last, desc))
+                        clist[asn][ctype]["range"].append((first, last, desc))
                     if regex:
-                        communitylist[asn][ctype]["re"].append((regex, desc))
-                        communitylist[asn][ctype]["raw"][comm] = desc
+                        clist[asn][ctype]["re"].append((regex, desc))
+                        clist[asn][ctype]["raw"][comm] = desc
 
     print(f"read communities in {time.time() - start} sec")
-    return communitylist
+    return clist
 
 
-def get_community_descr_from_list(community: str, communitylist: dict) -> str:
+def get_community_descr_from_list(community: str) -> str:
     """Given a community try to figure out if we can match it to something in the list
     """
 
@@ -209,31 +212,31 @@ def get_community_descr_from_list(community: str, communitylist: dict) -> str:
         print(f"Unknown community requested: {community}")
         return ""
 
-    if asn not in communitylist.keys():
+    if asn not in data.communitylist.keys():
         # no AS specific things found, let's check wellknown
-        if community in communitylist["well-known"][ctype]:
-            return communitylist["well-known"][ctype][community]
+        if community in data.communitylist["well-known"][ctype]:
+            return data.communitylist["well-known"][ctype][community]
         else:
             return ""
 
     # look if the bgpparser object can handle it
-    if communitylist[asn]["obj"]:
-        commdesc = communitylist[asn]["obj"].parse_community(community)
+    if data.communitylist[asn]["obj"]:
+        commdesc = data.communitylist[asn]["obj"].parse_community(community)
         if commdesc:
             return commdesc
 
     # first try to find an exact match
-    if community in communitylist[asn][ctype]["exact"]:
-        return communitylist[asn][ctype]["exact"][community]
+    if community in data.communitylist[asn][ctype]["exact"]:
+        return data.communitylist[asn][ctype]["exact"][community]
 
     # try if it matches a range
     # TODO FIX THIS, we don't know where to apply the range here!
-    for (start, end, desc) in communitylist[asn][ctype]["range"]:
+    for (start, end, desc) in data.communitylist[asn][ctype]["range"]:
         if start <= int(community) <= end:
             return desc
 
     # try a regexp instead
-    for (regex, desc) in communitylist[asn][ctype]["re"]:
+    for (regex, desc) in data.communitylist[asn][ctype]["re"]:
         match = regex.match(community)
         if match:
             for count, group in enumerate(match.groups()):
@@ -719,11 +722,11 @@ def show_route_for_prefix(prefix=None, netmask=None):
                 "aspath": [(r, get_asn_name(r)) for r in route["aspath"].split(" ")],
                 "origin": route["origin"],
                 "source": route["source"],
-                "communities": [(c, get_community_descr_from_list(c.strip(), app.communitylist))
+                "communities": [(c, get_community_descr_from_list(c.strip()))
                                 for c in route.get("communities", [])],
-                "extended_communities": [(c, get_community_descr_from_list(c.strip(), app.communitylist))
+                "extended_communities": [(c, get_community_descr_from_list(c.strip()))
                                          for c in route.get("extended_communities", [])],
-                "large_communities": [(c, get_community_descr_from_list(c.strip(), app.communitylist))
+                "large_communities": [(c, get_community_descr_from_list(c.strip()))
                                       for c in route.get("large_communities", [])],
                 "valid": route["valid"],
                 "ovs": route["ovs"],
@@ -897,7 +900,8 @@ def whois():
     # we return JSON data which is rendered in the front end
     return jsonify(output=output, title=query)
 
+data = Datastore()
+data.communitylist = read_communities()
 
 if __name__ == "__main__":
-    app.communitylist = read_communities()
     app.run(app.config.get("BIND_IP", "0.0.0.0"), app.config.get("BIND_PORT", 5000))
