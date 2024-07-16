@@ -64,6 +64,7 @@ app.debug = arguments.debug
 app.version = "0.2.1"
 asnlist = {}
 
+
 class Datastore:
     communitylist = {}
 
@@ -900,8 +901,10 @@ def whois():
     # we return JSON data which is rendered in the front end
     return jsonify(output=output, title=query)
 
+
 data = Datastore()
 data.communitylist = read_communities()
+
 
 if __name__ == "__main__":
     app.run(app.config.get("BIND_IP", "0.0.0.0"), app.config.get("BIND_PORT", 5000))
