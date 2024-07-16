@@ -49,7 +49,7 @@ import netaddr
 import requests
 from commparser import BGPCommunityParser
 from markupsafe import escape
-from flask import Flask, abort, jsonify, render_template, request, Response, make_response
+from flask import Flask, abort, jsonify, render_template, request, Response, make_response, send_from_directory
 from dns.resolver import Resolver, NXDOMAIN, Timeout, NoAnswer, NoNameservers
 
 parser = argparse.ArgumentParser()
@@ -901,6 +901,12 @@ def whois():
     # we return JSON data which is rendered in the front end
     return jsonify(output=output, title=query)
 
+
+@app.route("/robots.txt")
+def robots():
+    """ handle robots.txt
+    """
+    return send_from_directory(app.static_folder, "robots.txt")
 
 data = Datastore()
 data.communitylist = read_communities()
