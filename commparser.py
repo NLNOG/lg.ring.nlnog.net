@@ -291,4 +291,4 @@ class BGPCommunityParser:
                     output_fields.append(f'{field["name"]}={fieldvals[offset + fid]}')
             output_sections.append(",".join(output_fields))
 
-        return f"{asn}:{'':'.join(output_sections)}"
+        return f"{asn}:{':'.join(output_sections)}"
