@@ -116,6 +116,28 @@ def get_community_type(community: str) -> str:
     return "unknown"
 
 
+def fix_extended_community(community: str) -> str:
+    """ rewrite the extended community from the format openbgpd uses to the rfc format
+        see IANA_EXT_COMMUNITIES in bgpd.h source of openbgpd source code
+    """
+
+    replacemap = {
+        "rt": "0x02:0x02",
+        "soo": "0x02:0x03",
+        "odi": "0x02:0x05",
+        "bdc": "0x02:0x08",
+        "srcas": "0x02:0x09",
+        "l2vid": "0x02:0x0a",
+    }
+
+    if " " not in community:
+        return community
+    csplit = community.split(" ")
+    if csplit[0] in replacemap:
+        return f"{replacemap[csplit[0]]}:{csplit[1]}"
+    return community
+
+
 def read_communities() -> dict:
     """ Read the list of community definitions from communities/*.txt and translate them
         into a dictionary containing community lists for exact matches, ranges and regexps.
@@ -206,8 +228,13 @@ def get_community_descr_from_list(community: str) -> str:
     """
 
     community = community.strip()
-    asn = f"as{community.split(':')[0]}"
     ctype = get_community_type(community)
+
+    if ctype == "extended":
+        asn = "as" + community.split(" ")[1].split(":")[0]
+        community = fix_extended_community(community)
+    else:
+        asn = f"as{community.split(':')[0]}"
 
     if ctype == "unknown":
         print(f"Unknown community requested: {community}")
@@ -907,6 +934,7 @@ def robots():
     """ handle robots.txt
     """
     return send_from_directory(app.static_folder, "robots.txt")
+
 
 data = Datastore()
 data.communitylist = read_communities()
