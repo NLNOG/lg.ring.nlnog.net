@@ -12,7 +12,7 @@
  Source code: https://github/com/NLNOG/nlnog-lg
 
 
- Copyright (c) 2022 Stichting NLNOG <stichting@nlnog.net>
+ Copyright (c) 2022-2024 Stichting NLNOG <stichting@nlnog.net>
 
  Permission to use, copy, modify, and distribute this software for any
  purpose with or without fee is hereby granted, provided that the above

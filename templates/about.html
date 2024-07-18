@@ -19,7 +19,12 @@ You can contact them for questions, reporting issues or setting up new BGP sessi
 </p>
 <h3>Known BGP Communities</h3>
 <p>
-This Looking Glass uses a collection of known BGP communities to provide additional information on routes received. A list of ASNs for which communities are known can be found <a href="https://github.com/NLNOG/lg.ring.nlnog.net/tree/main/communities">here</a>.</p>
+This Looking Glass uses a collection of known BGP communities to provide additional information on routes received. We offer two ways of defining communities for an ASN:
+<ul>
+    <li>host a <a href="https://datatracker.ietf.org/doc/draft-ietf-grow-yang-bgp-communities/">draft-ietf-grow-yang-bgp-communities</a> style file describing the communities for an ASN</li>
+    <li>provide a file with our (older) way of describing communities for an ASN</li>
+</ul>
+The current list of URLs we query for draft-iets-grow-yang-bgp-communities style communitiy descriptions can be found in <a href="https://github.com/NLNOG/lg.ring.nlnog.net/blob/main/community_urls.yml">community_urls.yml</a>. A list of ASNs for which old style community definities are available can be found <a href="https://github.com/NLNOG/lg.ring.nlnog.net/tree/main/communities">here</a>.</p>
 <p>New community descriptions and updates can be added sending a pull request on the <a href="https://github.com/NLNOG/lg.ring.nlnog.net/">Github repostory</a>, which also provides information on the file format. For any questions, feel free to contact the <a href=""mailto:ring-admins@nlnog.net">ring-admins@nlnog.net</a>.
 <p>
 <h3>Peering with the Looking Glass</h3>
@@ -41,7 +46,8 @@ Hosting of this Looking Glass is generously sponsored by <a href="https://bit.nl
 <h3>Changelog</h3>
 Here's a very incomplete list of some of the changes to this looking glass:
 <pre>
-    2024-07-09  - added support for draft-ietf-grow-yang-bgp-communities style communities
+
+    2024-07-09  - added support for <a href="https://datatracker.ietf.org/doc/draft-ietf-grow-yang-bgp-communities/"></a>draft-ietf-grow-yang-bgp-communities</a> style communities
                 - total rework of the community lookup code
 
     2024-04-09  - show BGP peer role negotiation details
