@@ -262,9 +262,6 @@ class BGPCommunityParser:
         """
         output_sections = []
         output_fields = []
-        for attr in ("globaladmin", "asn", "asn4"):
-            if attr in candidate:
-                asn = candidate[attr]
         if "localadmin" in candidate:
             for fid, field in enumerate(candidate["localadmin"]["fields"]):
                 if "description" in field:
@@ -291,4 +288,4 @@ class BGPCommunityParser:
                     output_fields.append(f'{field["name"]}={fieldvals[offset + fid]}')
             output_sections.append(",".join(output_fields))
 
-        return f"{asn}:{':'.join(output_sections)}"
+        return f"{':'.join(output_sections)}"
