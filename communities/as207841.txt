@@ -1,29 +1,40 @@
 # https://inferno.net.uk/communities.txt
-# Last updated: 2024-02-27
+# Last updated: 2024-09-02
 
-# Exchanges
+# Sources
 207841:0:1000,From IX
 207841:0:1001,From IX peer
 207841:0:1002,From IX route server
 207841:0:1003,From upstream provider
 207841:0:1004,From self
 207841:0:1005,From downstream
+207841:0:2000,From CP
 
 # Locations
 207841:10:1,Originated in London, UK
 207841:20:1,Learned in London, UK
+
 207841:10:2,Originated in Cardiff, Wales, UK
 207841:20:2,Learned in Cardiff, Wales, UK
 
 # Sources
 207841:30:1,Originated to LINX LON1
 207841:40:1,Learned from LINX LON1
+
 207841:30:2,Originated to LONAP
 207841:40:2,Learned from LONAP
+
 207841:30:3,Originated to HE
 207841:40:3,Learned from HE
-207841:30:3,Originated to UTRS
-207841:40:3,Learned from UTRS
+
+207841:30:4,Originated to UTRS
+207841:40:4,Learned from UTRS
+
+207841:30:5,Originated to Cogent
+207841:40:5,Learned from Cogent
+
+207841:30:6,Originated to GSL
+207841:40:6,Learned from GSL
 
 # Blackhole
 207841:0:666,Blackhole
