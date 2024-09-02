@@ -1,13 +1,14 @@
 # https://inferno.net.uk/communities.txt
 # Last updated: 2024-09-02
 
-# Exchanges
+# Sources
 207841:0:1000,From IX
 207841:0:1001,From IX peer
 207841:0:1002,From IX route server
 207841:0:1003,From upstream provider
 207841:0:1004,From self
 207841:0:1005,From downstream
+207841:0:2000,From CP
 
 # Locations
 207841:10:1,Originated in London, UK
