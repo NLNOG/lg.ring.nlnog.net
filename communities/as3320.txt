@@ -14,12 +14,12 @@
 3320:2030,route received in PacRim
 3320:1113:0,route received in PacRim
 
-3320:9010,route received by customer
-3320:1101:0,route received by customer
-3320:9020,route received by peer
-3320:1102:0,route received by peer
-3320:9030,route received by upstream
-3320:1103:0,route received by upstream
+3320:9010,imported from a customer
+3320:1101:0,imported from a customer
+3320:9020,imported from a peer
+3320:1102:0,imported from a peer
+3320:9030,imported from an upstream provider
+3320:1103:0,imported from an upstream provider
 
 65012:65001,prepend AS3320 twice on export to peer
 65013:65001,prepend AS3320 thrice on export to peer
