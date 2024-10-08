@@ -1,0 +1,71 @@
+# AS57777 Communities
+#
+# Available from: https://as57777.net/communities/57777.txt
+#
+# More details about AS57777: https://massars.net/details/
+
+#####################################################################
+# 0 = No Export
+#####################################################################
+0:nnn,No export for AS$0
+57777:0:0,No export
+57777:0:nnn,No export for AS$0
+
+#####################################################################
+# 1 = Informational
+#####################################################################
+57777:1:1,IRR Peer Valid Prefix
+57777:1:2,IRR Peer Unknown Prefix
+57777:1:11,IRR Origin Valid Prefix
+57777:1:12,IRR Origin Unknown Prefix
+57777:1:21,RPKI ROA Valid
+57777:1:22,RPKI ROA Unknown
+57777:1:30,Whitelisted
+57777:1:40,From Peer
+57777:1:50,De-Preferenced
+57777:1:60,No Export
+57777:1:62,Do Export
+57777:1:71,From RouteServer
+57777:1:72,From Downstream
+57777:1:73,From Transit
+57777:1:74,From Peer
+57777:1:75,From LookingGlass
+57777:1:80,Minimal Routes
+
+#####################################################################
+# 3 = Downstream
+#####################################################################
+57777:3:nnn,From downstream AS$0
+
+#####################################################################
+# 6 = Filtering
+# Normally one would not see filtered prefixes outside of AS57777
+#####################################################################
+57777:6:1,Drop ASN
+57777:6:2,ASN Path Too Long
+57777:6:3,Bogon ASN
+57777:6:4,Martian Prefix
+57777:6:5,Our Prefix (AS57777)
+57777:6:6,Wrong Length
+57777:6:7,RPKI ROA Invalid
+57777:6:8,Wrong Peer ASN
+57777:6:9,IXP Prefix
+57777:6:10,Communities Exceeded
+57777:6:11,IRR Peer Mismatch
+57777:6:12,IRR Origin Mismatch
+57777:6:13,Drop Prefix
+57777:6:14,Reject Tier1
+
+#####################################################################
+# 8 = Via (Location / IX)
+#####################################################################
+57777:8:0,Private Network Interconnect (PNI)
+
+# IX locations indicated with https://www.peeringdb.com/ix/<number>
+57777:8:31,DEC-IX Frankfurt
+57777:8:60,Swiss-IX
+57777:8:2013,CommunityIX.ch
+57777:8:2365,CHIX
+57777:8:3570,Free-IX
+
+# EOF
