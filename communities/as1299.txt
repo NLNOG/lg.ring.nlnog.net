@@ -48,3 +48,387 @@
 1299:30870,Zagreb (HR)
 1299:35xxx,North American Customers
 1299:37xxx,Asia & Pacific Customers
+1299:20000,EU Peers
+1299:25000,North American Peers
+1299:27000,Asia+Pacific Peers
+1299:30000,EU Customers
+1299:35000,North American Customers
+1299:37000,Asia+Pacific Customers
+1299:30100,Copenhagen (Customer)
+1299:20100,Copenhagen (Peer)
+1299:30110,Gothenburg (Customer)
+1299:20110,Gothenburg (Peer)
+1299:30200,Stockholm (Customer)
+1299:20200,Stockholm (Peer)
+1299:30210,Kaunas vls Vilnius (Customer)
+1299:20210,Kaunas vls Vilnius (Peer)
+1299:30220,Oslo (Customer)
+1299:20220,Oslo (Peer)
+1299:30230,Helsinki (Customer)
+1299:20230,Helsinki (Peer)
+1299:30240,Tallinn (Customer)
+1299:20240,Tallinn (Peer)
+1299:30250,Moscow (Customer)
+1299:20250,Moscow (Peer)
+1299:30260,St Petersburg (Customer)
+1299:20260,St Petersburg (Peer)
+1299:30270,Riga (Customer)
+1299:20270,Riga (Peer)
+1299:30300,Hamburg (Customer)
+1299:20300,Hamburg (Peer)
+1299:30310,Berlin (Customer)
+1299:20310,Berlin (Peer)
+1299:30320,Warsaw pzn Poznan (Customer)
+1299:20320,Warsaw pzn Poznan (Peer)
+1299:30330,Kiev (Customer)
+1299:20330,Kiev (Peer)
+1299:30340,Kristiansand (Customer)
+1299:20340,Kristiansand (Peer)
+1299:30400,Paris (Customer)
+1299:20400,Paris (Peer)
+1299:30410,Marseille (Customer)
+1299:20410,Marseille (Peer)
+1299:30420,Lyon (Customer)
+1299:20420,Lyon (Peer)
+1299:30430,Madrid (Customer)
+1299:20430,Madrid (Peer)
+1299:30440,Barcelona (Customer)
+1299:20440,Barcelona (Peer)
+1299:30450,Valencia (Customer)
+1299:20450,Valencia (Peer)
+1299:30500,Amsterdam (Customer)
+1299:20500,Amsterdam (Peer)
+1299:30510,Rotterdam (Customer)
+1299:20510,Rotterdam (Peer)
+1299:30520,Brussels (Customer)
+1299:20520,Brussels (Peer)
+1299:30600,London/Slough (Customer)
+1299:20600,London/Slough (Peer)
+1299:30620,Dublin (Customer)
+1299:20620,Dublin (Peer)
+1299:30700,Frankfurt nug Nürnberg (Customer)
+1299:20700,Frankfurt nug Nürnberg (Peer)
+1299:30710,Düsseldorf (Customer)
+1299:20710,Düsseldorf (Peer)
+1299:30720,Munich (Customer)
+1299:20720,Munich (Peer)
+1299:30730,Milan (Customer)
+1299:20730,Milan (Peer)
+1299:30740,Zurich (Customer)
+1299:20740,Zurich (Peer)
+1299:30750,Stuttgart (Customer)
+1299:20750,Stuttgart (Peer)
+1299:30760,Cologne (Customer)
+1299:20760,Cologne (Peer)
+1299:30770,Rome (Customer)
+1299:20770,Rome (Peer)
+1299:30780,Geneva (Customer)
+1299:20780,Geneva (Peer)
+1299:30800,Vienna (Customer)
+1299:20800,Vienna (Peer)
+1299:30810,Belgrade (Customer)
+1299:20810,Belgrade (Peer)
+1299:30820,Budapest (Customer)
+1299:20820,Budapest (Peer)
+1299:30830,Sofia (Customer)
+1299:20830,Sofia (Peer)
+1299:30840,Bucharest (Customer)
+1299:20840,Bucharest (Peer)
+1299:30850,Prague (Customer)
+1299:20850,Prague (Peer)
+1299:30860,Bratislava (Customer)
+1299:20860,Bratislava (Peer)
+1299:30870,Zagre (Customer)
+1299:20870,Zagre (Peer)
+1299:35100,New York City (Customer)
+1299:25100,New York City (Peer)
+1299:35110,Buffalo (Customer)
+1299:25110,Buffalo (Peer)
+1299:35120,Toronto (Customer)
+1299:25120,Toronto (Peer)
+1299:35130,Boston (Customer)
+1299:25130,Boston (Peer)
+1299:35140,Philadelphia (Customer)
+1299:25140,Philadelphia (Peer)
+1299:35150,Montreal (Customer)
+1299:25150,Montreal (Peer)
+1299:35200,San José/Palo Alto/Santa Clara (Customer)
+1299:25200,San José/Palo Alto/Santa Clara (Peer)
+1299:35210,Seattle (Customer)
+1299:25210,Seattle (Peer)
+1299:35220,Vancouver (Customer)
+1299:25220,Vancouver (Peer)
+1299:35230,Portland (Customer)
+1299:25230,Portland (Peer)
+1299:35240,Salt Lake City (Customer)
+1299:25240,Salt Lake City (Peer)
+1299:35250,Sacramento (Customer)
+1299:25250,Sacramento (Peer)
+1299:35300,Chicago (Customer)
+1299:25300,Chicago (Peer)
+1299:35310,Cleveland (Customer)
+1299:25310,Cleveland (Peer)
+1299:35320,Denver (Customer)
+1299:25320,Denver (Peer)
+1299:35330,Kansas City (Customer)
+1299:25330,Kansas City (Peer)
+1299:35340,St Louis (Customer)
+1299:25340,St Louis (Peer)
+1299:35350,Omaha (Customer)
+1299:25350,Omaha (Peer)
+1299:35360,Indianapolis (Customer)
+1299:25360,Indianapolis (Peer)
+1299:35370,Detroit (Customer)
+1299:25370,Detroit (Peer)
+1299:35380,Minneapolis (Customer)
+1299:25380,Minneapolis (Peer)
+1299:35390,Des Moines (Customer)
+1299:25390,Des Moines (Peer)
+1299:35400,Los Angeles (Customer)
+1299:25400,Los Angeles (Peer)
+1299:35410,Phoenix (Customer)
+1299:25410,Phoenix (Peer)
+1299:35420,San Diego (Customer)
+1299:25420,San Diego (Peer)
+1299:35430,Las Vegas (Customer)
+1299:25430,Las Vegas (Peer)
+1299:35500,Dallas (Customer)
+1299:25500,Dallas (Peer)
+1299:35510,McAllen (Customer)
+1299:25510,McAllen (Peer)
+1299:35520,San Antonio (Customer)
+1299:25520,San Antonio (Peer)
+1299:35530,Austin (Customer)
+1299:25530,Austin (Peer)
+1299:35540,Houston (Customer)
+1299:25540,Houston (Peer)
+1299:35550,Queretaro (Customer)
+1299:25550,Queretaro (Peer)
+1299:35560,Monterrey (Customer)
+1299:25560,Monterrey (Peer)
+1299:35570,El Paso (Customer)
+1299:25570,El Paso (Peer)
+1299:35580,Laredo (Customer)
+1299:25580,Laredo (Peer)
+1299:35590,Mexico City (Customer)
+1299:25590,Mexico City (Peer)
+1299:35600,Ashburn/Reston/Manassas (Customer)
+1299:25600,Ashburn/Reston/Manassas (Peer)
+1299:35610,Pittsburgh (Customer)
+1299:25610,Pittsburgh (Peer)
+1299:35620,Richmond (Customer)
+1299:25620,Richmond (Peer)
+1299:35700,Atlanta (Customer)
+1299:25700,Atlanta (Peer)
+1299:35710,Charlotte (Customer)
+1299:25710,Charlotte (Peer)
+1299:35720,Nashville (Customer)
+1299:25720,Nashville (Peer)
+1299:35730,Chattanooga (Customer)
+1299:25730,Chattanooga (Peer)
+1299:35740,Memphis (Customer)
+1299:25740,Memphis (Peer)
+1299:35750,Raleigh (Customer)
+1299:25750,Raleigh (Peer)
+1299:35800,Miami (Customer)
+1299:25800,Miami (Peer)
+1299:35810,Boca Raton (Customer)
+1299:25810,Boca Raton (Peer)
+1299:35820,Jacksonville (Customer)
+1299:25820,Jacksonville (Peer)
+1299:37100,Hong Kong (Customer)
+1299:27100,Hong Kong (Peer)
+1299:37200,Singapore (Customer)
+1299:27200,Singapore (Peer)
+1299:37300,Tokyo (Customer)
+1299:27300,Tokyo (Peer)
+1299:37310,Osaka (Customer)
+1299:27310,Osaka (Peer)
+1299:666,Global RTBH
+1299:661,Regional RTBH
+1299:50,Lowest local preference Possible
+1299:150,Equal local preference to Peer
+1299:10050,Set local-pref 50 outside announced continent
+1299:12050,Set local-pref 50 in EU
+1299:10150,Set local-pref 150 outside announced continent
+1299:12150,Set local-pref 150 in EU
+1299:15050,Set local-pref 50 in North America
+1299:15150,Set local-pref 150 in North America
+1299:17050,Set local-pref 50 in APAC
+1299:17150,Set local-pref 150 in APAC
+1299:2009,Do not announce to All Peers in Europe
+1299:2001,Prepend x1 to All Peers in Europe
+1299:2002,Prepend x2 to All Peers in Europe
+1299:2003,Prepend x3 to All Peers in Europe
+1299:5009,Do not announce to All Peers in North America
+1299:5001,Prepend x1 to All Peers in North America
+1299:5002,Prepend x2 to All Peers in North America
+1299:5003,Prepend x3 to All Peers in North America
+1299:7009,Do not announce to All Peers in Asia & Pacific
+1299:7001,Prepend x1 to All Peers in Asia & Pacific
+1299:7002,Prepend x2 to All Peers in Asia & Pacific
+1299:7003,Prepend x3 to All Peers in Asia & Pacific
+1299:2589,Do not announce to ATT in Europe
+1299:2581,Prepend x1 to ATT in Europe
+1299:2582,Prepend x2 to ATT in Europe
+1299:2583,Prepend x3 to ATT in Europe
+1299:5589,Do not announce to ATT in North America
+1299:5581,Prepend x1 to ATT in North America
+1299:5582,Prepend x2 to ATT in North America
+1299:5583,Prepend x3 to ATT in North America
+1299:7589,Do not announce to ATT in APAC
+1299:7581,Prepend x1 to ATT in APAC
+1299:7582,Prepend x2 to ATT in APAC
+1299:7583,Prepend x3 to ATT in APAC
+1299:2569,Do not announce to Lumen in Europe
+1299:2561,Prepend x1 to Lumen in Europe
+1299:2562,Prepend x2 to Lumen in Europe
+1299:2563,Prepend x3 to Lumen in Europe
+1299:5569,Do not announce to Lumen in North America
+1299:5561,Prepend x1 to Lumen in North America
+1299:5562,Prepend x2 to Lumen in North America
+1299:5563,Prepend x3 to Lumen in North America
+1299:7569,Do not announce to Lumen in APAC
+1299:7561,Prepend x1 to Lumen in APAC
+1299:7562,Prepend x2 to Lumen in APAC
+1299:7563,Prepend x3 to Lumen in APAC
+1299:2889,Do not announce to China Telecom in Europe
+1299:2881,Prepend x1 to China Telecom in Europe
+1299:2882,Prepend x2 to China Telecom in Europe
+1299:2883,Prepend x3 to China Telecom in Europe
+1299:5889,Do not announce to China Telecom in North America
+1299:5881,Prepend x1 to China Telecom in North America
+1299:5882,Prepend x2 to China Telecom in North America
+1299:5883,Prepend x3 to China Telecom in North America
+1299:2879,Do not announce to China Unicom in Europe
+1299:2871,Prepend x1 to China Unicom in Europe
+1299:2872,Prepend x2 to China Unicom in Europe
+1299:2873,Prepend x3 to China Unicom in Europe
+1299:5879,Do not announce to China Unicom in North America
+1299:5871,Prepend x1 to China Unicom in North America
+1299:5872,Prepend x2 to China Unicom in North America
+1299:5873,Prepend x3 to China Unicom in North America
+1299:2739,Do not announce to Cogent in Europe
+1299:2731,Prepend x1 to Cogent in Europe
+1299:2732,Prepend x2 to Cogent in Europe
+1299:2733,Prepend x3 to Cogent in Europe
+1299:5739,Do not announce to Cogent in North America
+1299:5731,Prepend x1 to Cogent in North America
+1299:5732,Prepend x2 to Cogent in North America
+1299:5733,Prepend x3 to Cogent in North America
+1299:5669,Do not announce to Comcast in North America
+1299:5661,Prepend x1 to Comcast in North America
+1299:5662,Prepend x2 to Comcast in North America
+1299:5663,Prepend x3 to Comcast in North America
+1299:2649,Do not announce to DTAG in Europe
+1299:2641,Prepend x1 to DTAG in Europe
+1299:2642,Prepend x2 to DTAG in Europe
+1299:2643,Prepend x3 to DTAG in Europe
+1299:2549,Do not announce to Orange in Europe
+1299:2541,Prepend x1 to Orange in Europe
+1299:2542,Prepend x2 to Orange in Europe
+1299:2543,Prepend x3 to Orange in Europe
+1299:5549,Do not announce to Orange in North America
+1299:5541,Prepend x1 to Orange in North America
+1299:5542,Prepend x2 to Orange in North America
+1299:5543,Prepend x3 to Orange in North America
+1299:7549,Do not announce to Orange in APAC
+1299:7541,Prepend x1 to Orange in APAC
+1299:7542,Prepend x2 to Orange in APAC
+1299:7543,Prepend x3 to Orange in APAC
+1299:2699,Do not announce to GTT in Europe
+1299:2691,Prepend x1 to GTT in Europe
+1299:2692,Prepend x2 to GTT in Europe
+1299:2693,Prepend x3 to GTT in Europe
+1299:5699,Do not announce to GTT in North America
+1299:5691,Prepend x1 to GTT in North America
+1299:5692,Prepend x2 to GTT in North America
+1299:5693,Prepend x3 to GTT in North America
+1299:7699,Do not announce to GTT in APAC
+1299:7691,Prepend x1 to GTT in APAC
+1299:7692,Prepend x2 to GTT in APAC
+1299:7693,Prepend x3 to GTT in APAC
+1299:2709,Do not announce to Liberty Global in Europe
+1299:2701,Prepend x1 to Liberty Global in Europe
+1299:2702,Prepend x2 to Liberty Global in Europe
+1299:2703,Prepend x3 to Liberty Global in Europe
+1299:5709,Do not announce to Liberty Global in North America
+1299:5701,Prepend x1 to Liberty Global in North America
+1299:5702,Prepend x2 to Liberty Global in North America
+1299:5703,Prepend x3 to Liberty Global in North America
+1299:2529,Do not announce to NTT in Europe
+1299:2521,Prepend x1 to NTT in Europe
+1299:2522,Prepend x2 to NTT in Europe
+1299:2523,Prepend x3 to NTT in Europe
+1299:5529,Do not announce to NTT in North America
+1299:5521,Prepend x1 to NTT in North America
+1299:5522,Prepend x2 to NTT in North America
+1299:5523,Prepend x3 to NTT in North America
+1299:7949,Do not announce to PCCW in APAC
+1299:7941,Prepend x1 to PCCW in APAC
+1299:7942,Prepend x2 to PCCW in APAC
+1299:7943,Prepend x3 to PCCW in APAC
+1299:5509,Do not announce to Sprint in North America
+1299:5501,Prepend x1 to Sprint in North America
+1299:5502,Prepend x2 to Sprint in North America
+1299:5503,Prepend x3 to Sprint in North America
+1299:2639,Do not announce to TATA in Europe
+1299:2631,Prepend x1 to TATA in Europe
+1299:2632,Prepend x2 to TATA in Europe
+1299:2633,Prepend x3 to TATA in Europe
+1299:5639,Do not announce to TATA in North America
+1299:5631,Prepend x1 to TATA in North America
+1299:5632,Prepend x2 to TATA in North America
+1299:5633,Prepend x3 to TATA in North America
+1299:7639,Do not announce to TATA in APAC
+1299:7631,Prepend x1 to TATA in APAC
+1299:7632,Prepend x2 to TATA in APAC
+1299:7633,Prepend x3 to TATA in APAC
+1299:2749,Do not announce to Telecom Italia in Europe
+1299:2741,Prepend x1 to Telecom Italia in Europe
+1299:2742,Prepend x2 to Telecom Italia in Europe
+1299:2743,Prepend x3 to Telecom Italia in Europe
+1299:5749,Do not announce to Telecom Italia in North America
+1299:5741,Prepend x1 to Telecom Italia in North America
+1299:5742,Prepend x2 to Telecom Italia in North America
+1299:5743,Prepend x3 to Telecom Italia in North America
+1299:7749,Do not announce to Telecom Italia in APAC
+1299:7741,Prepend x1 to Telecom Italia in APAC
+1299:7742,Prepend x2 to Telecom Italia in APAC
+1299:7743,Prepend x3 to Telecom Italia in APAC
+1299:2599,Do not announce to Telxius in Europe
+1299:2591,Prepend x1 to Telxius in Europe
+1299:2592,Prepend x2 to Telxius in Europe
+1299:2593,Prepend x3 to Telxius in Europe
+1299:5599,Do not announce to Telxius in North America
+1299:5591,Prepend x1 to Telxius in North America
+1299:5592,Prepend x2 to Telxius in North America
+1299:5593,Prepend x3 to Telxius in North America
+1299:2579,Do not announce to Verizon in Europe
+1299:2571,Prepend x1 to Verizon in Europe
+1299:2572,Prepend x2 to Verizon in Europe
+1299:2573,Prepend x3 to Verizon in Europe
+1299:5579,Do not announce to Verizon in North America
+1299:5571,Prepend x1 to Verizon in North America
+1299:5572,Prepend x2 to Verizon in North America
+1299:5573,Prepend x3 to Verizon in North America
+1299:7579,Do not announce to Verizon in APAC
+1299:7571,Prepend x1 to Verizon in APAC
+1299:7572,Prepend x2 to Verizon in APAC
+1299:7573,Prepend x3 to Verizon in APAC
+1299:2849,Do not announce to Vodafone in Europe
+1299:2841,Prepend x1 to Vodafone in Europe
+1299:2842,Prepend x2 to Vodafone in Europe
+1299:2843,Prepend x3 to Vodafone in Europe
+1299:7849,Do not announce to Vodafone in APAC
+1299:7841,Prepend x1 to Vodafone in APAC
+1299:7842,Prepend x2 to Vodafone in APAC
+1299:7843,Prepend x3 to Vodafone in APAC
+1299:2539,Do not announce to Zayo in Europe
+1299:2531,Prepend x1 to Zayo in Europe
+1299:2532,Prepend x2 to Zayo in Europe
+1299:2533,Prepend x3 to Zayo in Europe
+1299:5539,Do not announce to Zayo in North America
+1299:5531,Prepend x1 to Zayo in North America
+1299:5532,Prepend x2 to Zayo in North America
+1299:5533,Prepend x3 to Zayo in North America
