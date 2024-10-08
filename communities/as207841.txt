@@ -1,5 +1,5 @@
 # https://inferno.net.uk/communities.txt
-# Last updated: 2024-09-02
+# Last updated: 2024-09-17
 
 # Sources
 207841:0:1000,From IX
@@ -9,6 +9,7 @@
 207841:0:1004,From self
 207841:0:1005,From downstream
 207841:0:2000,From CP
+207841:0:2001,From CP RS
 
 # Locations
 207841:10:1,Originated in London, UK
