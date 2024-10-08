@@ -1,0 +1,129 @@
+# As per AS8298 @ whois.ripe.net
+#
+# -- BGP Communities
+8298:1000,IXP Swissix Peer
+8298:1:1000,IXP Swissix Peer
+8298:1001,IXP Swissix Routeserver
+8298:1:1001,IXP Swissix Routeserver
+8298:1002,IXP Swissix RIPE RIS
+8298:1:1002,IXP Swissix RIPE RIS
+8298:1005,IXP France IX Paris Peer
+8298:1:1005,IXP France IX Paris Peer
+8298:1006,IXP France IX Paris Routeserver
+8298:1:1006,IXP France IX Paris Routeserver
+8298:1010,IXP CHIX Peer
+8298:1:1010,IXP CHIX Peer
+8298:1011,IXP CHIX Routeserver
+8298:1:1011,IXP CHIX Routeserver
+8298:1015,IXP EVIX Peer
+8298:1:1015,IXP EVIX Peer
+8298:1016,IXP EVIX Routeserver
+8298:1:1016,IXP EVIX Routeserver
+8298:1020,IXP Community IX Peer
+8298:1:1020,IXP Community IX Peer
+8298:1021,IXP Community IX Routeserver
+8298:1:1021,IXP Community IX Routeserver
+8298:1025,IXP Fremont Cabal IX Peer
+8298:1:1025,IXP Fremont Cabal IX Peer
+8298:1026,IXP Fremont Cabal IX Routeserver
+8298:1:1026,IXP Fremont Cabal IX Routeserver
+8298:1030,IXP Frys-IX Amsterdam
+8298:1:1030,IXP Frys-IX Amsterdam
+8298:1031,IXP Frys-IX Amsterdam Routeserver
+8298:1:1031,IXP Frys-IX Amsterdam Routeserver
+8298:1035,IXP LSIX Amsterdam
+8298:1:1035,IXP LSIX Amsterdam
+8298:1036,IXP LSIX Amsterdam Routeserver
+8298:1:1036,IXP LSIX Amsterdam Routeserver
+8298:1040,IXP Speed-IX Amsterdam
+8298:1:1040,IXP Speed-IX Amsterdam
+8298:1041,IXP Speed-IX Amsterdam Routeserver
+8298:1:1041,IXP Speed-IX Amsterdam Routeserver
+8298:1045,IXP DE-CIX Frankfurt
+8298:1:1045,IXP DE-CIX Frankfurt
+8298:1046,IXP DE-CIX Frankfurt Routeserver
+8298:1:1046,IXP DE-CIX Frankfurt Routeserver
+8298:1050,IXP France IX Marseille Peer
+8298:1:1050,IXP France IX Marseille Peer
+8298:1051,IXP France IX Marseille Routeserver
+8298:1:1051,IXP France IX Marseille Routeserver
+8298:1055,IXP NL-IX Peer
+8298:1:1055,IXP NL-IX Peer
+8298:1056,IXP NL-IX Routeserver
+8298:1:1056,IXP NL-IX Routeserver
+8298:1060,IXP Free IX Peer
+8298:1:1060,IXP Free IX Peer
+8298:1061,IXP Free IX Routeserver
+8298:1:1061,IXP Free IX Routeserver
+8298:1065,IXP LillIX Peer
+8298:1:1065,IXP LillIX Peer
+8298:1066,IXP LillIX Routeserver
+8298:1:1066,IXP LillIX Routeserver
+8298:1070,IXP DeCIX Hamburg Peer
+8298:1:1070,IXP DeCIX Hamburg Peer
+8298:1071,IXP DeCIX Hamburg Routeserver
+8298:1:1071,IXP DeCIX Hamburg Routeserver
+8298:1075,IXP DeCIX Munich Peer
+8298:1:1075,IXP DeCIX Munich Peer
+8298:1076,IXP DeCIX Munich Routeserver
+8298:1:1076,IXP DeCIX Munich Routeserver
+8298:1080,IXP DeCIX Dusseldorf Peer
+8298:1:1080,IXP DeCIX Dusseldorf Peer
+8298:1081,IXP DeCIX Dusseldorf Routeserver
+8298:1:1081,IXP DeCIX Dusseldorf Routeserver
+8298:1085,IXP 4IXP Peer
+8298:1:1085,IXP 4IXP Peer
+8298:1086,IXP 4IXP Routeserver
+8298:1:1086,IXP 4IXP Routeserver
+8298:1090,IXP FogIXP Peer
+8298:1:1090,IXP FogIXP Peer
+8298:1091,IXP FogIXP Routeserver
+8298:1:1091,IXP FogIXP Routeserver
+8298:1095,IXP LoCIX Frankfurt Peer
+8298:1:1095,IXP LoCIX Frankfurt Peer
+8298:1096,IXP LoCIX Frankfurt Routeserver
+8298:1:1096,IXP LoCIX Frankfurt Routeserver
+8298:1100,IXP KleyREX Peer
+8298:1:1100,IXP KleyREX Peer
+8298:1101,IXP KleyREX Routeserver
+8298:1:1101,IXP KleyREX Routeserver
+8298:1105,IXP LoCIX Dusseldorf Peer
+8298:1:1105,IXP LoCIX Dusseldorf Peer
+8298:1106,IXP LoCIX Dusseldorf Routeserver
+8298:1:1106,IXP LoCIX Dusseldorf Routeserver
+8298:1110,IXP InterIX Peer
+8298:1:1110,IXP InterIX Peer
+8298:1111,IXP InterIX Routeserver
+8298:1:1111,IXP InterIX Routeserver
+8298:1115,IXP LoCIX Dusseldorf Peer
+8298:1:1115,IXP LoCIX Dusseldorf Peer
+8298:1116,IXP LoCIX Dusseldorf Routeserver
+8298:1:1116,IXP LoCIX Dusseldorf Routeserver
+--
+8298:2000,Transit from IP-Max
+8298:2:25091,Transit from IP-Max
+8298:2005,Transit from OpenFactory
+8298:2:58299,Transit from OpenFactory
+8298:2010,Transit from Coloclue
+8298:2:8283,Transit from Coloclue
+8298:2015,Transit from Meerfarbig
+8298:2:34549,Transit from Meerfarbig
+8298:2020,Transit from A2B
+8298:2:51088,Transit from A2B
+
+8298:3000,Private Network Interconnect
+8298:3100,Local (AS8298 sourced)
+8298:3500,Transit Downstream (Customer route)
+
+# BGP Actions (customers only)
+0:8298,Do not announce this route anywhere
+8298:0:0,Do not announce this route anywhere
+0:nnn,Do not announce this route on sessions with this $ASN
+8298:0:nnn,Do not announce this route on sessions with this $ASN
+8298:101:0,Prepend customer AS once on all sessions
+8298:101:nnn,Prepend customer AS once on sessions with this ASN
+8298:102:0,Prepend customer AS twice on all sessions
+8298:102:nnn,Prepend customer AS twice on sessions with this ASN
+8298:103:0,Prepend customer AS thrice on all sessions
+8298:103:nnn,Prepend customer AS thrice on sessions with this ASN
+
