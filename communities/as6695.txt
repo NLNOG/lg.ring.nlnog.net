@@ -1,0 +1,165 @@
+# https://www.de-cix.net/en/resources/service-information/route-server-guides/informational-bgp-communities
+
+# Continents
+<RS_ASN>:1914:150,Continent: Europe
+<RS_ASN>:1914:2,Continent: Africa
+<RS_ASN>:1914:19,Continent: Americas
+<RS_ASN>:1914:142,Continent: Asia
+<RS_ASN>:1914:65535,Continent: Unknown
+
+# Countries
+<RS_ASN>:1913:276,Country: Germany
+<RS_ASN>:1913:250,Country: France
+<RS_ASN>:1913:380,Country: Italy
+<RS_ASN>:1913:724,Country: Spain
+<RS_ASN>:1913:620,Country: Portugal
+<RS_ASN>:1913:300,Country: Greece
+<RS_ASN>:1913:578,Country: Norway
+<RS_ASN>:1913:208,Country: Denmark
+<RS_ASN>:1913:246,Country: Finland
+<RS_ASN>:1913:528,Country: Netherlands
+<RS_ASN>:1913:154,Region: Northern Europe, Norway/Denmark/Finland/Germany
+
+<RS_ASN>:1913:566,Country: Nigeria
+<RS_ASN>:1913:180,Country: D.R.Congo
+
+<RS_ASN>:1913:484,Country: Mexico
+<RS_ASN>:1913:840,Country: USA
+<RS_ASN>:1913:784,Country: United Arab Emirates
+<RS_ASN>:1913:792,Country: Türkiye
+<RS_ASN>:1913:458,Country: Malaysia
+<RS_ASN>:1913:702,Country: Republic of Singapore 
+<RS_ASN>:1913:400,Country: Jordan
+<RS_ASN>:1913:368,Country: Iraq
+<RS_ASN>:1913:586,Country: Pakistan
+<RS_ASN>:1913:392,Country: Japan
+<RS_ASN>:1913:360,Country: Indonesia
+<RS_ASN>:1913:96,Country: Brunei
+<RS_ASN>:1913:35,Region: South-eastern Asia: Malaysia, Singapore, Brunei
+
+<RS_ASN>:1913:65535,Country: Unknown
+
+# Metros
+<RS_ASN>:1912:0,Metro: FRA
+<RS_ASN>:1912:1,Metro: MUC
+<RS_ASN>:1912:2,Metro: HAM
+<RS_ASN>:1912:9,Metro: DUS
+<RS_ASN>:1912:20,Metro: DTH (Ruhr-CIX)
+<RS_ASN>:1912:27,Metro: LEJ
+<RS_ASN>:1912:6,Metro: MRS
+<RS_ASN>:1912:5,Metro: PMO
+<RS_ASN>:1912:10,Metro: MAD
+<RS_ASN>:1912:21:Metro: BCN
+<RS_ASN>:1912:11:Metro: LIS
+<RS_ASN>:1912:12:Metro: ATH (SEECIX)
+<RS_ASN>:1912:31:Metro: OSL
+<RS_ASN>:1912:32:Metro: KRS
+<RS_ASN>:1912:36:Metro: EBJ
+<RS_ASN>:1912:33:Metro: CPH
+<RS_ASN>:1912:34:Metro: HEL
+<RS_ASN>:1912:42:Metro: AMS
+<RS_ASN>:1912:29:Metro: LOS (AF-CIX)
+<RS_ASN>:1912:35:Metro: FIH (ACIX)
+<RS_ASN>:1912:50:Metro: MEX
+<RS_ASN>:1912:2:Metro: NYC
+<RS_ASN>:1912:8:Metro: DFW
+<RS_ASN>:1912:14:Metro: ORD
+<RS_ASN>:1912:24:Metro: PHX
+<RS_ASN>:1912:22:Metro: RIC
+<RS_ASN>:1912:40:Metro: SEA
+<RS_ASN>:1912:3:Metro: DXB
+<RS_ASN>:1912:7:Metro: IST
+<RS_ASN>:1912:18:Metro: JHB
+<RS_ASN>:1912:17:Metro: KUL
+<RS_ASN:1912:41:Metro: PEN
+<RS_ASN>:1912:16:Metro: SIN
+<RS_ASN>:1912:38:Metro: AQJ
+<RS_ASN>:1912:39:Metro: BGW
+<RS_ASN>:1912:47:Metro: KHI
+<RS_ASN>:1912:44:Metro: TYO
+<RS_ASN>:1912:45:Metro: OSA
+<RS_ASN>:1912:48:Metro: JKT
+<RS_ASN>:1912:19:BWN (Borneo- IX)
+<RS_ASN>:1912:65535:Metro: Unknown
+
+# Switches
+<RS_ASN>:1911:82,Switch: edge02.fra12
+<RS_ASN>:1911:89,Switch: edge02.fra2
+<RS_ASN>:1911:90,Switch: edge02.fra6
+<RS_ASN>:1911:105,Switch: edge01.fra10
+<RS_ASN>:1911:163,Switch: edge02.fra9
+<RS_ASN>:1911:172,Switch: edge03.fra12
+<RS_ASN>:1911:79,Switch: edge01.fra5
+<RS_ASN>:1911:96,Switch: edge02.muc1
+<RS_ASN>:1911:122,Switch: edge03.ham1
+<RS_ASN>:1911:93,Switch: edge02.dus1
+<RS_ASN>:1911:115,Switch: edge01.dtm1
+<RS_ASN>:1911:97,Switch: edge02.mrs1
+<RS_ASN>:1911:180,Switch: edge02.pmo1
+<RS_ASN>:1911:77,Switch: edge02.mad1
+<RS_ASN>:1911:92,Switch: edge02.mad3
+<RS_ASN>:1911:103,Switch: edge01.mad4
+<RS_ASN>:1911:116,Switch: edge01.bcn1
+<RS_ASN>:1911:138,Switch: edge02.lis1
+<RS_ASN>:1911:182,Switch: edge01.lis3
+<RS_ASN>:1911:101,Switch: edge01.ath1
+<RS_ASN>:1911:144,Switch: edge01.osl1
+<RS_ASN>:1911:145,Switch: edge01.krs1
+<RS_ASN>:1911:157,Switch: edge01.ebj1
+<RS_ASN>:1911:146,Switch: edge01.cph1
+<RS_ASN>:1911:147,Switch: edge01.hel1
+<RS_ASN>:1911:167,Switch: edge01.ams1
+<RS_ASN>:1911:168,Switch: edge01.ams2
+<RS_ASN>:1911:169,Switch: edge01.ams3
+<RS_ASN>:1911:148,Switch: edge01.los1
+<RS_ASN>:1911:149,Switch: edge01.fih1
+<RS_ASN>:1911:192,Switch: edge01.mex1
+<RS_ASN>:1911:193,Switch: edge01.mex2
+<RS_ASN>:1911:194,Switch: edge01.mex3
+<RS_ASN>:1911:127,Switch: edge02.nyc1
+<RS_ASN>:1911:128,Switch: edge03.nyc3
+<RS_ASN>:1911:87,Switch: edge02.nyc5
+<RS_ASN>:1911:196,Switch: edge03.nyc6
+<RS_ASN>:1911:124,Switch: edge02.nyc8
+<RS_ASN>:1911:170,Switch: edge02.nyc17
+<RS_ASN>:1911:73,Switch: edge01.dfw1
+<RS_ASN>:1911:104,Switch: edge02.dfw8
+<RS_ASN>:1911:123,Switch: edge01.dfw10
+<RS_ASN>:1911:135,Switch: edge01.dfw11
+<RS_ASN>:1911:110,Switch: edge01.ord1
+<RS_ASN>:1911:183,Switch: edge02.ord1
+<RS_ASN>:1911:132,Switch: edge02.ord2
+<RS_ASN>:1911:125,Switch: edge01.ord6
+<RS_ASN>:1911:184,Switch: edge01.ord3
+<RS_ASN>:1911:130,Switch: edge01.phx1
+<RS_ASN>:1911:131,Switch: edge01.phx2
+<RS_ASN>:1911:143,Switch: edge01.phx3
+<RS_ASN>:1911:178,Switch: edge01.phx4
+<RS_ASN>:1911:117,Switch: edge01.ric1
+<RS_ASN>:1911:118,Switch: edge01.ric2
+<RS_ASN>:1911:119,Switch: edge01.ric3
+<RS_ASN>:1911:160,Switch: edge01.sea1
+<RS_ASN>:1911:161,Switch: edge01.sea2
+<RS_ASN>:1911:50,Switch: sw001.dxb1
+<RS_ASN>:1911:79,Switch: edge01.dxb1
+<RS_ASN>:1911:80,Switch: edge01.dxb2
+<RS_ASN>:1911:81,Switch: edge02.dxb2
+<RS_ASN>:1911:133,Switch: edge02.ist1
+<RS_ASN>:1911:139,Switch: edge01.ist5
+<RS_ASN>:1911:158,Switch: edge02.ist2
+<RS_ASN>:1911:108,Switch: edge01.jhb1
+<RS_ASN>:1911:109,Switch: edge01.jhb2
+<RS_ASN>:1911:106,Switch: edge01.kul1
+<RS_ASN>:1911:107,Switch: edge01.kul2
+<RS_ASN>:1911:166,Switch: edge01.pen1
+<RS_ASN>:1911:113,Switch: edge01.sin1
+<RS_ASN>:1911:171,Switch: edge01.sin2
+<RS_ASN>:1911:162,Switch: edge01.aqj1
+<RS_ASN>:1911:164,Switch: edge01.bgw1
+<RS_ASN>:1911:175,Switch: edge01.khi1
+<RS_ASN>:1911:174,Switch: edge01.tyo1
+<RS_ASN>:1911:173,Switch: edge01.osa1
+<RS_ASN>:1911:185,Switch: edge01.jkt1
+<RS_ASN>:1911:186,Switch: edge01.jkt2
+<RS_ASN>:1911:112,Switch: edge01.bwn1
+<RS_ASN>:1911:65535,Switch: Unknown
