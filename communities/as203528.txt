@@ -9,3 +9,7 @@
 203528:500:10,Prefix learned at New York
 203528:500:11,Prefix learned at Luxembourg
 203528:500:12,Prefix learned at Dusseldorf
+203528:999:1,Prefix reflected by RR1
+203528:999:2,Prefix reflected by RR2
+203528:999:3,Prefix reflected by RR3
+203528:999:4,Prefix reflected by RR4
