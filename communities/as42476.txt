@@ -1,0 +1,23 @@
+# https://www.swissix.ch/resources/route-server-informational-bgp-communities/
+# (See also as6695.txt for DE-CIX which are similar)
+
+# Continents
+42476:1914:150,Continent: Europe
+42476:1914:65535,Continent: Unknown
+
+# Countries
+42476:1913:756,Country: Switzerland
+42476:1913:65535,Country: Unknown
+
+# Metro
+42476:1912:28,Metro: Zurich
+42476:1912:65535,Metro: Unknown
+
+# Switches
+42476:1911:150,Switch: edge01.zrh1
+42476:1911:151,Switch: edge01.zrh2
+42476:1911:152,Switch: edge01.zrh3
+42476:1911:153,Switch: edge01.zrh4
+42476:1911:154,Switch: edge01.zrh5
+42476:1911:155,Switch: edge01.zrh6
+42476:1911:156,Switch: edge01.zrh7
