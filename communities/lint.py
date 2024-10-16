@@ -31,10 +31,16 @@ def check_communitydesc(filename):
     lines = []
     warnings = 0
     with open(filename, "r", encoding="utf8") as filehandle:
+        asn = filename.split("/")[-1].replace(".txt", "")
+        replaceAsn = ""
+        if os.path.islink(filename):
+            replaceAsn = asn[2:]
         for entry in [line.strip() for line in filehandle.readlines()]:
             if entry.startswith("#") or "," not in entry:
                 lines.append(("comment", entry))
                 continue
+            if replaceAsn != "":
+                entry = entry.replace("<ASN>", replaceAsn)
             (comm, desc) = entry.split(",", 1)
             if ":" not in comm:
                 lines.append(("WARN: malformed", entry))
@@ -79,7 +85,7 @@ def check_communities(files=None, all_lines=False, warnings_only=False):
     """ Check some or all files for inconsistencies and errors. """
     if not files:
         currentdir = os.path.dirname(os.path.realpath(__file__))
-        files = glob.glob(f"{currentdir}/*.txt")
+        files = glob.glob(f"{currentdir}/as*.txt")
 
     total_warnings = 0
     for filename in files:
