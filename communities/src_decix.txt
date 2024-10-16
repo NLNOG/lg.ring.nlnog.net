@@ -1,0 +1,207 @@
+# https://www.de-cix.net/en/resources/service-information/route-server-guides/informational-bgp-communities
+#
+# List of ASNs:
+# https://www.de-cix.net/en/resources/service-information/route-server-guides/action-bgp-communities
+# Note that as<ASN>.txt is symlinked to this src_decix.txt file
+#
+# That covers the following IX + ASN:
+#
+#-BEGIN_ASN
+# ASEAN			38137
+# Athens (SEECIX)	56858
+# Barcelona		57802
+# Brunei (Borneo-IX)	4617
+# Chicago		62760
+# Copenhagen		201561
+# Dallas		62499
+# Dubai (UAE-IX)	61374
+# Dusseldorf		56890
+# Esbjerg		200225
+# Frankfurt		6695
+# Hamburg		43252
+# Helsinki		201560
+# Istanbul		20715
+# Jakarta		9748
+# Karachi (Pakistan IE)	140307
+# Kristiansand		201537
+# Kuala Lumpur		38194
+# Lisbon		43729
+# Madrid		48793
+# Malaysia		38175
+# Marseille		20717
+# Mexico		272394
+# Munich		47228
+# New York		63034
+# Nordics		201410
+# Oslo			201526
+# Palermo		25083
+# Penang (PIX)		133086
+# Phoenix		400330
+# Richmond		393752
+# Ruhr-CIX		57819
+#-END_ASN
+
+# Continents
+<ASN>:1914:150,Continent: Europe
+<ASN>:1914:2,Continent: Africa
+<ASN>:1914:19,Continent: Americas
+<ASN>:1914:142,Continent: Asia
+<ASN>:1914:65535,Continent: Unknown
+
+# Countries
+<ASN>:1913:276,Country: Germany
+<ASN>:1913:250,Country: France
+<ASN>:1913:380,Country: Italy
+<ASN>:1913:724,Country: Spain
+<ASN>:1913:620,Country: Portugal
+<ASN>:1913:300,Country: Greece
+<ASN>:1913:578,Country: Norway
+<ASN>:1913:208,Country: Denmark
+<ASN>:1913:246,Country: Finland
+<ASN>:1913:528,Country: Netherlands
+<ASN>:1913:154,Region: Northern Europe, Norway/Denmark/Finland/Germany
+
+<ASN>:1913:566,Country: Nigeria
+<ASN>:1913:180,Country: D.R.Congo
+
+<ASN>:1913:484,Country: Mexico
+<ASN>:1913:840,Country: USA
+<ASN>:1913:784,Country: United Arab Emirates
+<ASN>:1913:792,Country: Türkiye
+<ASN>:1913:458,Country: Malaysia
+<ASN>:1913:702,Country: Republic of Singapore 
+<ASN>:1913:400,Country: Jordan
+<ASN>:1913:368,Country: Iraq
+<ASN>:1913:586,Country: Pakistan
+<ASN>:1913:392,Country: Japan
+<ASN>:1913:360,Country: Indonesia
+<ASN>:1913:96,Country: Brunei
+<ASN>:1913:35,Region: South-eastern Asia: Malaysia, Singapore, Brunei
+
+<ASN>:1913:65535,Country: Unknown
+
+# Metros
+<ASN>:1912:0,Metro: FRA
+<ASN>:1912:1,Metro: MUC
+<ASN>:1912:2,Metro: HAM
+<ASN>:1912:9,Metro: DUS
+<ASN>:1912:20,Metro: DTH (Ruhr-CIX)
+<ASN>:1912:27,Metro: LEJ
+<ASN>:1912:6,Metro: MRS
+<ASN>:1912:5,Metro: PMO
+<ASN>:1912:10,Metro: MAD
+<ASN>:1912:21:Metro: BCN
+<ASN>:1912:11:Metro: LIS
+<ASN>:1912:12:Metro: ATH (SEECIX)
+<ASN>:1912:31:Metro: OSL
+<ASN>:1912:32:Metro: KRS
+<ASN>:1912:36:Metro: EBJ
+<ASN>:1912:33:Metro: CPH
+<ASN>:1912:34:Metro: HEL
+<ASN>:1912:42:Metro: AMS
+<ASN>:1912:29:Metro: LOS (AF-CIX)
+<ASN>:1912:35:Metro: FIH (ACIX)
+<ASN>:1912:50:Metro: MEX
+<ASN>:1912:2:Metro: NYC
+<ASN>:1912:8:Metro: DFW
+<ASN>:1912:14:Metro: ORD
+<ASN>:1912:24:Metro: PHX
+<ASN>:1912:22:Metro: RIC
+<ASN>:1912:40:Metro: SEA
+<ASN>:1912:3:Metro: DXB
+<ASN>:1912:7:Metro: IST
+<ASN>:1912:18:Metro: JHB
+<ASN>:1912:17:Metro: KUL
+<ASN:1912:41:Metro: PEN
+<ASN>:1912:16:Metro: SIN
+<ASN>:1912:38:Metro: AQJ
+<ASN>:1912:39:Metro: BGW
+<ASN>:1912:47:Metro: KHI
+<ASN>:1912:44:Metro: TYO
+<ASN>:1912:45:Metro: OSA
+<ASN>:1912:48:Metro: JKT
+<ASN>:1912:19:BWN (Borneo- IX)
+<ASN>:1912:65535:Metro: Unknown
+
+# Switches
+<ASN>:1911:82,Switch: edge02.fra12
+<ASN>:1911:89,Switch: edge02.fra2
+<ASN>:1911:90,Switch: edge02.fra6
+<ASN>:1911:105,Switch: edge01.fra10
+<ASN>:1911:163,Switch: edge02.fra9
+<ASN>:1911:172,Switch: edge03.fra12
+<ASN>:1911:79,Switch: edge01.fra5
+<ASN>:1911:96,Switch: edge02.muc1
+<ASN>:1911:122,Switch: edge03.ham1
+<ASN>:1911:93,Switch: edge02.dus1
+<ASN>:1911:115,Switch: edge01.dtm1
+<ASN>:1911:97,Switch: edge02.mrs1
+<ASN>:1911:180,Switch: edge02.pmo1
+<ASN>:1911:77,Switch: edge02.mad1
+<ASN>:1911:92,Switch: edge02.mad3
+<ASN>:1911:103,Switch: edge01.mad4
+<ASN>:1911:116,Switch: edge01.bcn1
+<ASN>:1911:138,Switch: edge02.lis1
+<ASN>:1911:182,Switch: edge01.lis3
+<ASN>:1911:101,Switch: edge01.ath1
+<ASN>:1911:144,Switch: edge01.osl1
+<ASN>:1911:145,Switch: edge01.krs1
+<ASN>:1911:157,Switch: edge01.ebj1
+<ASN>:1911:146,Switch: edge01.cph1
+<ASN>:1911:147,Switch: edge01.hel1
+<ASN>:1911:167,Switch: edge01.ams1
+<ASN>:1911:168,Switch: edge01.ams2
+<ASN>:1911:169,Switch: edge01.ams3
+<ASN>:1911:148,Switch: edge01.los1
+<ASN>:1911:149,Switch: edge01.fih1
+<ASN>:1911:192,Switch: edge01.mex1
+<ASN>:1911:193,Switch: edge01.mex2
+<ASN>:1911:194,Switch: edge01.mex3
+<ASN>:1911:127,Switch: edge02.nyc1
+<ASN>:1911:128,Switch: edge03.nyc3
+<ASN>:1911:87,Switch: edge02.nyc5
+<ASN>:1911:196,Switch: edge03.nyc6
+<ASN>:1911:124,Switch: edge02.nyc8
+<ASN>:1911:170,Switch: edge02.nyc17
+<ASN>:1911:73,Switch: edge01.dfw1
+<ASN>:1911:104,Switch: edge02.dfw8
+<ASN>:1911:123,Switch: edge01.dfw10
+<ASN>:1911:135,Switch: edge01.dfw11
+<ASN>:1911:110,Switch: edge01.ord1
+<ASN>:1911:183,Switch: edge02.ord1
+<ASN>:1911:132,Switch: edge02.ord2
+<ASN>:1911:125,Switch: edge01.ord6
+<ASN>:1911:184,Switch: edge01.ord3
+<ASN>:1911:130,Switch: edge01.phx1
+<ASN>:1911:131,Switch: edge01.phx2
+<ASN>:1911:143,Switch: edge01.phx3
+<ASN>:1911:178,Switch: edge01.phx4
+<ASN>:1911:117,Switch: edge01.ric1
+<ASN>:1911:118,Switch: edge01.ric2
+<ASN>:1911:119,Switch: edge01.ric3
+<ASN>:1911:160,Switch: edge01.sea1
+<ASN>:1911:161,Switch: edge01.sea2
+<ASN>:1911:50,Switch: sw001.dxb1
+<ASN>:1911:79,Switch: edge01.dxb1
+<ASN>:1911:80,Switch: edge01.dxb2
+<ASN>:1911:81,Switch: edge02.dxb2
+<ASN>:1911:133,Switch: edge02.ist1
+<ASN>:1911:139,Switch: edge01.ist5
+<ASN>:1911:158,Switch: edge02.ist2
+<ASN>:1911:108,Switch: edge01.jhb1
+<ASN>:1911:109,Switch: edge01.jhb2
+<ASN>:1911:106,Switch: edge01.kul1
+<ASN>:1911:107,Switch: edge01.kul2
+<ASN>:1911:166,Switch: edge01.pen1
+<ASN>:1911:113,Switch: edge01.sin1
+<ASN>:1911:171,Switch: edge01.sin2
+<ASN>:1911:162,Switch: edge01.aqj1
+<ASN>:1911:164,Switch: edge01.bgw1
+<ASN>:1911:175,Switch: edge01.khi1
+<ASN>:1911:174,Switch: edge01.tyo1
+<ASN>:1911:173,Switch: edge01.osa1
+<ASN>:1911:185,Switch: edge01.jkt1
+<ASN>:1911:186,Switch: edge01.jkt2
+<ASN>:1911:112,Switch: edge01.bwn1
+<ASN>:1911:65535,Switch: Unknown
+
