@@ -139,7 +139,7 @@ def fix_extended_community(community: str) -> str:
 
 
 def read_communities() -> dict:
-    """ Read the list of community definitions from communities/*.txt and translate them
+    """ Read the list of community definitions from communities/as*.txt and translate them
         into a dictionary containing community lists for exact matches, ranges and regexps.
     """
     start = time.time()
@@ -171,7 +171,7 @@ def read_communities() -> dict:
                 print(f"Failed to parse community URL file: {err}")
 
     currentdir = os.path.dirname(os.path.realpath(__file__))
-    files = glob.glob(f"{currentdir}/communities/*.txt")
+    files = glob.glob(f"{currentdir}/communities/as*.txt")
     for filename in files:
         with open(filename, "r", encoding="utf8") as filehandle:
             asn = filename.split("/")[-1].replace(".txt", "")
@@ -182,9 +182,14 @@ def read_communities() -> dict:
                     "large": {"exact": {}, "re": [], "range": [], "raw": {}},
                     "extended": {"exact": {}, "re": [], "range": [], "raw": {}},
                 }
+            replaceAsn = ""
+            if os.path.islink(filename):
+                replaceAsn = asn[2:]
             for entry in [line.strip() for line in filehandle.readlines()]:
                 if entry.startswith("#") or "," not in entry:
                     continue
+                if replaceAsn != "":
+                    entry = entry.replace("<ASN>", replaceAsn)
                 (comm, desc) = entry.split(",", 1)
                 ctype = get_community_type(comm)
                 if ctype == "unknown":
