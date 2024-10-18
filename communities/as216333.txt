@@ -6,20 +6,25 @@
 216333:100:120,Learned from peer
 216333:100:121,Learned from remote peer
 216333:100:122,Learned from PNI
+216333:100:123,Learned from IX
 216333:100:130,originated in AS216333
 
 ## Source AS
+216333:101:13335,Learned from Serverius
+216333:101:6939,Learned from Hurricane Electric
+216333:101:50917,Learned from Backbone.Direct
 216333:101:13335,Learned from Cloudflare
 216333:101:15169,Learned from Google
 216333:101:41441,Learned from Speed-IX
-216333:101:13335,Learned from Serverius
+216333:101:206221,Learned from ERA-IX
+216333:101:56393,Learned from Frys-IX
+216333:101:56584,Learned from INTERIX
+216333:101:49917,Learned from LSIX
+
 216333:101:nnn,Learned from AS$0
 
 ## Location
-216333:105:1,Location Amsterdam, NL
+216333:105:1,Location Meppel, NL
+216333:105:2,Location Amsterdam, NL
 216333:105:nnn,Location $0
 
-## RPKI
-216333:1000:1,AS216333 verified RPKI UNKNOWN
-216333:1000:2,AS216333 verified RPKI VALID
-216333:1000:4,AS216333 verified RPKI INVALID (invalids are not imported)
