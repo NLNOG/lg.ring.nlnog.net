@@ -172,6 +172,7 @@ def read_communities() -> dict:
 
     currentdir = os.path.dirname(os.path.realpath(__file__))
     files = glob.glob(f"{currentdir}/communities/as*.txt")
+    files.append(f"{currentdir}/communities/well-known.txt")
     for filename in files:
         with open(filename, "r", encoding="utf8") as filehandle:
             asn = filename.split("/")[-1].replace(".txt", "")
