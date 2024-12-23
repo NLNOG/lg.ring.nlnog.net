@@ -1,0 +1,69 @@
+# Exascale Global BGP Communities
+
+61049:1:0, Origin - route originated by Exascale
+61049:1:1, Origin - route originated by downstream customer
+61049:1:2, Origin - route learnt from private peer
+61049:1:3, Origin - route learnt from public peer
+61049:1:4, Origin - route learnt from transit
+
+# Location Origin
+## Region Origin
+61049:2:0, Origin - route originated in EU (Europe)
+
+## Country Origin
+61049:3:31, Origin - route originated in NL (Netherlands)
+61049:3:33, Origin - route originated in FR (France)
+61049:3:44, Origin - route originated in UK (United Kingdom)
+61049:3:49, Origin - route originated in FR (Germany)
+
+## City Origin
+61049:4:441, Origin - route originated in TEL (Telford, UK)
+61049:4:442, Origin - route originated in MCR (Manchester, UK)
+61049:4:443, Origin - route originated in LHR (London, UK)
+61049:4:444, Origin - route originated in WLV (Wolverhampton, UK)
+61049:4:311, Origin - route originated in AMS (Amsterdam, NL)
+
+# Connectivity Type
+## Transit Origin
+61049:5:3257, Origin - route learned from GTT (AS3257) transit
+61049:5:2914, Origin - route learned from NTT (AS3356) transit
+61049:5:174, Origin - route learned from Cogent Communications (AS174) transit
+61049:5:6939, Origin - route learned from Huricane Electric (AS6939) transit
+
+## Public Peering Origin (Country+City+nnn)
+61049:6:0, Origin - route learned from public peer
+
+### UK Peering Exchanges
+61049:6:4431, Origin - route learned from LINX LON1 public peering
+61049:6:4432, Origin - route learned from LINX LON2 public peering
+61049:6:4433, Origin - route learned from LONAP public peering
+61049:6:4421, Origin - route learned from LINX MAN public peering
+
+### NL Peering Exchanges
+61049:6:3111, Origin - route learned from AMS-IX public peering
+61049:6:3112, Origin - route learned from Speed-IX public peering
+61049:6:3113, Origin - route learned from Frys-IX public peering
+61049:6:3114, Origin - route learned from iFOG-IX public peering
+61049:6:3115, Origin - route learned from InterIX public peering
+
+# Peer Type
+## Public Peer ASN Origin
+61049:7:nnn, Origin - route learned from IX peer AS$0
+
+## Public Peer ASN Origin
+61049:8:0, Origin - route learned from private peer
+61049:8:nnn, Origin - route learned from private peer AS$0
+
+# Control 
+## Control Global (All ASNs)
+61049:1000:0, Control - Global no export
+61049:1000:1, Control - Global prepend x1
+61049:1000:2, Control - Global prepend x2
+61049:1000:3, Control - Global prepend x3
+
+## Control Specific ASN AS$0
+61049:1001:nnn, Control - no export to AS$0
+61049:1002:nnn, Control - Prepend x1 to AS$0
+61049:1003:nnn, Control - Prepend x2 to AS$0
+61049:1004:nnn, Control - Prepend x3 to AS$0
+
