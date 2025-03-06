@@ -540,10 +540,6 @@ def generate_map(routes: dict, prefix: str):
             else:
                 add_asn(ashop, fgcolor=fontcolor, bgcolor="#%06x" % color)
 
-            # Add a link from the looking glass node node
-            if idx == 0:
-                add_link("lgnode", route['aspath'][0][0], label=route['peer'].upper(), fontsize=9)
-
             # Add a link towards the prefix
             if idx+1 == len(route['aspath']):
                 if ashop[0] == "}":
@@ -573,11 +569,6 @@ def generate_map(routes: dict, prefix: str):
     # Add the prefix node
     pfxnode = pydot.Node("DESTINATION", label=prefix, shape="box", fillcolor="#f4511e", style="filled", fontsize="10", fontname="Arial")
     graph.add_node(pfxnode)
-
-    # Add the looking glass node
-    lgnode = pydot.Node("lgnode", label=f"{app.config['LOOKING_GLASS_NAME'].upper()}",
-                        shape="box", fillcolor="#f4511e", style="filled", fontsize="10", fontname="Arial")
-    graph.add_node(lgnode)
 
     # Visualize every path
     for route in routes:
