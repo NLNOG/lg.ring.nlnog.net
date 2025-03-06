@@ -790,7 +790,7 @@ def show_route_for_prefix(prefix=None, netmask=None):
         # Return a map page
         dot = generate_map(routes[route["prefix"]], route["prefix"]).to_string()
         return render_template("map.html", peer=nodelist, peers=peers, routes=routes, prefix=prefix, query_id=query_id,
-                               warnings=warnings, errors=errors, match=request.args.get("match"), collected=create_date,
+                               warnings=warnings, errors=errors, match=request.args.get("match", "Exact"), collected=create_date,
                                dot=dot)
 
     if request.path == "/prefix/text" or (request.cookies.get("output") == "text" and request.path != "/prefix/html"):
