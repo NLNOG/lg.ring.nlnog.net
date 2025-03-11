@@ -1,0 +1,4 @@
+# ESnet communities taken from https://www.es.net/engineering-services/the-network/peering-connections/
+293:51,ESnet connected sites
+293:52,Research and Education Networks
+293:53,Commercial Networks
