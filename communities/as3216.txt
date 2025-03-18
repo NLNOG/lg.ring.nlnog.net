@@ -1,0 +1,449 @@
+# From AS3216 whois
+
+# External
+# Location / Peer
+3216:501x,Vodafone (Cable&Wireless) uplink
+3216:502x,Telecom Italia Sparkle uplink
+3216:503x,PCCW Global uplink
+3216:504x,Telia Global uplink
+3216:505x,Turk Telekom uplink
+3216:506x,TATA Communications uplink
+3216:508x,Orange uplink
+3216:509x,Cogent uplink
+3216:510x,any DE-CIX peer
+3216:511x,any LINX peer
+3216:512x,any AMS-IX peer
+3216:513x,any Equinix Ashrburn peer
+3216:514x,any Netnod Stockholm peer
+3216:570x,DATAIX (EU) peers
+3216:573x,any JPNAP Tokyo peer
+3216:574x,any Equinix Hong Kong peer
+3216:575x,any HKIX peer
+3216:576x,any NL-ix peer
+3216:577x,any BBIX Tokyo peer
+3216:578x,any BBIX Hong Kong peer
+3216:550x,CDN77 private peer (Frankfurt)
+3216:551x,G-Core Labs private peers
+3216:552x,FACEBOOK private peer (Frankfurt)
+3216:553x,Level 3 Communications private peer
+3216:554x,FACEBOOK private peer (Stockholm)
+3216:555x,Twitch private peer
+3216:556x,VALVE private peer (Stockholm)
+3216:557x,Apple private peer (Frankfurt)
+3216:558x,Core-Backbone private peer (Frankfurt)
+3216:559x,ONLINE SAS private peer (Amsterdam)
+3216:520x,Google private peer (Moscow and Frankfurt)
+3216:521x,Megafon private peer
+3216:522x,MTU private peer
+3216:523x,Vkontakte (AS47541) private peer
+3216:524x,TransTelecom private peer
+3216:525x,Yandex private peer
+3216:526x,Corbina private peer
+3216:527x,Comcor private peer
+3216:529x,Rostelecom private peer
+3216:530x,Vkontakte (AS47542) private peer
+3216:531x,DATAIX (RU) peers
+3216:533x,DALSATKOM AS43550 private peer
+3216:534x,RetnNet private peer
+3216:535x,FDCServers
+3216:536x,Rascom private peer
+3216:537x,SOLNTCETELEKOM private peer
+3216:538x,Er-telecom private peer
+3216:539x,Mail.ru private peer
+3216:540x,DigitalOcean private peer
+3216:542x,Roblox private peer
+3216:543x,Verizon Digital Media Services (EdgeCast) private peer
+3216:544x,Melbikomas AS56630 private peer
+3216:545x,Akamai private peer (Stockholm)
+3216:546x,Fastly private peer (Stockholm)
+3216:547x,DDOS-GUARD private peer
+3216:548x,LeaseWeb private peer
+3216:549x,ByteDance
+3216:560x,Wargaming private peer (Krasnoyarsk)
+3216:561x,LLNW private peer (Stockholm)
+3216:562x,FACEBOOK private peer (Helsingfors)
+3216:563x,Google Global Cache
+3216:564x,AS21357 private peer
+3216:565x,Amazon private peer (Frankfurt)
+3216:566x,China Telecom private peer
+3216:567x,Hetzner private peer
+3216:568x,Amazon private peer (Stockholm)
+3216:569x,VALVE private peer (Frankfurt)
+3216:581x,CLOUDFLARE private peer (Frankfurt)
+3216:582x,FACEBOOK private peer (Tokyo)
+3216:583x,OVHcloud private peer (Frankfurt)
+3216:584x,Telegram private peer
+3216:585x,Facebook-FNA
+3216:586x,Blizzard
+3216:590x,INTERNATIONAL peer or uplink
+
+# Action
+3216:5xx0,do not advertise
+3216:5xx1,prepend 3216 1 time
+3216:5xx2,prepend 3216 2 times
+3216:5xx4,prepend 3216 4 times
+3216:5xx6,prepend 3216 6 times
+3216:5870,Set local preference to the lowest value used in the network (BACKUP)
+3216:5880,Set local preference to less by 1 than the lowest value of INTERNATIONAL
+3216:5890,Set local preference to less by 1 than the lowest value of NATIONAL peer
+
+# Internal
+3216:1000,Russian peer (receieved from IX or private peer)
+3216:1002,Ufa peer
+3216:1016,Tatarstan peer
+3216:1023,Krasnodar peer
+3216:1024,Krasnoyarsk peer
+3216:1025,Vladivostok peer
+3216:1026,Stavropol peer
+3216:1027,Khabarovsk peer
+3216:1030,Astrakhan peer
+3216:1031,Belgorod peer
+3216:1034,Volgograd peer
+3216:1036,Voronezh peer
+3216:1038,Irkutsk peer
+3216:1039,Kaliningrad peer
+3216:1042,Kemerovo peer
+3216:1046,Kursk peer
+3216:1052,N.Novgorod peer
+3216:1054,Novosibirsk peer
+3216:1055,Omsk peer
+3216:1059,Perm peer
+3216:1061,Rostov-on-Don peer
+3216:1063,Samara peer
+3216:1064,Saratov peer
+3216:1065,Sakhalin peer
+3216:1066,Ekaterinburg peer
+3216:1072,Tyumen peer
+3216:1074,Chelyabinsk peer
+3216:1076,Yaroslavl peer
+3216:1077,Moscow peer
+3216:1078,SPb peer
+3216:1086,Surgut peer
+3216:1101,Rostelecom AS12389 private peering
+3216:1102,MTS (MTU) AS8359 private peering
+3216:1103,Vladivostok Electrosvyaz private peering
+3216:1104,Ekaterinburg Ural-Relcom private peering
+3216:1106,Arkhangelsk Artelecom private peering
+3216:1108,TransTelecom AS20485 private peering
+3216:1109,Yandex AS13238 private peering
+3216:1110,Corbina AS8402 private peering
+3216:1111,Comcor AS8732 private peering
+3216:1116,Vkontakte AS47541 private peering (SPB)
+3216:1118,Google AS15169 Russia private peering
+3216:1119,Mail.ru private peering (Moscow)
+3216:1120,Megafon AS31133 private peering
+3216:1121,Vkontakte AS47542 private peering (Moscow)
+3216:1122,RetnNet private peering (Moscow)
+3216:1124,Rascom AS20764 private peering
+3216:1125,Er-telecom AS9049 private peering
+3216:1126,Vkontakte AS28709 private peering (Region)
+3216:1129,Google AS36040 private peering
+3216:1130,Wargaming private peering (Krasnoyarsk)
+3216:1133,China Mobile private peering
+3216:1135,DDOS-GUARD AS57724 private peering
+3216:1136,SOLNTCETELEKOM AS51004 private peering
+3216:1137,DALSATKOM AS43550 private peering
+3216:1138,DATAIX (RU) peering
+3216:1210,Armenia peer (receieved from IX or private peer)
+3216:1211,Armenia Yerevan peer
+3216:1219,Armenia Service
+3216:1220,Kazakhstan peer (receieved from IX or private peer)
+3216:1221,Kazakhstan Almaty peer
+3216:1222,Kazakhstan Shymkent peer
+3216:1229,Kazakhstan Service
+3216:1230,Kyrgyzstan peer (receieved from IX or private peer)
+3216:1231,Kyrgyzstan Bishkek peer
+3216:1239,Kyrgyzstan Service
+3216:1240,Tadjikistan peer (receieved from IX or private peer)
+3216:1241,Tadjikistan Dushanbe peer
+3216:1249,Tadjikistan Service
+3216:1301,Filanco AS29076 custom peering
+3216:2001,Full transit customers and own networks
+3216:2222,Corbina to FTTB only transit multicast
+3216:2221,Corbina partial transit to IX
+3216:2999,Own networks
+3216:3000,Receieved from an international uplink or peer
+
+# Uplink
+3216:3001,Vodafone (Cable&Wireless)
+3216:3003,Telecom Italia Sparkle
+3216:3005,Telia
+3216:3006,TATA Communications
+3216:3007,Level 3 Communications
+3216:3008,Cogent
+3216:3009,PCCW Global
+3216:3010,China Telecom
+3216:3011,Orange Worldwide IP Backbone
+3216:3012,Turk Telecom
+
+# Internet exchange
+3216:3101,DE-CIX
+3216:3102,LINX
+3216:3103,AMS-IX
+3216:3104,Equinix Ashburn
+3216:3105,Netnod (Stockholm)
+3216:3114,DATAIX (EU) peering
+3216:3117,JPNAP Tokyo
+3216:3118,Equinix Hong Kong
+3216:3119,HKIX (Hong Kong)
+3216:3120,NL-ix (Frankfurt)
+3216:3121,BBIX (Tokyo)
+3216:3122,BBIX (Hong Kong)
+
+# Private Peering
+3216:3202,Google (Frankfurt)
+3216:3203,FACEBOOK (Stockholm)
+3216:3204,Twitch AS46489
+3216:3205,Apple (Frankfurt)
+3216:3206,Telegram AS62041
+3216:3207,FACEBOOK (Frankfurt)
+3216:3208,Core-Backbone (Frankfurt)
+3216:3209,VALVE (Stockholm)
+3216:3210,Amazon AS16509
+3216:3211,Hetzner AS24940
+3216:3212,VALVE (Frankfurt)
+3216:3213,FACEBOOK (Helsingfors)
+3216:3214,ONLINE SAS (Amsterdam)
+3216:3215,CLOUDFLARE AS13335
+3216:3217,OVHcloud (Frankfurt)
+3216:3218,CDN77 (Frankfurt)
+3216:3219,Blizzard (Amsterdam)
+3216:3220,Blizzard (Frankfurt)
+3216:3221,China Unicom
+3216:3222,ROBLOX (Frankfurt)
+3216:3223,Verizon Digital Media Services (EdgeCast)
+3216:3224,Melbikomas UAB
+3216:3225,Akamai (Stockholm)
+3216:3226,Fastly (Stockholm)
+3216:3227,LeaseWeb
+3216:3228,G-Core Labs
+3216:3229,ReTN
+3216:3230,ByteDance(Frankfurt)
+3216:3231,FDC Servers
+3216:3232,DigitalOcean
+
+# Community of our networks
+3216:4000,Originated in any region
+3216:4001,Originated in SPB
+3216:4002,Originated in Novosibirsk
+3216:4003,Originated in Vladivostok
+3216:4004,Originated in Samara
+3216:4005,Originated in NNovgorod
+3216:4006,Originated in Arkhangelsk
+3216:4007,Originated in Tyumen
+3216:4008,Originated in Ekaterinburg
+3216:4009,Originated in Almaty
+3216:4010,Originated in NW Region (Spb Arkh Kaliningrad)
+3216:4011,Originated in Komi Republic
+3216:4023,Originated in Krasnodar
+3216:4024,Originated in Krasnoyarsk
+3216:4034,Originated in Volgograd
+3216:4040,Originated in Kaluga
+3216:4061,Originated in Rostov-na-Donu
+3216:4072,Originated in Tyumen
+3216:4074,Originated in Chelyabinsk
+3216:4100,Originated in Moscow
+3216:4200,Internal prefixes originated in Moscow
+3216:4250,Internal prefixes originated in Moscow region cities
+3216:4201,Internal prefixes originated in SPB
+3216:4202,Internal prefixes originated in Ufa
+3216:4203,Internal prefixes originated in Samara
+3216:4204,Internal prefixes originated in Khabarovsk
+3216:4205,Internal prefixes originated in NNovgorod
+3216:4206,Internal prefixes originated in Novosibirsk
+3216:4207,Internal prefixes originated in Krasnoyarsk
+3216:4208,Internal prefixes originated in Kazan
+3216:4209,Internal prefixes originated in Irkutsk
+3216:4210,Internal prefixes originated in Ekaterinburg
+3216:4211,Internal prefixes originated in Chelyabinsk
+3216:4212,Internal prefixes originated in Rostov-na-Donu
+3216:4213,Internal prefixes originated in Krasnodar
+3216:4250,Internal prefixes originated in Moscow Region
+3216:4272,Internal prefixes originated in Krasnodar
+3216:4301,Internal prefixes originated in Republic of Adygea
+3216:4302,Internal prefixes originated in Republic of Bashkortostan
+3216:4303,Internal prefixes originated in Buryat Republic
+3216:4304,Internal prefixes originated in Altai Republic
+3216:4305,Internal prefixes originated in Republic of Dagestan
+3216:4306,Internal prefixes originated in Republic of Ingushetia
+3216:4307,Internal prefixes originated in Kabardino-Balkar Republic
+3216:4308,Internal prefixes originated in Republic of Kalmykia
+3216:4309,Internal prefixes originated in Karachay-Cherkess Republic
+3216:4310,Internal prefixes originated in Republic of Karelia
+3216:4311,Internal prefixes originated in Komi Republic
+3216:4312,Internal prefixes originated in Mari El Republic
+3216:4313,Internal prefixes originated in Republic of Mordovia
+3216:4314,Internal prefixes originated in Sakha Republic
+3216:4315,Internal prefixes originated in Republic of North Osetia-Alania
+3216:4316,Internal prefixes originated in Republic of Tatarstan
+3216:4317,Internal prefixes originated in Tuva Republic
+3216:4318,Internal prefixes originated in Udmurt Republic
+3216:4319,Internal prefixes originated in Republic of Khakassia
+3216:4321,Internal prefixes originated in Chuvash Republic
+3216:4322,Internal prefixes originated in Altai Krai
+3216:4323,Internal prefixes originated in Krasnodar Krai
+3216:4324,Internal prefixes originated in Krasnoyarsk Krai
+3216:4325,Internal prefixes originated in Primorsky Krai
+3216:4326,Internal prefixes originated in Stavropol Krai
+3216:4327,Internal prefixes originated in Khabarovsk Krai
+3216:4328,Internal prefixes originated in Amur Region
+3216:4329,Internal prefixes originated in Arkhangelsk Region
+3216:4330,Internal prefixes originated in Astrakhan Region
+3216:4331,Internal prefixes originated in Belgorod Region
+3216:4332,Internal prefixes originated in Bryansk Region
+3216:4333,Internal prefixes originated in Vladimir Region
+3216:4334,Internal prefixes originated in Volgograd Region
+3216:4335,Internal prefixes originated in Vologda Region
+3216:4336,Internal prefixes originated in Voronezh Region
+3216:4337,Internal prefixes originated in Ivanovo Region
+3216:4338,Internal prefixes originated in Irkutsk Region
+3216:4339,Internal prefixes originated in Kaliningrad Region
+3216:4340,Internal prefixes originated in Kaluga Region
+3216:4341,Internal prefixes originated in Kamchatka Region
+3216:4342,Internal prefixes originated in Kemerovo Region
+3216:4343,Internal prefixes originated in Kirov Region
+3216:4344,Internal prefixes originated in Kostroma Region
+3216:4345,Internal prefixes originated in Kurgan Region
+3216:4346,Internal prefixes originated in Kursk Region
+3216:4347,Internal prefixes originated in Leningrad Region
+3216:4348,Internal prefixes originated in Lipetsk Region
+3216:4349,Internal prefixes originated in Magadan Region
+3216:4350,Internal prefixes originated in Moscow Region
+3216:4351,Internal prefixes originated in Murmansk Region
+3216:4352,Internal prefixes originated in Nizhny Novgorod Region
+3216:4353,Internal prefixes originated in Novgorod Region
+3216:4354,Internal prefixes originated in Novosibirsk Region
+3216:4355,Internal prefixes originated in Omsk Region
+3216:4356,Internal prefixes originated in Orenburg Region
+3216:4357,Internal prefixes originated in Oryol Region
+3216:4358,Internal prefixes originated in Penza Region
+3216:4359,Internal prefixes originated in Perm Region
+3216:4360,Internal prefixes originated in Pskov Region
+3216:4361,Internal prefixes originated in Rostov Region
+3216:4362,Internal prefixes originated in Ryazan Region
+3216:4363,Internal prefixes originated in Samara Region
+3216:4364,Internal prefixes originated in Saratov Region
+3216:4365,Internal prefixes originated in Sakhalin Region
+3216:4366,Internal prefixes originated in Sverdlovsk Region
+3216:4367,Internal prefixes originated in Smolensk Region
+3216:4368,Internal prefixes originated in Tambov Region
+3216:4369,Internal prefixes originated in Tver Region
+3216:4370,Internal prefixes originated in Tomsk Region
+3216:4371,Internal prefixes originated in Tula Region
+3216:4372,Internal prefixes originated in Tyumen Region
+3216:4373,Internal prefixes originated in Ulyanovsk Region
+3216:4374,Internal prefixes originated in Chelyabinsk Region
+3216:4375,Internal prefixes originated in Chita Region
+3216:4376,Internal prefixes originated in Yaroslavl Region
+3216:4377,Internal prefixes originated in Moscow
+3216:4378,Internal prefixes originated in Saint Petersburg
+3216:4379,Internal prefixes originated in Jewish Autonomous Region
+3216:4383,Internal prefixes originated in Nenets Autonomous Okrug
+3216:4386,Internal prefixes originated in Khanty-Mansi Autonomous Okrug
+3216:4387,Internal prefixes originated in Chukotka Autonomous Okrug
+3216:4389,Internal prefixes originated in Yamalo-Nenets Autonomous Okrug
+3216:4390,Internal prefixes originated in Azerbaijan
+3216:4395,Internal prefixes originated in Chechen Republic
+3216:4401,External prefixes originated in Republic of Adygea
+3216:4402,External prefixes originated in Republic of Bashkortostan
+3216:4403,External prefixes originated in Buryat Republic
+3216:4404,External prefixes originated in Altai Republic
+3216:4405,External prefixes originated in Republic of Dagestan
+3216:4406,External prefixes originated in Republic of Ingushetia
+3216:4407,External prefixes originated in Kabardino-Balkar Republic
+3216:4408,External prefixes originated in Republic of Kalmykia
+3216:4409,External prefixes originated in Karachay-Cherkess Republic
+3216:4410,External prefixes originated in Republic of Karelia
+3216:4411,External prefixes originated in Komi Republic
+3216:4412,External prefixes originated in Mari El Republic
+3216:4413,External prefixes originated in Republic of Mordovia
+3216:4414,External prefixes originated in Sakha Republic
+3216:4415,External prefixes originated in Republic of North Ossetia-Alania
+3216:4416,External prefixes originated in Republic of Tatarstan
+3216:4417,External prefixes originated in Tuva Republic
+3216:4418,External prefixes originated in Udmurt Republic
+3216:4419,External prefixes originated in Republic of Khakassia
+3216:4421,External prefixes originated in Chuvash Republic
+3216:4422,External prefixes originated in Altai Krai
+3216:4423,External prefixes originated in Krasnodar Krai
+3216:4424,External prefixes originated in Krasnoyarsk Krai
+3216:4425,External prefixes originated in Primorsky Krai
+3216:4426,External prefixes originated in Stavropol Krai
+3216:4427,External prefixes originated in Khabarovsk Krai
+3216:4428,External prefixes originated in Amur Region
+3216:4429,External prefixes originated in Arkhangelsk Region
+3216:4430,External prefixes originated in Astrakhan Region
+3216:4431,External prefixes originated in Belgorod Region
+3216:4432,External prefixes originated in Bryansk Region
+3216:4433,External prefixes originated in Vladimir Region
+3216:4434,External prefixes originated in Volgograd Region
+3216:4435,External prefixes originated in Vologda Region
+3216:4436,External prefixes originated in Voronezh Region
+3216:4437,External prefixes originated in Ivanovo Region
+3216:4438,External prefixes originated in Irkutsk Region
+3216:4439,External prefixes originated in Kaliningrad Region
+3216:4440,External prefixes originated in Kaluga Region
+3216:4441,External prefixes originated in Kamchatka Region
+3216:4442,External prefixes originated in Kemerovo Region
+3216:4443,External prefixes originated in Kirov Region
+3216:4444,External prefixes originated in Kostroma Region
+3216:4445,External prefixes originated in Kurgan Region
+3216:4446,External prefixes originated in Kursk Region
+3216:4447,External prefixes originated in Leningrad Region
+3216:4448,External prefixes originated in Lipetsk Region
+3216:4449,External prefixes originated in Magadan Region
+3216:4450,External prefixes originated in Moscow Region Obsoleted
+3216:4451,External prefixes originated in Murmansk Region
+3216:4452,External prefixes originated in Nizhny Novgorod Region
+3216:4453,External prefixes originated in Novgorod Region
+3216:4454,External prefixes originated in Novosibirsk Region
+3216:4455,External prefixes originated in Omsk Region
+3216:4456,External prefixes originated in Orenburg Region
+3216:4457,External prefixes originated in Oryol Region
+3216:4458,External prefixes originated in Penza Region
+3216:4459,External prefixes originated in Perm Region
+3216:4460,External prefixes originated in Pskov Region
+3216:4461,External prefixes originated in Rostov Region
+3216:4462,External prefixes originated in Ryazan Region
+3216:4463,External prefixes originated in Samara Region
+3216:4464,External prefixes originated in Saratov Region
+3216:4465,External prefixes originated in Sakhalin Region
+3216:4466,External prefixes originated in Sverdlovsk Region
+3216:4467,External prefixes originated in Smolensk Region
+3216:4468,External prefixes originated in Tambov Region
+3216:4469,External prefixes originated in Tver Region
+3216:4470,External prefixes originated in Tomsk Region
+3216:4471,External prefixes originated in Tula Region
+3216:4472,External prefixes originated in Tyumen Region
+3216:4473,External prefixes originated in Ulyanovsk Region
+3216:4474,External prefixes originated in Chelyabinsk Region
+3216:4475,External prefixes originated in Chita Region
+3216:4476,External prefixes originated in Yaroslavl Region
+3216:4477,External prefixes originated in Moscow
+3216:4478,External prefixes originated in Saint Petersburg
+3216:4479,External prefixes originated in Jewish Autonomous Region
+3216:4483,External prefixes originated in Nenets Autonomous Okrug
+3216:4486,External prefixes originated in Khanty-Mansi Autonomous Okrug
+3216:4487,External prefixes originated in Chukotka Autonomous Okrug
+3216:4489,External prefixes originated in Yamalo-Nenets Autonomous Okrug
+3216:4490,External prefixes originated in Azerbaijan
+3216:4495,External prefixes originated in Chechen Republic
+3216:4499,External prefixes originated in Stockholm
+3216:4610,Internal prefixes originated in Armenia
+3216:4611,Internal prefixes originated in Armenia Yerevan
+3216:4620,Internal prefixes originated in Kazakhstan
+3216:4621,Internal prefixes originated in Kazakhstan Almaty
+3216:4622,Internal prefixes originated in Kazakhstan Shymkent
+3216:4630,Internal prefixes originated in Kyrgyzstan
+3216:4631,Internal prefixes originated in Kyrgyzstan Bishkek
+3216:4640,Internal prefixes originated in Tadjikistan
+3216:4641,Internal prefixes originated in Tadjikistan Dushanbe
+3216:4710,External prefixes originated in Armenia
+3216:4711,External prefixes originated in Armenia Yerevan
+3216:4720,External prefixes originated in Kazakhstan
+3216:4721,External prefixes originated in Kazakhstan Almaty
+3216:4722,External prefixes originated in Kazakhstan Shymkent
+3216:4730,External prefixes originated in Kyrgyzstan
+3216:4731,External prefixes originated in Kyrgyzstan Bishkek
+3216:4740,External prefixes originated in Tadjikistan
+3216:4741,External prefixes originated in Tadjikistan Dushanbe
