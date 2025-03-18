@@ -1,0 +1,28 @@
+# AS15169 (GOOGLE) communities taken from https://support.google.com/interconnect/answer/9664829
+15169:10010,GPRS Mobile Broadband
+15169:10020,2.5G/Edge Mobile Broadband
+15169:10030,3G Mobile Broadband
+15169:10040,4G Mobile Broadband
+15169:10050,Dial-Up
+15169:10060,ISDN
+15169:10070,Cable
+15169:10080,Cable-Business
+15169:10090,Ethernet/Enterprise Access
+15169:10100,Fiber to the Home
+15169:10110,Fiber to the Premises-Business
+15169:10120,ADSL
+15169:10130,ADSL-Business
+15169:10140,VDSL
+15169:10150,VDSL-Business
+15169:10160,Wholesale/Transit- Not directly user-facing
+15169:10170,Satellite
+15169:1100x,Product Differentiator $0
+15169:12000,Contains a NAT device
+15169:12100,Assigned to users who are NATed
+15169:13000,Lowest preference to receive traffic for this prefix at this interconnection point
+15169:13001-13099,very low preference to receive traffic for this prefix at this interconnection point
+15169:13100,Default priority of traffic on an indirect path
+15169:13101-13199,low preference to receive traffic for this prefix at this interconnection point
+15169:13200,Default priority to receive traffic for this prefix at this interconnection point
+15169:13201-13299,high preference to receive traffic for this prefix at this interconnection point
+15169:13300,Highest preference to receive traffic for this prefix at this interconnection point
