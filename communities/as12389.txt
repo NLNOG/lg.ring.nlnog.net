@@ -1,0 +1,230 @@
+# From AS12389 whois
+
+# Prepending Communities
+12389:6019,Advertising to GTT (AS3257) upstream without prepends
+12389:6010,Do not advertise to GTT (AS3257) upstream
+12389:601x,Advertising to GTT (AS3257) upstream with $0 12389 prepend
+12389:6089,Advertising to PCCW Global Asia (AS3491) upstream without prepends
+12389:6080,Do not advertise to PCCW Global Asia (AS3491) upstream
+12389:608x,Advertising to PCCW Global Asia (AS3491) upstream with $0 12389 prepend
+12389:6099,Advertising to PCCW Global Europe (AS3491) upstream without prepends
+12389:6090,Do not advertise to PCCW Global Europe (AS3491) upstream
+12389:609x,Advertising to PCCW Global Europe (AS3491) upstream with $0 12389 prepend
+12389:6129,Advertising to Telia Sonera (AS1299) upstream without prepends
+12389:6120,Do not advertise to Telia Sonera (AS1299) upstream
+12389:612x,Advertising to Telia Sonera (AS1299) upstream with $0 12389 prepend
+12389:6149,Advertising to Vodafone (AS1273) upstream without prepends
+12389:6140,Do not advertise to Vodafone (AS1273) upstream
+12389:614x,Advertising to Vodafone (AS1273) upstream with $0 12389 prepend
+12389:6179,Advertising to Telecom-Italia Sparkle (AS6762) upstream without prepends
+12389:6170,Do not advertise to Telecom-Italia Sparkle (AS6762) upstream
+12389:617x,Advertising to Telecom-Italia Sparkle (AS6762) upstream with $0 12389 prepend
+12389:6189,Advertising to Orange (AS5511) upstream without prepends
+12389:6180,Do not advertise to Orange (AS5511) upstream
+12389:618x,Advertising to Orange (AS5511) upstream with $0 12389 prepend
+12389:6199,Advertising to Cogent (AS174) upstream without prepends
+12389:6190,Do not advertise to Cogent (AS174) upstream
+12389:619x,Advertising to Cogent (AS174) upstream with $0 12389 prepend
+12389:6999,Advertising to any upstream without prepends
+12389:6990,Do not advertise to any upstream
+12389:699x,Advertising to any upstream with $0 12389 prepend
+
+12389:7029,Advertising to China Telecom (AS4134) peer without prepends
+12389:7020,Do not advertise to China Telecom (AS4134) peer
+12389:702x,Advertising to China Telecom (AS4134) peer with $0 12389 prepend
+12389:7039,Advertising to China NetCom / Unicom  (AS4837) peer without prepends
+12389:7030,Do not advertise to China NetCom / Unicom  (AS4837) peer
+12389:703x,Advertising to China NetCom / Unicom  (AS4837) peer with $0 12389 prepend
+12389:7079,Advertising to Korea Telecom (AS4766) peer without prepends
+12389:7070,Do not advertise to Korea Telecom (AS4766) peer
+12389:707x,Advertising to Korea Telecom (AS4766) peer with $0 12389 prepend
+12389:7099,Advertising to KDDI (AS2516) peer without prepends
+12389:7090,Do not advertise to KDDI (AS2516) peer
+12389:709x,Advertising to KDDI (AS2516) peer with $0 12389 prepend
+12389:7109,Advertising to Akamai (AS20940) peer without prepends
+12389:7100,Do not advertise to Akamai (AS20940) peer
+12389:710x,Advertising to Akamai (AS20940) peer with $0 12389 prepend
+12389:7119,Advertising to DE-CIX any private peers without prepends
+12389:7110,Do not advertise to DE-CIX any private peers
+12389:711x,Advertising to DE-CIX any private peers with $0 12389 prepend
+12389:7129,Advertising to CloudFlare (AS13335) peer without prepends
+12389:7120,Do not advertise to CloudFlare (AS13335) peer
+12389:712x,Advertising to CloudFlare (AS13335) peer with $0 12389 prepend
+12389:7139,Advertising to Google (AS15169) peer without prepends
+12389:7130,Do not advertise to Google (AS15169) peer
+12389:713x,Advertising to Google (AS15169) peer with $0 12389 prepend
+12389:7149,Advertising to Netnod any private peers without prepends
+12389:7140,Do not advertise to Netnod any private peers
+12389:714x,Advertising to Netnod any private peers with $0 12389 prepend
+12389:7229,Advertising to Hetzner Online AG (AS24940) peer without prepends
+12389:7220,Do not advertise to Hetzner Online AG (AS24940) peer
+12389:722x,Advertising to Hetzner Online AG (AS24940) peer with $0 12389 prepend
+12389:7249,Advertising to Singtel (AS7473) peer without prepends
+12389:7240,Do not advertise to Singtel (AS7473) peer
+12389:724x,Advertising to Singtel (AS7473) peer with $0 12389 prepend
+12389:7279,Advertising to Hurricane Electric (AS6939) peer without prepends
+12389:7270,Do not advertise to Hurricane Electric (AS6939) peer
+12389:727x,Advertising to Hurricane Electric (AS6939) peer with $0 12389 prepend
+12389:7299,Advertising to LEASEWEB (AS16265) peer without prepends
+12389:7290,Do not advertise to LEASEWEB (AS16265) peer
+12389:729x,Advertising to LEASEWEB (AS16265) peer with $0 12389 prepend
+12389:7319,Advertising to JUSTINTV / TWITCH (AS46489) peer without prepends
+12389:7310,Do not advertise to JUSTINTV / TWITCH (AS46489) peer
+12389:731x,Advertising to JUSTINTV / TWITCH (AS46489) peer with $0 12389 prepend
+12389:7339,Advertising to Limelight Networks (AS22822) peer without prepends
+12389:7330,Do not advertise to Limelight Networks (AS22822) peer
+12389:733x,Advertising to Limelight Networks (AS22822) peer with $0 12389 prepend
+12389:7349,Advertising to Valve at Asia (AS32590) peer without prepends
+12389:7340,Do not advertise to Valve at Asia (AS32590) peer
+12389:734x,Advertising to Valve at Asia (AS32590) peer with $0 12389 prepend
+12389:7359,Advertising to Valve at Europe (AS32590) peer without prepends
+12389:7350,Do not advertise to Valve at Europe (AS32590) peer
+12389:735x,Advertising to Valve at Europe (AS32590) peer with $0 12389 prepend
+12389:7379,Advertising to EdgeCast Networks (AS15133) peer without prepends
+12389:7370,Do not advertise to EdgeCast Networks (AS15133) peer
+12389:737x,Advertising to EdgeCast Networks (AS15133) peer with $0 12389 prepend
+12389:7389,Advertising to Microsoft (AS8075) peer without prepends
+12389:7380,Do not advertise to Microsoft (AS8075) peer
+12389:738x,Advertising to Microsoft (AS8075) peer with $0 12389 prepend
+12389:7429,Advertising to CoreBackbone (AS33891) peer without prepends
+12389:7420,Do not advertise to CoreBackbone (AS33891) peer
+12389:742x,Advertising to CoreBackbone (AS33891) peer with $0 12389 prepend
+12389:7439,Advertising to Facebook (AS32934) peer without prepends
+12389:7430,Do not advertise to Facebook (AS32934) peer
+12389:743x,Advertising to Facebook (AS32934) peer with $0 12389 prepend
+12389:7469,Advertising to HKIX any private peers without prepends
+12389:7460,Do not advertise to HKIX any private peers
+12389:746x,Advertising to HKIX any private peers with $0 12389 prepend
+12389:7479,Advertising to Blizzard (AS57976) peer without prepends
+12389:7470,Do not advertise to Blizzard (AS57976) peer
+12389:747x,Advertising to Blizzard (AS57976) peer with $0 12389 prepend
+12389:7489,Advertising to Apple (AS714) peer without prepends
+12389:7480,Do not advertise to Apple (AS714) peer
+12389:748x,Advertising to Apple (AS714) peer with $0 12389 prepend
+12389:7499,Advertising to Amazon at Europe (AS16509) peer without prepends
+12389:7490,Do not advertise to Amazon at Europe (AS16509) peer
+12389:749x,Advertising to Amazon at Europe (AS16509) peer with $0 12389 prepend
+12389:7509,Advertising to NL-IX any private peers without prepends
+12389:7500,Do not advertise to NL-IX any private peers
+12389:750x,Advertising to NL-IX any private peers with $0 12389 prepend
+12389:7519,Advertising to Equinix at Asia any private peers without prepends
+12389:7510,Do not advertise to Equinix at Asia any private peers
+12389:751x,Advertising to Equinix at Asia any private peers with $0 12389 prepend
+12389:7529,Advertising to BBIX any private peers without prepends
+12389:7520,Do not advertise to BBIX any private peers
+12389:752x,Advertising to BBIX any private peers with $0 12389 prepend
+12389:7539,Advertising to LG UPLUS (AS3786) peer without prepends
+12389:7530,Do not advertise to LG UPLUS (AS3786) peer
+12389:753x,Advertising to LG UPLUS (AS3786) peer with $0 12389 prepend
+12389:7559,Advertising to DATA-IX any private peers without prepends
+12389:7550,Do not advertise to DATA-IX any private peers
+12389:755x,Advertising to DATA-IX any private peers with $0 12389 prepend
+12389:7569,Advertising to IIJ (AS2497) peer without prepends
+12389:7560,Do not advertise to IIJ (AS2497) peer
+12389:756x,Advertising to IIJ (AS2497) peer with $0 12389 prepend
+12389:7579,Advertising to JNAP any private peers without prepends
+12389:7570,Do not advertise to JNAP any private peers
+12389:757x,Advertising to JNAP any private peers with $0 12389 prepend
+12389:7599,Advertising to CDN77(AS60068) peer without prepends
+12389:7590,Do not advertise to CDN77(AS60068) peer
+12389:759x,Advertising to CDN77(AS60068) peer with $0 12389 prepend
+12389:7619,Advertising to Telegram (AS62041) without prepends
+12389:7610,Do not advertise to Telegram (AS62041)
+12389:761x,Advertising to Telegram (AS62041) with $0 12389 prepend
+12389:7629,Advertising to Amazon at Asia (AS16509) peer without prepends
+12389:7620,Do not advertise to Amazon at Asia (AS16509) peer
+12389:762x,Advertising to Amazon at Asia (AS16509) peer with $0 12389 prepend
+12389:7639,Advertising to Roblox (AS22697) peer without prepends
+12389:7630,Do not advertise to Roblox (AS22697) peer
+12389:763x,Advertising to Roblox (AS22697) peer with $0 12389 prepend
+12389:7649,Advertising to OVH Cloud (AS16276) peer without prepends
+12389:7640,Do not advertise to OVH Cloud (AS16276) peer
+12389:764x,Advertising to OVH Cloud (AS16276) peer with $0 12389 prepend
+12389:7659,Advertising to Fastly (AS54113) peer without prepends
+12389:7650,Do not advertise to Fastly (AS54113) peer
+12389:765x,Advertising to Fastly (AS54113) peer with $0 12389 prepend
+12389:7669,Advertising to FDC Servers (AS30058) peer without prepends
+12389:7660,Do not advertise to FDC Servers (AS30058) peer
+12389:766x,Advertising to FDC Servers (AS30058) peer with $0 12389 prepend
+12389:7679,Advertising to DigitalOcean (AS14061) peer without prepends
+12389:7670,Do not advertise to DigitalOcean (AS14061) peer
+12389:767x,Advertising to DigitalOcean (AS14061) peer with $0 12389 prepend
+12389:7999,Advertising to any INTERNATIONAL peer without prepends
+12389:7990,Do not advertise to any INTERNATIONAL peer
+12389:799x,Advertising to any INTERNATIONAL peer with $0 12389 prepend
+
+12389:8019,Advertising to Yandex (AS13238) peer without prepends
+12389:8010,Do not advertise to Yandex (AS13238) peer
+12389:801x,Advertising to Yandex (AS13238) peer with $0 12389 prepend
+12389:8029,Advertising to Google (AS15169) peer without prepends
+12389:8020,Do not advertise to Google (AS15169) peer
+12389:802x,Advertising to Google (AS15169) peer with $0 12389 prepend
+12389:8049,Advertising to MSK-IX (AS8631) peer without prepends
+12389:8040,Do not advertise to MSK-IX (AS8631) peer
+12389:804x,Advertising to MSK-IX (AS8631) peer with $0 12389 prepend
+12389:8069,Advertising to SMR-IX (AS47882) peer without prepends
+12389:8060,Do not advertise to SMR-IX (AS47882) peer
+12389:806x,Advertising to SMR-IX (AS47882) peer with $0 12389 prepend
+12389:8159,Advertising to RUNNET (AS3267) peer without prepends
+12389:8150,Do not advertise to RUNNET (AS3267) peer
+12389:815x,Advertising to RUNNET (AS3267) peer with $0 12389 prepend
+12389:8209,Advertising to GLOBALNET (AS31500) peer without prepends
+12389:8200,Do not advertise to GLOBALNET (AS31500) peer
+12389:820x,Advertising to GLOBALNET (AS31500) peer with $0 12389 prepend
+12389:8249,Advertising to VKadre (AS47542) peer without prepends
+12389:8240,Do not advertise to VKadre (AS47542) peer
+12389:824x,Advertising to VKadre (AS47542) peer with $0 12389 prepend
+12389:8259,Advertising to VKontakte (AS47541) peer without prepends
+12389:8250,Do not advertise to VKontakte (AS47541) peer
+12389:825x,Advertising to VKontakte (AS47541) peer with $0 12389 prepend
+12389:8279,Advertising to Mail.ru (AS47764) peer without prepends
+12389:8270,Do not advertise to Mail.ru (AS47764) peer
+12389:827x,Advertising to Mail.ru (AS47764) peer with $0 12389 prepend
+12389:8339,Advertising to MegaFon (AS31133) peer without prepends
+12389:8330,Do not advertise to MegaFon (AS31133) peer
+12389:833x,Advertising to MegaFon (AS31133) peer with $0 12389 prepend
+12389:8349,Advertising to MTS (AS8359) peer without prepends
+12389:8340,Do not advertise to MTS (AS8359) peer
+12389:834x,Advertising to MTS (AS8359) peer with $0 12389 prepend
+12389:8359,Advertising to Vympelcom / Beeline (AS3216) peer without prepends
+12389:8350,Do not advertise to Vympelcom / Beeline (AS3216) peer
+12389:835x,Advertising to Vympelcom / Beeline (AS3216) peer with $0 12389 prepend
+12389:8379,Advertising to TransTeleCom (AS20485) peer without prepends
+12389:8370,Do not advertise to TransTeleCom (AS20485) peer
+12389:837x,Advertising to TransTeleCom (AS20485) peer with $0 12389 prepend
+12389:8389,Advertising to Corbina (AS8402) peer without prepends
+12389:8380,Do not advertise to Corbina (AS8402) peer
+12389:838x,Advertising to Corbina (AS8402) peer with $0 12389 prepend
+12389:8429,Advertising to DATA-IX (AS50952) peer without prepends
+12389:8420,Do not advertise to DATA-IX (AS50952) peer
+12389:842x,Advertising to DATA-IX (AS50952) peer with $0 12389 prepend
+12389:8439,Advertising to EKT-IX (AS42728) peer without prepends
+12389:8430,Do not advertise to EKT-IX (AS42728) peer
+12389:843x,Advertising to EKT-IX (AS42728) peer with $0 12389 prepend
+12389:8449,Advertising to RND-IX (AS47445) peer without prepends
+12389:8440,Do not advertise to RND-IX (AS47445) peer
+12389:844x,Advertising to RND-IX (AS47445) peer with $0 12389 prepend
+12389:8459,Advertising to VLV-IX (AS45018) peer without prepends
+12389:8450,Do not advertise to VLV-IX (AS45018) peer
+12389:845x,Advertising to VLV-IX (AS45018) peer with $0 12389 prepend
+12389:8469,Advertising to NSK-IX (AS42139) peer without prepends
+12389:8460,Do not advertise to NSK-IX (AS42139) peer
+12389:846x,Advertising to NSK-IX (AS42139) peer with $0 12389 prepend
+12389:8489,Advertising to SPB-IX (AS43690) peer without prepends
+12389:8480,Do not advertise to SPB-IX (AS43690) peer
+12389:848x,Advertising to SPB-IX (AS43690) peer with $0 12389 prepend
+12389:8499,Advertising to Amazon (AS16509) peer without prepends
+12389:8490,Do not advertise to Amazon (AS16509) peer
+12389:849x,Advertising to Amazon (AS16509) peer with $0 12389 prepend
+12389:8529,Advertising to VK CDN (AS28709) peer without prepends
+12389:8520,Do not advertise to VK CDN (AS28709) peer
+12389:852x,Advertising to VK CDN (AS28709) peer with $0 12389 prepend
+12389:8539,Advertising to Telegram (AS211157) peer without prepends
+12389:8530,Do not advertise to Telegram (AS211157) peer
+12389:853x,Advertising to Telegram (AS211157) peer with $0 12389 prepend
+
+# Local-preference
+12389:2xxx,set local-pref = $0$1$2
+
+# Blackhole
+12389:55555,blackhole traffic
