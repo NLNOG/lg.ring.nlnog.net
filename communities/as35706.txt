@@ -1,0 +1,15 @@
+# From AS35706 as-set AS35706:AS-COMMUNITIES whois
+
+0:666,Null route traffic
+35706:100,Set local preference to 100 (Last Resort route)
+35706:110,Set local preference to 110 (Backup Transit route)
+35706:120,Set local preference to 120 (Normal Transit route)
+35706:140,Set local preference to 140 (Depreferenced Peering route)
+35706:150,Set local preference to 150 (Normal Peering route)
+35706:190,Set local preference to 190 (Backup Customer route)
+35706:200,Set local preference to 200 (Normal Customer route)
+35706:30000,Normal announcement
+35706:30001,Prepend once to all
+35706:30002,Prepend twice to all
+35706:30003,Prepend thrice to all
+35706:30009,Do not announce
