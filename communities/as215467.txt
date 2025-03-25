@@ -1,0 +1,3 @@
+# RFC 8195, ISO 3166-1 Numeric Function
+215467:1:616,Learned in Poland
+215467:1:752,Learned in Sweden
