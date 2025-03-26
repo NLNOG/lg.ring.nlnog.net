@@ -1,0 +1,319 @@
+# Orange Wholesale International communities taken from whois as5511
+5511:999,BGP community append to all customer routes
+5511:30100,Caribbean
+5511:560,Caribbean Customers (Deprecated)
+5511:700,Caribbean Peer & contents (Deprecated)
+5511:30101,France Caribbean
+5511:541,France Caribbean (Deprecated)
+5511:30607,Lamentin
+5511:30610,Pointe-a-Pitre
+5511:30106,Eastern Africa
+5511:640,Eastern Africa Customers (Deprecated)
+5511:730,Eastern Africa Peer & contents (Deprecated)
+5511:30107,Djibouti
+5511:653,Djibouti (Deprecated)
+5511:30108,Djibouti datacenter
+5511:30110,Kenya
+5511:649,Kenya (Deprecated)
+5511:30111,Mombasa
+5511:30114,Nairobi Africa DC NBO1
+5511:30116,Madagascar
+5511:30117,Antananarivo
+5511:30119,Taomasina
+5511:30121,Eastern Asia
+5511:600,Eastern Asia Customers (Deprecated)
+5511:720,Eastern Asia Peer & contents (Deprecated)
+5511:30122,Japan
+5511:30123,Tokyo NTT TK5
+5511:603,Tokyo NTT TK5 (Deprecated)
+5511:30125,Osaka
+5511:604,Osaka (Deprecated)
+5511:30128,Tokyo Equinix TY2
+5511:603,Tokyo Equinix TY2 (Deprecated)
+5511:30132,PRC
+5511:30133,Hong-Kong
+5511:601,Hong-Kong (Deprecated)
+5511:30137,Hong-Kong - HKCOLO Data Center - MEGA-I
+5511:601,Hong-Kong - HKCOLO Data Center - MEGA-I (Deprecated)
+5511:30139,Eastern Europe
+5511:500,Eastern Europe Customers (Deprecated)
+5511:710,Eastern Europe Peer & contents (Deprecated)
+5511:30140,Bulgaria
+5511:512,Bulgaria (Deprecated)
+5511:30141,Sofia
+5511:30143,Czechia
+5511:513,Czechia (Deprecated)
+5511:30144,Prague
+5511:30146,Hungary
+5511:533,Hungary (Deprecated)
+5511:30147,Budapest
+5511:30149,Poland
+5511:531,Poland (Deprecated)
+5511:30612,Warsaw
+5511:30155,Romania
+5511:530,Romania (Deprecated)
+5511:30617,Bucharest
+5511:30159,Russia
+5511:535,Russia (Deprecated)
+5511:30160,St Petersburg
+5511:30162,Moscow
+5511:30164,Slovakia
+5511:529,Slovakia (Deprecated)
+5511:30169,Bratislava
+5511:30173,Middle Africa
+5511:640,Middle Africa Customers (Deprecated)
+5511:730,Middle Africa Peer & contents (Deprecated)
+5511:30174,Cameroon
+5511:30175,Douala
+5511:30177,Yaounde
+5511:30179,Democratic Republic of the Congo
+5511:30180,Kinshasa
+5511:30182,Lubumbashi
+5511:30184,Northern Africa
+5511:640,Northern Africa Customers (Deprecated)
+5511:730,Northern Africa Peer & contents (Deprecated)
+5511:30185,Morocco
+5511:30186,Casablanca
+5511:30188,Rabat
+5511:30190,Tunisia
+5511:30191,Tunis
+5511:30194,Northern America (East)
+5511:540,Northern America (East) Customers (Deprecated)
+5511:700,Northern America (East) Peer & contents (Deprecated)
+5511:30195,United States of America
+5511:30198,Ashburn Equinix DC3 DC11
+5511:542,Ashburn Equinix DC3 DC11 (Deprecated)
+5511:30504,Atlanta
+5511:542,Atlanta (Deprecated)
+5511:30621,Concord
+5511:30623,Chicago Equinix CH1/2/4
+5511:542,Chicago Equinix CH1/2/4 (Deprecated)
+5511:30204,Dallas
+5511:543,Dallas (Deprecated)
+5511:30207,Houston
+5511:30507,OakHill
+5511:542,OakHill (Deprecated)
+5511:30209,Jacksonville
+5511:542,Jacksonville (Deprecated)
+5511:30509,Secaucus
+5511:542,Secaucus (Deprecated)
+5511:30211,Miami
+5511:542,Miami (Deprecated)
+5511:30589,New-York
+5511:542,New-York (Deprecated)
+5511:30512,Chicago Digital Reality CHI1
+5511:542,Chicago Digital Reality CHI1 (Deprecated)
+5511:30626,Alpharetta
+5511:30514,Philadelphia
+5511:542,Philadelphia (Deprecated)
+5511:30218,Northern America (West)
+5511:540,Northern America (West) Customers (Deprecated)
+5511:700,Northern America (West) Peer & contents (Deprecated)
+5511:30219,United States of America
+5511:30516,Los Angeles CoreSite LA2
+5511:543,Los Angeles CoreSite LA2 (Deprecated)
+5511:30518,Centennial
+5511:543,Centennial (Deprecated)
+5511:30220,Los Angeles Equinix LA1
+5511:543,Los Angeles Equinix LA1 (Deprecated)
+5511:30224,Palo Alto
+5511:543,Palo Alto (Deprecated)
+5511:30520,Seattle
+5511:543,Seattle (Deprecated)
+5511:30226,San Jose
+5511:543,San Jose (Deprecated)
+5511:30228,Northern Europe
+5511:500,Northern Europe Customers (Deprecated)
+5511:710,Northern Europe Peer & contents (Deprecated)
+5511:30523,Denmark
+5511:30524,Copenhagen AtlasEdge DC
+5511:534,Copenhagen AtlasEdge DC (Deprecated)
+5511:30605,Ballerup Interxion CPH1 CPH2
+5511:30526,Norway
+5511:30527,Oslo
+5511:536,Oslo (Deprecated)
+5511:30229,Sweden
+5511:30230,Stockholm
+5511:516,Stockholm (Deprecated)
+5511:30232,United Kingdom of Great Britain and Northern Ireland
+5511:515,United Kingdom of Great Britain and Northern Ireland (Deprecated)
+5511:30530,Slough Equinix LD5
+5511:537,Slough Equinix LD5 (Deprecated)
+5511:30532,London
+5511:30233,London Orange - Equinix LD8
+5511:30535,London Telehouse
+5511:30237,Oceania
+5511:680,Oceania Customers (Deprecated)
+5511:680,Oceania Peer & contents (Deprecated)
+5511:30238,Australia
+5511:681,Australia (Deprecated)
+5511:30239,Sydney
+5511:30241,South-eastern Asia
+5511:600,South-eastern Asia Customers (Deprecated)
+5511:720,South-eastern Asia Peer & contents (Deprecated)
+5511:30242,Singapore
+5511:602,Singapore (Deprecated)
+5511:30243,Singapore ORANGE - Equinix SG1
+5511:30247,Singapore Equinix SG3
+5511:30249,Singapore ESR Chai Chee
+5511:30251,Southern Africa
+5511:640,Southern Africa Customers (Deprecated)
+5511:730,Southern Africa Peer & contents (Deprecated)
+5511:30537,Reunion Island
+5511:686,Reunion Island (Deprecated)
+5511:30538,Reunion Island
+5511:30252,South Africa
+5511:645,South Africa (Deprecated)
+5511:30253,Cape Town
+5511:30255,Johannesburg
+5511:30541,Southern America
+5511:590,Southern America Customers (Deprecated)
+5511:700,Southern America Peer & contents (Deprecated)
+5511:30542,Brazil
+5511:30543,Rio de Janeiro
+5511:591,Rio de Janeiro (Deprecated)
+5511:30545,Sao Paulo
+5511:592,Sao Paulo (Deprecated)
+5511:30257,Southern Europe
+5511:500,Southern Europe Customers (Deprecated)
+5511:710,Southern Europe Peer & contents (Deprecated)
+5511:30258,Portugal
+5511:527,Portugal (Deprecated)
+5511:30259,Lisbon
+5511:30262,Spain
+5511:518,Spain (Deprecated)
+5511:30263,Alicante
+5511:30266,Almeria
+5511:30629,Barcelona
+5511:30272,Bilbao
+5511:30274,Burgos
+5511:30276,Las Palmas de Gran Canaria
+5511:30278,Castellon
+5511:30280,Corunna
+5511:30282,Girona
+5511:30285,Granada
+5511:30288,Jerez
+5511:30290,Jaen
+5511:30292,Madrid
+5511:30301,Malaga
+5511:30303,Palma
+5511:30305,Merida
+5511:30307,Murcia
+5511:30309,Oviedo
+5511:30311,Sevilla
+5511:30314,San Sebastian
+5511:30316,Sevilla
+5511:30318,Tarragona
+5511:30320,Santa Cruz de Tenerife
+5511:30322,Valencia
+5511:30324,Valencia
+5511:30326,Vigo
+5511:30328,Vitoria
+5511:30330,Valencia
+5511:30332,Valladolid
+5511:30335,Zaragoza
+5511:30338,italy
+5511:532,italy (Deprecated)
+5511:30339,Milan
+5511:30341,Rome
+5511:30343,Western Africa
+5511:640,Western Africa Customers (Deprecated)
+5511:730,Western Africa Peer & contents (Deprecated)
+5511:30344,Burkina Faso
+5511:643,Burkina Faso (Deprecated)
+5511:30345,Bobo-Dioulasso
+5511:30347,Ouagadougou
+5511:30350,Zagtouli
+5511:30352,Ghana
+5511:654,Ghana (Deprecated)
+5511:30353,Accra
+5511:30356,Guinea
+5511:647,Guinea (Deprecated)
+5511:30357,Conakry
+5511:30360,Ivory Coast
+5511:641,Ivory Coast (Deprecated)
+5511:30361,Abidjan
+5511:30368,Daloa
+5511:30370,Ouangolo
+5511:30373,Pogo
+5511:30375,Yamoussoukro
+5511:30377,Yamoussoukro
+5511:30570,Liberia
+5511:30571,Monrovia-Roberts
+5511:30379,Mali
+5511:644,Mali (Deprecated)
+5511:30387,Bamako
+5511:30577,Kenieba
+5511:30395,Sikasso
+5511:30397,Kayes
+5511:30399,Nigeria
+5511:30400,Lagos
+5511:642,Lagos (Deprecated)
+5511:30403,Senegal
+5511:646,Senegal (Deprecated)
+5511:30404,Dakar
+5511:30408,Kidira
+5511:30410,Kaolac
+5511:30412,Thies
+5511:30414,Tumba
+5511:30416,Western Asia
+5511:650,Western Asia Customers (Deprecated)
+5511:720,Western Asia Peer & contents (Deprecated)
+5511:30417,Jordan
+5511:651,Jordan (Deprecated)
+5511:30418,Amman
+5511:30424,United Arab Emirates
+5511:652,United Arab Emirates (Deprecated)
+5511:30425,Dubai
+5511:30428,Western Europe
+5511:500,Western Europe Customers (Deprecated)
+5511:710,Western Europe Peer & contents (Deprecated)
+5511:30429,Austria
+5511:523,Austria (Deprecated)
+5511:30430,Vienna
+5511:30432,Belgium
+5511:511,Belgium (Deprecated)
+5511:30433,Brussels ORANGE
+5511:30548,Brussels Interxion BRU1
+5511:30436,France
+5511:30442,Bagnolet ORANGE
+5511:501,Bagnolet ORANGE (Deprecated)
+5511:30568,Bordeaux Equinix BX1
+5511:30449,Clichy Global Switch
+5511:510,Clichy Global Switch (Deprecated)
+5511:30550,Aubervilliers ORANGE
+5511:505,Aubervilliers ORANGE (Deprecated)
+5511:30552,Lille ORANGE
+5511:538,Lille ORANGE (Deprecated)
+5511:30554,Lyon ORANGE - Jaguar & SFR
+5511:509,Lyon ORANGE - Jaguar & SFR (Deprecated)
+5511:30597,Marseille ORANGE - Interxion MRS1 & 2
+5511:507,Marseille ORANGE - Interxion MRS1 & 2 (Deprecated)
+5511:30458,Paris - TeleHouse2 - Equinix PA3 - Interxion PAR5 & PAR7
+5511:504,Paris - TeleHouse2 - Equinix PA3 - Interxion PAR5 & PAR7 (Deprecated)
+5511:30643,Bercenay ORANGE
+5511:506,Bercenay ORANGE (Deprecated)
+5511:30646,Reims
+5511:503,Reims (Deprecated)
+5511:30649,Val de Reuil
+5511:508,Val de Reuil (Deprecated)
+5511:30478,Vitry sur Seine SCALEWAY
+5511:504,Vitry sur Seine SCALEWAY (Deprecated)
+5511:30480,Paris Pastourelle ORANGE
+5511:502,Paris Pastourelle ORANGE (Deprecated)
+5511:30482,Germany
+5511:521,Germany (Deprecated)
+5511:30483,Frankfurt Interxion FRA4
+5511:30557,Frankfurt ORANGE
+5511:30574,Frankfurt Interxion FRA15
+5511:30652,Frankfurt Equinix FRA5
+5511:30559,Frankfurt Interxion FRA13
+5511:30561,Frankfurt Itenos FRA1
+5511:30486,Netherlands
+5511:514,Netherlands (Deprecated)
+5511:30487,Amsterdam Equinix AM2&3 - Interxion AMS9 - IronMountain AMS1
+5511:30579,Amsterdam ORANGE
+5511:30492,Switzerland
+5511:520,Switzerland (Deprecated)
+5511:30564,Geneva ORANGE - CERN
+5511:30496,Zurich
