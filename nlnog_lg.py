@@ -49,7 +49,8 @@ import netaddr
 import requests
 from commparser import BGPCommunityParser
 from markupsafe import escape
-from flask import Flask, abort, jsonify, render_template, request, Response, make_response, send_from_directory
+from flask import Flask, abort, jsonify, render_template, request, Response, make_response, send_from_directory, url_for
+from api import api
 from dns.resolver import Resolver, NXDOMAIN, Timeout, NoAnswer, NoNameservers
 
 parser = argparse.ArgumentParser()
@@ -63,6 +64,11 @@ app.secret_key = app.config["SESSION_KEY"]
 app.debug = arguments.debug
 app.version = "0.2.1"
 asnlist = {}
+
+# Register the API blueprint
+from api import api
+api.config = app.config
+app.register_blueprint(api, url_prefix='/api')
 
 
 class Datastore:
