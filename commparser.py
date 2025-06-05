@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 """
- Module for parsing draft-ietf-grow-yang-bgp-communities style BGP community definitions
+ Module for parsing ietf-bgp-communities style BGP community definitions
  Based on code written by Martin Pels
 
  This file is part of the NLNOG Looking Glass code.
  Source code: https://github/com/NLNOG/nlnog-lg
 
 
- Copyright (c) 2022-2024 Stichting NLNOG <stichting@nlnog.net>
+ Copyright (c) 2022-2025 Stichting NLNOG <stichting@nlnog.net>
 
  Permission to use, copy, modify, and distribute this software for any
  purpose with or without fee is hereby granted, provided that the above
@@ -30,7 +30,7 @@ import requests
 
 class BGPCommunityParser:
     """
-    An object to keep track of one or more draft-ietf-grow-yang-bgp-communities style BGP community definitions
+    An object to keep track of one or more ietf-bgp-communities style BGP community definitions
     and do lookups on them.
     """
     def __init__(self, sources=None):
@@ -50,7 +50,7 @@ class BGPCommunityParser:
 
     def load_source(self, source: str):
         """
-        Load a draft-yang-bgp-communities style BGP community definition from
+        Load a ietf-bgp-communities style BGP community definition from
         an URL or file.
         """
         jdata = None
@@ -59,9 +59,9 @@ class BGPCommunityParser:
         else:
             jdata = json.load(source)
 
-        self.comm_regular += jdata["draft-ietf-grow-yang-bgp-communities:bgp-communities"]["regular"]
-        self.comm_large += jdata["draft-ietf-grow-yang-bgp-communities:bgp-communities"]["large"]
-        self.comm_extended += jdata["draft-ietf-grow-yang-bgp-communities:bgp-communities"]["extended"]
+        self.comm_regular += jdata["ietf-bgp-communities:bgp-communities"]["regular"]
+        self.comm_large += jdata["ietf-bgp-communities:bgp-communities"]["large"]
+        self.comm_extended += jdata["ietf-bgp-communities:bgp-communities"]["extended"]
         self.sources.append(source)
 
     def __str__(self):
@@ -92,7 +92,7 @@ class BGPCommunityParser:
 
         found = self._try_candidates_regular(asn, content, self.comm_regular)
         if found:
-            fieldvals = self._candidate2fields(content, found["localadmin"])
+            fieldvals = self._candidate2fields(content, found["local-admin"])
             return self._print_match(community, found, fieldvals)
 
         return None
@@ -106,7 +106,7 @@ class BGPCommunityParser:
         found = self._try_candidates_large(asn, content1, content2, self.comm_large)
         if found:
             fieldvals = self._candidate2fields_large(
-                content1, content2, found["localdatapart1"], found["localdatapart2"]
+                content1, content2, found["local-data-part-1"], found["local-data-part-2"]
             )
             return self._print_match(community, found, fieldvals)
 
@@ -122,7 +122,7 @@ class BGPCommunityParser:
             extype, exsubtype, asn, content, self.comm_extended
         )
         if found:
-            fieldvals = self._candidate2fields(content, found["localadmin"])
+            fieldvals = self._candidate2fields(content, found["local-admin"])
             return self._print_match(community, found, fieldvals)
 
         return None
@@ -132,12 +132,12 @@ class BGPCommunityParser:
         Try to find a matching Regular Community amongst candidate JSON definitions
         """
         for candidate in candidates:
-            if asn != str(candidate["globaladmin"]):
+            if asn != str(candidate["global-admin"]):
                 continue
-            if "format" in candidate["localadmin"]:
-                if candidate["localadmin"]["format"] == "binary":
+            if "format" in candidate["local-admin"]:
+                if candidate["local-admin"]["format"] == "binary":
                     content = self._decimal2bits(content, 16)
-            if self._try_candidate_fields(content, candidate["localadmin"]["fields"]):
+            if self._try_candidate_fields(content, candidate["local-admin"]["field"]):
                 return candidate
         return False
 
@@ -146,18 +146,18 @@ class BGPCommunityParser:
         Try to find a matching Large Community amongst candidate JSON definitions
         """
         for candidate in candidates:
-            if asn != str(candidate["globaladmin"]):
+            from rich import print
+            print(candidate)
+            if asn != str(candidate["global-admin"]):
                 continue
-            if "format" in candidate["localdatapart1"]:
-                if candidate["localdatapart1"]["format"] == "binary":
-                    content1 = self._decimal2bits(content1, 32)
-            if "format" in candidate["localdatapart2"]:
-                if candidate["localdatapart2"]["format"] == "binary":
-                    content2 = self._decimal2bits(content2, 32)
+            if candidate["local-data-part-1"].get("format") == "binary":
+                content1 = self._decimal2bits(content1, 32)
+            if candidate["local-data-part-2"].get("format") == "binary":
+                content2 = self._decimal2bits(content2, 32)
             if self._try_candidate_fields(
-                content1, candidate["localdatapart1"]["fields"]
+                content1, candidate["local-data-part-1"]["field"]
             ) and self._try_candidate_fields(
-                content2, candidate["localdatapart2"]["fields"]
+                content2, candidate["local-data-part-2"]["field"]
             ):
                 return candidate
         return False
@@ -180,14 +180,14 @@ class BGPCommunityParser:
                     continue
             else:
                 continue
-            if "format" in candidate["localadmin"]:
-                if candidate["localadmin"]["format"] == "binary":
+            if "format" in candidate["local-admin"]:
+                if candidate["local-admin"]["format"] == "binary":
                     if "asn4" in candidate:
                         contentstring = self._decimal2bits(content, 16)
                     else:
                         contentstring = self._decimal2bits(content, 32)
             if self._try_candidate_fields(
-                contentstring, candidate["localadmin"]["fields"]
+                contentstring, candidate["local-admin"]["field"]
             ):
                 return candidate
         return False
@@ -198,20 +198,19 @@ class BGPCommunityParser:
         """
         pos = 0
         for cfield in cfields:
+            print(content, cfield)
             if "length" in cfield:
                 value = content[pos: pos + cfield["length"]]
             else:
                 value = content
-
             pattern = cfield["pattern"]
             if pattern.startswith("^"):
                 pattern = pattern[1:]
             if pattern.endswith("$"):
                 pattern = pattern[:-1]
             if not re.match("^{}$".format(pattern), value):
-                # print('{} != {}'.format(pattern,value))
                 return False
-
+            print("ja")
             if "length" in cfield:
                 pos = pos + cfield["length"]
         return True
@@ -225,7 +224,7 @@ class BGPCommunityParser:
         if "format" in clocaladmin:
             if clocaladmin["format"] == "binary":
                 contentbits = self._decimal2bits(contentbits, 16)
-        for fid, field in enumerate(clocaladmin["fields"]):
+        for fid, field in enumerate(clocaladmin["field"]):
             if "length" in field:
                 length = field["length"]
             else:
@@ -250,7 +249,7 @@ class BGPCommunityParser:
 
         pos = 0
         foffset = 0
-        for fid, field in enumerate(clocaldatapart1["fields"]):
+        for fid, field in enumerate(clocaldatapart1["field"]):
             if "length" in field:
                 length = field["length"]
             else:
@@ -259,8 +258,8 @@ class BGPCommunityParser:
             pos = pos + length
 
         pos = 0
-        foffset = len(clocaldatapart1["fields"])
-        for fid, field in enumerate(clocaldatapart2["fields"]):
+        foffset = len(clocaldatapart1["field"])
+        for fid, field in enumerate(clocaldatapart2["field"]):
             if "length" in field:
                 length = field["length"]
             else:
@@ -281,26 +280,26 @@ class BGPCommunityParser:
         """
         output_sections = []
         output_fields = []
-        if "localadmin" in candidate:
-            for fid, field in enumerate(candidate["localadmin"]["fields"]):
+        if "local-admin" in candidate:
+            for fid, field in enumerate(candidate["local-admin"]["field"]):
                 if "description" in field:
                     output_fields.append(f'{field["name"]}={field["description"]}')
                 else:
                     output_fields.append(f'{field["name"]}={fieldvals[fid]}')
             output_sections.append(",".join(output_fields))
-        elif "localdatapart1" in candidate:
+        elif "local-data-part-1" in candidate:
             offset = 0
             output_fields = []
-            for fid, field in enumerate(candidate["localdatapart1"]["fields"]):
+            for fid, field in enumerate(candidate["local-data-part-1"]["field"]):
                 if "description" in field:
                     output_fields.append(f"{field['name']}={field['description']}")
                 else:
                     output_fields.append(f"{field['name']}={fieldvals[offset + fid]}")
             output_sections.append(",".join(output_fields))
 
-            offset = len(candidate["localdatapart1"]["fields"])
+            offset = len(candidate["local-data-part-1"]["field"])
             output_fields = []
-            for fid, field in enumerate(candidate["localdatapart2"]["fields"]):
+            for fid, field in enumerate(candidate["local-data-part-2"]["field"]):
                 if "description" in field:
                     output_fields.append(f'{field["name"]}={field["description"]}')
                 else:
