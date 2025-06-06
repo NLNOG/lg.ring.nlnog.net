@@ -146,8 +146,6 @@ class BGPCommunityParser:
         Try to find a matching Large Community amongst candidate JSON definitions
         """
         for candidate in candidates:
-            from rich import print
-            print(candidate)
             if asn != str(candidate["global-admin"]):
                 continue
             if candidate["local-data-part-1"].get("format") == "binary":
@@ -198,7 +196,6 @@ class BGPCommunityParser:
         """
         pos = 0
         for cfield in cfields:
-            print(content, cfield)
             if "length" in cfield:
                 value = content[pos: pos + cfield["length"]]
             else:
@@ -210,7 +207,6 @@ class BGPCommunityParser:
                 pattern = pattern[:-1]
             if not re.match("^{}$".format(pattern), value):
                 return False
-            print("ja")
             if "length" in cfield:
                 pos = pos + cfield["length"]
         return True
