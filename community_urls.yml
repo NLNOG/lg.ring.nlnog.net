@@ -2,3 +2,4 @@
 sources:
   as25152: https://www-static.ripe.net/dynamic/draft-ietf-grow-yang-bgp-communities/as25152.json
   as197000: https://www-static.ripe.net/dynamic/draft-ietf-grow-yang-bgp-communities/as197000.json
+  as18076: https://github.com/rodecker/draft-yang-bgp-communities/blob/05/examples/rfc4384.json

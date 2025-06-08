@@ -59,9 +59,9 @@ class BGPCommunityParser:
         else:
             jdata = json.load(source)
 
-        self.comm_regular += jdata["ietf-bgp-communities:bgp-communities"]["regular"]
-        self.comm_large += jdata["ietf-bgp-communities:bgp-communities"]["large"]
-        self.comm_extended += jdata["ietf-bgp-communities:bgp-communities"]["extended"]
+        self.comm_regular += jdata["ietf-bgp-communities:bgp-communities"].get("regular", [])
+        self.comm_large += jdata["ietf-bgp-communities:bgp-communities"].get("large", [])
+        self.comm_extended += jdata["ietf-bgp-communities:bgp-communities"].get("extended", [])
         self.sources.append(source)
 
     def __str__(self):
@@ -92,7 +92,7 @@ class BGPCommunityParser:
 
         found = self._try_candidates_regular(asn, content, self.comm_regular)
         if found:
-            fieldvals = self._candidate2fields(content, found["local-admin"])
+            fieldvals = self._candidate2fields(content, found["local-admin"], 16)
             return self._print_match(community, found, fieldvals)
 
         return None
@@ -122,8 +122,14 @@ class BGPCommunityParser:
             extype, exsubtype, asn, content, self.comm_extended
         )
         if found:
-            fieldvals = self._candidate2fields(content, found["local-admin"])
-            return self._print_match(community, found, fieldvals)
+            if 'asn' in found:
+                return(self._print_match(community, found, 
+                                         self._candidate2fields(content, found['local-admin'], 32)))
+            elif 'asn4' in found:
+                return(self._print_match(community, found, 
+                                         self._candidate2fields(content, found['local-admin'], 16)))
+            else:
+                return None
 
         return None
 
@@ -211,7 +217,7 @@ class BGPCommunityParser:
                 pos = pos + cfield["length"]
         return True
 
-    def _candidate2fields(self, contentbits, clocaladmin):
+    def _candidate2fields(self, contentbits, clocaladmin, localadminlength):
         """
         Link values from tested community to field names in matched candidate
         """
@@ -219,7 +225,7 @@ class BGPCommunityParser:
         pos = 0
         if "format" in clocaladmin:
             if clocaladmin["format"] == "binary":
-                contentbits = self._decimal2bits(contentbits, 16)
+                contentbits = self._decimal2bits(contentbits, localadminlength)
         for fid, field in enumerate(clocaladmin["field"]):
             if "length" in field:
                 length = field["length"]
