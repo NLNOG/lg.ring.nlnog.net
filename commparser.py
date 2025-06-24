@@ -284,28 +284,37 @@ class BGPCommunityParser:
         output_fields = []
         if "local-admin" in candidate:
             for fid, field in enumerate(candidate["local-admin"]["field"]):
-                if "description" in field:
-                    output_fields.append(f'{field["name"]}={field["description"]}')
-                else:
+                if "description" not in field:
+                    continue
+                if field["description"] == '*':
                     output_fields.append(f'{field["name"]}={fieldvals[fid]}')
+                else:
+                    output_fields.append(f'{field["name"]}={field["description"]}')
+
             output_sections.append(",".join(output_fields))
         elif "local-data-part-1" in candidate:
             offset = 0
             output_fields = []
             for fid, field in enumerate(candidate["local-data-part-1"]["field"]):
-                if "description" in field:
-                    output_fields.append(f"{field['name']}={field['description']}")
-                else:
+                if "description" not in field:
+                    continue
+                if field["description"] == '*':
                     output_fields.append(f"{field['name']}={fieldvals[offset + fid]}")
+                else:
+                    output_fields.append(f"{field['name']}={field['description']}")
+                    
             output_sections.append(",".join(output_fields))
 
             offset = len(candidate["local-data-part-1"]["field"])
             output_fields = []
             for fid, field in enumerate(candidate["local-data-part-2"]["field"]):
-                if "description" in field:
-                    output_fields.append(f'{field["name"]}={field["description"]}')
-                else:
+                if "description" not in field:
+                    continue
+                if field["description"] == '*':
                     output_fields.append(f'{field["name"]}={fieldvals[offset + fid]}')
+                else:
+                    output_fields.append(f'{field["name"]}={field["description"]}')
+                    
             output_sections.append(",".join(output_fields))
 
         return f"{':'.join(output_sections)}"
