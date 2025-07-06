@@ -1,0 +1,53 @@
+# https://inferno.net.uk/communities-44355.txt
+# Last updated: 2025-07-06
+
+# Sources
+44355:0:1000,From IX
+44355:0:1001,From IX peer
+44355:0:1002,From IX route server
+44355:0:1003,From upstream provider
+44355:0:1004,From self
+44355:0:1005,From downstream
+44355:0:2000,From CP
+44355:0:2001,From CP RS
+
+# Locations
+44355:10:1,Originated in London, UK
+44355:20:1,Learned in London, UK
+
+44355:10:2,Originated in Cardiff, Wales, UK
+44355:20:2,Learned in Cardiff, Wales, UK
+
+44355:10:3,Originated in Manchester, UK
+44355:20:3,Learned in Manchester, UK
+
+# Sources
+44355:30:1,Originated to LINX LON1
+44355:40:1,Learned from LINX LON1
+
+44355:30:2,Originated to LONAP
+44355:40:2,Learned from LONAP
+
+44355:30:3,Originated to HE
+44355:40:3,Learned from HE
+
+44355:30:4,Originated to UTRS
+44355:40:4,Learned from UTRS
+
+44355:30:5,Originated to Cogent
+44355:40:5,Learned from Cogent
+
+44355:30:6,Originated to GSL
+44355:40:6,Learned from GSL
+
+44355:30:7,Originated to Exascale
+44355:40:7,Learned from Exascale
+
+44355:30:8,Originated to Ziax
+44355:40:8,Learned from Ziax
+
+44355:30:9,Originated to LINX MAN1
+44355:40:9,Learned from LINX MAN1
+
+# Blackhole
+44355:0:666,Blackhole
