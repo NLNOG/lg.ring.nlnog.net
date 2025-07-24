@@ -1,0 +1,18 @@
+# Type of route
+20811:1,20811 originated routes
+20811:2,customer routes
+20811:3,public peer
+20811:4,private peer
+20811:5,transit
+# Geographical Italy
+20811:100,Learned in Italy
+20811:101,Learned in Bolzano
+20811:102,Learned in Trento
+20811:103,Learned in Milan
+# Geographical Germany
+20811:200,Learned in Germany
+20811:201,Learned in Munich
+20811:202,Learned in Frankfurt
+# Geographical Austria
+20811:300,Learned in Austria
+20811:301,Learned in Innsbruck
