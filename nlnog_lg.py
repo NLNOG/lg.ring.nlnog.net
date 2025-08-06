@@ -676,8 +676,8 @@ def show_route_for_prefix(prefix=None, netmask=None):
             # single addresses without a netmask would be a valid IPNetwork too, ignore them
             if "/" in prefix:
                 if request.args.get("match", "exact") != "exact" and ((netaddr.valid_ipv4(str(net.ip)) and net.prefixlen <= 16) or \
-                   (netaddr.valid_ipv6(str(net.ip)) and net.prefixlen <= 48)):
-                    warnings.append("Not showing more specific routes, too many results, showing exact matches only.")
+                   (netaddr.valid_ipv6(str(net.ip)) and net.prefixlen <= 27)):
+                    warnings.append("Or longer match type is not available for /16 or shorter (IPv4) and /27 or shorter (IPv6), showing exact matches only.")
                 elif request.args.get("match") == "orlonger" and request.path != '/prefix/map':
                     args["all"] = 1
         except netaddr.core.AddrFormatError:
