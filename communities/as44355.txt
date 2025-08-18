@@ -1,5 +1,5 @@
 # https://inferno.net.uk/communities-44355.txt
-# Last updated: 2025-07-06
+# Last updated: 2025-08-18
 
 # Sources
 44355:0:1000,From IX
@@ -48,6 +48,10 @@
 
 44355:30:9,Originated to LINX MAN1
 44355:40:9,Learned from LINX MAN1
+
+# Backhaul
+44355:90:0,Learned from IX1 via Backhaul
+44355:90:1,Sent to IX1 via Backhaul
 
 # Blackhole
 44355:0:666,Blackhole
