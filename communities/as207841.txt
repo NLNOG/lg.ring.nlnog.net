@@ -49,5 +49,9 @@
 207841:30:9,Originated to LINX MAN1
 207841:40:9,Learned from LINX MAN1
 
+# Backhaul
+207841:90:0,Learned from LU1 via Backhaul
+207841:90:1,Sent to LU1 via Backhaul
+
 # Blackhole
 207841:0:666,Blackhole
