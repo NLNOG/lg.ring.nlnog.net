@@ -1,0 +1,126 @@
+# From AS6730 as-set AS-COMMUNITIES whois
+
+# OUTBOUND TWEAKING
+6730:10100,Do not announce to all upstreams
+6730:11100,Prepend +1 to all upstreams
+6730:12100,Prepend +2 to all upstreams
+6730:13100,Prepend +3 to all upstreams
+6730:10180,Do not announce to LGI (AS6830)
+6730:11180,Prepend +1 to LGI (AS6830)
+6730:12180,Prepend +2 to LGI (AS6830)
+6730:13180,Prepend +3 to LGI (AS6830)
+6730:10200,Do not announce to all exchange points
+6730:11200,Prepend +1 to all exchange points
+6730:12200,Prepend +2 to all exchange points
+6730:13200,Prepend +3 to all exchange points
+6730:10210,Do not announce to all Swiss IXP
+6730:11210,Prepend +1 to all Swiss IXP
+6730:12210,Prepend +2 to all Swiss IXP
+6730:13210,Prepend +3 to all Swiss IXP
+6730:10211,Do not announce to TIX
+6730:11211,Prepend +1 to TIX
+6730:12211,Prepend +2 to TIX
+6730:13211,Prepend +3 to TIX
+6730:10212,Do not announce to SwissIX
+6730:11212,Prepend +1 to SwissIX
+6730:12212,Prepend +2 to SwissIX
+6730:13212,Prepend +3 to SwissIX
+6730:10213,Do not announce to CIXP
+6730:11213,Prepend +1 to CIXP
+6730:12213,Prepend +2 to CIXP
+6730:13213,Prepend +3 to CIXP
+6730:10214,Do not announce to LGIIX
+6730:11214,Prepend +1 to LGIIX
+6730:12214,Prepend +2 to LGIIX
+6730:13214,Prepend +3 to LGIIX
+6730:10220,Do not announce to all European IXP
+6730:11220,Prepend +1 to all European IXP
+6730:12220,Prepend +2 to all European IXP
+6730:13220,Prepend +3 to all European IXP
+6730:10221,Do not announce to LINX (London)
+6730:11221,Prepend +1 to LINX (London)
+6730:12221,Prepend +2 to LINX (London)
+6730:13221,Prepend +3 to LINX (London)
+6730:10222,Do not announce to DECIX (Frankfurt)
+6730:11222,Prepend +1 to DECIX (Frankfurt)
+6730:12222,Prepend +2 to DECIX (Frankfurt)
+6730:13222,Prepend +3 to DECIX (Frankfurt)
+6730:10223,Do not announce to AMSIX (Amsterdam)
+6730:11223,Prepend +1 to AMSIX (Amsterdam)
+6730:12223,Prepend +2 to AMSIX (Amsterdam)
+6730:13223,Prepend +3 to AMSIX (Amsterdam)
+6730:10224,Do not announce to MIX (Milan)
+6730:11224,Prepend +1 to MIX (Milan)
+6730:12224,Prepend +2 to MIX (Milan)
+6730:13224,Prepend +3 to MIX (Milan)
+6730:10300,Do not announce to all private peers
+6730:11300,Prepend +1 to all private peers
+6730:12300,Prepend +2 to all private peers
+6730:13300,Prepend +3 to all private peers
+6730:10302,Do not announce to Swisscom IP-Plus AS3303
+6730:11302,Prepend +1 to Swisscom IP-Plus AS3303
+6730:12302,Prepend +2 to Swisscom IP-Plus AS3303
+6730:13302,Prepend +3 to Swisscom IP-Plus AS3303
+6730:10306,Do not announce to Google/YouTube AS15169
+6730:11306,Prepend +1 to Google/YouTube AS15169
+6730:12306,Prepend +2 to Google/YouTube AS15169
+6730:13306,Prepend +3 to Google/YouTube AS15169
+6730:10307,Do not announce to Netflix AS2906
+6730:11307,Prepend +1 to Netflix AS2906
+6730:12307,Prepend +2 to Netflix AS2906
+6730:13307,Prepend +3 to Netflix AS2906
+6730:10309,Do not announce to Amazon AS16509
+6730:11309,Prepend +1 to Amazon AS16509
+6730:12309,Prepend +2 to Amazon AS16509
+6730:13309,Prepend +3 to Amazon AS16509
+6730:10310,Do not announce to Microsoft AS8068
+6730:11310,Prepend +1 to Microsoft AS8068
+6730:12310,Prepend +2 to Microsoft AS8068
+6730:13310,Prepend +3 to Microsoft AS8068
+6730:10311,Do not announce to OVH AS16276
+6730:11311,Prepend +1 to OVH AS16276
+6730:12311,Prepend +2 to OVH AS16276
+6730:13311,Prepend +3 to OVH AS16276
+6730:10312,Do not announce to Core Backbone AS33891
+6730:11312,Prepend +1 to Core Backbone AS33891
+6730:12312,Prepend +2 to Core Backbone AS33891
+6730:13312,Prepend +3 to Core Backbone AS33891
+6730:10313,Do not announce to CDN77 AS60068
+6730:11313,Prepend +1 to CDN77 AS60068
+6730:12313,Prepend +2 to CDN77 AS60068
+6730:13313,Prepend +3 to CDN77 AS60068
+6730:10315,Do not announce to Meta (Facebook) AS32934
+6730:11315,Prepend +1 to Meta (Facebook) AS32934
+6730:12315,Prepend +2 to Meta (Facebook) AS32934
+6730:13315,Prepend +3 to Meta (Facebook) AS32934
+6730:10316,Do not announce to Akamai AS20940
+6730:11316,Prepend +1 to Akamai AS20940
+6730:12316,Prepend +2 to Akamai AS20940
+6730:13316,Prepend +3 to Akamai AS20940
+
+# INBOUND
+6730:6100,Upstream (Received from commercial upstream providers)
+6730:6200,IXP
+6730:6300,Private peer
+6730:6210,Swiss peerings (TIX, SwissIX, CIXP and Swiss private peers)
+6730:6211,IXP_TIX
+6730:6212,IXP_SwissIX
+6730:6213,IXP_CIXP
+6730:6214,IXP_LGIIX
+6730:6221,IXP_LINX (London)
+6730:6222,IXP_DECIX (Frankfurt)
+6730:6223,IXP_AMSIX (Amsterdam)
+6730:6224,IXP_MIX (Milan)
+
+# LOCAL-PREF
+6730:1,Set local pref to 95
+6730:2,Set local pref to 94
+6730:3,Set local pref to 85
+6730:4,Set local pref to 84
+6730:5,Set local pref to 75
+6730:6,Set local pref to 74
+6730:7,Set local pref to 65
+6730:8,Set local pref to 64
+
+# Blackhole
+6730:666,Blackhole /32 Host prefixes

@@ -1,0 +1,21 @@
+# For full descriptions and peering policy, go to https://as394177.net
+394177:101:1,Originated by AS394177
+394177:101:4,Learned from transit (100 localpref)
+394177:101:3,Learned from IX routeserver (120 localpref)
+394177:101:2,Learned from direct peer (130 localpref)
+394177:101:5,Learned from customer (140 localpref)
+394177:102:1,Learned in Dallas
+394177:102:2,Learned in Atlanta
+394177:102:3,Learned in Chicago
+394177:112:1,Active path in Dallas
+394177:112:2,Active path in Atlanta
+394177:112:3,Active path in Chicago
+394177:50:nnn,Do not export to AS$0
+394177:5x:nnn,Prepend $0 times to AS$1
+394177:2:nnn,Set localpref to $0
+394177:666:0,Blackhole (also triggers upstream blackhole communities)
+394177:32:1,Readvertise to, but not export in Dallas
+394177:32:2,Readvertise to, but not export in Atlanta
+394177:32:3,Readvertise to, but not export in Chicago
+394177:77:0,Do not readvertise outside metro (dangerous)
+394177:505:174,Override default behavior of applying 174:991 on export to AS174

@@ -1,0 +1,24 @@
+# Communities taken from AS31477.net
+# Contact: noc@duocast.net
+# BEGIN Informational Communities
+65500:42,Please ensure you take your towel and a spoon.
+65501:nnn,Route learned from peer AS$0.
+65502:100,Learned from transit
+65502:200,Learned from public peer
+65502:300,Learned from private peer
+65502:500,Learned from customer
+65502:31477,Duocast originated route
+65503:nnn,Learned from IX $0. peeringdb.com/ix/$0
+65504:nnn,Learned in facility $0. peeringdb.com/fac/$0
+65505:31,Learned in country 31. The Netherlands, Kingdom of
+31477:500:42,Don't Panic
+31477:501:nnn,Route learned from peer AS$0.
+31477:502:100,Learned from transit
+31477:502:200,Learned from public peer
+31477:502:300,Learned from private peer
+31477:502:500,Learned from customer
+31477:502:31477,Duocast originated route
+31477:503:nnn,Learned from IX $0. peeringdb.com/ix/$0
+31477:504:nnn,Learned in facility $0. peeringdb.com/fac/$0
+31477:505:31,Learned in country 31. The Netherlands, Kingdom of
+# END Info Communities

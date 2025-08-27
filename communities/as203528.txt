@@ -1,0 +1,15 @@
+203528:1:1,Prefix learned from Transit
+203528:1:2,Prefix learned from IXP
+203528:1:3,Prefix learned from IXP-over-tunnel
+203528:1:4,Prefix learned from Peering
+203528:1:5,Prefix learned from Peering-over-tunnel
+203528:2:1,Prefix learned from internal network
+203528:500:1,Prefix learned at Ostrava 1
+203528:500:2,Prefix learned at Ostrava 2
+203528:500:10,Prefix learned at New York
+203528:500:11,Prefix learned at Luxembourg
+203528:500:12,Prefix learned at Dusseldorf
+203528:999:1,Prefix reflected by RR1
+203528:999:2,Prefix reflected by RR2
+203528:999:3,Prefix reflected by RR3
+203528:999:4,Prefix reflected by RR4

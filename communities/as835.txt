@@ -1,7 +1,8 @@
-# GoCodeIT communities. From: https://as62513.net/communities/
+# GoCodeIT communities. From: https://as835.net/communities/
 
 # Sources
-835:150,Downstream
+835:100,Infrastructure in Toronto
+835:150,Downstream in Toronto
 835:10000,Source: Cogent Transit
 835:10001,Source: HE Transit
 835:10002,Source: Zayo Transit
@@ -34,6 +35,8 @@
 835:20023,Append 3x to Zayo
 835:20029,Drop to Zayo
 
+835:20999,Drop to ALL TRANSIT
+
 835:21001,Append 1x to TORIX
 835:21002,Append 2x to TORIX
 835:21003,Append 3x to TORIX
@@ -49,6 +52,8 @@
 835:21023,Append 3x to ONIX
 835:21029,Drop to ONIX
 
+835:21999,Drop to ALL IXP
+
 835:22001,Append 1x to Google
 835:22002,Append 2x to Google
 835:22003,Append 3x to Google
@@ -58,4 +63,6 @@
 835:22012,Append 2x to Meta
 835:22013,Append 3x to Meta
 835:22019,Drop to Meta
+
+835:22999,Drop to ALL PNI
 

@@ -7,11 +7,12 @@
 
  Code contributions:
   * Filip Hruška
+  * Martin Pels
 
  Source code: https://github/com/NLNOG/nlnog-lg
 
 
- Copyright (c) 2022 Stichting NLNOG <stichting@nlnog.net>
+ Copyright (c) 2022-2024 Stichting NLNOG <stichting@nlnog.net>
 
  Permission to use, copy, modify, and distribute this software for any
  purpose with or without fee is hereby granted, provided that the above
@@ -32,6 +33,8 @@ import re
 import bz2
 import glob
 import json
+import time
+import yaml
 import random
 import string
 import sqlite3
@@ -44,7 +47,9 @@ from datetime import datetime, timezone, timedelta
 import pydot
 import netaddr
 import requests
-from flask import Flask, abort, jsonify, render_template, request, escape, Response, make_response
+from commparser import BGPCommunityParser
+from markupsafe import escape
+from flask import Flask, abort, jsonify, render_template, request, Response, make_response, send_from_directory
 from dns.resolver import Resolver, NXDOMAIN, Timeout, NoAnswer, NoNameservers
 
 parser = argparse.ArgumentParser()
@@ -58,6 +63,10 @@ app.secret_key = app.config["SESSION_KEY"]
 app.debug = arguments.debug
 app.version = "0.2.1"
 asnlist = {}
+
+
+class Datastore:
+    communitylist = {}
 
 
 class LGException(Exception):
@@ -107,27 +116,81 @@ def get_community_type(community: str) -> str:
     return "unknown"
 
 
+def fix_extended_community(community: str) -> str:
+    """ rewrite the extended community from the format openbgpd uses to the rfc format
+        see IANA_EXT_COMMUNITIES in bgpd.h source of openbgpd source code
+    """
+
+    replacemap = {
+        "rt": "0x02:0x02",
+        "soo": "0x02:0x03",
+        "odi": "0x02:0x05",
+        "bdc": "0x02:0x08",
+        "srcas": "0x02:0x09",
+        "l2vid": "0x02:0x0a",
+    }
+
+    if " " not in community:
+        return community
+    csplit = community.split(" ")
+    if csplit[0] in replacemap:
+        return f"{replacemap[csplit[0]]}:{csplit[1]}"
+    return community
+
+
 def read_communities() -> dict:
-    """ Read the list of community definitions from communities/*.txt and translate them
+    """ Read the list of community definitions from communities/as*.txt and translate them
         into a dictionary containing community lists for exact matches, ranges and regexps.
     """
-    communitylist = {
-        "regular": {"exact": {}, "re": [], "range": [], "raw": {}},
-        "large": {"exact": {}, "re": [], "range": [], "raw": {}},
-        "extended": {"exact": {}, "re": [], "range": [], "raw": {}},
-    }
+    start = time.time()
+    clist = {}
     re_range = re.compile(r"^(\d+)\-(\d+)$")
     re_regular_exact = re.compile(r"^\d+:\d+$")
     re_large_exact = re.compile(r"^\d+:\d+:\d+$")
     re_extended_exact = re.compile(r"^\w+ \w+(:\w+)$")
 
+    print("reading communities")
+    if app.config.get("COMMUNITY_FILE", ""):
+        with open(app.config["COMMUNITY_FILE"], "r") as fh:
+            try:
+                commlist = yaml.safe_load(fh)
+                sources = commlist.get("sources", {})
+                for asn in sources:
+                    if type(sources[asn]) == str:
+                        sources[asn] = [sources[asn]]
+                    commparser = BGPCommunityParser()
+                    for url in sources[asn]:
+                        commparser.load_source(url)
+                    clist[asn] = {
+                        "obj": commparser,
+                        "regular": {"exact": {}, "re": [], "range": [], "raw": {}},
+                        "large": {"exact": {}, "re": [], "range": [], "raw": {}},
+                        "extended": {"exact": {}, "re": [], "range": [], "raw": {}},
+                    }
+            except Exception as err:
+                print(f"Failed to parse community URL file: {err}")
+
     currentdir = os.path.dirname(os.path.realpath(__file__))
-    files = glob.glob(f"{currentdir}/communities/*.txt")
+    files = glob.glob(f"{currentdir}/communities/as*.txt")
+    files.append(f"{currentdir}/communities/well-known.txt")
     for filename in files:
         with open(filename, "r", encoding="utf8") as filehandle:
+            asn = filename.split("/")[-1].replace(".txt", "")
+            if asn not in clist:
+                clist[asn] = {
+                    "obj": None,
+                    "regular": {"exact": {}, "re": [], "range": [], "raw": {}},
+                    "large": {"exact": {}, "re": [], "range": [], "raw": {}},
+                    "extended": {"exact": {}, "re": [], "range": [], "raw": {}},
+                }
+            replaceAsn = ""
+            if os.path.islink(filename):
+                replaceAsn = asn[2:]
             for entry in [line.strip() for line in filehandle.readlines()]:
                 if entry.startswith("#") or "," not in entry:
                     continue
+                if replaceAsn != "":
+                    entry = entry.replace("<ASN>", replaceAsn)
                 (comm, desc) = entry.split(",", 1)
                 ctype = get_community_type(comm)
                 if ctype == "unknown":
@@ -138,8 +201,8 @@ def read_communities() -> dict:
                    (ctype == "large" and re_large_exact.match(comm)) or \
                    (ctype == "extended" and re_extended_exact.match(comm)):
                     # exact community, no ranges or wildcards
-                    communitylist[ctype]["exact"][comm] = desc
-                    communitylist[ctype]["raw"][comm] = desc
+                    clist[asn][ctype]["exact"][comm] = desc
+                    clist[asn][ctype]["raw"][comm] = desc
                 else:
                     # funky notations:
                     # nnn -> any number
@@ -157,36 +220,57 @@ def read_communities() -> dict:
                         if first > last:
                             print(f"Bad range for as {comm}, {first} should be less than {last}")
                             continue
-                        communitylist[ctype]["range"].append((first, last, desc))
+                        clist[asn][ctype]["range"].append((first, last, desc))
                     if regex:
-                        communitylist[ctype]["re"].append((regex, desc))
-                        communitylist[ctype]["raw"][comm] = desc
+                        clist[asn][ctype]["re"].append((regex, desc))
+                        clist[asn][ctype]["raw"][comm] = desc
 
-    return communitylist
+    print(f"read communities in {time.time() - start} sec")
+    return clist
 
 
-def get_community_descr_from_list(community: str, communitylist: dict) -> str:
+def get_community_descr_from_list(community: str) -> str:
     """Given a community try to figure out if we can match it to something in the list
     """
 
     community = community.strip()
     ctype = get_community_type(community)
+
+    if ctype == "extended":
+        asn = "as" + community.split(" ")[1].split(":")[0]
+        community = fix_extended_community(community)
+    else:
+        asn = f"as{community.split(':')[0]}"
+
     if ctype == "unknown":
         print(f"Unknown community requested: {community}")
         return ""
 
+    if asn not in data.communitylist.keys():
+        # no AS specific things found, let's check wellknown
+        if community in data.communitylist["well-known"][ctype]:
+            return data.communitylist["well-known"][ctype][community]
+        else:
+            return ""
+
+    # look if the bgpparser object can handle it
+    if data.communitylist[asn]["obj"]:
+        commdesc = data.communitylist[asn]["obj"].parse_community(community)
+        if commdesc:
+            return commdesc
+
     # first try to find an exact match
-    if community in communitylist[ctype]["exact"]:
-        return communitylist[ctype]["exact"][community]
+    if community in data.communitylist[asn][ctype]["exact"]:
+        return data.communitylist[asn][ctype]["exact"][community]
 
     # try if it matches a range
     # TODO FIX THIS, we don't know where to apply the range here!
-    for (start, end, desc) in communitylist[ctype]["range"]:
+    for (start, end, desc) in data.communitylist[asn][ctype]["range"]:
         if start <= int(community) <= end:
             return desc
 
     # try a regexp instead
-    for (regex, desc) in communitylist[ctype]["re"]:
+    for (regex, desc) in data.communitylist[asn][ctype]["re"]:
         match = regex.match(community)
         if match:
             for count, group in enumerate(match.groups()):
@@ -218,7 +302,7 @@ def get_asn_name(asn: str):
     resolver = Resolver()
     resolver.search = ""
     try:
-        query = resolver.query(f"AS{asn}.asn.cymru.com", "TXT")
+        query = resolver.resolve(f"AS{asn}.asn.cymru.com", "TXT")
         asname = query.rrset[0].to_text().split("|")[-1][:-1].strip()
         asnlist[asn] = asname
         return asname
@@ -456,10 +540,6 @@ def generate_map(routes: dict, prefix: str):
             else:
                 add_asn(ashop, fgcolor=fontcolor, bgcolor="#%06x" % color)
 
-            # Add a link from the looking glass node node
-            if idx == 0:
-                add_link("lgnode", route['aspath'][0][0], label=route['peer'].upper(), fontsize=9)
-
             # Add a link towards the prefix
             if idx+1 == len(route['aspath']):
                 if ashop[0] == "}":
@@ -490,11 +570,6 @@ def generate_map(routes: dict, prefix: str):
     pfxnode = pydot.Node("DESTINATION", label=prefix, shape="box", fillcolor="#f4511e", style="filled", fontsize="10", fontname="Arial")
     graph.add_node(pfxnode)
 
-    # Add the looking glass node
-    lgnode = pydot.Node("lgnode", label=f"{app.config['LOOKING_GLASS_NAME'].upper()}",
-                        shape="box", fillcolor="#f4511e", style="filled", fontsize="10", fontname="Arial")
-    graph.add_node(lgnode)
-
     # Visualize every path
     for route in routes:
         visualize_route(route)
@@ -510,7 +585,7 @@ def get_ringnodes():
         nodes = {}
         for node in data["results"]["nodes"]:
             if node["asn"] not in nodes:
-                nodes[node["asn"]] = {node["hostname"].replace(".ring.nlnog.net", "") : node}
+                nodes[node["asn"]] = {node["hostname"].replace(".ring.nlnog.net", ""): node}
             else:
                 nodes[node["asn"]][node["hostname"].replace(".ring.nlnog.net", "")] = node
         return nodes
@@ -558,7 +633,8 @@ def show_peer_details(peer: str):
     peers = get_peer_info(names_only=True, established_only=True)
     if len(peers) == 0:
         return render_template("error.html", warning=["No data received from the NLNOG Ring API endpoint."])
-    return render_template('peer.html', peer=peer, peers=peers, data=result["neighbors"][0], errors=errors, ringnodes=ringnodes.get(remote_as, {}))
+    return render_template('peer.html', peer=peer, peers=peers, data=result["neighbors"][0],
+                           errors=errors, ringnodes=ringnodes.get(remote_as, {}))
 
 
 @app.route("/prefix")
@@ -599,9 +675,9 @@ def show_route_for_prefix(prefix=None, netmask=None):
             net = netaddr.IPNetwork(prefix)
             # single addresses without a netmask would be a valid IPNetwork too, ignore them
             if "/" in prefix:
-                if (netaddr.valid_ipv4(str(net.ip)) and net.prefixlen <= 16) or \
-                   (netaddr.valid_ipv6(str(net.ip)) and net.prefixlen <= 48):
-                    warnings.append("Not showing more specific routes, too many results, showing exact matches only.")
+                if request.args.get("match", "exact") != "exact" and ((netaddr.valid_ipv4(str(net.ip)) and net.prefixlen <= 16) or \
+                   (netaddr.valid_ipv6(str(net.ip)) and net.prefixlen <= 27)):
+                    warnings.append("Or longer match type is not available for /16 or shorter (IPv4) and /27 or shorter (IPv6), showing exact matches only.")
                 elif request.args.get("match") == "orlonger" and request.path != '/prefix/map':
                     args["all"] = 1
         except netaddr.core.AddrFormatError:
@@ -648,7 +724,6 @@ def show_route_for_prefix(prefix=None, netmask=None):
         return render_template("error.html", warning=["No data received from the NLNOG LG API endpoint."])
 
     ringnodes = get_ringnodes()
-    communitylist = read_communities()
 
     create_date = None
     if result.get("created", False):
@@ -672,11 +747,11 @@ def show_route_for_prefix(prefix=None, netmask=None):
                 "aspath": [(r, get_asn_name(r)) for r in route["aspath"].split(" ")],
                 "origin": route["origin"],
                 "source": route["source"],
-                "communities": [(c, get_community_descr_from_list(c.strip(), communitylist))
+                "communities": [(c, get_community_descr_from_list(c.strip()))
                                 for c in route.get("communities", [])],
-                "extended_communities": [(c, get_community_descr_from_list(c.strip(), communitylist))
+                "extended_communities": [(c, get_community_descr_from_list(c.strip()))
                                          for c in route.get("extended_communities", [])],
-                "large_communities": [(c, get_community_descr_from_list(c.strip(), communitylist))
+                "large_communities": [(c, get_community_descr_from_list(c.strip()))
                                       for c in route.get("large_communities", [])],
                 "valid": route["valid"],
                 "ovs": route["ovs"],
@@ -706,7 +781,7 @@ def show_route_for_prefix(prefix=None, netmask=None):
         # Return a map page
         dot = generate_map(routes[route["prefix"]], route["prefix"]).to_string()
         return render_template("map.html", peer=nodelist, peers=peers, routes=routes, prefix=prefix, query_id=query_id,
-                               warnings=warnings, errors=errors, match=request.args.get("match"), collected=create_date,
+                               warnings=warnings, errors=errors, match=request.args.get("match", "Exact"), collected=create_date,
                                dot=dot)
 
     if request.path == "/prefix/text" or (request.cookies.get("output") == "text" and request.path != "/prefix/html"):
@@ -849,6 +924,17 @@ def whois():
 
     # we return JSON data which is rendered in the front end
     return jsonify(output=output, title=query)
+
+
+@app.route("/robots.txt")
+def robots():
+    """ handle robots.txt
+    """
+    return send_from_directory(app.static_folder, "robots.txt")
+
+
+data = Datastore()
+data.communitylist = read_communities()
 
 
 if __name__ == "__main__":

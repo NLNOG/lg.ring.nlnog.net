@@ -1,0 +1,6 @@
+# AS16276 communities are available on the OVHcloud peering page : https://peering.ovh.net/
+16276:40000,Routes to North American Networks
+16276:40001,Routes to European Networks
+16276:40019,Routes to Asian Networks
+16276:40020,Routes to Australian Networks
+16276:40021,Routes to Indian Networks

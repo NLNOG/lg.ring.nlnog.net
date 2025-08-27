@@ -1,0 +1,6 @@
+# documented at 'whois -h whois.ripe.net as34953'
+34953:10000,own route
+34953:10001,customer route
+34953:10002,private peering route
+34953:10003,public peering route
+34953:10004,transit route

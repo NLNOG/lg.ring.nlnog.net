@@ -1,12 +1,20 @@
 # NLNOG Looking Glass
 This is the NLNOG Looking Glass for OpenBGPD, written by Teun Vink. This code is used as a front end to the <a href="https://openbgpd.org">OpenBGPD</a> route collector operated by NLNOG. The looking glass is hosted at https://lg.ring.nlnog.net. The code was inspired on [bird-lg](https://github.com/sileht/bird-lg/) by Mehdi Abaakouk.
 
-**Please note**: this code is not intended as general purpose looking glass code. It is custom made for this specific use case. 
+**Please note**: this code is not intended as general purpose looking glass code. It is custom made for this specific use case.
 
 Questions about the status of the Looking Glass or its peers should be directed at ring-admins@nlnog.net.
 
 ## Known communities
-Where possible the Looking Glass tries to provide information on communities used on routes. This is done using information stored in the [`communities`](communities) folder. This folder contains a file per ASN for known communities. Each line should contain a community entry followed by a comma, followed by the description of the community. Any line not matching this format is ignored.
+Where possible the Looking Glass tries to provide information on communities used on routes. We provide two ways of defining communities for an ASN:
+
+### draft-ietf-grow-yang-bgp-communities ###
+[draft-ietf-grow-yang-bgp-communities](https://datatracker.ietf.org/doc/draft-ietf-grow-yang-bgp-communities/) was designed to describe BGP communities for an ASN in a formalised way which can be generated and parsed automatically. The NLNOG Looking Glass supports retrieving a file in this format from a specified URL and using it as a data source for a given ASN. The list of URLs used by the Looking Glass can be found in [community_urls.yml](community_urls.yml).
+
+### community description files ###
+At the beginning of this looking glass we loosely defined a file format to describe communities for an ASN in a text file format. Although draft-ietf-grow-yang-bgp-communities style descriptions should be preferred, we continue to support these.
+
+Files of this type are stored in the [`communities`](communities) folder. This folder contains a file per ASN for known communities. Each line should contain a community entry followed by a comma, followed by the description of the community. Any line not matching this format is ignored.
 
 The following types of entries are accepted for communities:
 * **exact matches**, for example: `65535:666`, only matching this exact community
@@ -28,7 +36,7 @@ Additions and updates to the list of communities are welcome, if possible please
 
 ## License
 ```
- Copyright (c) 2022 Stichting NLNOG <stichting@nlnog.net>
+ Copyright (c) 2022-2024 Stichting NLNOG <stichting@nlnog.net>
 
  Permission to use, copy, modify, and distribute this software for any
  purpose with or without fee is hereby granted, provided that the above

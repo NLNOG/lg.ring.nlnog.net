@@ -1,0 +1,209 @@
+# AS13030 Init7 Communities
+#
+# Based upon 20/06/23 edition of:
+# https://www.as13030.net/static/pdf/as13030_bgp_communities.pdf
+
+# 1.3.2 Action
+65001:x prepend once
+65002:x prepend twice
+65003:x prepend three times
+65009:x not announce
+
+# 1.3.3 Location / IXP / Peer
+6500x:1 Europe
+6500x:2 USA / Canada
+6500x:3 South America
+6500x:4 Asia
+6500x:5 Africa
+6500x:6 Australia / New Zealand
+
+# Transit
+6500x:7 Transit
+
+# IXP
+6500x:4001,SwissIX Zürich
+6500x:4005,DE-CIX Frankfurt
+6500x:4006,LINX Juniper LAN London
+6500x:4007,LINX Extreme LAN London
+6500x:4008,AMS-IX (AMS-2 NIKHEF #1) Amsterdam
+6500x:4009,Equinix Paris
+6500x:4010,Espanix Madrid
+6500x:4011,AMS-IX (AMS-2 NIKHEF #2) Amsterdam
+6500x:4012,DE-CIX Madrid
+6500x:4013,MIX Milano
+6500x:4014,MINAP Milan
+6500x:4016,CIXP Geneva
+6500x:4018,PLIX Warsaw
+6500x:4020,VIX Vienna
+6500x:4021,LONAP London
+6500x:4022,BCIX Berlin
+6500x:4023,Equinix Zürich
+6500x:4024,DECIX Marseille
+6500x:4025,France IX Marseille
+6500x:4026,France IX Paris
+6500x:4027,DE-CIX Düsseldorf
+6500x:4029,CHIX Zürich
+6500x:4030,Romand IX
+6500x:4031,Rheintal IX STG-3
+6500x:4032,Equinix IX Frankfurt
+6500x:4033,DE-CIX Hamburg
+
+# Peers
+6500x:8001,Switch (AS559)
+6500x:8005,Solnet (AS9044)
+6500x:8006,Finecom/Quickline (AS15600)
+6500x:8007,ATOM86 (AS8455)
+6500x:8008,Leaseweb (AS16265)
+6500x:8009,Microsoft (AS8075)
+6500x:8010,IPTP (AS41095)
+6500x:8011,Swisscom (AS3303)
+6500x:8012,Vodafone GlobalNet (ex. C&W / AS1273)
+6500x:8014,Talktalk (AS13285)
+6500x:8015,Sunrise (AS6730)
+6500x:8016,PCCW (AS3491)
+6500x:8021,Portugal Telecom (AS8657)
+6500x:8022,ROMTelecom S.A. (AS9050)
+6500x:8023,Limelight Networks (AS22822)
+6500x:8025,Core-Backbone (AS33891)
+6500x:8026,Google (AS15169)
+6500x:8027,BHARTI Airtel Ltd. (AS9498)
+6500x:8029,Netstream (AS15517)
+6500x:8030,Etisalat (AS8966)
+6500x:8031,Datahop (AS6908)
+6500x:8033,BICS (AS6774)
+6500x:8034,Mobile TeleSystems OJSC (AS8359)
+6500x:8036,Tineo (AS42346)
+6500x:8039,Prolocation (AS41887)
+6500x:8040,Netia (AS12741)
+6500x:8041,VTX (AS12350)
+6500x:8043,Apple CDN (AS6185)
+6500x:8044,NetCologne (AS8422)
+6500x:8046,Amazon (AS16509)
+6500x:8047,Online.net (AS12876)
+6500x:8050,Telefonica (AS13184)
+6500x:8051,hetzner.de (AS24940)
+6500x:8052,A1 Telecom Austria (AS8447)
+6500x:8053,METANET GmbH (AS21069)
+6500x:8055,Zattoo (AS8302)
+6500x:8056,Facebook (AS32934)
+6500x:8057,Twitch (AS46489)
+6500x:8058,LWLcom GmbH (AS50629)
+6500x:8059,Apple Inc (AS714)
+6500x:8060,netplus.ch (AS15547)
+6500x:8061,Cyberlink (AS15623)
+6500x:8062,SysEleven (AS25291)
+6500x:8063,TV Factory (AS59622)
+6500x:8070,green.ch (AS1836)
+6500x:8071,Deutsche Telekom AG (AS3320)
+
+# 2 Informative Communities
+
+##  2.1 Tagging by Country
+13030:511xx,CH / Switzerland
+13030:512xx,DE / Germany
+13030:513xx,FR / France
+13030:514xx,ES / Spain
+13030:515xx,NL / The Netherlands
+13030:516xx,DK / Denmark
+13030:517xx,UK / United Kingdom
+13030:518xx,PL / Poland
+13030:519xx,US / United States
+13030:520xx,CA / Canada
+13030:521xx,BE / Belgium
+13030:522xx,AT / Austria
+13030:523xx,RU / Russia
+13030:524xx,CZ / Czech Republic
+13030:525xx,IT / Italy
+
+# 2.2.1 Switzerland
+13030:51102,ZRH-2 Equinix Zurich ZH2
+13030:51103,ZRH-16 Init7 (Switzerland) AG Riedtliberg
+13030:51104,ZHI-1 Data 11 Solothurn
+13030:51105,BXO-1 CKW Luzern
+13030:51106,QLS-4 Init7 (Switzerland) AG Fribourg
+13030:51150,ZRH-9 Swisscom Zurich Herdern
+13030:51107,GLB-1 Interxion Glattbrugg
+13030:51112,ZRH-10 Airport Zurich
+13030:51113,WIN-1 Stadtwerk Winterhur
+13030:51115,GVA-2 Equinix 2 Geneva
+13030:51116,BSL-1 IWB Basel
+13030:51117,GVA-1 Equinix 1 Geneva
+13030:51118,ZUG-1 Init7 (Switzerland) AG Zug
+13030:51121,BSL-2 Tineo Münchenstein
+13030:51124,WIL-1 Online Consulting AG Wil
+13030:51125,GVA-3 CERN Geneva
+13030:51126,GLB-2 green.ch (Glattbrugg)
+13030:51127,QLS-1 Brainserve Crissier
+13030:51128,ZRH-6 e-Shelter Rümlang
+13030:51129,ZRH-8 green.ch Lupfig
+13030:51130,BSL-3 ColoBâle Pratteln
+13030:51134,WIN-7 AXA Winterthur
+13030:51135,WIN-8 Technopark Winterthur
+13030:51136,STG-2 Init7 St. Gallen
+13030:51137,GLB-3 Interxion Glattbrugg
+13030:51138,WIL-2 Init7 Wil SG
+13030:51139,ZRH-7 Init7 Zurich Letzigraben
+13030:51140,ZRH-3 green.ch Schlieren
+13030:51141,ZRH-5 Equinix Zurich ZH5 Oberengstringen
+13030:51142,STG-3 Rechenzentrum Ostschweiz Gais
+13030:51143,WIN-9 Init7 Winterthur Hauptpost (780WIP)
+13030:51145,STG-5 Init7 Sargans SG (660SAR)
+13030:51146,STG-4 Init7 (Switzerland) AG Rapperswil SG (740RAP)
+13030:51147,ZRH-12 Init7 (Switzerland) AG Uster ZH (790UST)
+13030:51148,WIN-12 Init7 (Switzerland) AG (780WIN/780SEE)
+13030:51149,WIN-11 Datencenter Thurgau
+13030:51150,ZRH-9 Init7 (Switzerland) AG Zürich-Herdern
+13030:51151,ZRH-11 Swisscom Zurich Binz
+13030:51152,BRN-2 Init7 Bern Breitenrain (640BRE)
+13030:51153,ZRH-13 Init7 Zürich Kalchbühl (790WOL)
+13030:51155,BRN-3 Rechenzentrum Bern SIAG
+13030:51156,QLS-3 Init7 Place St-Francois Lausanne (690STF)
+13030:51157,ZHI-2 Init7 (Switzerland) AG Olten (730NAR)
+13030:51158,BSL-4 Init7 Wallstrasse (620WAL)
+13030:51159,BRN-4 Init7 Genferstrasse (640BOL)
+13030:51160,BRN-5 Rechenzentrum senseLAN Düdingen
+13030:51161,ZRH-15 WWB-Zentrale Brüttisellen
+13030:51162,STG-7 Init7 St. Gallen (750SGL)
+13030:51163,SIR-1 Init7 Brig-Glis (760BRI)
+13030:51164,BXO-2 CKW Rotkreuz
+13030:51165,ZRH-18 Colo Zürich
+
+# 2.2.2 Germany
+13030:51202 FRA-2 Equinix 5 Frankfurt
+13030:51203 FRA-3 InterXion 3 Frankfurt
+13030:51212 DUS-1 InterXion Dusseldorf
+13030:51214 BER-1 IPB Berlin
+13030:51215 HAM-1 IPHH Hamburg
+
+# 2.2.3 France
+13030:51301,PAR-1 Telehouse Voltaire Paris
+13030:51302,MRS-1 interXion Marseille
+
+# 2.2.4 Spain
+13030:51403,MAD-3 InterXion Madrid
+
+# 2.2.5 Italy
+13030:52501,MXP-1 MIX Milano
+
+# 2.2.6 The Netherlands
+13030:51502,AMS-2 NIKHEF Amsterdam
+
+# 2.2.8 United Kingdom
+13030:51701,LON-1 Telehouse North London
+
+# 2.2.9 Poland
+13030:51801,WAW-1 Equinix (Ex-Telecity) Warsaw
+
+# 2.2.11 Austria
+13030:52201,VIE-1 InterXion Vienna
+13030:52202,VIE-2 NTT Wien
+
+# 2.3 Tagging by IXP
+13030:4000 – 13030:4199,Europe
+13030:4200 – 13030:4399,USA / Canada
+13030:4400 – 13030:4499,South America
+13030:4500 – 13030:4599,Asia
+13030:4600 – 13030:4699,Africa
+13030:4700 – 13030:4799,Australia / New Zealand
+
+# EOF

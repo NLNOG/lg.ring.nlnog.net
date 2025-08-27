@@ -1,0 +1,16 @@
+# added by 46733 (support@x6c.co)
+46733:0:12,Learned from upstream
+46733:0:13,Learned from peer
+46733:0:14,Learned from route server
+46733:0:15,Learned from downstream
+46733:10:1,Country: United States
+46733:20:1,Location: Kansas City, MO
+46733:20:2,Location: Fremont, CA
+46733:20:3,Location: Chicago, IL
+46733:30:1,Exchange: KCIX
+46733:30:2,Exchange: HOUIX
+46733:30:3,Exchange: STLIX
+46733:30:3,Exchange: FREMIX
+46733:30:3,Exchange: F4IX
+46733:30:3,Exchange: MICEMN
+46733:666,Blackhole

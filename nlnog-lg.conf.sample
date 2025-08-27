@@ -10,3 +10,4 @@ LOOKING_GLASS_NAME = "lg.ring.nlnog.net"
 
 ARCHIVE_DIR = "archive/"
 DB_FILE = "nlnog-lg.sqlite"
+COMMUNITY_FILE = "community_urls.yml"

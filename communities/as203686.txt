@@ -1,0 +1,31 @@
+64513:nnn,Set Local Preference (170..220)
+64514:nnn:0,Do Not Export to Upstream/RS
+64514:nnn:x,Prepend (1..3) times to To Upstream/RS
+203686:1111:nnn,Learned in Singapore (Transit)
+203686:11111:nnn,Learned in Singapore (Peer)
+203686:21111:nnn,Learned in Singapore (IXP)
+203686:31111:nnn,Learned in Singapore (Downstream)
+203686:51111:nnn,Originated from Singapore
+203686:140961:nnn,ZXIX Members
+203686:1212:nnn,Learned in Jakarta (Transit)
+203686:11212:nnn,Learned in Jakarta (Peer)
+203686:21212:nnn,Learned in Jakarta (IXP)
+203686:51212:nnn,Originated from Jakarta
+203686:133339:nnn,cloudXchange Members
+203686:137295:nnn,JKT-IX Members
+203686:2313:nnn,Learned in Frankfurt (Transit)
+203686:12313:nnn,Learned in Frankfurt (Peer)
+203686:22313:nnn,Learned in Frankfurt (IXP)
+203686:32313:nnn,Learned in Frankfurt (Downstream)
+203686:52313:nnn,Originated from Frankfurt
+203686:35708:nnn,4b42 Members
+203686:210461:nnn,BEE-IX Members
+203686:49459:nnn,IXP.cat Members
+203686:3414:nnn,Learned in Kansas (Transit)
+203686:13414:nnn,Learned in Kansas (Peer)
+203686:23414:nnn,Learned in Kansas (IXP)
+203686:33414:nnn,Learned in Kansas (Downstream)
+203686:53414:nnn,Originated from Kansas
+203686:215617:nnn,F4IX Members
+203686:215617:nnn,HNIX Members
+203686:0:203686,Blackhole Routes (/49 to /128)

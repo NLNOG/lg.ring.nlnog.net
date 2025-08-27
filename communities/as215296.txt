@@ -1,0 +1,12 @@
+# AS215296 Large Communities. Contact noc@as215296.net for clarification.
+215296:101:100,Route learned via Direct Peering
+215296:101:200,Route learned via Direct Transit
+215296:101:300,Route learned via Tunneled Peering
+215296:101:400,Route learned via Tunneled Transit
+215296:101:500,Route originated at AS215296
+215296:102:47498,Peering via FogIXP Route Server (AS47498)
+215296:102:209643,Peering via LocIX Route Server (AS209643)
+215296:102:56393,Peering via FrysIX Route Server (AS52393)
+215296:201:47498,Direct Peering via FogIXP (AS47498)
+215296:201:209643,Direct Peering via LocIX (AS209643)
+215296:201:56393,Direct Peering via FrysIX (AS52393)
