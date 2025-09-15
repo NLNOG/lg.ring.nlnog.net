@@ -12,7 +12,7 @@ from urllib.parse import unquote
 
 import netaddr
 from flask import abort, Blueprint, jsonify, request
-from nlnog_lg import (
+from utils import (
     get_asn_name,
     get_community_descr_from_list,
     get_peer_info,
@@ -24,14 +24,16 @@ from nlnog_lg import (
     whois_command,
     write_archive,
 )
+from nlnog_lg import resolve
 
 api = Blueprint("api", __name__)
+api.communitylist = {}
 
 
 @api.route("/summary")
 def api_bgp_summary():
     """API endpoint for BGP peer summary information."""
-    (data, totals) = get_peer_info(names_only=False)
+    (data, totals) = get_peer_info(api.config, names_only=False)
     if len(data) == 0:
         return (
             jsonify({"error": "No data received from the NLNOG Ring API endpoint."}),
@@ -89,8 +91,6 @@ def api_show_route_for_prefix():
     except netaddr.core.AddrFormatError:
         if not netaddr.valid_ipv4(prefix) and not netaddr.valid_ipv6(prefix):
             # Test domain resolution
-            from nlnog_lg import resolve
-
             resolved = resolve(prefix)
 
             # Make sure the received answer is either valid IPv4 or IPv6
@@ -135,7 +135,7 @@ def api_show_route_for_prefix():
             result["rib"] = result["rib"] + peerresult["rib"]
 
     try:
-        query_id = write_archive(result, prefix, ",".join(nodelist))
+        query_id = write_archive(result, prefix, ",".join(nodelist), api.config)
     except LGException:
         return jsonify({"error": "Failed to store results."}), 500
 
@@ -173,15 +173,15 @@ def api_show_route_for_prefix():
                     "origin": route["origin"],
                     "source": route["source"],
                     "communities": [
-                        (c, get_community_descr_from_list(c.strip()))
+                        (c, get_community_descr_from_list(c.strip(), api.communitylist))
                         for c in route.get("communities", [])
                     ],
                     "extended_communities": [
-                        (c, get_community_descr_from_list(c.strip()))
+                        (c, get_community_descr_from_list(c.strip(), api.communitylist))
                         for c in route.get("extended_communities", [])
                     ],
                     "large_communities": [
-                        (c, get_community_descr_from_list(c.strip()))
+                        (c, get_community_descr_from_list(c.strip(), api.communitylist))
                         for c in route.get("large_communities", [])
                     ],
                     "valid": route["valid"],
@@ -214,7 +214,7 @@ def api_show_route_for_prefix():
 def api_show_saved_route(query_id):
     """API endpoint for retrieving saved prefix lookup results."""
     try:
-        (result, prefix, nodelist) = read_archive(query_id)
+        (result, prefix, nodelist) = read_archive(query_id, api.config)
     except LGException as err:
         return jsonify({"error": str(err)}), 400
 
@@ -251,15 +251,15 @@ def api_show_saved_route(query_id):
                     "origin": route["origin"],
                     "source": route["source"],
                     "communities": [
-                        (c, get_community_descr_from_list(c.strip()))
+                        (c, get_community_descr_from_list(c.strip(), api.communitylist))
                         for c in route.get("communities", [])
                     ],
                     "extended_communities": [
-                        (c, get_community_descr_from_list(c.strip()))
+                        (c, get_community_descr_from_list(c.strip(), api.communitylist))
                         for c in route.get("extended_communities", [])
                     ],
                     "large_communities": [
-                        (c, get_community_descr_from_list(c.strip()))
+                        (c, get_community_descr_from_list(c.strip(), api.communitylist))
                         for c in route.get("large_communities", [])
                     ],
                     "valid": route["valid"],
@@ -345,6 +345,6 @@ def api_whois():
         except netaddr.core.AddrFormatError:
             return jsonify({"error": f"Invalid query: {query}"}), 400
 
-    output = whois_command(query)
+    output = whois_command(query, api.config)
 
     return jsonify({"query": query, "output": output})
