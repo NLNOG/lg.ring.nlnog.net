@@ -21,10 +21,10 @@ from utils import (
     openbgpd_command,
     read_archive,
     read_communities,
+    resolve,
     whois_command,
     write_archive,
 )
-from nlnog_lg import resolve
 
 api = Blueprint("api", __name__)
 api.communitylist = {}
@@ -292,7 +292,7 @@ def api_show_saved_route(query_id):
 def api_communitylist():
     """API endpoint for community list."""
     communities = []
-    for community in sorted([int(c) for c in read_communities()]):
+    for community in sorted([int(c) for c in read_communities(api.config)]):
         communities.append({"asn": community, "name": get_asn_name(str(community))})
 
     return jsonify({"communities": communities})
@@ -302,7 +302,7 @@ def api_communitylist():
 def api_communitylist_specific(asn):
     """API endpoint for community details for a specific ASN."""
     asn = unquote(asn.strip())
-    communitylist = read_communities()
+    communitylist = read_communities(api.config)
 
     if asn not in communitylist:
         return jsonify({"error": f"ASN {asn} not found in community list."}), 404
