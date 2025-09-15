@@ -90,40 +90,76 @@ Returns routing information for a specific prefix.
 - `peer`: The peer(s) to query (can be specified multiple times, e.g., `peer=peer1&peer=peer2`)
 - `all`: If set to "all", query all peers
 
+**Examples:**
+
+```bash
+# Basic prefix lookup
+curl "https://lg.ring.nlnog.net/api/prefix?q=8.8.8.0/24"
+
+# Lookup with specific peer
+curl "https://lg.ring.nlnog.net/api/prefix?q=8.8.8.0/24&peer=Google"
+
+# Lookup with multiple peers
+curl "https://lg.ring.nlnog.net/api/prefix?q=8.8.8.0/24&peer=Google&peer=Cloudflare"
+
+# Lookup showing more specific routes
+curl "https://lg.ring.nlnog.net/api/prefix?q=8.8.0.0/16&match=orlonger"
+
+# Query all peers
+curl "https://lg.ring.nlnog.net/api/prefix?q=8.8.8.0/24&all=all"
+
+# Domain name resolution (automatically resolved to IP)
+curl "https://lg.ring.nlnog.net/api/prefix?q=google.com"
+
+# IPv6 prefix lookup
+curl "https://lg.ring.nlnog.net/api/prefix?q=2001:4860:4860::8888/128"
+
+# Lookup with URL encoding for special characters
+curl "https://lg.ring.nlnog.net/api/prefix?q=192.0.2.0%2F24"
+```
+
 **Response:**
 
 ```json
 {
   "query_id": "abcdef1234",
-  "prefix": "192.0.2.0/24",
+  "prefix": "8.8.8.0/24",
   "routes": {
-    "192.0.2.0/24": [
+    "8.8.8.0/24": [
       {
-        "peer": "peer1 (AS1234)",
+        "peer": "Google (AS15169)",
         "ip": "192.0.2.1",
-        "bgp_id": "192.0.2.1",
-        "aspath": [["1234", "AS1234 Name"], ["5678", "AS5678 Name"]],
+        "bgp_id": "8.8.8.8",
+        "aspath": [["15169", "Google LLC"]],
         "origin": "IGP",
-        "source": "IGP",
-        "communities": [["1234:5678", "Community description"]],
+        "source": "BGP",
+        "communities": [["15169:1", "Google community"]],
         "extended_communities": [],
-        "large_communities": [],
-        "valid": "valid",
-        "ovs": "not-found",
-        "avs": "unknown",
+        "large_communities": [["15169:1:1", "Google large community"]],
+        "valid": true,
+        "ovs": "Valid",
+        "avs": "Valid",
         "exit_nexthop": "192.0.2.1",
         "last_update": "1d 2h 3m 4s",
-        "last_update_at": "2023-01-01 12:00:00 UTC",
+        "last_update_at": "2023-01-15 10:30:45 UTC",
         "metric": 0,
-        "otc": ""
-      },
-      ...
+        "otc": ["15169", "Google LLC"]
+      }
     ]
   },
-  "warnings": [],
-  "collected": "2023-01-01 12:00:00 UTC"
+  "warnings": ["Not showing more specific routes, too many results"],
+  "collected": "2023-01-15 10:31:00 UTC"
 }
 ```
+
+**Use Cases:**
+
+- **Network Troubleshooting**: Check routing paths and BGP attributes for specific prefixes
+- **Route Monitoring**: Monitor how your prefixes are advertised across different peers
+- **Path Analysis**: Analyze AS paths and detect routing anomalies
+- **Community Analysis**: Examine BGP communities attached to routes
+- **RPKI Validation**: Check route validation status (ROV/RPKI)
+- **Multi-peer Comparison**: Compare routing information from different BGP peers
 
 ### Saved Prefix Lookup
 
