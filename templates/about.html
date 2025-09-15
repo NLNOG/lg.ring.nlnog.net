@@ -10,7 +10,7 @@
 <h2>
 About the NLNOG Looking Glass
 </h2>
-This Looking Glass is hosted by <a href="https://nlnog.net">NLNOG</a>, The Dutch Network Operators Group. The Looking Glass runs <a href="http://openbgpd.org/">OpenBGPD</a> as backend and a custom made front end written by Teun Vink,
+This Looking Glass is hosted by <a href="https://nlnog.net">NLNOG</a>, The Dutch Network Operators Group. The Looking Glass runs <a href="http://openbgpd.org/">OpenBGPD</a> as backend and a custom made front end written by Teun Vink, API code was contributed by Sebastiaan Koetsier.
 for which the source code can be found <a href="https://www.github.com/NLNOG/lg.ring.nlnog.net">on GitHub</a>. The code was inspired on <a href="https://github.com/sileht/bird-lg/">bird-lg</a> by Mehdi Abaakouk.
 </p>
 <p>
@@ -39,6 +39,9 @@ Peering with this Looking Glass is optional for ring users. If you want to peer 
 
 </pre>
 Our looking glass supports 'add-path', so if supported on your side, feel free to configure it.
+<p>
+<h3>API</h3>
+The NLNOG Looking Glass offers an API. Documentation can be found [on Github](https://github.com/NLNOG/lg.ring.nlnog.net/blob/main/API.md). Keep in mind that this Looking Glass is a best effort service run by the NLNOG community, no guarantees ar given on availability or correctness of data.
 <p></p>
 <h3>Sponsor</h3>
 Hosting of this Looking Glass is generously sponsored by <a href="https://bit.nl">BIT</a>.
@@ -46,6 +49,7 @@ Hosting of this Looking Glass is generously sponsored by <a href="https://bit.nl
 <h3>Changelog</h3>
 Here's a very incomplete list of some of the changes to this looking glass:
 <pre>
+    2025-09-15  - API functionailty has been added thanks to Sebastiaan Koetsier
 
     2024-07-09  - added support for <a href="https://datatracker.ietf.org/doc/draft-ietf-grow-yang-bgp-communities/"></a>draft-ietf-grow-yang-bgp-communities</a> style communities
                 - total rework of the community lookup code
