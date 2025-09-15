@@ -5,6 +5,11 @@ This is the NLNOG Looking Glass for OpenBGPD, written by Teun Vink. This code is
 
 Questions about the status of the Looking Glass or its peers should be directed at ring-admins@nlnog.net.
 
+## API
+The NLNOG Looking Glass provides a JSON API that allows programmatic access to the looking glass data. The API endpoints are available under the `/api` prefix.
+
+For detailed documentation of the API endpoints, see the [API.md](API.md) file.
+
 ## Known communities
 Where possible the Looking Glass tries to provide information on communities used on routes. We provide two ways of defining communities for an ASN:
 
