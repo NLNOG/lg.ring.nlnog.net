@@ -13,7 +13,6 @@
 8283:1:150,Set LOCAL_PREF to 150 (default is 100)
 8283:1:450,Set LOCAL_PREF to 450 (default is 500)
 8283:1:50,Set LOCAL_PREF to 50 (default is 100)
-8283:1:50,Set LOCAL_PREF to 50 (default is 500)
 8283:1:550,Set LOCAL_PREF to 550 (default is 500)
 8283:2,downstream routes
 8283:202,Prepend 8283 once to all eBGP peers
@@ -33,7 +32,6 @@
 8283:4:0,Do not export to eBGP peers
 8283:4:nnn,Do not export to peer AS$0
 8283:50,Set LOCAL_PREF to 50 (default is 100)
-8283:50,Set LOCAL_PREF to 50 (default is 500)
 8283:550,Set LOCAL_PREF to 550 (default is 500)
 8283:5:1,Valid IRR entry
 8283:5:2,Valid ROA

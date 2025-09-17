@@ -1,0 +1,41 @@
+# add local communities for MBIX, just in case they escape.  Documented at http://lg.mbix.ca/bgp.html.  Contact <tech at mbix dot ca> for clarification.
+### Standard communities
+0:16395,MBIX-NO-EXPORT
+16395:nnn,MBIX-NO-EXPORT-OVERRIDE
+0:nnn,MBIX-PEER-NO-EXPORT
+65511-65513:nnn,MBIX-PEER-PREPEND
+65501-65503:16395,MBIX-PREPEND
+65281:nnn,MBIX-PEER-ADD-NO-EXPORT
+65282:nnn,MBIX-PEER-ADD-NO-ADVERTISE
+
+### Extended communities
+rt 0:16395,MBIX-NO-EXPORT
+rt 16395:nnn,MBIX-NO-EXPORT-OVERRIDE
+rt 0:nnn,MBIX-PEER-NO-EXPORT
+rt 65511-65513:nnn,MBIX-PEER-PREPEND
+rt 65501-65503:16395,MBIX-PREPEND
+rt 65281:nnn,MBIX-PEER-ADD-NO-EXPORT
+rt 65282:nnn,MBIX-PEER-ADD-NO-ADVERTISE
+
+### Large communities
+0:0:16395,MBIX-NO-EXPORT
+16395:1:nnn,MBIX-NO-EXPORT-OVERRIDE
+0:0:nnn,MBIX-PEER-NO-EXPORT
+16395:10x:0,MBIX-PREPEND
+16395:10x:nnn,MBIX-PEER-PREPEND
+16395:65281:nnn,MBIX-PEER-ADD-NO-EXPORT
+16395:65282:nnn,MBIX-PEER-ADD-NO-ADVERTISE
+16395:9:0,Route is not accepted by Route Server
+16395:9:1,rejected: Invalid AS_PATH length
+16395:9:2,rejected: Bogon Prefix
+16395:9:7,rejected: Bogon ASN in AS_PATH
+16395:9:8,rejected: Transit-free ASN in AS_PATH
+16395:9:9,rejected: Origin ASN not present in AS-SET
+16395:9:12,rejected: Prefix not registered in IRR or ARIN WHOIS
+16395:9:13,rejected: Invalid Prefix length
+16395:11:1,Prefix is included in client's AS-SET
+16395:11:2,Prefix is NOT included in client's AS-SET
+16395:11:3,Origin ASN is included in client's AS-SET
+16395:11:4,Origin ASN is NOT included in client's AS-SET
+16395:11:5,Prefix matched by a RPKI ROA for the authorized origin ASN
+16395:11:6,Prefix validated against ARIN WHOIS
