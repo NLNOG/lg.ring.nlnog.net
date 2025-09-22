@@ -24,7 +24,6 @@
 
 209097:1:3215,Learned from Transit Orange NOLYO102 LYON LACASS
 209097:2:3212,Learned from Transit Orange NOLYO101 LYON SEVIGN
-209097:2:39180,Learned from Transit Lasotel
 209097:3:1299,Learned from Transit Arelion
 209097:3:43100,Learned from IX FranceIX Lyon
 209097:3:51706,Learned from IX FranceIX Paris
@@ -39,8 +38,6 @@
 209097:9997:215596,Prefix from Kissgroup (AS215596) not reannounced 
 
 9999:1,Not announce to Orange
-9999:2,Not announce to Xefi
-9999:3,Not announce to Lasotel
 9999:4,Not announce to Arelion
 9999:5,Not announce to Cogent
 9999:6,Not announce to Eurofiber
@@ -51,8 +48,6 @@
 9999:10,Not announce to Netrix
 
 209097:9999:3215,Not announce to Orange
-209097:9999:198330,Not announce to Xefi
-209097:9999:39180,Not announce to Lasotel
 209097:9999:1299,Not announce to Arelion
 209097:9999:174,Not announce to Cogent
 209097:9999:35625,Not announce to Eurofiber
