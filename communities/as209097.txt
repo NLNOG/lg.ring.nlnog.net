@@ -24,7 +24,6 @@
 
 209097:1:3215,Learned from Transit Orange NOLYO102 LYON LACASS
 209097:2:3212,Learned from Transit Orange NOLYO101 LYON SEVIGN
-209097:2:39180,Learned from Transit Lasotel
 209097:3:1299,Learned from Transit Arelion
 209097:3:43100,Learned from IX FranceIX Lyon
 209097:3:51706,Learned from IX FranceIX Paris
