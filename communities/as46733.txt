@@ -10,7 +10,7 @@
 46733:30:1,Exchange: KCIX
 46733:30:2,Exchange: HOUIX
 46733:30:3,Exchange: STLIX
-46733:30:3,Exchange: FREMIX
-46733:30:3,Exchange: F4IX
-46733:30:3,Exchange: MICEMN
+46733:30:4,Exchange: FREMIX
+46733:30:5,Exchange: F4IX
+46733:30:6,Exchange: MICEMN
 46733:666,Blackhole

@@ -11,27 +11,27 @@
 24115:1000:3,RPKI Not Checked
 24115:1001:1,IRRDB Valid
 24115:1001:2,IRRDB Not Checked
-24115:1002:xxx,Route Server Tracer
-24115:1003:xx,Peer Round Trip Time
-24115:1004:1-401308,Incoming Peer ASN
+24115:1002:nnn,Route Server Tracer
+24115:1003:nnn,Peer Round Trip Time
+24115:1004:nnn,Incoming Peer AS$0
 #
 # Operational Communities – Received from Peers
 #
 # Standard
 24115:65281-65283,No Export
 24115:24115,Default Open Policy
-24115:24115:1-401308,Default Open except for ASN
+24115:24115:nnn,Default Open except for AS$0
 # Extended
-24115:1-401308,Allow Export to ASN
+24115:nnn,Allow Export to ASN $0
 # Large
 24115:1:24115,Default Open Policy
 24115:0:24115,Default Closed Policy
-24115:0:1-401308,No Export to ASN
-24115:1:1-401308,Allow Export to ASN
+24115:0:nnn,No Export to AS$0
+24115:1:nnn,Allow Export to AS$0
 24115:2:xx,No Export to Neighbors above MS
-24115:101:1-401308,Prepend 1x to Neighbor ASN
-24115:102:1-401308,Prepend 2x to Neighbor ASN
-24115:103:1-401308,Prepend 3x to Neighbor ASN
+24115:101:nnn,Prepend 1x to Neighbor AS$0
+24115:102:nnn,Prepend 2x to Neighbor AS$0
+24115:103:nnn,Prepend 3x to Neighbor AS$0
 24115:111:xx,Prepend 1x for Latency greater than MS
 24115:112:xx,Prepend 2x for Latency greater than MS
 24115:113:xx,Prepend 3x for Latency greater than MS

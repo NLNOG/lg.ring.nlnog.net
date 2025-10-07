@@ -99,7 +99,7 @@
 8298:1:1115,IXP LoCIX Dusseldorf Peer
 8298:1116,IXP LoCIX Dusseldorf Routeserver
 8298:1:1116,IXP LoCIX Dusseldorf Routeserver
---
+#--
 8298:2000,Transit from IP-Max
 8298:2:25091,Transit from IP-Max
 8298:2005,Transit from OpenFactory

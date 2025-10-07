@@ -27,8 +27,6 @@
 3491:2001,DAL01 Dallas peer
 3491:117,JAX01 Jacksonville customer
 3491:1017,JAX01 Jacksonville peer
-3491:117,JAX01 Jacksonville customer
-3491:1017,JAX01 Jacksonville peer
 3491:212,LAR01 Laredo customer
 3491:2012,LAR01 Laredo peer
 3491:208,LAR02 Laredo customer

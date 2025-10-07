@@ -10,11 +10,6 @@
 11111:31111,restrict to USA only
 10111:33111,advertise in Europe only
 11111:33111,restrict to Europe only
-10111:33111,advertise in Europe
-34111:21111,APNIC routes
-31111:21111,USA routes
-33111:21111,Europe routes
-9498:93,All international routes
 13111:34111,Prepend once in APNIC
 14111:34111,Prepend twice in APNIC
 15111:34111,Prepend 3x in APNIC

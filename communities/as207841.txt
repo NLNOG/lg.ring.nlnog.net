@@ -1,5 +1,5 @@
-# https://inferno.net.uk/communities.txt
-# Last updated: 2024-09-17
+# https://inferno.net.uk/communities-207841.txt
+# Last updated: 2025-08-18
 
 # Sources
 207841:0:1000,From IX
@@ -17,6 +17,9 @@
 
 207841:10:2,Originated in Cardiff, Wales, UK
 207841:20:2,Learned in Cardiff, Wales, UK
+
+207841:10:3,Originated in Manchester, UK
+207841:20:3,Learned in Manchester, UK
 
 # Sources
 207841:30:1,Originated to LINX LON1
@@ -36,6 +39,19 @@
 
 207841:30:6,Originated to GSL
 207841:40:6,Learned from GSL
+
+207841:30:7,Originated to Exascale
+207841:40:7,Learned from Exascale
+
+207841:30:8,Originated to Ziax
+207841:40:8,Learned from Ziax
+
+207841:30:9,Originated to LINX MAN1
+207841:40:9,Learned from LINX MAN1
+
+# Backhaul
+207841:90:0,Learned from LU1 via Backhaul
+207841:90:1,Sent to LU1 via Backhaul
 
 # Blackhole
 207841:0:666,Blackhole
