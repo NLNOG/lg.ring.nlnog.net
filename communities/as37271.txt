@@ -1,0 +1,81 @@
+# AS37271 communities taken from Workonline Communications BGP Community Definitions, version 1.5.0 15/04/2018
+37271:0000,Group code (imported via peering in group) - Global - all internet peerings
+37271:1001,Group code (imported via peering in group) - Non-transit peerings on a continent Africa
+37271:1002,Group code (imported via peering in group) - Non-transit peerings on a continent Asia
+37271:1003,Group code (imported via peering in group) - Non-transit peerings on a continent North America
+37271:1004,Group code (imported via peering in group) - Non-transit peerings on a continent South America
+37271:1005,Group code (imported via peering in group) - Non-transit peerings on a continent Europe
+37271:1006,Group code (imported via peering in group) - Non-transit peerings on a continent Oceania
+37271:1007,Group code (imported via peering in group) - Non-transit peerings on a continent Antarctica
+37271:2xxx,Group code (imported via peering in group) - Non-transit peerings within a region where xxx is the UN M.49 code of the region
+37271:3xxx,Group code (imported via peering in group) - Non-transit peerings within a country where xxx is the ISO 3166-1 numeric country code
+37271:4000,Group code (imported via peering in group) - Non-transit peerings within any metro
+37271:4001,Group code (imported via peering in group) - Non-transit peerings within a metro area Cape Town / CPT
+37271:4002,Group code (imported via peering in group) - Non-transit peerings within a metro area Johannesburg / JHB
+37271:4003,Group code (imported via peering in group) - Non-transit peerings within a metro area Durban / DRB
+37271:4004,Group code (imported via peering in group) - Non-transit peerings within a metro area London / LDN
+37271:4005,Group code (imported via peering in group) - Non-transit peerings within a metro area Frankfurt / FRA
+37271:4006,Group code (imported via peering in group) - Non-transit peerings within a metro area Amsterdam / AMS
+37271:4007,Group code (imported via peering in group) - Non-transit peerings within a metro area Nairobi / NBO
+37271:4008,Group code (imported via peering in group) - Non-transit peerings within a metro area Singapore / SIN
+37271:4009,Group code (imported via peering in group) - Non-transit peerings within a metro area Marseilles / MRS
+37271:4010,Group code (imported via peering in group) - Non-transit peerings within a metro area Mombasa / MBA
+37271:4011,Group code (imported via peering in group) - Non-transit peerings within a metro area Accra / ACC
+37271:4012,Group code (imported via peering in group) - Non-transit peerings within a metro area East London / ELS
+37271:4013,Group code (imported via peering in group) - Non-transit peerings within a metro area Lagos / LOS
+37271:4014,Group code (imported via peering in group) - Non-transit peerings within a metro area Kigali / KGL
+37271:5001,Group code (imported via peering in group) - Customer peerings
+37271:5002,Group code (imported via peering in group) - Non-customer peerings
+37271:5003,Group code (imported via peering in group) - Peering at any NAP Africa IXP
+37271:5100,Group code (imported via peering in group) - All global transit provider peerings
+37271:5101,Group code (imported via peering in group) - All peerings with a specific global transit provider: AS3356 - Level3
+37271:5102,Group code (imported via peering in group) - All peerings with a specific global transit provider: AS174 - Cogent
+37271:5103,Group code (imported via peering in group) - All peerings with a specific global transit provider: AS2914 - NTT
+37271:5107,Group code (imported via peering in group) - All peerings with a specific global transit provider: AS3257 - GTT
+37271:5108,Group code (imported via peering in group) - All peerings with a specific global transit provider: AS6453 - Tata Communications
+37271:5200,Group code (imported via peering in group) - All IXP peerings
+37271:5201,Group code (imported via peering in group) - All peerings at a specific IXP: NAP Africa CT1
+37271:5202,Group code (imported via peering in group) - All peerings at a specific IXP: NAP Africa JB1
+37271:5203,Group code (imported via peering in group) - All peerings at a specific IXP: NAP Africa DB1
+37271:5204,Group code (imported via peering in group) - All peerings at a specific IXP: CINX
+37271:5205,Group code (imported via peering in group) - All peerings at a specific IXP: JINX
+37271:5206,Group code (imported via peering in group) - All peerings at a specific IXP: DINX
+37271:5207,Group code (imported via peering in group) - All peerings at a specific IXP: LINX LON1 "Juniper"
+37271:5209,Group code (imported via peering in group) - All peerings at a specific IXP: LONAP
+37271:5210,Group code (imported via peering in group) - All peerings at a specific IXP: DE-CIX FRA
+37271:5212,Group code (imported via peering in group) - All peerings at a specific IXP: AMS-IX
+37271:5213,Group code (imported via peering in group) - All peerings at a specific IXP: KIXP
+37271:5214,Group code (imported via peering in group) - All peerings at a specific IXP: Equinix SG
+37271:5215,Group code (imported via peering in group) - All peerings at a specific IXP: France-IX
+37271:5216,Group code (imported via peering in group) - All peerings at a specific IXP: IXPN
+37271:5217,Group code (imported via peering in group) - All peerings at a specific IXP: Accra-IX
+37271:5218,Group code (imported via peering in group) - All peerings at a specific IXP: BBIX
+37271:1,Imported from peer type Transit provider
+37271:2,Imported from peer type Peering partner
+37271:3,Imported from peer type Transit customer
+37271:4,Imported from peer type AS37271 originated aggregate
+37271:5,Imported from peer type Customer more-specific
+37271:6,Imported from peer type AS37271 originated more-specific
+37271:10,AS37271 originated
+37271:11,Learnt from eBGP peer
+37271:12,Protocol redistribution
+37271:13,Imported from VRF RIB
+37271:14,Generated default route
+37271:801,Error status 01 during import: Illegal community received from customer
+37271:802,Error status 02 during import: Illegal community received from non-customer
+37271:120,Set LOCAL_REF in AS37271 to 200
+37271:125,Set LOCAL_REF in AS37271 to 350
+37271:130,Set LOCAL_REF in AS37271 to 300
+37271:135,Set LOCAL_REF in AS37271 to 450
+37271:140,Set LOCAL_REF in AS37271 to 400
+37271:6xx,Private iBGP controls
+37271:7xx,Private eBGP controls
+37271:9xx,NEXT_HOP modification controls
+37271:999,Blackhole traffic
+37271:6xxx,Private route-reflection controls
+37271:1xxxx,Prepend 37271 once on non-customer peerings in group XXXX
+37271:2xxxx,Prepend 37271 twice on non-customer peerings in group XXXX
+37271:3xxxx,Prepend 37271 thrice on non-customer peerings in group XXXX
+37271:4xxxx,Suppress export on non-customer peerings in group XXXX
+37271:5xxxx,Un-suppress export on non-customer peerings in group XXXX
+37271:6xxxx,Administrative export scope
