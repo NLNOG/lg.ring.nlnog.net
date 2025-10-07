@@ -64,9 +64,9 @@
 37271:801,Error status 01 during import: Illegal community received from customer
 37271:802,Error status 02 during import: Illegal community received from non-customer
 37271:120,Set LOCAL_REF in AS37271 to 200
-37271:125,Set LOCAL_REF in AS37271 to 350
+37271:125,Set LOCAL_REF in AS37271 to 250
 37271:130,Set LOCAL_REF in AS37271 to 300
-37271:135,Set LOCAL_REF in AS37271 to 450
+37271:135,Set LOCAL_REF in AS37271 to 350
 37271:140,Set LOCAL_REF in AS37271 to 400
 37271:6xx,Private iBGP controls
 37271:7xx,Private eBGP controls
