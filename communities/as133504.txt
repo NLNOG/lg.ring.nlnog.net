@@ -1,0 +1,27 @@
+# Latest data available at https://www.paocloud.co.th/bgp-policy-and-community/ , Add by Payungsak | pclonet@as133504.net
+
+133504:11:101,Route from PCLO-HQ IPv4 to Internet - Upstream
+133504:11:102,Route from PCLO-HQ IPv6 to Internet - Upstream
+133504:11:111,Route from PCLO-HQ IPv4 to IX
+133504:11:112,Route from PCLO-HQ IPv6 to IX
+133504:11:121,Route from PCLO-HQ IPv4 to Peer
+133504:11:122,Route from PCLO-HQ IPv6 to Peer
+133504:11:131,Route from PCLO-HQ IPv4 to Customer - Downstream
+133504:11:132,Route from PCLO-HQ IPv6 to Customer - Downstream
+133504:12:101,Route from PCLO-HQ to Y.U.T Upstreme
+133504:12:102,Route from PCLO-HQ to The Constant Company
+133504:12:104,Route from PCLO-HQ to HYEHOST LTD
+133504:12:106,Route from PCLO-HQ to Servperso Systems
+133504:12:107,Route from PCLO-HQ to iFog GmbH
+133504:13:101,Route from PCLO-HQ to BGP.EXCHANGE - Bangkok
+133504:13:103,Route from PCLO-HQ to BGP.EXCHANGE - Tokyo
+133504:13:104,Route from PCLO-HQ to BGP.EXCHANGE - Paris
+133504:13:201,Route from PCLO-HQ to FogIXP
+133504:13:202,Route from PCLO-HQ to 4b42 Internet Exchange Point
+133504:13:203,Route from PCLO-HQ to LOCIX DUSSELDORF
+133504:13:204,Route from PCLO-HQ to LOCIX FRANKFURT
+133504:14:101,Route from PCLO-HQ to Route64
+133504:14:102,Route from PCLO-HQ to HE.NET
+133504:14:103,Route from PCLO-HQ to Cloudflare
+133504:99:101,Anycast Prefix IPv4
+133504:99:102,Anycast Prefix IPv6
