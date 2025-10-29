@@ -258,7 +258,6 @@
 3216:4211,Internal prefixes originated in Chelyabinsk
 3216:4212,Internal prefixes originated in Rostov-na-Donu
 3216:4213,Internal prefixes originated in Krasnodar
-3216:4250,Internal prefixes originated in Moscow Region
 3216:4272,Internal prefixes originated in Krasnodar
 3216:4301,Internal prefixes originated in Republic of Adygea
 3216:4302,Internal prefixes originated in Republic of Bashkortostan

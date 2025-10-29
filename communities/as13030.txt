@@ -4,97 +4,178 @@
 # https://www.as13030.net/static/pdf/as13030_bgp_communities.pdf
 
 # 1.3.2 Action
-65001:x prepend once
-65002:x prepend twice
-65003:x prepend three times
-65009:x not announce
+#65001:x prepend once
+#65002:x prepend twice
+#65003:x prepend three times
+#65009:x not announce
 
 # 1.3.3 Location / IXP / Peer
-6500x:1 Europe
-6500x:2 USA / Canada
-6500x:3 South America
-6500x:4 Asia
-6500x:5 Africa
-6500x:6 Australia / New Zealand
+65009:1,do not announce in Europe
+65009:2,do not announce in USA / Canada
+65009:3,do not announce in South America
+65009:4,do not announce in Asia
+65009:5,do not announce in Africa
+65009:6,do not announce in Australia / New Zealand
+6500x:1,prepend $0 in Europe
+6500x:2,prepend $0 in USA / Canada
+6500x:3,prepend $0 in South America
+6500x:4,prepend $0 in Asia
+6500x:5,prepend $0 in Africa
+6500x:6,prepend $0 in Australia / New Zealand
 
 # Transit
-6500x:7 Transit
+65009:7,do not announce to Transit
+6500x:7,prepend $0 to Transit
 
 # IXP
-6500x:4001,SwissIX Zürich
-6500x:4005,DE-CIX Frankfurt
-6500x:4006,LINX Juniper LAN London
-6500x:4007,LINX Extreme LAN London
-6500x:4008,AMS-IX (AMS-2 NIKHEF #1) Amsterdam
-6500x:4009,Equinix Paris
-6500x:4010,Espanix Madrid
-6500x:4011,AMS-IX (AMS-2 NIKHEF #2) Amsterdam
-6500x:4012,DE-CIX Madrid
-6500x:4013,MIX Milano
-6500x:4014,MINAP Milan
-6500x:4016,CIXP Geneva
-6500x:4018,PLIX Warsaw
-6500x:4020,VIX Vienna
-6500x:4021,LONAP London
-6500x:4022,BCIX Berlin
-6500x:4023,Equinix Zürich
-6500x:4024,DECIX Marseille
-6500x:4025,France IX Marseille
-6500x:4026,France IX Paris
-6500x:4027,DE-CIX Düsseldorf
-6500x:4029,CHIX Zürich
-6500x:4030,Romand IX
-6500x:4031,Rheintal IX STG-3
-6500x:4032,Equinix IX Frankfurt
-6500x:4033,DE-CIX Hamburg
+65009:4001,do not announce to SwissIX Zürich
+65009:4005,do not announce to DE-CIX Frankfurt
+65009:4006,do not announce to LINX Juniper LAN London
+65009:4007,do not announce to LINX Extreme LAN London
+65009:4008,do not announce to AMS-IX (AMS-2 NIKHEF #1) Amsterdam
+65009:4009,do not announce to Equinix Paris
+65009:4010,do not announce to Espanix Madrid
+65009:4011,do not announce to AMS-IX (AMS-2 NIKHEF #2) Amsterdam
+65009:4012,do not announce to DE-CIX Madrid
+65009:4013,do not announce to MIX Milano
+65009:4014,do not announce to MINAP Milan
+65009:4016,do not announce to CIXP Geneva
+65009:4018,do not announce to PLIX Warsaw
+65009:4020,do not announce to VIX Vienna
+65009:4021,do not announce to LONAP London
+65009:4022,do not announce to BCIX Berlin
+65009:4023,do not announce to Equinix Zürich
+65009:4024,do not announce to DECIX Marseille
+65009:4025,do not announce to France IX Marseille
+65009:4026,do not announce to France IX Paris
+65009:4027,do not announce to DE-CIX Düsseldorf
+65009:4029,do not announce to CHIX Zürich
+65009:4030,do not announce to Romand IX
+65009:4031,do not announce to Rheintal IX STG-3
+65009:4032,do not announce to Equinix IX Frankfurt
+65009:4033,do not announce to DE-CIX Hamburg
+
+6500x:4001,prepend $0 times to SwissIX Zürich
+6500x:4005,prepend $0 times to DE-CIX Frankfurt
+6500x:4006,prepend $0 times to LINX Juniper LAN London
+6500x:4007,prepend $0 times to LINX Extreme LAN London
+6500x:4008,prepend $0 times to AMS-IX (AMS-2 NIKHEF #1) Amsterdam
+6500x:4009,prepend $0 times to Equinix Paris
+6500x:4010,prepend $0 times to Espanix Madrid
+6500x:4011,prepend $0 times to AMS-IX (AMS-2 NIKHEF #2) Amsterdam
+6500x:4012,prepend $0 times to DE-CIX Madrid
+6500x:4013,prepend $0 times to MIX Milano
+6500x:4014,prepend $0 times to MINAP Milan
+6500x:4016,prepend $0 times to CIXP Geneva
+6500x:4018,prepend $0 times to PLIX Warsaw
+6500x:4020,prepend $0 times to VIX Vienna
+6500x:4021,prepend $0 times to LONAP London
+6500x:4022,prepend $0 times to BCIX Berlin
+6500x:4023,prepend $0 times to Equinix Zürich
+6500x:4024,prepend $0 times to DECIX Marseille
+6500x:4025,prepend $0 times to France IX Marseille
+6500x:4026,prepend $0 times to France IX Paris
+6500x:4027,prepend $0 times to DE-CIX Düsseldorf
+6500x:4029,prepend $0 times to CHIX Zürich
+6500x:4030,prepend $0 times to Romand IX
+6500x:4031,prepend $0 times to Rheintal IX STG-3
+6500x:4032,prepend $0 times to Equinix IX Frankfurt
+6500x:4033,prepend $0 times to DE-CIX Hamburg
 
 # Peers
-6500x:8001,Switch (AS559)
-6500x:8005,Solnet (AS9044)
-6500x:8006,Finecom/Quickline (AS15600)
-6500x:8007,ATOM86 (AS8455)
-6500x:8008,Leaseweb (AS16265)
-6500x:8009,Microsoft (AS8075)
-6500x:8010,IPTP (AS41095)
-6500x:8011,Swisscom (AS3303)
-6500x:8012,Vodafone GlobalNet (ex. C&W / AS1273)
-6500x:8014,Talktalk (AS13285)
-6500x:8015,Sunrise (AS6730)
-6500x:8016,PCCW (AS3491)
-6500x:8021,Portugal Telecom (AS8657)
-6500x:8022,ROMTelecom S.A. (AS9050)
-6500x:8023,Limelight Networks (AS22822)
-6500x:8025,Core-Backbone (AS33891)
-6500x:8026,Google (AS15169)
-6500x:8027,BHARTI Airtel Ltd. (AS9498)
-6500x:8029,Netstream (AS15517)
-6500x:8030,Etisalat (AS8966)
-6500x:8031,Datahop (AS6908)
-6500x:8033,BICS (AS6774)
-6500x:8034,Mobile TeleSystems OJSC (AS8359)
-6500x:8036,Tineo (AS42346)
-6500x:8039,Prolocation (AS41887)
-6500x:8040,Netia (AS12741)
-6500x:8041,VTX (AS12350)
-6500x:8043,Apple CDN (AS6185)
-6500x:8044,NetCologne (AS8422)
-6500x:8046,Amazon (AS16509)
-6500x:8047,Online.net (AS12876)
-6500x:8050,Telefonica (AS13184)
-6500x:8051,hetzner.de (AS24940)
-6500x:8052,A1 Telecom Austria (AS8447)
-6500x:8053,METANET GmbH (AS21069)
-6500x:8055,Zattoo (AS8302)
-6500x:8056,Facebook (AS32934)
-6500x:8057,Twitch (AS46489)
-6500x:8058,LWLcom GmbH (AS50629)
-6500x:8059,Apple Inc (AS714)
-6500x:8060,netplus.ch (AS15547)
-6500x:8061,Cyberlink (AS15623)
-6500x:8062,SysEleven (AS25291)
-6500x:8063,TV Factory (AS59622)
-6500x:8070,green.ch (AS1836)
-6500x:8071,Deutsche Telekom AG (AS3320)
+65009:8001,do not announce to Switch (AS559)
+65009:8005,do not announce to Solnet (AS9044)
+65009:8006,do not announce to Finecom/Quickline (AS15600)
+65009:8007,do not announce to ATOM86 (AS8455)
+65009:8008,do not announce to Leaseweb (AS16265)
+65009:8009,do not announce to Microsoft (AS8075)
+65009:8010,do not announce to IPTP (AS41095)
+65009:8011,do not announce to Swisscom (AS3303)
+65009:8012,do not announce to Vodafone GlobalNet (ex. C&W / AS1273)
+65009:8014,do not announce to Talktalk (AS13285)
+65009:8015,do not announce to Sunrise (AS6730)
+65009:8016,do not announce to PCCW (AS3491)
+65009:8021,do not announce to Portugal Telecom (AS8657)
+65009:8022,do not announce to ROMTelecom S.A. (AS9050)
+65009:8023,do not announce to Limelight Networks (AS22822)
+65009:8025,do not announce to Core-Backbone (AS33891)
+65009:8026,do not announce to Google (AS15169)
+65009:8027,do not announce to BHARTI Airtel Ltd. (AS9498)
+65009:8029,do not announce to Netstream (AS15517)
+65009:8030,do not announce to Etisalat (AS8966)
+65009:8031,do not announce to Datahop (AS6908)
+65009:8033,do not announce to BICS (AS6774)
+65009:8034,do not announce to Mobile TeleSystems OJSC (AS8359)
+65009:8036,do not announce to Tineo (AS42346)
+65009:8039,do not announce to Prolocation (AS41887)
+65009:8040,do not announce to Netia (AS12741)
+65009:8041,do not announce to VTX (AS12350)
+65009:8043,do not announce to Apple CDN (AS6185)
+65009:8044,do not announce to NetCologne (AS8422)
+65009:8046,do not announce to Amazon (AS16509)
+65009:8047,do not announce to Online.net (AS12876)
+65009:8050,do not announce to Telefonica (AS13184)
+65009:8051,do not announce to hetzner.de (AS24940)
+65009:8052,do not announce to A1 Telecom Austria (AS8447)
+65009:8053,do not announce to METANET GmbH (AS21069)
+65009:8055,do not announce to Zattoo (AS8302)
+65009:8056,do not announce to Facebook (AS32934)
+65009:8057,do not announce to Twitch (AS46489)
+65009:8058,do not announce to LWLcom GmbH (AS50629)
+65009:8059,do not announce to Apple Inc (AS714)
+65009:8060,do not announce to netplus.ch (AS15547)
+65009:8061,do not announce to Cyberlink (AS15623)
+65009:8062,do not announce to SysEleven (AS25291)
+65009:8063,do not announce to TV Factory (AS59622)
+65009:8070,do not announce to green.ch (AS1836)
+65009:8071,do not announce to Deutsche Telekom AG (AS3320)
+
+6500x:8001,prepend $0 times to Switch (AS559)
+6500x:8005,prepend $0 times to Solnet (AS9044)
+6500x:8006,prepend $0 times to Finecom/Quickline (AS15600)
+6500x:8007,prepend $0 times to ATOM86 (AS8455)
+6500x:8008,prepend $0 times to Leaseweb (AS16265)
+6500x:8009,prepend $0 times to Microsoft (AS8075)
+6500x:8010,prepend $0 times to IPTP (AS41095)
+6500x:8011,prepend $0 times to Swisscom (AS3303)
+6500x:8012,prepend $0 times to Vodafone GlobalNet (ex. C&W / AS1273)
+6500x:8014,prepend $0 times to Talktalk (AS13285)
+6500x:8015,prepend $0 times to Sunrise (AS6730)
+6500x:8016,prepend $0 times to PCCW (AS3491)
+6500x:8021,prepend $0 times to Portugal Telecom (AS8657)
+6500x:8022,prepend $0 times to ROMTelecom S.A. (AS9050)
+6500x:8023,prepend $0 times to Limelight Networks (AS22822)
+6500x:8025,prepend $0 times to Core-Backbone (AS33891)
+6500x:8026,prepend $0 times to Google (AS15169)
+6500x:8027,prepend $0 times to BHARTI Airtel Ltd. (AS9498)
+6500x:8029,prepend $0 times to Netstream (AS15517)
+6500x:8030,prepend $0 times to Etisalat (AS8966)
+6500x:8031,prepend $0 times to Datahop (AS6908)
+6500x:8033,prepend $0 times to BICS (AS6774)
+6500x:8034,prepend $0 times to Mobile TeleSystems OJSC (AS8359)
+6500x:8036,prepend $0 times to Tineo (AS42346)
+6500x:8039,prepend $0 times to Prolocation (AS41887)
+6500x:8040,prepend $0 times to Netia (AS12741)
+6500x:8041,prepend $0 times to VTX (AS12350)
+6500x:8043,prepend $0 times to Apple CDN (AS6185)
+6500x:8044,prepend $0 times to NetCologne (AS8422)
+6500x:8046,prepend $0 times to Amazon (AS16509)
+6500x:8047,prepend $0 times to Online.net (AS12876)
+6500x:8050,prepend $0 times to Telefonica (AS13184)
+6500x:8051,prepend $0 times to hetzner.de (AS24940)
+6500x:8052,prepend $0 times to A1 Telecom Austria (AS8447)
+6500x:8053,prepend $0 times to METANET GmbH (AS21069)
+6500x:8055,prepend $0 times to Zattoo (AS8302)
+6500x:8056,prepend $0 times to Facebook (AS32934)
+6500x:8057,prepend $0 times to Twitch (AS46489)
+6500x:8058,prepend $0 times to LWLcom GmbH (AS50629)
+6500x:8059,prepend $0 times to Apple Inc (AS714)
+6500x:8060,prepend $0 times to netplus.ch (AS15547)
+6500x:8061,prepend $0 times to Cyberlink (AS15623)
+6500x:8062,prepend $0 times to SysEleven (AS25291)
+6500x:8063,prepend $0 times to TV Factory (AS59622)
+6500x:8070,prepend $0 times to green.ch (AS1836)
+6500x:8071,prepend $0 times to Deutsche Telekom AG (AS3320)
 
 # 2 Informative Communities
 
@@ -121,7 +202,6 @@
 13030:51104,ZHI-1 Data 11 Solothurn
 13030:51105,BXO-1 CKW Luzern
 13030:51106,QLS-4 Init7 (Switzerland) AG Fribourg
-13030:51150,ZRH-9 Swisscom Zurich Herdern
 13030:51107,GLB-1 Interxion Glattbrugg
 13030:51112,ZRH-10 Airport Zurich
 13030:51113,WIN-1 Stadtwerk Winterhur
@@ -169,11 +249,11 @@
 13030:51165,ZRH-18 Colo Zürich
 
 # 2.2.2 Germany
-13030:51202 FRA-2 Equinix 5 Frankfurt
-13030:51203 FRA-3 InterXion 3 Frankfurt
-13030:51212 DUS-1 InterXion Dusseldorf
-13030:51214 BER-1 IPB Berlin
-13030:51215 HAM-1 IPHH Hamburg
+13030:51202,FRA-2 Equinix 5 Frankfurt
+13030:51203,FRA-3 InterXion 3 Frankfurt
+13030:51212,DUS-1 InterXion Dusseldorf
+13030:51214,BER-1 IPB Berlin
+13030:51215,HAM-1 IPHH Hamburg
 
 # 2.2.3 France
 13030:51301,PAR-1 Telehouse Voltaire Paris
@@ -199,11 +279,11 @@
 13030:52202,VIE-2 NTT Wien
 
 # 2.3 Tagging by IXP
-13030:4000 – 13030:4199,Europe
-13030:4200 – 13030:4399,USA / Canada
-13030:4400 – 13030:4499,South America
-13030:4500 – 13030:4599,Asia
-13030:4600 – 13030:4699,Africa
-13030:4700 – 13030:4799,Australia / New Zealand
+13030:4000-4199,Europe
+13030:4200-4399,USA / Canada
+13030:4400-4499,South America
+13030:4500-4599,Asia
+13030:4600-4699,Africa
+13030:4700-4799,Australia / New Zealand
 
 # EOF

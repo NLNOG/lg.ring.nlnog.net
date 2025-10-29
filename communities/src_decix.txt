@@ -90,38 +90,38 @@
 <ASN>:1912:6,Metro: MRS
 <ASN>:1912:5,Metro: PMO
 <ASN>:1912:10,Metro: MAD
-<ASN>:1912:21:Metro: BCN
-<ASN>:1912:11:Metro: LIS
-<ASN>:1912:12:Metro: ATH (SEECIX)
-<ASN>:1912:31:Metro: OSL
-<ASN>:1912:32:Metro: KRS
-<ASN>:1912:36:Metro: EBJ
-<ASN>:1912:33:Metro: CPH
-<ASN>:1912:34:Metro: HEL
-<ASN>:1912:42:Metro: AMS
-<ASN>:1912:29:Metro: LOS (AF-CIX)
-<ASN>:1912:35:Metro: FIH (ACIX)
-<ASN>:1912:50:Metro: MEX
-<ASN>:1912:2:Metro: NYC
-<ASN>:1912:8:Metro: DFW
-<ASN>:1912:14:Metro: ORD
-<ASN>:1912:24:Metro: PHX
-<ASN>:1912:22:Metro: RIC
-<ASN>:1912:40:Metro: SEA
-<ASN>:1912:3:Metro: DXB
-<ASN>:1912:7:Metro: IST
-<ASN>:1912:18:Metro: JHB
-<ASN>:1912:17:Metro: KUL
-<ASN:1912:41:Metro: PEN
-<ASN>:1912:16:Metro: SIN
-<ASN>:1912:38:Metro: AQJ
-<ASN>:1912:39:Metro: BGW
-<ASN>:1912:47:Metro: KHI
-<ASN>:1912:44:Metro: TYO
-<ASN>:1912:45:Metro: OSA
-<ASN>:1912:48:Metro: JKT
-<ASN>:1912:19:BWN (Borneo- IX)
-<ASN>:1912:65535:Metro: Unknown
+<ASN>:1912:21,Metro: BCN
+<ASN>:1912:11,Metro: LIS
+<ASN>:1912:12,Metro: ATH (SEECIX)
+<ASN>:1912:31,Metro: OSL
+<ASN>:1912:32,Metro: KRS
+<ASN>:1912:36,Metro: EBJ
+<ASN>:1912:33,Metro: CPH
+<ASN>:1912:34,Metro: HEL
+<ASN>:1912:42,Metro: AMS
+<ASN>:1912:29,Metro: LOS (AF-CIX)
+<ASN>:1912:35,Metro: FIH (ACIX)
+<ASN>:1912:50,Metro: MEX
+<ASN>:1912:4,Metro: NYC
+<ASN>:1912:8,Metro: DFW
+<ASN>:1912:14,Metro: ORD
+<ASN>:1912:24,Metro: PHX
+<ASN>:1912:22,Metro: RIC
+<ASN>:1912:40,Metro: SEA
+<ASN>:1912:3,Metro: DXB
+<ASN>:1912:7,Metro: IST
+<ASN>:1912:18,Metro: JHB
+<ASN>:1912:17,Metro: KUL
+<ASN>:1912:41,Metro: PEN
+<ASN>:1912:16,Metro: SIN
+<ASN>:1912:38,Metro: AQJ
+<ASN>:1912:39,Metro: BGW
+<ASN>:1912:47,Metro: KHI
+<ASN>:1912:44,Metro: TYO
+<ASN>:1912:45,Metro: OSA
+<ASN>:1912:48,Metro: JKT
+<ASN>:1912:19,BWN (Borneo- IX)
+<ASN>:1912:65535,Metro: Unknown
 
 # Switches
 <ASN>:1911:82,Switch: edge02.fra12
@@ -130,7 +130,7 @@
 <ASN>:1911:105,Switch: edge01.fra10
 <ASN>:1911:163,Switch: edge02.fra9
 <ASN>:1911:172,Switch: edge03.fra12
-<ASN>:1911:79,Switch: edge01.fra5
+<ASN>:1911:179,Switch: edge01.fra5
 <ASN>:1911:96,Switch: edge02.muc1
 <ASN>:1911:122,Switch: edge03.ham1
 <ASN>:1911:93,Switch: edge02.dus1

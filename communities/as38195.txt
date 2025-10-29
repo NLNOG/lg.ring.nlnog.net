@@ -38,7 +38,7 @@
 38195:nnn:0,Global DNA to AS$0
 38195:nnn:1,Global Prepend x1 to AS$0
 38195:nnn:2,Global Prepend x2 to AS$0
-38195:nnn:3.Global Prepend x3 to AS$0
+38195:nnn:3,Global Prepend x3 to AS$0
 38195:nnn:9,Global Set no-export to AS$0
 
 #AS38195 Large DNA control communities
