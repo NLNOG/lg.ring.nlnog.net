@@ -55,3 +55,5 @@
 8283:8:31,received via DE-CIX
 8283:8:359,received via France-IX
 8283:8:60,received via SwissIX
+8283:8:3789,received via ERA-IX
+8283:8:4589,received via NSIX
