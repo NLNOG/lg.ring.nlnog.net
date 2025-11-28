@@ -1,0 +1,12 @@
+203069:100:nnn,Session ID:$0
+203069:10:nnn,Routes learned from Upstream AS$0
+203069:11:nnn,Routes learned from Peer AS$0
+203069:12:102,Routes learned in Toronto, ON, CA
+203069:12:101,Routes learned in Ashburn, VA, USA
+203069:13:101,Routes learned in IX NVIX
+203069:13:102,Routes learned in IX ONIX
+203069:14:nnn,Routes learned from Downstream AS$0
+203069:0:666,Blackhole
+203069:8210:0,Prefix NOT matched by any RPKI ROA (unknown)
+203069:8210:1,Prefix matched by a RPKI ROA for the authorized origin ASN (valid)
+203069:8210:2,Prefix matched by a ROA but origin ASN not authorized (invalid)
