@@ -394,11 +394,43 @@ def get_peer_info(config, names_only: bool = False, established_only: bool = Fal
         "v6_pfx": 0,
     }
 
-    status, result = openbgpd_command(config["ROUTER"], "summary")
-    if not status:
-        if names_only:
-            return []
-        return ({}, totals)
+    result = ""
+    from_cache = False
+
+    try:
+        if os.path.exists(config.get("PEER_CACHE", "NOPEERCACHE")):
+            with open(config["PEER_CACHE"], "r") as fh:
+                cache = json.load(fh)
+                ttl = int(config.get("PEER_CACHE_TTL", "300"))
+                timestamp = cache.get("timestamp", 0)
+                age = int(time.time()) - timestamp
+                print(f"cache age: {age}")
+                if age < ttl:
+                    (status, result) = (True, cache["data"])
+                    print("read cache")
+                    from_cache = True
+                else:
+                    print("cache too old")
+    except Exception as e:
+        print(f"Something went wrong reading the peer cache: {e}")
+
+    if not from_cache:
+        print("querying API for peer list")
+        status, q_result = openbgpd_command(config["ROUTER"], "summary")
+
+        if not status:
+            if names_only:
+                return []
+            return ({}, totals)
+
+        result = q_result
+
+        try:
+            with open(config["PEER_CACHE"], "w") as fh:
+                json.dump({"timestamp" : int(time.time()), "data": result}, fh)
+                print("saved cache")
+        except Exception as e:
+            print(f"Failed to store cache: {e}")
 
     data = []
 
