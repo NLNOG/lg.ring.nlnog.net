@@ -1,5 +1,8 @@
 65535:666,Set next-hop discard 
-65535:0,IX Graceful Shutdown 
+65535:0,IX Graceful Shutdown
+
+209097:0:1,Learned via RR1
+209097:0:2,Learned via RR2
 
 209097:1:1,Learned from core1-sbe1
 209097:2:1,Learned from core1-nxn1
@@ -28,10 +31,11 @@
 209097:3:43100,Learned from IX FranceIX Lyon
 209097:3:51706,Learned from IX FranceIX Paris
 209097:3:31561,Learned from IX NineIX
+209097:3:39801,Learned from IX FranceIX Lyon Multipass
 209097:7:2027,Learned from Transit Milkywan
 209097:4:35625,Learned from Transit Eurofiber
 209097:4:62000,Learned from Transit Netrix
-209097:6:174,Learned from Transit Cogent  
+209097:6:174,Learned from Transit Cogent
 
 209097:9998:209097,Prefix from Customer NetSyst (AS209097) reannounced to ALL
 209097:9998:2027,Prefix from Customer Milkywan (AS2027) reannounced to ALL   
@@ -46,6 +50,7 @@
 9999:9,Not announce to FranceIX Paris
 9999:11,Not announce to NineIX
 9999:10,Not announce to Netrix
+9999:12,Not announce to FranceIX Lyon Multipass
 
 209097:9999:3215,Not announce to Orange
 209097:9999:1299,Not announce to Arelion
@@ -55,4 +60,5 @@
 209097:9999:43100,Not announce to FranceIX Lyon
 209097:9999:51706,Not announce to FranceIX Paris
 209097:9999:31561,Not announce to NineIX
-209097:9999:62000,Not announce to Netrixs
+209097:9999:62000,Not announce to Netrix
+209097:9999:39801,announce to FranceIX Lyon Multipass
