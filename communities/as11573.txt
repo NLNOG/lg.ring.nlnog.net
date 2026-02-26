@@ -1,0 +1,52 @@
+# AS11537 - Internet2 communities
+# Source: https://noc.net.internet2.edu/internet2/knowledge/policy-statements/internet2-bgp-communities.html
+# Date: September 2021
+
+# External Traffic Influencing Communities
+11537:40,International, Non-International, or FEDNET peers: Low (local-pref 460)
+11537:160,International, Non-International, or FEDNET peers: High (local-pref 560)
+11537:140,Connectors: Low (local-pref 540)
+11537:260,Connectors: High (local-pref 620)
+11537:2002,Block prefix to commercial R&E peers
+
+# Internal Traffic Influencing Communities
+11537:888,Block to external
+11537:902,non-I2 R&E sites sponsored for connection by members
+11537:910,sponsored educational groups (Primary state networks)
+11537:950,Internet2 Participants
+11537:2000,Commercial research - Lab participant
+11537:2001,Special Commercial prefix used for V6 or multicast
+11537:2500,Block advertisement to international
+11537:2501,International
+11537:3000,FEDNET (US Federal Peer Network)
+11537:3500,Connector Only
+11537:4000,RHCPP (Rural Health Network Groups)
+11537:6001,LHCOne Connectors
+11537:6002,LHCOne Peers
+11537:911,Remote Triggered Black Hole (RTBH)
+
+# NET+ BGP Communities
+11537:5000,Internet2 NET+ Services
+11537:5002,Cloud
+11537:5003,SIP
+11537:5004,Amazon
+11537:5007,Code42
+11537:5008,Black Board
+11537:5013,ServiceNow
+11537:5015,DropBox
+11537:5016,Oracle
+11537:5017,Zoom
+11537:5500,Block to NET+
+11537:249,Mclean, VA (Washington, DC)
+11537:242,New York
+11537:243,Atlanta
+11537:241,Chicago - Level(3)
+11537:245,Kansas City
+11537:244,Houston
+11537:246,Salt Lake City
+11537:247,Seattle
+11537:250,Cleveland
+11537:248,Los Angeles - Level(3)
+11537:253,Ashburn
+11537:254,Chicago - Equinix
+11537:252,Los Angeles - Wilcon
