@@ -8,7 +8,6 @@
 209097:2:1,Learned from core1-nxn1
 209097:3:1,Learned from core1-vnx1
 209097:4:1,Learned from core2-vnx1
-209097:5:1,Learned from core2-sbe1
 209097:6:1,Learned from core1-lyo1
 209097:7:1,Learned from core3-vnx1
 
@@ -18,15 +17,13 @@
 209097:0:65101,Learned from WANGUARD SRTBH
 
 209097:3:200,Learned from LNS1
-209097:2:201,Learned from LNS2
-209097:3:202,Learned from LNS3
 
 209097:9:10,Learned from transits
 209097:9:20,Learned from peerings with IX/RS
-209097:9:21,Learned from peerings with PP link
+209097:9:21,Learned from peerings with IX/Public Peering link
 
 209097:1:3215,Learned from Transit Orange NOLYO102 LYON LACASS
-209097:2:3212,Learned from Transit Orange NOLYO101 LYON SEVIGN
+209097:2:3215,Learned from Transit Orange NOLYO101 LYON SEVIGN
 209097:3:1299,Learned from Transit Arelion
 209097:3:43100,Learned from IX FranceIX Lyon
 209097:3:51706,Learned from IX FranceIX Paris
@@ -37,9 +34,14 @@
 209097:4:62000,Learned from Transit Netrix
 209097:6:174,Learned from Transit Cogent
 
+9998:x,Prefix reannounce to ALL
+209097:9998:x,Prefix reannounce to ALL
 209097:9998:209097,Prefix from Customer NetSyst (AS209097) reannounced to ALL
-209097:9998:2027,Prefix from Customer Milkywan (AS2027) reannounced to ALL   
-209097:9997:215596,Prefix from Kissgroup (AS215596) not reannounced 
+209097:9998:2027,Prefix from Customer Milkywan (AS2027) reannounced to ALL
+
+9997:x,Prefix not reannounced
+209097:9997:x,Prefix not reannounced
+209097:9997:215596,Prefix from Kissgroup (AS215596) not reannounced
 
 9999:1,Not announce to Orange
 9999:4,Not announce to Arelion
@@ -61,4 +63,4 @@
 209097:9999:51706,Not announce to FranceIX Paris
 209097:9999:31561,Not announce to NineIX
 209097:9999:62000,Not announce to Netrix
-209097:9999:39801,announce to FranceIX Lyon Multipass
+209097:9999:39801,Not announce to FranceIX Lyon Multipass
