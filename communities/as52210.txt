@@ -1,27 +1,32 @@
 # Fetched from https://as52210.net/communities
 # BEGIN Info Communities
+52210:5000,IRR Valid
+52210:5001,IRR Missing/Not Found
+52210:5002,IRR Invalid
+52210:5010,RPKI Valid
+52210:5011,RPKI Missing/Not Found
+52210:5012,RPKI Invalid
 52210:0:174,Learned from Cogent (Transit)
 52210:0:835,Learned from GoCodeIT (Transit)
 52210:0:6939,Learned from Hurricane Electric (Transit)
-52210:0:52025,Learned from Paradox Networks (Transit)
-52210:1:1,Learned from OGIX (Peer)
-52210:1:2,Learned from ONIX (Peer)
-52210:1:3,Learned from KCIX (Peer)
-52210:1:4,Learned from HOUIX (Peer)
-52210:1:5,Learned from STLIX (Peer)
-52210:1:6,Learned from AccurIX (Peer)
-52210:2:1,Infratructure Prefix
-52210:2:2,Infratructure Prefix (YOW)
-52210:2:3,Infratructure Prefix (MCI)
-52210:2:4,Infratructure Prefix (Anycast)
-52210:2:5,iBGP Prefix (Anycast)
+52210:0:52025,Learned from ParadoxNetworks (Transit)
+52210:0:32097,Learned from Wholesale Internet (Transit)
+52210:1:1,Learned from ONIX (Peer)
+52210:1:2,Learned from KCIX (Peer)
+52210:1:3,Learned from HOUIX (Peer)
+52210:1:4,Learned from STLIX (Peer)
+52210:1:5,Learned from SeattleIX (Peer)
+52210:1:6,Learned from MICE (Peer)
+52210:1:7,Learned from AMS-IX (Peer)
+52210:2:1,Infrastructure Prefix
+52210:2:2,Infrastructure Prefix (MCI)
+52210:2:9,Infrastructure Prefix (Anycast)
 52210:3:1,Learned from Downstream Customer
-52210:3:2,Learned from Downstream Customer (YOW)
-52210:3:3,Learned from Downstream Customer (MCI)
-52210:4:1,Learned in YOW
-52210:4:2,Learned in MCI
+52210:3:2,Learned from Downstream Customer (MCI)
+52210:4:1,Learned in MCI
 # END Info Communities
 # BEGIN Action Communities
+52210:666,Blackhole
 52210:20001,Prepend 1x to Cogent (Transit)
 52210:20002,Prepend 2x to Cogent (Transit)
 52210:20003,Prepend 3x to Cogent (Transit)
@@ -34,15 +39,19 @@
 52210:20022,Prepend 2x to Hurricane Electric (Transit)
 52210:20023,Prepend 3x to Hurricane Electric (Transit)
 52210:20029,No-Export to Hurricane Electric (Transit)
-52210:20031,Prepend 1x to Paradox Networks (Transit)
-52210:20032,Prepend 2x to Paradox Networks (Transit)
-52210:20033,Prepend 3x to Paradox Networks (Transit)
-52210:20039,No-Export to Paradox Networks (Transit)
-52210:20999,No-Export to All Transit Providers
-52210:21001,Prepend 1x to OGIX (Peer)
-52210:21002,Prepend 2x to OGIX (Peer)
-52210:21003,Prepend 3x to OGIX (Peer)
-52210:21009,No-Export to OGIX (Peer)
+52210:20031,Prepend 1x to ParadoxNetworks (Transit)
+52210:20032,Prepend 2x to ParadoxNetworks (Transit)
+52210:20033,Prepend 3x to ParadoxNetworks (Transit)
+52210:20039,No-Export to ParadoxNetworks (Transit)
+52210:20041,Prepend 1x to SmishCraft (Transit)
+52210:20042,Prepend 2x to SmishCraft (Transit)
+52210:20043,Prepend 3x to SmishCraft (Transit)
+52210:20049,No-Export to SmishCraft (Transit)
+52210:20051,Prepend 1x to Wholesale Internet (Transit)
+52210:20052,Prepend 2x to Wholesale Internet (Transit)
+52210:20053,Prepend 3x to Wholesale Internet (Transit)
+52210:20059,No-Export to Wholesale Internet (Transit)
+52210:20099,No-Export to All Transit Providers
 52210:21011,Prepend 1x to ONIX (Peer)
 52210:21012,Prepend 2x to ONIX (Peer)
 52210:21013,Prepend 3x to ONIX (Peer)
@@ -59,9 +68,17 @@
 52210:21042,Prepend 2x to STLIX (Peer)
 52210:21043,Prepend 3x to STLIX (Peer)
 52210:21049,No-Export to STLIX (Peer)
-52210:21051,Prepend 1x to AccurIX (Peer)
-52210:21052,Prepend 2x to AccurIX (Peer)
-52210:21053,Prepend 3x to AccurIX (Peer)
-52210:21059,No-Export to AccurIX (Peer)
-52210:21999,No-Export to All IXPs
+52210:21061,Prepend 1x to SeattleIX (Peer)
+52210:21062,Prepend 2x to SeattleIX (Peer)
+52210:21063,Prepend 3x to SeattleIX (Peer)
+52210:21069,No-Export to SeattleIX (Peer)
+52210:21071,Prepend 1x to MICE (Peer)
+52210:21072,Prepend 2x to MICE (Peer)
+52210:21073,Prepend 3x to MICE (Peer)
+52210:21079,No-Export to MICE (Peer)
+52210:21081,Prepend 1x to AMS-IX (Peer)
+52210:21082,Prepend 2x to AMS-IX (Peer)
+52210:21083,Prepend 3x to AMS-IX (Peer)
+52210:21089,No-Export to AMS-IX (Peer)
+52210:21999,No-Export to All Internet Exchange Points
 # END Action Communities
