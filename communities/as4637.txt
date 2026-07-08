@@ -1,46 +1,294 @@
-4637:30501,Asia-Pacific (including Mainland China) customer route
-4637:30502,Europe customer route
-4637:30504,USA customer route
-4637:30507,Mainland China customer route
-4637:31501,Asia-Pacific (including Mainland China) internal route
-4637:31502,Europe internal route
-4637:31504,USA internal route
-4637:31507,Mainland China internal route
-4637:32501,Asia-Pacific (including Mainland China) peer route
-4637:32502,Europe peer route
-4637:32504,USA peer route
-4637:32507,Mainland China peer route
-4637:33501,Asia-Pacific (including Mainland China) transit route
-4637:33502,Europe transit route
-4637:33504,USA transit route
-4637:33507,Mainland China transit route
-4637:3xx00,Australia
-4637:3xx01,Hong Kong SAR
-4637:3xx02,Japan
-4637:3xx03,Korea
-4637:3xx04,Singapore
-4637:3xx05,Indonesia
-4637:3xx06,Philippines
-4637:3xx07,Malaysia
-4637:3xx08,Thailand
-4637:3xx09,Taiwan PRC
-4637:3xx10,India
-4637:3xx11,New Zealand
-4637:3xx12,UK
-4637:3xx13,Netherlands
-4637:3xx14,USA
-4637:3xx15,Mainland China
-4637:3xx16,Pakistan
-4637:3xx17,Bangladesh
-4637:3xx18,Macau SAR
-4637:3xx19,Maldives
-4637:3xx20,Myanmar
-4637:3xx21,Vietnam
-4637:3xx22,Papua New Gineau
-4637:3xx23,Mongolia
-4637:3xx24,Seyschelles
-4637:3xx25,Deigo Garcia
-4637:3xx26,Nauru
-4637:3xx27,Samoa
-4637:3xx28,Kiribati
-4637:3xx29,UAE
+# Source: Telstra BGP Communities for GID Standard and IPT Platinum/Standard (with Direct China Transit), Version 1.6, September 2016, doc ref IPN-WKI-028
+# Local preference communities (customer-advertised routes)
+4637:70,set Telstra local preference to 370
+4637:80,set Telstra local preference to 380
+4637:110,set Telstra local preference to 410
+4637:120,set Telstra local preference to 420
+
+# Regional origin route tagging (Telstra-advertised routes)
+4637:30501,route learnt in Asia-Pacific (including Mainland China)
+4637:30502,route learnt in Europe
+4637:30504,route learnt in USA
+4637:30507,route learnt in Mainland China
+4637:31501,route learnt in Asia-Pacific (including Mainland China)
+4637:31502,route learnt in Europe
+4637:31504,route learnt in USA
+4637:31507,route learnt in Mainland China
+4637:32501,route learnt in Asia-Pacific (including Mainland China)
+4637:32502,route learnt in Europe
+4637:32504,route learnt in USA
+4637:32507,route learnt in Mainland China
+4637:33501,route learnt in Asia-Pacific (including Mainland China)
+4637:33502,route learnt in Europe
+4637:33504,route learnt in USA
+4637:33507,route learnt in Mainland China
+
+# Country of origin tagging - in-country connection (Telstra-advertised routes)
+4637:30300,route origin Australia via in-country connection
+4637:30301,route origin Hong Kong SAR via in-country connection
+4637:30302,route origin Japan via in-country connection
+4637:30303,route origin Korea via in-country connection
+4637:30304,route origin Singapore via in-country connection
+4637:30305,route origin Indonesia via in-country connection
+4637:30306,route origin Philippines via in-country connection
+4637:30307,route origin Malaysia via in-country connection
+4637:30308,route origin Thailand via in-country connection
+4637:30309,route origin Taiwan PRC via in-country connection
+4637:30310,route origin India via in-country connection
+4637:30311,route origin New Zealand via in-country connection
+4637:30312,route origin UK via in-country connection
+4637:30313,route origin Netherlands via in-country connection
+4637:30314,route origin USA via in-country connection
+4637:30315,route origin Mainland China via in-country connection
+4637:30316,route origin Pakistan via in-country connection
+4637:30317,route origin Bangladesh via in-country connection
+4637:30318,route origin Macau SAR via in-country connection
+4637:30319,route origin Maldives via in-country connection
+4637:30320,route origin Myanmar via in-country connection
+4637:30321,route origin Vietnam via in-country connection
+4637:30322,route origin Papua New Guinea via in-country connection
+4637:30323,route origin Mongolia via in-country connection
+4637:30324,route origin Seychelles via in-country connection
+4637:30325,route origin Diego Garcia via in-country connection
+4637:30326,route origin Nauru via in-country connection
+4637:30327,route origin Samoa via in-country connection
+4637:30328,route origin Kiribati via in-country connection
+4637:30329,route origin UAE via in-country connection
+4637:30399,route origin Others via in-country connection
+4637:31300,route origin Australia via in-country connection
+4637:31301,route origin Hong Kong SAR via in-country connection
+4637:31302,route origin Japan via in-country connection
+4637:31303,route origin Korea via in-country connection
+4637:31304,route origin Singapore via in-country connection
+4637:31305,route origin Indonesia via in-country connection
+4637:31306,route origin Philippines via in-country connection
+4637:31307,route origin Malaysia via in-country connection
+4637:31308,route origin Thailand via in-country connection
+4637:31309,route origin Taiwan PRC via in-country connection
+4637:31310,route origin India via in-country connection
+4637:31311,route origin New Zealand via in-country connection
+4637:31312,route origin UK via in-country connection
+4637:31313,route origin Netherlands via in-country connection
+4637:31314,route origin USA via in-country connection
+4637:31315,route origin Mainland China via in-country connection
+4637:31316,route origin Pakistan via in-country connection
+4637:31317,route origin Bangladesh via in-country connection
+4637:31318,route origin Macau SAR via in-country connection
+4637:31319,route origin Maldives via in-country connection
+4637:31320,route origin Myanmar via in-country connection
+4637:31321,route origin Vietnam via in-country connection
+4637:31322,route origin Papua New Guinea via in-country connection
+4637:31323,route origin Mongolia via in-country connection
+4637:31324,route origin Seychelles via in-country connection
+4637:31325,route origin Diego Garcia via in-country connection
+4637:31326,route origin Nauru via in-country connection
+4637:31327,route origin Samoa via in-country connection
+4637:31328,route origin Kiribati via in-country connection
+4637:31329,route origin UAE via in-country connection
+4637:31399,route origin Others via in-country connection
+4637:32300,route origin Australia via in-country connection
+4637:32301,route origin Hong Kong SAR via in-country connection
+4637:32302,route origin Japan via in-country connection
+4637:32303,route origin Korea via in-country connection
+4637:32304,route origin Singapore via in-country connection
+4637:32305,route origin Indonesia via in-country connection
+4637:32306,route origin Philippines via in-country connection
+4637:32307,route origin Malaysia via in-country connection
+4637:32308,route origin Thailand via in-country connection
+4637:32309,route origin Taiwan PRC via in-country connection
+4637:32310,route origin India via in-country connection
+4637:32311,route origin New Zealand via in-country connection
+4637:32312,route origin UK via in-country connection
+4637:32313,route origin Netherlands via in-country connection
+4637:32314,route origin USA via in-country connection
+4637:32315,route origin Mainland China via in-country connection
+4637:32316,route origin Pakistan via in-country connection
+4637:32317,route origin Bangladesh via in-country connection
+4637:32318,route origin Macau SAR via in-country connection
+4637:32319,route origin Maldives via in-country connection
+4637:32320,route origin Myanmar via in-country connection
+4637:32321,route origin Vietnam via in-country connection
+4637:32322,route origin Papua New Guinea via in-country connection
+4637:32323,route origin Mongolia via in-country connection
+4637:32324,route origin Seychelles via in-country connection
+4637:32325,route origin Diego Garcia via in-country connection
+4637:32326,route origin Nauru via in-country connection
+4637:32327,route origin Samoa via in-country connection
+4637:32328,route origin Kiribati via in-country connection
+4637:32329,route origin UAE via in-country connection
+4637:32399,route origin Others via in-country connection
+4637:33300,route origin Australia via in-country connection
+4637:33301,route origin Hong Kong SAR via in-country connection
+4637:33302,route origin Japan via in-country connection
+4637:33303,route origin Korea via in-country connection
+4637:33304,route origin Singapore via in-country connection
+4637:33305,route origin Indonesia via in-country connection
+4637:33306,route origin Philippines via in-country connection
+4637:33307,route origin Malaysia via in-country connection
+4637:33308,route origin Thailand via in-country connection
+4637:33309,route origin Taiwan PRC via in-country connection
+4637:33310,route origin India via in-country connection
+4637:33311,route origin New Zealand via in-country connection
+4637:33312,route origin UK via in-country connection
+4637:33313,route origin Netherlands via in-country connection
+4637:33314,route origin USA via in-country connection
+4637:33315,route origin Mainland China via in-country connection
+4637:33316,route origin Pakistan via in-country connection
+4637:33317,route origin Bangladesh via in-country connection
+4637:33318,route origin Macau SAR via in-country connection
+4637:33319,route origin Maldives via in-country connection
+4637:33320,route origin Myanmar via in-country connection
+4637:33321,route origin Vietnam via in-country connection
+4637:33322,route origin Papua New Guinea via in-country connection
+4637:33323,route origin Mongolia via in-country connection
+4637:33324,route origin Seychelles via in-country connection
+4637:33325,route origin Diego Garcia via in-country connection
+4637:33326,route origin Nauru via in-country connection
+4637:33327,route origin Samoa via in-country connection
+4637:33328,route origin Kiribati via in-country connection
+4637:33329,route origin UAE via in-country connection
+4637:33399,route origin Others via in-country connection
+
+# Country of origin tagging - international connection (Telstra-advertised routes)
+4637:30400,route origin Australia via international connection
+4637:30401,route origin Hong Kong SAR via international connection
+4637:30402,route origin Japan via international connection
+4637:30403,route origin Korea via international connection
+4637:30404,route origin Singapore via international connection
+4637:30405,route origin Indonesia via international connection
+4637:30406,route origin Philippines via international connection
+4637:30407,route origin Malaysia via international connection
+4637:30408,route origin Thailand via international connection
+4637:30409,route origin Taiwan PRC via international connection
+4637:30410,route origin India via international connection
+4637:30411,route origin New Zealand via international connection
+4637:30412,route origin UK via international connection
+4637:30413,route origin Netherlands via international connection
+4637:30414,route origin USA via international connection
+4637:30415,route origin Mainland China via international connection
+4637:30416,route origin Pakistan via international connection
+4637:30417,route origin Bangladesh via international connection
+4637:30418,route origin Macau SAR via international connection
+4637:30419,route origin Maldives via international connection
+4637:30420,route origin Myanmar via international connection
+4637:30421,route origin Vietnam via international connection
+4637:30422,route origin Papua New Guinea via international connection
+4637:30423,route origin Mongolia via international connection
+4637:30424,route origin Seychelles via international connection
+4637:30425,route origin Diego Garcia via international connection
+4637:30426,route origin Nauru via international connection
+4637:30427,route origin Samoa via international connection
+4637:30428,route origin Kiribati via international connection
+4637:30429,route origin UAE via international connection
+4637:30499,route origin Others via international connection
+4637:31400,route origin Australia via international connection
+4637:31401,route origin Hong Kong SAR via international connection
+4637:31402,route origin Japan via international connection
+4637:31403,route origin Korea via international connection
+4637:31404,route origin Singapore via international connection
+4637:31405,route origin Indonesia via international connection
+4637:31406,route origin Philippines via international connection
+4637:31407,route origin Malaysia via international connection
+4637:31408,route origin Thailand via international connection
+4637:31409,route origin Taiwan PRC via international connection
+4637:31410,route origin India via international connection
+4637:31411,route origin New Zealand via international connection
+4637:31412,route origin UK via international connection
+4637:31413,route origin Netherlands via international connection
+4637:31414,route origin USA via international connection
+4637:31415,route origin Mainland China via international connection
+4637:31416,route origin Pakistan via international connection
+4637:31417,route origin Bangladesh via international connection
+4637:31418,route origin Macau SAR via international connection
+4637:31419,route origin Maldives via international connection
+4637:31420,route origin Myanmar via international connection
+4637:31421,route origin Vietnam via international connection
+4637:31422,route origin Papua New Guinea via international connection
+4637:31423,route origin Mongolia via international connection
+4637:31424,route origin Seychelles via international connection
+4637:31425,route origin Diego Garcia via international connection
+4637:31426,route origin Nauru via international connection
+4637:31427,route origin Samoa via international connection
+4637:31428,route origin Kiribati via international connection
+4637:31429,route origin UAE via international connection
+4637:31499,route origin Others via international connection
+4637:32400,route origin Australia via international connection
+4637:32401,route origin Hong Kong SAR via international connection
+4637:32402,route origin Japan via international connection
+4637:32403,route origin Korea via international connection
+4637:32404,route origin Singapore via international connection
+4637:32405,route origin Indonesia via international connection
+4637:32406,route origin Philippines via international connection
+4637:32407,route origin Malaysia via international connection
+4637:32408,route origin Thailand via international connection
+4637:32409,route origin Taiwan PRC via international connection
+4637:32410,route origin India via international connection
+4637:32411,route origin New Zealand via international connection
+4637:32412,route origin UK via international connection
+4637:32413,route origin Netherlands via international connection
+4637:32414,route origin USA via international connection
+4637:32415,route origin Mainland China via international connection
+4637:32416,route origin Pakistan via international connection
+4637:32417,route origin Bangladesh via international connection
+4637:32418,route origin Macau SAR via international connection
+4637:32419,route origin Maldives via international connection
+4637:32420,route origin Myanmar via international connection
+4637:32421,route origin Vietnam via international connection
+4637:32422,route origin Papua New Guinea via international connection
+4637:32423,route origin Mongolia via international connection
+4637:32424,route origin Seychelles via international connection
+4637:32425,route origin Diego Garcia via international connection
+4637:32426,route origin Nauru via international connection
+4637:32427,route origin Samoa via international connection
+4637:32428,route origin Kiribati via international connection
+4637:32429,route origin UAE via international connection
+4637:32499,route origin Others via international connection
+4637:33400,route origin Australia via international connection
+4637:33401,route origin Hong Kong SAR via international connection
+4637:33402,route origin Japan via international connection
+4637:33403,route origin Korea via international connection
+4637:33404,route origin Singapore via international connection
+4637:33405,route origin Indonesia via international connection
+4637:33406,route origin Philippines via international connection
+4637:33407,route origin Malaysia via international connection
+4637:33408,route origin Thailand via international connection
+4637:33409,route origin Taiwan PRC via international connection
+4637:33410,route origin India via international connection
+4637:33411,route origin New Zealand via international connection
+4637:33412,route origin UK via international connection
+4637:33413,route origin Netherlands via international connection
+4637:33414,route origin USA via international connection
+4637:33415,route origin Mainland China via international connection
+4637:33416,route origin Pakistan via international connection
+4637:33417,route origin Bangladesh via international connection
+4637:33418,route origin Macau SAR via international connection
+4637:33419,route origin Maldives via international connection
+4637:33420,route origin Myanmar via international connection
+4637:33421,route origin Vietnam via international connection
+4637:33422,route origin Papua New Guinea via international connection
+4637:33423,route origin Mongolia via international connection
+4637:33424,route origin Seychelles via international connection
+4637:33425,route origin Diego Garcia via international connection
+4637:33426,route origin Nauru via international connection
+4637:33427,route origin Samoa via international connection
+4637:33428,route origin Kiribati via international connection
+4637:33429,route origin UAE via international connection
+4637:33499,route origin Others via international connection
+
+# Regional routing policy control (customer-advertised routes)
+4637:59501,do not announce to Asia-Pacific (including Mainland China)
+4637:59502,do not announce to Europe
+4637:59504,do not announce to USA
+4637:59507,do not announce to Mainland China
+4637:51501,prepend once when announcing to Asia-Pacific (including Mainland China)
+4637:51502,prepend once when announcing to Europe
+4637:51504,prepend once when announcing to USA
+4637:51507,prepend once when announcing to Mainland China
+4637:52501,prepend twice when announcing to Asia-Pacific (including Mainland China)
+4637:52502,prepend twice when announcing to Europe
+4637:52504,prepend twice when announcing to USA
+4637:52507,prepend twice when announcing to Mainland China
+4637:53501,prepend three times when announcing to Asia-Pacific (including Mainland China) (not effective for China Telecom AS4134 and China Unicom AS4837)
+4637:53502,prepend three times when announcing to Europe
+4637:53504,prepend three times when announcing to USA
+4637:53507,prepend three times when announcing to Mainland China (not effective for China Telecom AS4134 and China Unicom AS4837)
