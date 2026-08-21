@@ -1,5 +1,6 @@
-# Fetched from https://as52210.net/communities
-# BEGIN Info Communities
+# Fetched from https://as52210.net/communities.txt
+52210:666,Blackhole
+52210:1:666,Blackhole (Large)
 52210:5000,IRR Valid
 52210:5001,IRR Missing/Not Found
 52210:5002,IRR Invalid
@@ -7,90 +8,157 @@
 52210:5011,RPKI Missing/Not Found
 52210:5012,RPKI Invalid
 52210:5013,ASPA Invalid
-52210:0:174,Learned from Cogent (Transit)
-52210:0:835,Learned from GoCodeIT (Transit)
-52210:0:6939,Learned from Hurricane Electric (Transit)
-52210:0:52025,Learned from ParadoxNetworks (Transit)
-52210:0:210667,Learned from SmishCraft (Transit)
-52210:0:32097,Learned from Wholesale Internet (Transit)
-52210:1:1,Learned from ONIX (Peer)
-52210:1:2,Learned from KCIX (Peer)
-52210:1:3,Learned from HOUIX (Peer)
-52210:1:4,Learned from STLIX (Peer)
-52210:1:5,Learned from SeattleIX (Peer)
-52210:1:6,Learned from MICE (Peer)
-52210:1:7,Learned from AMS-IX (Peer)
-52210:1:8,Learned from Frys-IX (Peer)
-52210:1:9,Learned from FogIXP (Peer)
+52210:1000,From internet exchange
+52210:1000:0,From internet exchange
+52210:1002,From internet exchange peer
+52210:1002:0,From internet exchange peer
+52210:1003,From internet exchange route server
+52210:1003:0,From internet exchange route server
+52210:1004,From upstream provider
+52210:1004:0,From upstream provider
+52210:1005,From upstream provider (transit)
+52210:1005:0,From upstream provider (transit)
+52210:1007,From downstream
+52210:1007:0,From downstream
+52210:50:174,Learned from Cogent (Transit)
+52210:50:835,Learned from GoCodeIT (Transit)
+52210:50:6939,Learned from Hurricane Electric (Transit)
+52210:50:52025,Learned from ParadoxNetworks (Transit)
+52210:50:210667,Learned from SmishCraft (Transit)
+52210:50:32097,Learned from Wholesale Internet (Transit)
+52210:60:4059,Learned from ONIX (Peer)
+52210:60:249,Learned from KCIX (Peer)
+52210:60:2835,Learned from HOUIX (Peer)
+52210:60:2585,Learned from STLIX (Peer)
+52210:60:13,Learned from SeattleIX (Peer)
+52210:60:1285,Learned from SeattleIX Jumbo (Peer)
+52210:60:446,Learned from MICE (Peer)
+52210:60:26,Learned from AMS-IX (Peer)
+52210:60:3512,Learned from Frys-IX (Peer)
+52210:60:4837,Learned from FogIXP (Peer)
+52210:60:3990,Learned from InterIX (Peer)
+52210:60:4378,Learned from F4IX (Peer)
 52210:2:1,Infrastructure Prefix
 52210:2:2,Infrastructure Prefix (MCI)
 52210:2:9,Infrastructure Prefix (Anycast)
 52210:3:1,Learned from Downstream Customer
 52210:3:2,Learned from Downstream Customer (MCI)
-52210:4:1,Learned in MCI
-# END Info Communities
-# BEGIN Action Communities
-52210:666,Blackhole
-52210:20001,Prepend 1x to Cogent (Transit)
-52210:20002,Prepend 2x to Cogent (Transit)
-52210:20003,Prepend 3x to Cogent (Transit)
-52210:20009,No-Export to Cogent (Transit)
-52210:20011,Prepend 1x to GoCodeIT (Transit)
-52210:20012,Prepend 2x to GoCodeIT (Transit)
-52210:20013,Prepend 3x to GoCodeIT (Transit)
-52210:20019,No-Export to GoCodeIT (Transit)
-52210:20021,Prepend 1x to Hurricane Electric (Transit)
-52210:20022,Prepend 2x to Hurricane Electric (Transit)
-52210:20023,Prepend 3x to Hurricane Electric (Transit)
-52210:20029,No-Export to Hurricane Electric (Transit)
-52210:20031,Prepend 1x to ParadoxNetworks (Transit)
-52210:20032,Prepend 2x to ParadoxNetworks (Transit)
-52210:20033,Prepend 3x to ParadoxNetworks (Transit)
-52210:20039,No-Export to ParadoxNetworks (Transit)
-52210:20041,Prepend 1x to SmishCraft (Transit)
-52210:20042,Prepend 2x to SmishCraft (Transit)
-52210:20043,Prepend 3x to SmishCraft (Transit)
-52210:20049,No-Export to SmishCraft (Transit)
-52210:20051,Prepend 1x to Wholesale Internet (Transit)
-52210:20052,Prepend 2x to Wholesale Internet (Transit)
-52210:20053,Prepend 3x to Wholesale Internet (Transit)
-52210:20059,No-Export to Wholesale Internet (Transit)
-52210:20099,No-Export to All Transit Providers
-52210:21011,Prepend 1x to ONIX (Peer)
-52210:21012,Prepend 2x to ONIX (Peer)
-52210:21013,Prepend 3x to ONIX (Peer)
-52210:21019,No-Export to ONIX (Peer)
-52210:21021,Prepend 1x to KCIX (Peer)
-52210:21022,Prepend 2x to KCIX (Peer)
-52210:21023,Prepend 3x to KCIX (Peer)
-52210:21029,No-Export to KCIX (Peer)
-52210:21031,Prepend 1x to HOUIX (Peer)
-52210:21032,Prepend 2x to HOUIX (Peer)
-52210:21033,Prepend 3x to HOUIX (Peer)
-52210:21039,No-Export to HOUIX (Peer)
-52210:21041,Prepend 1x to STLIX (Peer)
-52210:21042,Prepend 2x to STLIX (Peer)
-52210:21043,Prepend 3x to STLIX (Peer)
-52210:21049,No-Export to STLIX (Peer)
-52210:21051,Prepend 1x to SeattleIX (Peer)
-52210:21052,Prepend 2x to SeattleIX (Peer)
-52210:21053,Prepend 3x to SeattleIX (Peer)
-52210:21059,No-Export to SeattleIX (Peer)
-52210:21061,Prepend 1x to MICE (Peer)
-52210:21062,Prepend 2x to MICE (Peer)
-52210:21063,Prepend 3x to MICE (Peer)
-52210:21069,No-Export to MICE (Peer)
-52210:21071,Prepend 1x to AMS-IX (Peer)
-52210:21072,Prepend 2x to AMS-IX (Peer)
-52210:21073,Prepend 3x to AMS-IX (Peer)
-52210:21079,No-Export to AMS-IX (Peer)
-52210:21081,Prepend 1x to Frys-IX (Peer)
-52210:21082,Prepend 2x to Frys-IX (Peer)
-52210:21083,Prepend 3x to Frys-IX (Peer)
-52210:21089,No-Export to Frys-IX (Peer)
-52210:21091,Prepend 1x to FogIXP (Peer)
-52210:21092,Prepend 2x to FogIXP (Peer)
-52210:21093,Prepend 3x to FogIXP (Peer)
-52210:21099,No-Export to FogIXP (Peer)
-52210:21999,No-Export to All Internet Exchange Points
-# END Action Communities
+52210:101:0,Prepend 1x to all
+52210:102:0,Prepend 2x to all
+52210:103:0,Prepend 3x to all
+52210:104:0,Do not announce to all
+52210:101:174,Prepend 1x to Cogent (Transit)
+52210:102:174,Prepend 2x to Cogent (Transit)
+52210:103:174,Prepend 3x to Cogent (Transit)
+52210:104:174,No-Export to Cogent (Transit)
+52210:101:835,Prepend 1x to GoCodeIT (Transit)
+52210:102:835,Prepend 2x to GoCodeIT (Transit)
+52210:103:835,Prepend 3x to GoCodeIT (Transit)
+52210:104:835,No-Export to GoCodeIT (Transit)
+52210:101:6939,Prepend 1x to Hurricane Electric (Transit)
+52210:102:6939,Prepend 2x to Hurricane Electric (Transit)
+52210:103:6939,Prepend 3x to Hurricane Electric (Transit)
+52210:104:6939,No-Export to Hurricane Electric (Transit)
+52210:101:52025,Prepend 1x to ParadoxNetworks (Transit)
+52210:102:52025,Prepend 2x to ParadoxNetworks (Transit)
+52210:103:52025,Prepend 3x to ParadoxNetworks (Transit)
+52210:104:52025,No-Export to ParadoxNetworks (Transit)
+52210:101:210667,Prepend 1x to SmishCraft (Transit)
+52210:102:210667,Prepend 2x to SmishCraft (Transit)
+52210:103:210667,Prepend 3x to SmishCraft (Transit)
+52210:104:210667,No-Export to SmishCraft (Transit)
+52210:101:32097,Prepend 1x to Wholesale Internet (Transit)
+52210:102:32097,Prepend 2x to Wholesale Internet (Transit)
+52210:103:32097,Prepend 3x to Wholesale Internet (Transit)
+52210:104:32097,No-Export to Wholesale Internet (Transit)
+52210:65526,Do not export to transit (peers and exchanges only)
+52210:201:0,Prepend 1x to All Internet Exchange Points
+52210:202:0,Prepend 2x to All Internet Exchange Points
+52210:203:0,Prepend 3x to All Internet Exchange Points
+52210:201:4059,Prepend 1x to ONIX (Peer)
+52210:202:4059,Prepend 2x to ONIX (Peer)
+52210:203:4059,Prepend 3x to ONIX (Peer)
+52210:204:4059,No-Export to ONIX (Peer)
+52210:201:249,Prepend 1x to KCIX (Peer)
+52210:202:249,Prepend 2x to KCIX (Peer)
+52210:203:249,Prepend 3x to KCIX (Peer)
+52210:204:249,No-Export to KCIX (Peer)
+52210:201:2835,Prepend 1x to HOUIX (Peer)
+52210:202:2835,Prepend 2x to HOUIX (Peer)
+52210:203:2835,Prepend 3x to HOUIX (Peer)
+52210:204:2835,No-Export to HOUIX (Peer)
+52210:201:2585,Prepend 1x to STLIX (Peer)
+52210:202:2585,Prepend 2x to STLIX (Peer)
+52210:203:2585,Prepend 3x to STLIX (Peer)
+52210:204:2585,No-Export to STLIX (Peer)
+52210:201:13,Prepend 1x to SeattleIX (Peer)
+52210:202:13,Prepend 2x to SeattleIX (Peer)
+52210:203:13,Prepend 3x to SeattleIX (Peer)
+52210:204:13,No-Export to SeattleIX (Peer)
+52210:201:1285,Prepend 1x to SeattleIX Jumbo (Peer)
+52210:202:1285,Prepend 2x to SeattleIX Jumbo (Peer)
+52210:203:1285,Prepend 3x to SeattleIX Jumbo (Peer)
+52210:204:1285,No-Export to SeattleIX Jumbo (Peer)
+52210:201:446,Prepend 1x to MICE (Peer)
+52210:202:446,Prepend 2x to MICE (Peer)
+52210:203:446,Prepend 3x to MICE (Peer)
+52210:204:446,No-Export to MICE (Peer)
+52210:201:26,Prepend 1x to AMS-IX (Peer)
+52210:202:26,Prepend 2x to AMS-IX (Peer)
+52210:203:26,Prepend 3x to AMS-IX (Peer)
+52210:204:26,No-Export to AMS-IX (Peer)
+52210:201:3512,Prepend 1x to Frys-IX (Peer)
+52210:202:3512,Prepend 2x to Frys-IX (Peer)
+52210:203:3512,Prepend 3x to Frys-IX (Peer)
+52210:204:3512,No-Export to Frys-IX (Peer)
+52210:201:4837,Prepend 1x to FogIXP (Peer)
+52210:202:4837,Prepend 2x to FogIXP (Peer)
+52210:203:4837,Prepend 3x to FogIXP (Peer)
+52210:204:4837,No-Export to FogIXP (Peer)
+52210:201:3990,Prepend 1x to InterIX (Peer)
+52210:202:3990,Prepend 2x to InterIX (Peer)
+52210:203:3990,Prepend 3x to InterIX (Peer)
+52210:204:3990,No-Export to InterIX (Peer)
+52210:201:4378,Prepend 1x to F4IX (Peer)
+52210:202:4378,Prepend 2x to F4IX (Peer)
+52210:203:4378,Prepend 3x to F4IX (Peer)
+52210:204:4378,No-Export to F4IX (Peer)
+52210:204:0,No-Export to All Internet Exchange Points
+52210:10:1,Originated in Kansas City, United States
+52210:20:1,Learned in Kansas City, United States
+52210:10:2,Originated in Toronto, Canada
+52210:20:2,Learned in Toronto, Canada
+52210:10:3,Originated in Amsterdam, Netherlands
+52210:20:3,Learned in Amsterdam, Netherlands
+52210:10:4,Originated in Auckland, New Zealand
+52210:20:4,Learned in Auckland, New Zealand
+52210:10:5,Originated in London, United Kingdom
+52210:20:5,Learned in London, United Kingdom
+52210:10:6,Originated in Zurich, Switzerland
+52210:20:6,Learned in Zurich, Switzerland
+52210:10:7,Originated in Wolverhampton, United Kingdom
+52210:20:7,Learned in Wolverhampton, United Kingdom
+52210:30:1,Originating router NOC-MCI01A
+52210:40:1,Learned at router NOC-MCI01A
+52210:30:2,Originating router NOC-MCI01B
+52210:40:2,Learned at router NOC-MCI01B
+52210:30:3,Originating router EQX-TR2
+52210:40:3,Learned at router EQX-TR2
+52210:30:4,Originating router NIK-AMS01
+52210:40:4,Learned at router NIK-AMS01
+52210:30:5,Originating router ZAP-AKL01
+52210:40:5,Learned at router ZAP-AKL01
+52210:30:7,Originating router CDN-NOC-MCI01
+52210:40:7,Learned at router CDN-NOC-MCI01
+52210:30:8,Originating router CDN-THN-LHR01
+52210:40:8,Learned at router CDN-THN-LHR01
+52210:30:9,Originating router CDN-FOG-ZRH01
+52210:40:9,Learned at router CDN-FOG-ZRH01
+52210:30:10,Originating router CDN-VLX-WOV02
+52210:40:10,Learned at router CDN-VLX-WOV02
+52210:30:11,Originating router CDN-ZAP-AKL01
+52210:40:11,Learned at router CDN-ZAP-AKL01
+52210:10x:0,Prepend $0 times to all (max 3)
+52210:104:nnn,Do not announce to AS$0
+52210:10x:nnn,Prepend $0 times to AS$1 (max 3)
+52210:50:nnn,Learned from AS$0
