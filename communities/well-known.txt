@@ -1,6 +1,9 @@
 # https://www.rfc-editor.org/rfc/rfc8326.html
 65535:0,Graceful shutdown
 
+# https://www.iana.org/go/draft-ietf-grow-downgrade-bgp-community-00
+65535:10,DOWNGRADE
+
 # https://www.iana.org/go/rfc7999
 65535:666,Blackhole
 
