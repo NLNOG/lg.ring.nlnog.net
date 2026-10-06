@@ -1,4 +1,7 @@
 # Contact noc@level66.network for any questions.
 ## Source
-56381:100:100,Internal
-56381:100:200,Customer
+56381:100:100,Own Routes
+56381:100:200,Customer Routes
+56381:100:300,Upstream Routes
+56381:100:400,Internet Exchange Routes
+56381:100:500,Private Network Interconnect Routes
