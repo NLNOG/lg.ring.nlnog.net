@@ -1,0 +1,26 @@
+# AS202585 (bgp.rodeo) informational communities, from the operator and the routers' BIRD configuration
+202585:0:100,Learned from customer
+202585:0:200,Own network
+202585:1:1,Learned from transit
+202585:1:2,Learned from IXP peer/RS
+202585:1:3,Learned from customer
+202585:1:4,Own network
+202585:2:nnn,Learned from AS$0
+202585:5:1,Valid IRR entry
+202585:5:2,Valid ROA
+202585:101:0,Prefix in IRR prefix set
+202585:7:2,Bogon ASN in AS_PATH
+202585:7:3,Bogon prefix
+202585:7:4,RPKI invalid
+202585:7:5,Unacceptable prefix length
+202585:7:6,No IRR object covers the route
+202585:8:26,Learned at AMS-IX
+202585:8:1842,Learned at Speed-IX
+202585:8:3512,Learned at Frys-IX
+202585:8:3990,Learned at InterIX
+202585:8:4644,Learned at Ens-IX
+202585:8:nnn,Learned at IXP with PeeringDB ID $0
+202585:9:1,Learned at NIKHEF Amsterdam
+202585:9:2,Learned at Enschede
+202585:100:1,Announced to peers and upstreams
+202585:1000:1,ASPA invalid (monitored, not rejected)
