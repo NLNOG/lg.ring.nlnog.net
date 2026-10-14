@@ -1,0 +1,86 @@
+# AS34307 (NL-IX) route server communities, from https://www.nl-ix.net/about/support/bgp-communities-peering/
+# Do not mix communities with the Route Server Configurator GUI; routes without action communities go to all peers
+0:nnn,Do not advertise to AS$0
+34307:nnn,Announce only to AS$0
+0:34307,Do not announce to any peer
+34307:34307,Announce to all peers
+34307:0:nnn,Do not advertise to AS$0
+34307:1:nnn,Announce only to AS$0
+34307:0:0,Do not announce to any peer
+34307:1:0,Announce to all peers
+65535:0,Graceful shutdown
+65001:0,Prepend 1x to all peers
+65002:0,Prepend 2x to all peers
+65003:0,Prepend 3x to all peers
+65001:nnn,Prepend 1x to AS$0
+65002:nnn,Prepend 2x to AS$0
+65003:nnn,Prepend 3x to AS$0
+34307:101:nnn,Prepend 1x to AS$0
+34307:102:nnn,Prepend 2x to AS$0
+34307:103:nnn,Prepend 3x to AS$0
+34307:65151,Do not advertise to peers in Netherlands
+34307:65152,Do not advertise to peers in Belgium
+34307:65153,Do not advertise to peers in France
+34307:65154,Do not advertise to peers in United Kingdom
+34307:65155,Do not advertise to peers in Denmark
+34307:65156,Do not advertise to peers in Germany
+34307:65157,Do not advertise to peers in Luxembourg
+34307:65251,Advertise to peers in Netherlands
+34307:65252,Advertise to peers in Belgium
+34307:65253,Advertise to peers in France
+34307:65254,Advertise to peers in United Kingdom
+34307:65255,Advertise to peers in Denmark
+34307:65256,Advertise to peers in Germany
+34307:65257,Advertise to peers in Luxembourg
+34307:65101,Do not advertise to peers in Amsterdam
+34307:65102,Do not advertise to peers in Antwerp
+34307:65103,Do not advertise to peers in Brussels
+34307:65104,Do not advertise to peers in Berlin
+34307:65105,Do not advertise to peers in Eindhoven
+34307:65106,Do not advertise to peers in Arnhem
+34307:65107,Do not advertise to peers in Copenhagen
+34307:65108,Do not advertise to peers in Groningen
+34307:65109,Do not advertise to peers in Rotterdam
+34307:65110,Do not advertise to peers in London
+34307:65111,Do not advertise to peers in Paris
+34307:65112,Do not advertise to peers in Luxembourg
+34307:65113,Do not advertise to peers in Marseille
+34307:65114,Do not advertise to peers in Dusseldorf
+34307:65115,Do not advertise to peers in Frankfurt
+34307:65201,Advertise to peers in Amsterdam
+34307:65202,Advertise to peers in Antwerp
+34307:65203,Advertise to peers in Brussels
+34307:65204,Advertise to peers in Berlin
+34307:65205,Advertise to peers in Eindhoven
+34307:65206,Advertise to peers in Arnhem
+34307:65207,Advertise to peers in Copenhagen
+34307:65208,Advertise to peers in Groningen
+34307:65209,Advertise to peers in Rotterdam
+34307:65210,Advertise to peers in London
+34307:65211,Advertise to peers in Paris
+34307:65212,Advertise to peers in Luxembourg
+34307:65213,Advertise to peers in Marseille
+34307:65214,Advertise to peers in Dusseldorf
+34307:65215,Advertise to peers in Frankfurt
+65000:65151,Learned in Netherlands
+65000:65152,Learned in Belgium
+65000:65153,Learned in France
+65000:65154,Learned in United Kingdom
+65000:65155,Learned in Denmark
+65000:65156,Learned in Germany
+65000:65157,Learned in Luxembourg
+65000:65101,Prefix learned in Amsterdam
+65000:65102,Prefix learned in Antwerp
+65000:65103,Prefix learned in Brussels
+65000:65104,Prefix learned in Berlin
+65000:65105,Prefix learned in Eindhoven
+65000:65106,Prefix learned in Arnhem
+65000:65107,Prefix learned in Copenhagen
+65000:65108,Prefix learned in Groningen
+65000:65109,Prefix learned in Rotterdam
+65000:65110,Prefix learned in London
+65000:65111,Prefix learned in Paris
+65000:65112,Prefix learned in Luxembourg
+65000:65113,Prefix learned in Marseille
+65000:65114,Prefix learned in Dusseldorf
+65000:65115,Prefix learned in Frankfurt
