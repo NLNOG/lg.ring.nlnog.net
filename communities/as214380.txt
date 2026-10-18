@@ -1,0 +1,67 @@
+# AS214380 (tim427.net) large communities, provided by AS214380; generated from its Ansible inventory
+# Informational (functions 0-9): every route AS214380 learns gets 1-4 and, where RPKI is checked, 5;
+# own routes get 0, 7 (not towards route collectors) and 8.
+# 214380:*:* sent by a neighbour is removed first. Actions (10 and up) are honoured from customers only.
+214380:0:1,Originated by AS214380
+214380:1:1,Learned from a customer
+214380:1:2,Learned from a bilateral peer
+214380:1:3,Learned from an IXP route server
+214380:1:4,Learned from a transit provider
+214380:2:0,Learned outside an IXP (PNI or multihop)
+214380:2:26,Learned at AMS-IX
+214380:2:1842,Learned at Speed-IX
+214380:2:2601,Learned at LOCIX NETHERLANDS
+214380:2:3512,Learned at Frys-IX
+214380:2:3739,Learned at PITER-IX Frankfurt
+214380:2:4705,Learned at nine
+214380:2:5106,Learned at Clue-IX
+214380:2:nnn,Learned at the IXP with PeeringDB IX id $0
+214380:3:nnn,Learned from AS$0
+214380:4:0,Learned at a site not in PeeringDB
+214380:4:18,Learned at NIKHEF Amsterdam
+214380:4:374,Learned at Iron Mountain - Amsterdam (AMS-1)
+214380:4:nnn,Learned at PeeringDB facility id $0
+214380:5:1,RPKI valid
+214380:5:2,RPKI unknown (no ROA)
+214380:5:3,RPKI invalid
+214380:6:0,Rejected: another reason, see the route comment
+214380:6:1,Rejected: RPKI invalid
+214380:6:2,Rejected: not in the IRR of the neighbour
+214380:6:3,Rejected: bogon prefix
+214380:6:4,Rejected: bogon ASN in the AS path
+214380:6:5,Rejected: prefix too long
+214380:6:6,Rejected: prefix too short
+214380:6:7,Rejected: transit network in a peer's path
+214380:6:8,Rejected: AS path too long
+214380:6:9,Rejected: IXP peering LAN
+214380:6:10,Rejected: session does not import routes
+214380:7:0,Announced outside an IXP (PNI or multihop)
+214380:7:26,Announced at AMS-IX
+214380:7:1842,Announced at Speed-IX
+214380:7:2601,Announced at LOCIX NETHERLANDS
+214380:7:3512,Announced at Frys-IX
+214380:7:3739,Announced at PITER-IX Frankfurt
+214380:7:4705,Announced at nine
+214380:7:5106,Announced at Clue-IX
+214380:7:nnn,Announced at the IXP with PeeringDB IX id $0
+214380:8:0,Announced from a site not in PeeringDB
+214380:8:18,Announced from NIKHEF Amsterdam
+214380:8:374,Announced from Iron Mountain - Amsterdam (AMS-1)
+214380:8:nnn,Announced from PeeringDB facility id $0
+214380:10:0,Do not announce to any neighbour
+214380:10:nnn,Do not announce to AS$0
+214380:11:0,Do not announce outside IXPs (PNIs)
+214380:11:nnn,Do not announce at PeeringDB IX id $0
+214380:21:0,Prepend once to all neighbours
+214380:21:nnn,Prepend once to AS$0
+214380:22:0,Prepend twice to all neighbours
+214380:22:nnn,Prepend twice to AS$0
+214380:23:0,Prepend three times to all neighbours
+214380:23:nnn,Prepend three times to AS$0
+214380:31:0,Prepend once outside IXPs (PNIs)
+214380:31:nnn,Prepend once at PeeringDB IX id $0
+214380:32:0,Prepend twice outside IXPs (PNIs)
+214380:32:nnn,Prepend twice at PeeringDB IX id $0
+214380:33:0,Prepend three times outside IXPs (PNIs)
+214380:33:nnn,Prepend three times at PeeringDB IX id $0
+
