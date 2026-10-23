@@ -1,0 +1,12 @@
+# AS51392 Fusioned - informational large communities on received routes. Source: AS51392 NOC, contact noc@fusioned.net (2026-10-23)
+51392:1:0,Route originated by AS51392
+51392:1:1,Route learned from customer
+51392:1:2,Route learned from bilateral peer
+51392:1:3,Route learned from IXP route server
+51392:1:4,Route learned from remote-IXP relay (Free-IX Remote AS50869)
+51392:1:5,Route learned from transit
+51392:2:50745,Route learned at GR-IX Athens
+51392:2:57463,Route learned at NetIX
+51392:2:52055,Route learned at NetIX Greece
+51392:2:215405,Route learned at Free-IX Greece
+51392:4:2951,Route learned at TI Sparkle Metamorfosis Athens (PeeringDB fac 2951)
